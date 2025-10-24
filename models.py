@@ -1,3 +1,4 @@
+# models.py
 from pydantic import BaseModel, Field
 from typing import List, Optional
 
@@ -14,11 +15,13 @@ class MatchAlt(BaseModel):
 class ClauseMatch(BaseModel):
     id: str
     text: str
+
     label: str
     best_match: Optional[MatchAlt]
     alternatives: List[MatchAlt] = []
     rationale: Optional[str] = None
 
 class AnalyzeResponse(BaseModel):
+
     overall: dict
     clauses: List[ClauseMatch]

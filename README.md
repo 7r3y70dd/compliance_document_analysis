@@ -143,6 +143,13 @@ python -m uvicorn app:app --host 0.0.0.0 --port 8000
 //let nli downgrade
 export USE_NLI_JUDGE=1
 export NLI_ANNOTATE_ONLY=0
+
+
+//LLM JUDGE
+
+export USE_LLM_JUDGE=1
+export LLM_MODEL_NAME=google/flan-t5-base
+export LLM_DEVICE=-1 
 ```
 
 ---
