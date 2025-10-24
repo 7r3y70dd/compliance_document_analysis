@@ -1,2 +1,158 @@
-# compliance_document_analysis
-THis is an application that will compare a compliance document too a company policy.
+# Policy–Compliance Analyzer (FastAPI)
+
+Analyze a **company policy** against a **compliance document** (e.g., HIPAA) and label each compliance clause as **`satisfied`**, **`partially_satisfied`**, or **`non_existent`**. Uses Hugging Face embeddings, optional cross-encoder reranking, and an optional LLM judge for borderline cases.
+
+---
+
+## Overview
+
+**Flow**
+1. Parse both documents into **clauses** (headings/bullets/sentences).
+2. Embed compliance clauses (queries) and policy clauses (passages).
+3. **Match** each compliance clause to the best policy clause.
+4. **Label** with thresholds; optionally:
+   - **Rerank** with a cross-encoder for sharper matches.
+   - **LLM judge** on partials to refine the label + produce a one-line rationale.
+
+**Key files**
+```
+app.py               # FastAPI endpoints and request/response handling
+settings.py          # Config & feature flags (env vars)
+matcher.py           # Embeddings, (optional) reranker, LLM judge, rationale
+clause_extractor.py  # Clause segmentation (rules based)
+models.py            # Pydantic models
+requirements.txt     # Python dependencies
+run_local.sh         # (optional) local runner
+Dockerfile           # Container image
+```
+
+---
+
+## Setup
+
+### 1) Python venv
+```bash
+cd /path/to/compliance_document_analysis
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+### 2) Start the server (baseline)
+```bash
+python -m uvicorn app:app --host 0.0.0.0 --port 8000
+```
+
+### 3) Health check
+```bash
+curl -s http://localhost:8000/health | jq .
+```
+You’ll see the embedding model and which optional features are enabled.
+
+---
+
+## Feature Flags (safe toggles)
+
+All optional quality boosts are **off by default**. Turn them on with env vars **before** launching uvicorn.
+
+### A) Better embeddings (MPNet)
+```bash
+export EMBEDDING_MODEL=sentence-transformers/all-mpnet-base-v2
+python -m uvicorn app:app --host 0.0.0.0 --port 8000
+```
+
+### B) E5 embeddings (with prefixes)
+```bash
+export EMBEDDING_MODEL=intfloat/e5-base-v2
+export USE_E5_PREFIXES=1
+python -m uvicorn app:app --host 0.0.0.0 --port 8000
+```
+
+### C) Cross-encoder reranking (sharper top-k)
+```bash
+export USE_CROSS_ENCODER=1
+# optional:
+export CROSS_ENCODER_MODEL=cross-encoder/ms-marco-MiniLM-L-6-v2
+export CROSS_ENCODER_TOP_K=5
+python -m uvicorn app:app --host 0.0.0.0 --port 8000
+```
+
+### D) LLM judge for partials + one-line rationale
+```bash
+export USE_LLM_JUDGE=1
+# optional: export JUDGE_MODEL=google/flan-t5-base
+python -m uvicorn app:app --host 0.0.0.0 --port 8000
+```
+
+**Recommended quality preset**
+```bash
+export EMBEDDING_MODEL=sentence-transformers/all-mpnet-base-v2
+export USE_CROSS_ENCODER=1
+export USE_LLM_JUDGE=1
+python -m uvicorn app:app --host 0.0.0.0 --port 8000
+```
+
+---
+
+## Using the API
+
+### 0) Health
+```bash
+curl -s http://localhost:8000/health | jq .
+```
+
+### 1) JSON body (`POST /analyze`)
+```bash
+curl -s -X POST http://localhost:8000/analyze   -H 'Content-Type: application/json'   -d '{
+    "policy_text": "All data at rest is encrypted with AES-256. Access logs are retained for 365 days.",
+    "compliance_text": "Encrypt PHI at rest using AES-256. Retain access logs for at least one year.",
+    "top_k": 3,
+    "use_rationale": false
+  }' | jq .
+```
+
+### 2) Multipart file upload (`POST /analyze-multipart`)
+```bash
+curl --fail-with-body -X POST http://localhost:8000/analyze-multipart   -F "policy=@/absolute/path/policy.txt;type=text/plain"   -F "compliance=@/absolute/path/compliance.txt;type=text/plain"   -F "top_k=3"   -F "use_rationale=false" | jq .
+```
+
+**Response shape**
+```json
+{
+  "overall": { "satisfied": 2, "partially_satisfied": 3, "non_existent": 5 },
+  "clauses": [
+    {
+      "id": "C-0004",
+      "text": "Data Encryption: PHI must be encrypted during storage and transmission.",
+      "label": "partially_satisfied",
+      "best_match": { "policy_text": "All electronic records are stored on encrypted servers.", "similarity": 0.62 },
+      "alternatives": [ { "policy_text": "Transmission ... must use TLS 1.2+", "similarity": 0.59 } ],
+      "rationale": "…present only if judge or rationale was enabled…"
+    }
+  ]
+}
+```
+
+---
+
+## Docker (optional)
+
+```bash
+docker build -t policy-compl-svc .
+docker run --rm -p 8000:8000   -e EMBEDDING_MODEL=sentence-transformers/all-mpnet-base-v2   -e USE_CROSS_ENCODER=1   -e USE_LLM_JUDGE=1   policy-compl-svc
+```
+
+---
+
+## Rollback (to original behavior)
+
+- Simply **unset** the flags (or set to 0) and restart:
+  ```bash
+  export USE_E5_PREFIXES=0
+  export USE_CROSS_ENCODER=0
+  export USE_LLM_JUDGE=0
+  python -m uvicorn app:app --host 0.0.0.0 --port 8000
+  ```
+
+---
