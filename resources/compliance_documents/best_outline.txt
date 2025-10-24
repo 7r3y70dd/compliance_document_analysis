@@ -1,0 +1,275 @@
+# Comprehensive HIPAA & SOC 2 Compliance Policy Suite
+
+> **Template** — replace all placeholders like `<CompanyName>` and values in ☐ checkboxes. Review with legal counsel and your security/privacy officers before adoption.
+
+## Table of Contents
+
+* [1. Introduction](#1-introduction)
+* [2. Governance, Roles & Responsibilities](#2-governance-roles--responsibilities)
+* [3. Document Management](#3-document-management)
+* [Part A — HIPAA Program Policy](#part-a--hipaa-program-policy)
+
+  * [A1. Purpose & Scope](#a1-purpose--scope)
+  * [A2. Authority & References](#a2-authority--references)
+  * [A3. Definitions (Selected)](#a3-definitions-selected)
+  * [A4. Administrative Safeguards (§164.308)](#a4-administrative-safeguards-§164308)
+  * [A5. Physical Safeguards (§164.310)](#a5-physical-safeguards-§164310)
+  * [A6. Technical Safeguards (§164.312)](#a6-technical-safeguards-§164312)
+  * [A7. Organizational Requirements (§164.314)](#a7-organizational-requirements-§164314)
+  * [A8. Policies, Procedures & Documentation (§164.316)](#a8-policies-procedures--documentation-§164316)
+  * [A9. HIPAA Privacy & Breach Notification (Highlights)](#a9-hipaa-privacy--breach-notification-highlights)
+  * [A10. HIPAA Program Procedures (How-To)](#a10-hipaa-program-procedures-how-to)
+  * [A11. HIPAA Metrics, KPIs & Evidence](#a11-hipaa-metrics-kpis--evidence)
+  * [A12. HIPAA Control Mapping (Quick Index)](#a12-hipaa-control-mapping-quick-index)
+* [Part B — SOC 2 Trust Services Criteria Policy](#part-b--soc-2-trust-services-criteria-policy)
+
+  * [B1. Purpose & Scope](#b1-purpose--scope)
+  * [B2. Trust Services Criteria Coverage](#b2-trust-services-criteria-coverage)
+  * [B3. Core Controls](#b3-core-controls)
+  * [B4. Evidence, Monitoring & KPIs](#b4-evidence-monitoring--kpis)
+  * [B5. SOC 2 Mapping (Quick Index)](#b5-soc-2-mapping-quick-index)
+* [4. Exception & Risk Acceptance Process](#4-exception--risk-acceptance-process)
+* [5. Training & Awareness](#5-training--awareness)
+* [6. Enforcement](#6-enforcement)
+* [7. Appendices](#7-appendices)
+
+---
+
+## 1. Introduction
+
+**Policy Owner:** `<CISO/Privacy Officer>`
+**Approved By:** `<Executive Sponsor>`
+**Effective Date:** `<YYYY-MM-DD>`
+**Version:** `<x.y>`
+
+**Purpose.** This suite establishes a unified set of administrative, physical, and technical controls for **HIPAA** compliance (Privacy, Security & Breach Notification) and **SOC 2** attestation (Trust Services Criteria). It defines responsibilities, minimum control requirements, operational procedures, monitoring, and evidence expectations.
+
+**Applicability.** Applies to all `<CompanyName>` workforce members, contractors, and third parties who access `<CompanyName>` information systems and data. Additional obligations apply to systems in-scope for HIPAA ePHI and/or SOC 2.
+
+---
+
+## 2. Governance, Roles & Responsibilities
+
+* **Board / Executive Leadership.** Set tone at the top; oversee risk; approve this policy suite.
+* **CISO / Security Officer (SO).** Owns Security Rule implementation; risk management; security incident response; periodic evaluation.
+* **Privacy Officer (PO).** Owns Privacy Rule; Notice of Privacy Practices; individual rights; breach notification content.
+* **Compliance Officer.** Coordinates HIPAA program, SOC 2 readiness, and audits; maintains mappings and evidence.
+* **IT Operations / Infrastructure.** Implements technical controls (access, logging, backups, DR, patching, endpoint protection).
+* **Engineering / SDLC Owners.** Secure design, code review, CI/CD, change control, secrets management.
+* **Data Owners / System Owners.** Classify data; approve access; perform user access reviews; maintain system inventories.
+* **Third‑Party Management.** Due diligence, BAAs/DPAs, continuous monitoring.
+* **All Workforce Members.** Complete training; follow policies; report incidents promptly.
+
+RACI charts for major controls are provided in [Appendix A](#7-appendices).
+
+---
+
+## 3. Document Management
+
+* **Review cadence:** at least **annually** and upon material changes (technology, regulation, business model, incidents).
+* **Document retention:** HIPAA-required documentation retained **≥6 years** from creation or last effective date.
+* **Version control:** changes tracked with summary, approver, and effective date.
+
+---
+
+# Part A — HIPAA Program Policy
+
+## A1. Purpose & Scope
+
+Implement the HIPAA **Security Rule** (§164.308–§164.316), **Privacy Rule** (selected highlights), and **Breach Notification Rule**, for all systems processing **ePHI**.
+
+**Systems in scope:** Systems storing/processing/transmitting ePHI; integrations; backups; logs containing ePHI identifiers; admin consoles; mobile/endpoint clients with ePHI access.
+
+## A2. Authority & References
+
+HIPAA (45 CFR Part 160 & 164), state privacy/security laws; NIST SP 800‑66; NIST SP 800‑53 (reference), HHS guidance.
+
+## A3. Definitions (Selected)
+
+* **ePHI:** Electronic protected health information.
+* **Business Associate (BA):** Vendor handling ePHI on behalf of `<CompanyName>` (must execute BAA).
+* **Minimum Necessary:** Only the least amount of PHI needed to accomplish the task.
+* **Security Incident:** Attempted or successful unauthorized access/use/disclosure/modification/destruction.
+
+## A4. Administrative Safeguards (§164.308)
+
+1. **Security Management Process**
+
+   * **Risk Analysis (R):** Perform enterprise and system-level risk analyses **annually** and upon major change. Maintain risk register, likelihood/impact, owner, and treatment plan.
+   * **Risk Management (R):** Track remediation to closure with due dates and acceptance criteria; high/critical items remediated within **30–90 days** depending on severity.
+   * **Sanction Policy (R):** Violations may lead to corrective action up to termination.
+   * **Information System Activity Review (R):** Monitor security events, access logs, audit trails. Review **at least monthly** for in-scope systems.
+
+2. **Assigned Security Responsibility (R):** Appoint a Security Officer (SO).
+
+3. **Workforce Security (A):** Authorization/supervision; clearance; termination procedures (access revocation ≤ **24 hours** of separation).
+
+4. **Information Access Management (R/A):** Minimum necessary; role-based access; documented access authorization and modification; periodic access reviews (**quarterly** for high-risk systems).
+
+5. **Security Awareness & Training (A):** Onboarding + **annual** HIPAA security training; phishing simulations; password/MFA guidance.
+
+6. **Security Incident Procedures (R):** Detect, triage, contain, investigate, and report. Internal notification to SO/PO **within 24 hours** of discovery.
+
+7. **Contingency Plan (R/A):** Data backup plan, disaster recovery plan, emergency mode operations.
+
+   * **Backups:** Encrypt; test **quarterly**; retain per data retention policy.
+   * **DR/BCP:** Define **RTO/RPO**; test **annually** (tabletop + technical).
+
+8. **Evaluation (R):** Periodic technical and non-technical evaluations **annually**.
+
+9. **Business Associate Arrangements (R):** Execute **BAA** before ePHI access; require incident reporting, safeguards, subcontractor flow-downs.
+
+## A5. Physical Safeguards (§164.310)
+
+* **Facility Access Controls (A):** Badge controls; visitor management; data center access by least privilege; logs retained **1 year** minimum.
+* **Workstation Use (R):** Secure screens, privacy filters for PHI; clear desk for PHI.
+* **Workstation Security (R):** Endpoint protection, disk encryption, screen lock ≤ **10 minutes** idle.
+* **Device & Media Controls (R/A):** Secure disposal; media reuse with crypto‑erase; asset inventory; chain of custody; backup/restore procedures.
+
+## A6. Technical Safeguards (§164.312)
+
+* **Access Control:** Unique user IDs; **MFA** for privileged and remote access; emergency access procedure; automatic logoff (≤ **15 minutes** idle).
+* **Encryption:** ePHI **at rest** (AES‑256 or equivalent) and **in transit** (TLS 1.2+; TLS 1.3 preferred). Key management documented.
+* **Audit Controls:** Centralized logging; immutable storage for critical logs; SIEM correlation; time sync (NTP).
+* **Integrity:** Hashing/signing where applicable; change detection; anti‑tamper.
+* **Person/Entity Authentication:** Enterprise identity; SSO preferred; password policy consistent with NIST SP 800‑63; MFA mandated.
+* **Transmission Security:** Encrypted channels, certificate management, secure APIs.
+
+## A7. Organizational Requirements (§164.314)
+
+* **BA Contracts:** Required clauses: permitted uses/disclosures; safeguards; breach reporting; subcontractor flow-down; return/destroy PHI; termination for cause.
+
+## A8. Policies, Procedures & Documentation (§164.316)
+
+* Maintain written P&P; train on updates; document evaluations; **retain 6 years** from creation/last effective date.
+
+## A9. HIPAA Privacy & Breach Notification (Highlights)
+
+* **Minimum Necessary:** Enforced through RBAC and procedures.
+* **Uses/Disclosures:** As authorized by law/consent/BAA; marketing/research require additional controls.
+* **Individual Rights:** Access, amendment, accounting of disclosures (document SLAs).
+* **Notice of Privacy Practices (if applicable):** Published and kept current.
+* **Breach Notification:** Without unreasonable delay, **no later than 60 days** to affected individuals; notify HHS and media where required. Internal escalation **within 24 hours** of discovery. Maintain risk assessment and decision record.
+
+## A10. HIPAA Program Procedures (How-To)
+
+1. **Risk Analysis Workflow:** inventory → data flows → threat modeling → likelihood/impact → risk register → treatment plan.
+2. **Access Provisioning:** request → manager & data owner approval → least privilege → SSO/MFA enforced → logging.
+3. **Quarterly Access Reviews:** extract entitlements → owner attestation → remediation tickets → closure evidence.
+4. **Encryption Standard:** storage classes mapped to controls; KMS/HSM; key rotation schedule; secrets management.
+5. **Logging & Monitoring:** define events; retention ≥ **1 year online**; alerting playbooks.
+6. **Incident Response:** detect → contain → eradicate → recover → lessons learned; tabletop **biannually**.
+7. **Backup/DR:** nightly backups; offsite copies; quarterly restore tests; annual DR test.
+
+## A11. HIPAA Metrics, KPIs & Evidence
+
+* **KPIs:** access review completion %, median time-to-revoke (hrs), vuln remediation SLA compliance %, backup restore success rate, incident MTTR, training completion %.
+* **Evidence:** risk assessments, BAA inventory, access review exports, SIEM dashboards, IR tickets, backup test logs, DR reports, training rosters.
+
+## A12. HIPAA Control Mapping (Quick Index)
+
+* **§164.308(a)(1)** Risk Analysis/Management → [A4‑1].
+* **§164.308(a)(5)** Security Awareness/Training → [A4‑5].
+* **§164.308(a)(7)** Contingency Plan → [A4‑7].
+* **§164.310** Physical Safeguards → [A5].
+* **§164.312** Technical Safeguards → [A6].
+* **§164.314** BA Agreements → [A7].
+* **§164.316** Documentation → [A8].
+
+---
+
+# Part B — SOC 2 Trust Services Criteria Policy
+
+## B1. Purpose & Scope
+
+Establish controls to meet SOC 2 **Trust Services Criteria (TSC)** for **Security (Common Criteria)**, with optional categories **Availability, Confidentiality, Processing Integrity, Privacy** as in scope for `<CompanyName>`.
+
+## B2. Trust Services Criteria Coverage
+
+* **Control Environment (CC1):** ethics, governance, structure, authority/responsibility.
+* **Communication & Information (CC2):** internal/external communication supports control operation.
+* **Risk Assessment (CC3):** objectives, identification & analysis of risks (including fraud).
+* **Control Activities (CC4):** policies/procedures, technology controls, change mgmt.
+* **Monitoring (CC5):** ongoing/separate evaluations, remediation.
+* **Logical & Physical Access (CC6):** provisioning, authN/Z, MFA, network security, endpoint.
+* **System Operations (CC7):** vuln mgmt, malware protection, logging/monitoring, incident response.
+* **Change Management (CC8):** secure SDLC, approvals, testing, separation of duties.
+* **Vendor/Third Parties (CC9):** selection, onboarding, monitoring, offboarding.
+
+## B3. Core Controls
+
+**1) Governance & Policy Management.** Code of Conduct; info security policy suite; annual reviews; leadership sign-off.
+**2) Risk Management.** Enterprise and product risks tracked; threat intel; risk appetite; treatment SLAs.
+**3) Asset & Data Classification.** Inventories; data classes; handling rules; labels.
+**4) Access Control.** RBAC; JIT/JEA where possible; SSO; **MFA**; quarterly access reviews; privileged access monitoring.
+**5) Network Security.** Segmentation; least-route; firewall rules reviewed **semiannually**; secure remote access (VPN/ZTNA).
+**6) Endpoint Security.** EDR/AV; full-disk encryption; secure baseline; patch SLAs (critical ≤ **7 days**).
+**7) Logging & Monitoring.** Centralize logs; detect anomalies; alerting runbooks; retention ≥ **1 year** online (longer if required).
+**8) Vulnerability & Patch Management.** Continuous scanning; risk‑based remediation; exceptions with expiry.
+**9) Secure SDLC.** Design reviews; threat modeling; SAST/DAST/dep scanning; code review; secrets scanning; release approvals; changelogs.
+**10) Change Management.** CAB or change approvals for high‑risk; emergency change post‑review; separation of duties.
+**11) Cryptography.** TLS 1.2+; TLS 1.3 preferred; strong ciphers; key management lifecycle; HSM/KMS.
+**12) Business Continuity & DR (Availability).** RTO/RPO documented; tested **annually**; backup strategy with quarterly restores.
+**13) Confidentiality.** Encryption at rest/in transit; key mgmt; DLP; secure disposal; NDA for confidential data access.
+**14) Processing Integrity.** Input validation; reconciliation; QA gates; error handling/playbacks; rollback procedures.
+**15) Privacy (if in scope).** Notice, choice/consent, purpose limitation, data subject rights, retention/deletion standards.
+**16) Third‑Party Risk.** Security questionnaires, SOC reports review, **BAA/DPA** as applicable; continuous monitoring; termination data return/delete.
+
+## B4. Evidence, Monitoring & KPIs
+
+* **Evidence Library:** policies, org chart, risk register, asset inventories, access reviews, SIEM dashboards, IR tickets, change logs, pipeline results, vendor reviews, DR reports, backup logs, training records.
+* **KPIs:** vuln SLA adherence %, patch latency, access review completion %, incident MTTR, failed login trends, DR test success rate, vendor review completion %.
+* **Internal Audit / QA:** planned audits each quarter; issues tracked to closure with owners and due dates.
+
+## B5. SOC 2 Mapping (Quick Index)
+
+* **CC1.0–CC1.5** → Governance, ethics, roles ([B3‑1]).
+* **CC2.0** → Communication & awareness ([5. Training](#5-training--awareness)).
+* **CC3.x** → Risk management ([B3‑2]).
+* **CC4.x** → Control activities & SDLC ([B3‑9], [B3‑10]).
+* **CC5.x** → Monitoring & remediation ([B4]).
+* **CC6.x** → Access/network/endpoint ([B3‑4]–[B3‑6]).
+* **CC7.x** → Ops, vuln mgmt, logging, IR ([B3‑7], [B3‑8]).
+* **CC8.x** → Change management ([B3‑10]).
+* **CC9.x** → Vendor risk ([B3‑16]).
+
+---
+
+## 4. Exception & Risk Acceptance Process
+
+* **Request:** Submit exception with control, justification, risk assessment, compensating controls, expiry date.
+* **Approvals:** Data Owner + CISO/PO (as applicable).
+* **Limits:** High‑risk exceptions require executive approval; maximum initial term **90 days**, renewals require updated risk analysis.
+* **Tracking:** Central register; reminders before expiry; evidence of compensating controls.
+
+## 5. Training & Awareness
+
+* **Required:** Security & privacy training at onboarding and **annually**; HIPAA‑specific training for ePHI handlers; role‑based training for admins/developers.
+* **Awareness:** Phishing simulations; quarterly security newsletters; targeted advisories.
+
+## 6. Enforcement
+
+Violations of this policy may result in corrective action up to termination and legal remedies where applicable. Report suspected violations to the SO/PO immediately.
+
+## 7. Appendices
+
+**Appendix A — RACI Samples**
+
+* **Access Provisioning:** Requester (R), Manager (A/R), Data Owner (A), IT/IdP (R), Compliance (C), Security (C).
+* **Incident Response:** SOC (R), CISO (A), PO (A for breaches), IT/Eng (R), Legal (C), Comms (C).
+* **DR Test:** IT/Infra (R), CISO (A), System Owners (R), Product (C), Compliance (C).
+
+**Appendix B — Configurable Defaults (edit to fit)**
+
+* Screen lock: **≤ 10 minutes**; Session timeout: **≤ 15 minutes**.
+* Access revocation upon termination: **≤ 24 hours**.
+* Critical patch remediation: **≤ 7 days**; High: **≤ 14 days**.
+* Log retention online: **≥ 1 year** (longer if required).
+* Access reviews: **Quarterly** (high‑risk), **Semiannual** (moderate), **Annual** (low).
+* DR testing: **Annual** full test; **Quarterly** restore drills.
+* Internal incident escalation: **≤ 24 hours**; External HIPAA breach notices: **≤ 60 days** per law.
+* Encryption: At rest **AES‑256**; in transit **TLS 1.2+** (TLS 1.3 preferred).
+* Passwords: SSO/MFA preferred; follow NIST 800‑63 (no periodic forced rotation; length/blacklist checks).
+
+**Appendix C — Evidence Starter List**
+Risk analyses; BAA list; training logs; SIEM export; access review evidence; IR tickets; backup/DR reports; encryption/KMS configs; vendor risk files; change approvals; SAST/DAST pipelines; data classification registry; privacy notices and request logs.

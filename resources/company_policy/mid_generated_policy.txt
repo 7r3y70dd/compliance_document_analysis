@@ -1,0 +1,83 @@
+Document Title: Company Information Security & Privacy Policy (Mid-Coverage Draft)
+Effective Date: <YYYY-MM-DD>   Version: 0.9
+
+1. Purpose
+   1.1 This policy sets minimum safeguards to protect Company Data, including any electronic health information handled by <CompanyName>.
+   1.2 The objectives are to prevent unauthorized access, ensure service continuity, and promote responsible handling of sensitive information.
+
+2. Scope
+   2.1 Applies to all employees, contractors, and vendors who access Company systems.
+   2.2 Sections marked “ePHI” apply where electronic protected health information is processed.
+
+3. Governance & Roles
+   3.1 The Chief Information Security Officer (CISO) owns this policy and leads the security program.
+   3.2 The Privacy Officer oversees privacy practices and breach communications.
+   3.3 System Owners approve access to their systems and complete user access reviews.
+   3.4 All personnel complete training and report suspected incidents without delay.
+
+4. Risk Management (Administrative)
+   4.1 An enterprise risk analysis is performed at least annually and after major changes. Results are tracked in a risk register with owners and due dates.
+   4.2 Risks rated Critical or High are remediated on a defined timetable. Risk acceptance requires written business justification and CISO approval.
+   4.3 Sanctions: policy violations may lead to corrective action up to termination.
+
+5. Access Control (Technical & Administrative)
+   5.1 Access is granted based on job duties and approved by the relevant manager and System Owner (least-privilege).
+   5.2 Multi-factor authentication (MFA) is mandatory for administrators and remote access. (MFA for all users is recommended.)
+   5.3 Sessions must lock after 20 minutes of inactivity and require re-authentication to resume.
+   5.4 User access reviews are performed twice per year on high-risk systems and at least annually on others; remediation is documented.
+
+6. Workforce Security & Training (Administrative)
+   6.1 New hires complete security and privacy onboarding before system access is enabled; all personnel complete refresher training annually.
+   6.2 Departing personnel have access revoked within 24 hours of separation. Company assets and credentials are returned or disabled.
+
+7. Encryption & Key Management (Technical)
+   7.1 All production databases and file stores containing sensitive data are encrypted at rest using strong, industry-accepted algorithms.
+   7.2 Data in transit should use secure protocols (TLS 1.2+). Exceptions require documented risk review and compensating controls.
+   7.3 Keys are generated, stored, and rotated according to internal key management procedures.
+
+8. Logging & Monitoring (Technical)
+   8.1 Security-relevant events (authentication results, privilege changes, configuration changes, and incident indicators) are logged centrally where feasible.
+   8.2 Logs are retained for no less than 180 days, with restricted access and tamper-resistant storage for critical systems.
+   8.3 The security team reviews alerts and trends and escalates potential incidents for investigation.
+
+9. Incident Response (Administrative & Technical)
+   9.1 Suspected security incidents are reported to Security and the Privacy Officer within 48 hours of discovery.
+   9.2 The incident team performs triage, containment, eradication, and recovery, and documents lessons learned.
+   9.3 Where ePHI is involved, the Privacy Officer coordinates regulatory notifications consistent with applicable law.
+
+10. Contingency Planning & Backups (Administrative & Technical)
+   10.1 Production data is backed up regularly and encrypted in storage and transit to the backup repository.
+   10.2 Restore procedures are tested at least twice per year; results and defects are tracked to closure.
+   10.3 Disaster recovery objectives (RTO/RPO) are defined for critical services and validated through an annual exercise.
+
+11. Physical Safeguards
+   11.1 Facilities housing production systems use badge-controlled access and visitor sign-in procedures.
+   11.2 Workstations used to access sensitive data employ full-disk encryption and automatic screen locking.
+
+12. Vendor & Third-Party Management (Organizational)
+   12.1 Vendors with access to sensitive data undergo due diligence and must meet Company security expectations.
+   12.2 Business Associate Agreements are executed before any vendor handles ePHI; subcontractors must meet equivalent obligations.
+
+13. Data Classification & Handling
+   13.1 Data is categorized (e.g., Public, Internal, Confidential, Restricted/ePHI). Handling rules specify storage, sharing, and disposal requirements.
+   13.2 Personnel must access only the minimum data necessary to perform assigned duties.
+
+14. Secure Development & Change Management
+   14.1 Changes to production services require peer review and approval appropriate to the risk of the change.
+   14.2 Code changes are scanned for known weaknesses; high-risk issues are remediated before release or tracked with an approved exception.
+   14.3 Secrets are stored in managed vaults; direct embedding of secrets in source code is prohibited.
+
+15. Vulnerability & Patch Management
+   15.1 Systems are scanned regularly; findings are triaged and tracked to closure.
+   15.2 Critical vulnerabilities are remediated within 14 days, and High within 30 days unless an approved exception exists.
+
+16. Documentation & Retention
+   16.1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date.
+   16.2 This policy is reviewed at least annually and upon material changes.
+
+17. Privacy Program (Overview)
+   17.1 Notices describe how personal information is collected, used, and shared; requests to access or delete personal information are honored as required by applicable law.
+   17.2 Data is retained only as long as needed for business and legal purposes, after which it is securely disposed of.
+
+18. Enforcement
+   18.1 Non-compliance may result in disciplinary action up to and including termination and legal remedies where applicable.
