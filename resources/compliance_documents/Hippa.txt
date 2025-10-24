@@ -1,0 +1,26 @@
+Document Title: HIPAA Privacy and Security Compliance Policy
+Effective Date: January 1, 2025
+Version: 1.0
+
+1. Purpose
+This policy ensures the confidentiality, integrity, and availability of Protected Health Information (PHI) in accordance with the Health Insurance Portability and Accountability Act (HIPAA) of 1996.
+
+2. Scope
+Applies to all employees, contractors, and vendors who create, access, or transmit PHI.
+
+3. Policy
+
+Access Controls: PHI is accessible only to authorized personnel.
+
+Data Encryption: PHI must be encrypted during storage and transmission.
+
+Training: Employees must complete annual HIPAA training.
+
+Incident Reporting: Any breach of PHI must be reported within 24 hours.
+
+Auditing: Regular audits will verify HIPAA compliance.
+
+Business Associate Agreements (BAAs): Required for third-party partners handling PHI.
+
+4. Enforcement
+Violations of this policy may result in disciplinary action, including termination.

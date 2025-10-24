@@ -1,0 +1,26 @@
+Document Title: SOC 2 Trust Services Compliance Policy
+Effective Date: January 1, 2025
+Version: 1.0
+
+1. Purpose
+To ensure compliance with the SOC 2 framework for Security, Availability, Confidentiality, Processing Integrity, and Privacy.
+
+2. Scope
+Covers all systems and personnel that store, process, or manage customer data.
+
+3. Policy
+
+Security: Access requires multi-factor authentication.
+
+Availability: Systems must maintain ≥99.9% uptime.
+
+Confidentiality: Data is encrypted at rest and in transit.
+
+Change Management: All changes to infrastructure must be logged and reviewed.
+
+Monitoring: Continuous monitoring for unauthorized access or unusual activity.
+
+Vendor Risk Management: Third parties must undergo SOC 2 due diligence.
+
+4. Review and Audit
+This policy is reviewed annually or following significant system changes.

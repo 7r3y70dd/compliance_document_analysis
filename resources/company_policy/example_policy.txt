@@ -1,0 +1,28 @@
+Document Title: Health Data Security and Privacy Policy
+Effective Date: February 1, 2025
+Version: 2.1
+
+1. Purpose
+This policy defines how the company protects health-related data and ensures compliance with federal and industry regulations.
+
+2. Scope
+Applies to all employees, contractors, vendors, and systems that store or process health-related data.
+
+3. Data Protection Measures
+
+All electronic records must be stored on encrypted servers.
+
+Transmission of sensitive data must use secure communication channels (TLS 1.2+).
+
+Access to sensitive data requires unique user credentials and MFA.
+
+Activity logs must be maintained for all data access attempts.
+
+Incident reports must be filed within 48 hours of discovery.
+
+Annual security training is mandatory for all staff.
+
+Business partners must sign a data handling agreement before accessing systems.
+
+4. Review and Maintenance
+This policy will be reviewed annually or when regulatory changes occur.
