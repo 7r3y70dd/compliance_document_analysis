@@ -1,74 +1,104 @@
-# llm_judge.py  (NEW FILE)
+# llm_judge.py
 import json
 import re
 from typing import Dict, List, Optional
 
 from transformers import pipeline
 
-_JSON_RE = re.compile(r'\{.*\}', re.DOTALL)
+# Strict: find a JSON object that actually has "label": "<one of 4>"
+_JSON_OBJ_RE = re.compile(
+    r'\{[^{}]*"label"\s*:\s*"(?:satisfied|partially_satisfied|non_existent|garbage)"[^{}]*\}',
+    re.IGNORECASE | re.DOTALL,
+)
 
-INSTRUCTIONS = """You are a strict compliance analyst. Given a requirement from a regulation and the closest matching company policy text, decide how well the policy satisfies the requirement.
+INSTRUCTIONS = """
+You are a strict compliance analyst. Decide how well the BEST POLICY MATCH satisfies the REQUIREMENT.
 
-Return ONLY a compact JSON object with:
-- "label": one of ["satisfied","partially_satisfied","non_existent","garbage"]
-- "rationale": a single, specific sentence why.
+Reply with ONLY a single-line JSON object:
+{"label":"<satisfied|partially_satisfied|non_existent|garbage>","rationale":"<one short, specific sentence>"}
 
 Rules:
-- "garbage": the policy text is unrelated (generic overlap like 'policy' or 'data' without substance).
-- "satisfied": the policy clearly fulfills the requirement.
-- "partially_satisfied": policy addresses the idea but is weaker, missing a key element, or has looser scope/threshold (e.g., 48h vs 24h).
-- "non_existent": the policy text doesn't cover the requirement.
-
-Be conservative and use the requirement exactly as written. Keep the rationale short.
+- "garbage": the policy text is unrelated or just noise (generic words without substance).
+- "satisfied": clearly fulfills the requirement.
+- "partially_satisfied": addresses the idea but is weaker, missing a key element, or has looser scope/threshold.
+- "non_existent": does not cover the requirement.
+Do not include any extra text, code fences, or explanations.
 """
 
 PROMPT_TEMPLATE = """{instructions}
 
-Requirement:
+REQUIREMENT:
 {requirement}
 
-Best policy match:
+BEST POLICY MATCH:
 {best}
 
-Top alternative snippets:
+TOP ALTERNATIVES:
 {alts}
+
+JSON:
 """
 
 def _extract_json(text: str) -> Optional[str]:
-    m = _JSON_RE.search(text)
-    return m.group(0) if m else None
+    matches = list(_JSON_OBJ_RE.finditer(text))
+    if not matches:
+        return None
+    # take the LAST json-looking object to avoid the model echoing earlier examples
+    return matches[-1].group(0)
+
+def _normalize_label(x: str) -> str:
+    x = x.strip().lower()
+    if x in {"satisfied", "partially_satisfied", "non_existent", "garbage"}:
+        return x
+    # normalize variants
+    if x.replace("-", "_") == "non_existent" or x.replace(" ", "_") == "non_existent":
+        return "non_existent"
+    return "non_existent"
 
 class LLMJudge:
     def __init__(self, model_name: str = "google/flan-t5-base", device: int = -1, hf_token: Optional[str] = None, max_new_tokens: int = 192):
-        # text2text works well with FLAN-T5 and is CPU-friendly
         self.pipe = pipeline(
             task="text2text-generation",
             model=model_name,
             device=device,
-            use_auth_token=hf_token if hf_token else None
+            use_auth_token=hf_token if hf_token else None,
         )
         self.max_new_tokens = max_new_tokens
 
     def assess(self, requirement: str, best_policy: str, alt_snippets: Optional[List[str]] = None) -> Dict[str, str]:
         alts_txt = ""
         if alt_snippets:
-            # limit to two short alts
             for s in alt_snippets[:2]:
                 alts_txt += f"- {s}\n"
 
         prompt = PROMPT_TEMPLATE.format(
             instructions=INSTRUCTIONS.strip(),
             requirement=requirement.strip(),
-            best=best_policy.strip() if best_policy else "(none)",
-            alts=alts_txt.strip() or "(none)"
+            best=(best_policy or "(none)").strip(),
+            alts=(alts_txt.strip() or "(none)"),
         )
 
-        out = self.pipe(prompt, max_new_tokens=self.max_new_tokens)[0]["generated_text"].strip()
+        out = self.pipe(
+            prompt,
+            max_new_tokens=self.max_new_tokens,
+            do_sample=False,   # deterministic
+            num_beams=1,
+            return_full_text=False,
+        )[0]["generated_text"].strip()
+
         js = _extract_json(out)
         if js:
             try:
-                return json.loads(js)
+                obj = json.loads(js)
+                label = _normalize_label(obj.get("label", "non_existent"))
+                rationale = obj.get("rationale", "").strip()
+                return {"label": label, "rationale": rationale, "_parsed": True}
             except Exception:
                 pass
-        # Fallback if model didn't return clean JSON
-        return {"label": "non_existent", "rationale": "Could not parse LLM output; defaulting to non_existent."}
+
+        # final fallback: DO NOT GUESS a label, just report unparsed
+        return {
+            "label": "non_existent",
+            "rationale": "LLM output was not valid JSON; ignoring.",
+            "_parsed": False,
+        }

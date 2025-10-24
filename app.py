@@ -116,26 +116,24 @@ def analyze(req: AnalyzeRequest):
         # This can upgrade to satisfied/partial or mark as 'garbage' if unrelated.
         if llm is not None and label in {"partially_satisfied", "non_existent"}:
             try:
-                alt_texts = [policy_clauses[j] for j, _ in alts[1:3]]  # pass a couple of alternatives
+                alt_texts = [policy_clauses[j] for j, _ in alts[1:3]]
                 res = llm.assess(
                     requirement=compliance_clauses[i],
                     best_policy=best_text,
                     alt_snippets=alt_texts,
                 )
-                # Guard: if someone's old llm_judge.py accidentally returns a tuple
-                if isinstance(res, tuple):
-                    res = res[0]
-                llm_label = (res.get("label") or "").strip().lower()
-                llm_rationale = res.get("rationale")
-
-                # Accept only supported labels
-                if llm_label in {"satisfied", "partially_satisfied", "non_existent", "garbage"}:
-                    label = llm_label
-                # Add/append rationale
-                if llm_rationale:
-                    rationale = (rationale + " | " if rationale else "") + f"LLM: {llm_rationale}"
+                # Only trust the LLM if it produced valid JSON
+                if res.get("_parsed"):
+                    llm_label = (res.get("label") or "").strip().lower()
+                    if llm_label in {"satisfied", "partially_satisfied", "non_existent", "garbage"}:
+                        label = llm_label
+                    if res.get("rationale"):
+                        rationale = (rationale + " | " if rationale else "") + f"LLM: {res['rationale']}"
+                else:
+                    # keep existing label; optional: attach note if user asked for rationale
+                    if req.use_rationale and res.get("rationale"):
+                        rationale = (rationale + " | " if rationale else "") + f"LLM: {res['rationale']}"
             except Exception:
-                # Keep going if LLM judge fails
                 pass
 
         # Optional heuristic: ultra-low similarity means likely garbage
