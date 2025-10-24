@@ -150,6 +150,99 @@ export NLI_ANNOTATE_ONLY=0
 export USE_LLM_JUDGE=1
 export LLM_MODEL_NAME=google/flan-t5-base
 export LLM_DEVICE=-1 
+
+
+
+
+//Balanced defaults
+
+# Embeddings / retrieval
+export SATISFIED_T=0.78
+export PARTIAL_T=0.60
+export USE_CROSS_ENCODER=1
+export CROSS_ENCODER_MODEL="cross-encoder/ms-marco-MiniLM-L-6-v2"
+export CROSS_ENCODER_TOP_K=5
+
+# Semantic normalizer
+export USE_SEMANTIC_NORMALIZER=1
+export SEMANTIC_THRESHOLD=0.68   # raise to be stricter (e.g., 0.72)
+
+# Numeric checks
+export USE_NUMERIC_CHECK=1
+
+# NLI judge (allows upgrades/downgrades)
+export USE_NLI_JUDGE=1
+export NLI_MODEL="distilroberta-base-mnli"
+export NLI_SAT_FLOOR=0.70
+export NLI_PARTIAL_FLOOR=0.45
+export NLI_ANNOTATE_ONLY=0       # 0 = can change labels; 1 = annotate only
+
+# LLM refine (optional second opinion on partial/non-existent)
+export USE_LLM_REFINE=true
+export LLM_MODEL_NAME="google/flan-t5-base"
+export LLM_DEVICE=-1             # -1=CPU, or 0 for GPU
+export LLM_MAX_NEW_TOKENS=192
+
+
+//strict defaults
+export SATISFIED_T=0.82
+export PARTIAL_T=0.65
+export USE_CROSS_ENCODER=1
+export CROSS_ENCODER_TOP_K=8
+
+export USE_SEMANTIC_NORMALIZER=1
+export SEMANTIC_THRESHOLD=0.72
+
+export USE_NUMERIC_CHECK=1
+
+export USE_NLI_JUDGE=1
+export NLI_SAT_FLOOR=0.80
+export NLI_PARTIAL_FLOOR=0.55
+export NLI_ANNOTATE_ONLY=0
+
+export USE_LLM_REFINE=true
+
+
+//lenient defaults
+export SATISFIED_T=0.74
+export PARTIAL_T=0.55
+export USE_CROSS_ENCODER=0
+
+export USE_SEMANTIC_NORMALIZER=1
+export SEMANTIC_THRESHOLD=0.62
+
+export USE_NUMERIC_CHECK=1
+
+export USE_NLI_JUDGE=1
+export NLI_SAT_FLOOR=0.60
+export NLI_PARTIAL_FLOOR=0.40
+export NLI_ANNOTATE_ONLY=0
+
+export USE_LLM_REFINE=true
+
+
+// best env so far
+
+CROSS_ENCODER_MODEL=BAAI/bge-reranker-large
+CROSS_ENCODER_TOP_K=5
+EMBEDDING_MODEL=intfloat/e5-base-v2
+LLM_DEVICE=-1
+LLM_MAX_NEW_TOKENS=192
+LLM_MODEL_NAME=google/flan-t5-base
+NLI_ANNOTATE_ONLY=0
+NLI_MODEL=roberta-large-mnli
+NLI_PARTIAL_FLOOR=0.45
+NLI_SAT_FLOOR=0.70
+PARTIAL_T=0.60
+SATISFIED_T=0.78
+SEMANTIC_THRESHOLD=0.68
+USE_CROSS_ENCODER=1
+USE_E5_PREFIXES=1
+USE_LLM_JUDGE=1
+USE_LLM_REFINE=true
+USE_NLI_JUDGE=1
+USE_NUMERIC_CHECK=1
+USE_SEMANTIC_NORMALIZER=1
 ```
 
 ---

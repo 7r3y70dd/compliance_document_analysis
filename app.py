@@ -7,12 +7,16 @@ from clause_extractor import extract_clauses
 from matcher import ClauseMatcher
 from settings import settings
 from comparator import numeric_downgrade
+from fastapi.staticfiles import StaticFiles
+from starlette.responses import RedirectResponse
 # NEW: NLI judge
 from nli_judge import NLIJudge, stricter  # requires nli_judge.py
 # NEW: LLM judge (classifies non_existent/partial as garbage/partial/satisfied + rationale)
 from llm_judge import LLMJudge  # requires llm_judge.py
 
 app = FastAPI(title="Policy Compliance Analyzer", version="1.4.0")
+
+app.mount("/ui", StaticFiles(directory="static", html=True), name="ui")
 
 # CORS for local dev; tighten in prod
 app.add_middleware(
@@ -173,3 +177,7 @@ async def analyze_multipart(
         use_rationale=use_rationale,
     )
     return analyze(req)
+
+@app.get("/")
+def root():
+    return RedirectResponse(url="/ui")

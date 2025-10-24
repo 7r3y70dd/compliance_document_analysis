@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Compliance Match Viewer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    :root { --bg:#0f172a; --panel:#111827; --muted:#94a3b8; --fg:#e5e7eb; --pill:#1f2937; --ok:#22c55e; --warn:#f59e0b; --miss:#ef4444; --garb:#64748b; }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial}
+    header{padding:20px 24px;border-bottom:1px solid #1f2937;display:flex;gap:12px;align-items:center}
+    header h1{margin:0;font-size:18px}
+    .container{display:grid;grid-template-columns:320px 1fr;gap:16px;padding:16px}
+    .card{background:var(--panel);border:1px solid #1f2937;border-radius:12px}
+    .card h2{margin:0 0 8px 0;font-size:14px;color:#cbd5e1}
+    .card .body{padding:14px}
+    .muted{color:var(--muted)}
+    textarea{width:100%;min-height:180px;background:#0b1220;color:var(--fg);border:1px solid #243040;border-radius:8px;padding:10px;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
+    .controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:8px}
+    button{background:#2563eb;color:white;border:0;border-radius:8px;padding:8px 12px;cursor:pointer}
+    button:disabled{opacity:.6;cursor:not-allowed}
+    input[type=file]{color:var(--muted)}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
+    .stat{background:#0b1220;border:1px solid #243040;border-radius:10px;padding:10px;text-align:center}
+    .kpi{font-weight:700;font-size:18px}
+    .pill{display:inline-block;background:var(--pill);padding:2px 8px;border-radius:999px;font-size:12px;color:#cbd5e1}
+    .row{padding:12px;border-top:1px solid #1f2937}
+    .row:first-child{border-top:0}
+    .row h4{margin:0 0 6px 0;font-size:14px}
+    .row .small{font-size:12px;color:#a3a3a3}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .badge-ok{color:var(--ok)}
+    .badge-warn{color:var(--warn)}
+    .badge-miss{color:var(--miss)}
+    .badge-garb{color:var(--garb)}
+    details{background:#0b1220;border:1px solid #243040;border-radius:8px;padding:8px;margin-top:6px}
+    details summary{cursor:pointer;color:#cbd5e1}
+    .legend{display:flex;gap:10px;align-items:center;margin-top:6px}
+    .dot{width:10px;height:10px;border-radius:999px;display:inline-block}
+    .dot.ok{background:var(--ok)} .dot.warn{background:var(--warn)} .dot.miss{background:var(--miss)} .dot.garb{background:var(--garb)}
+    .error{color:#fca5a5;margin-top:8px}
+    @media (max-width: 1000px){ .container{grid-template-columns:1fr} .grid{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Compliance Match Viewer</h1>
+    <span class="muted">Paste your JSON result to visualize status, best matches, and rationales.</span>
+  </header>
+
+  <div class="container">
+    <!-- LEFT: Input -->
+    <div class="card">
+      <div class="body">
+        <h2>Results JSON</h2>
+        <textarea id="jsonInput" placeholder='Paste the AnalyzeResponse JSON here'></textarea>
+        <div class="controls">
+          <input id="fileInput" type="file" accept=".json" />
+          <button id="renderBtn">Render</button>
+          <button id="clearBtn" class="muted" style="background:#374151">Clear</button>
+        </div>
+        <div id="error" class="error" style="display:none"></div>
+
+        <div class="stats" id="stats" style="display:none">
+          <div class="stat"><div class="kpi" id="kpi-ok">0</div><div class="muted">Satisfied</div></div>
+          <div class="stat"><div class="kpi" id="kpi-warn">0</div><div class="muted">Partial</div></div>
+          <div class="stat"><div class="kpi" id="kpi-miss">0</div><div class="muted">Non-existent</div></div>
+          <div class="stat"><div class="kpi" id="kpi-garb">0</div><div class="muted">Garbage</div></div>
+        </div>
+
+        <div style="margin-top:12px">
+          <canvas id="summaryChart" height="140"></canvas>
+          <div class="legend">
+            <span><span class="dot ok"></span> Satisfied</span>
+            <span><span class="dot warn"></span> Partial</span>
+            <span><span class="dot miss"></span> Non-existent</span>
+            <span><span class="dot garb"></span> Garbage</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Lists -->
+    <div class="card">
+      <div class="body">
+        <h2>Clauses by Category</h2>
+        <div class="grid">
+          <div>
+            <div class="pill"><span class="badge-ok">●</span> Satisfied</div>
+            <div id="list-satisfied"></div>
+          </div>
+          <div>
+            <div class="pill"><span class="badge-warn">●</span> Partially Satisfied</div>
+            <div id="list-partially_satisfied"></div>
+          </div>
+          <div>
+            <div class="pill"><span class="badge-miss">●</span> Non-existent</div>
+            <div id="list-non_existent"></div>
+          </div>
+          <div>
+            <div class="pill"><span class="badge-garb">●</span> Garbage</div>
+            <div id="list-garbage"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+let chart;
+
+function showError(msg){
+  const el = document.getElementById('error');
+  el.style.display = 'block';
+  el.textContent = msg;
+}
+
+function clearError(){
+  const el = document.getElementById('error');
+  el.style.display = 'none';
+  el.textContent = '';
+}
+
+function computeCounts(clauses){
+  const c = { satisfied:0, partially_satisfied:0, non_existent:0, garbage:0 };
+  (clauses||[]).forEach(x => {
+    const key = (x.label||'').toLowerCase();
+    if (c[key] !== undefined) c[key] += 1;
+  });
+  return c;
+}
+
+function renderChart(counts){
+  const ctx = document.getElementById('summaryChart').getContext('2d');
+  const data = [
+    counts.satisfied||0,
+    counts.partially_satisfied||0,
+    counts.non_existent||0,
+    counts.garbage||0
+  ];
+  if (chart) chart.destroy();
+  chart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Satisfied','Partial','Non-existent','Garbage'],
+      datasets: [{
+        label: 'Clauses',
+        data
+        // (No custom colors per your constraints; Chart.js will pick defaults)
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display:false } },
+      scales: { y: { beginAtZero: true, ticks: { precision:0 } } }
+    }
+  });
+
+  // KPIs
+  document.getElementById('stats').style.display = 'grid';
+  document.getElementById('kpi-ok').textContent = data[0];
+  document.getElementById('kpi-warn').textContent = data[1];
+  document.getElementById('kpi-miss').textContent = data[2];
+  document.getElementById('kpi-garb').textContent = data[3];
+}
+
+function div(id){ return document.getElementById(id); }
+
+function safeSim(v){
+  return (typeof v === 'number' && isFinite(v)) ? v.toFixed(3) : '—';
+}
+
+function makeRow(item){
+  const best = item.best_match || {};
+  const sim = safeSim(best.similarity);
+  const policy = best.policy_text ? best.policy_text : '(no best match)';
+  const rat = item.rationale || '(no rationale)';
+  const el = document.createElement('div');
+  el.className = 'row';
+  el.innerHTML = `
+    <h4>${item.id} — ${escapeHtml(item.text||'')}</h4>
+    <div class="small"><strong>Best match similarity:</strong> ${sim}</div>
+    <details>
+      <summary>Best match snippet</summary>
+      <div style="margin-top:6px">${escapeHtml(policy)}</div>
+    </details>
+    <details>
+      <summary>Rationale</summary>
+      <div style="margin-top:6px">${escapeHtml(rat)}</div>
+    </details>
+  `;
+  return el;
+}
+
+function renderLists(clauses){
+  const buckets = {
+    satisfied: div('list-satisfied'),
+    partially_satisfied: div('list-partially_satisfied'),
+    non_existent: div('list-non_existent'),
+    garbage: div('list-garbage')
+  };
+  Object.values(buckets).forEach(b => b.innerHTML = '');
+
+  (clauses||[]).forEach(c => {
+    const key = (c.label||'').toLowerCase();
+    if (buckets[key]) buckets[key].appendChild(makeRow(c));
+  });
+}
+
+function normalize(data){
+  if (!data) throw new Error('Empty data');
+  if (!Array.isArray(data.clauses)) throw new Error('Missing "clauses" array');
+  // Prefer computed counts (safer if upstream totals drift)
+  const counts = computeCounts(data.clauses);
+  return { counts, clauses: data.clauses };
+}
+
+function render(data){
+  const n = normalize(data);
+  renderChart(n.counts);
+  renderLists(n.clauses);
+}
+
+function escapeHtml(s){
+  return String(s)
+    .replace(/&/g,'&amp;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;');
+}
+
+document.getElementById('fileInput').addEventListener('change', async (e) => {
+  clearError();
+  const f = e.target.files?.[0];
+  if (!f) return;
+  try {
+    const text = await f.text();
+    document.getElementById('jsonInput').value = text;
+  } catch (err) {
+    showError('Failed to read file: ' + err.message);
+  }
+});
+
+document.getElementById('renderBtn').addEventListener('click', () => {
+  clearError();
+  try {
+    const txt = document.getElementById('jsonInput').value.trim();
+    if (!txt) throw new Error('Paste JSON first or choose a file.');
+    const data = JSON.parse(txt);
+    render(data);
+  } catch (err) {
+    showError('Invalid JSON: ' + err.message);
+  }
+});
+
+document.getElementById('clearBtn').addEventListener('click', () => {
+  clearError();
+  document.getElementById('jsonInput').value = '';
+  document.getElementById('stats').style.display = 'none';
+  if (chart) { chart.destroy(); chart = null; }
+  ['list-satisfied','list-partially_satisfied','list-non_existent','list-garbage'].forEach(id => div(id).innerHTML = '');
+});
+</script>
+</body>
+</html>

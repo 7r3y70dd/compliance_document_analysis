@@ -12,18 +12,21 @@ _JSON_OBJ_RE = re.compile(
 )
 
 INSTRUCTIONS = """
-You are a strict compliance analyst. Decide how well the BEST POLICY MATCH satisfies the REQUIREMENT.
+Please compare the compliance 'text with the policy 'best match'  If the compliance text is not a statement or rule, mark as garbage.  
+if the compliance text is clearly satisfied by the policy 'best match' please mark as satisfied.  
+If there is any relation between the compliance text and the policy best match please mark ast partially_satisfied.
+If the compliance text is a valid statement or rule but the best match is unrelated, mark as non_existent
 
 Reply with ONLY a single-line JSON object:
 {"label":"<satisfied|partially_satisfied|non_existent|garbage>","rationale":"<one short, specific sentence>"}
 
-Rules:
-- "garbage": the policy text is unrelated or just noise (generic words without substance).
-- "satisfied": clearly fulfills the requirement.
-- "partially_satisfied": addresses the idea but is weaker, missing a key element, or has looser scope/threshold.
-- "non_existent": does not cover the requirement.
-Do not include any extra text, code fences, or explanations.
-"""
+# Rules:
+# - "garbage": the compliance text is unrelated or just noise (generic words without substance).
+# - "satisfied": clearly fulfills the requirement.
+# - "partially_satisfied": addresses the idea but is weaker, missing a key element, or has looser scope/threshold.
+# - "non_existent": does not cover the requirement.
+# Do not include any extra text, code fences, or explanations.
+# """
 
 PROMPT_TEMPLATE = """{instructions}
 
