@@ -1,15 +1,19 @@
+# app.py
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from typing import Optional
 
 from models import AnalyzeRequest, AnalyzeResponse, ClauseMatch, MatchAlt
 from clause_extractor import extract_clauses
 from matcher import ClauseMatcher
 from settings import settings
+from comparator import numeric_downgrade
 
-app = FastAPI(title="Policy Compliance Analyzer", version="1.1.0")
+# NEW: NLI judge
+from nli_judge import NLIJudge, stricter  # requires nli_judge.py as provided
 
-# CORS for local dev; restrict in production.
+app = FastAPI(title="Policy Compliance Analyzer", version="1.3.0")
+
+# CORS for local dev; tighten in prod
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -19,6 +23,7 @@ app.add_middleware(
 )
 
 matcher = ClauseMatcher()
+nli = NLIJudge(settings.nli_model_name) if settings.use_nli_judge else None
 
 @app.get("/health")
 def health():
@@ -27,48 +32,67 @@ def health():
         "embedding_model": settings.embedding_model_name,
         "use_cross_encoder": settings.use_cross_encoder,
         "use_llm_judge": settings.use_llm_judge,
+        "use_semantic_normalizer": settings.use_semantic_normalizer,
+        "use_numeric_check": settings.use_numeric_check,
+        "use_nli_judge": settings.use_nli_judge,
+        "nli_model": settings.nli_model_name if settings.use_nli_judge else None,
+        "nli_annotate_only": settings.nli_annotate_only if settings.use_nli_judge else None,
     }
 
 @app.post("/analyze", response_model=AnalyzeResponse)
 def analyze(req: AnalyzeRequest):
-    # 1) Validate sizes early
+    # 1) size guard
     if len(req.policy_text) > settings.max_chars or len(req.compliance_text) > settings.max_chars:
         raise HTTPException(status_code=413, detail="Document too large")
 
-    # 2) Extract clauses
+    # 2) clause extraction
     policy_clauses = extract_clauses(req.policy_text)
     compliance_clauses = extract_clauses(req.compliance_text)
-
     if not policy_clauses or not compliance_clauses:
         raise HTTPException(status_code=400, detail="Could not extract clauses from one or both documents")
 
-    # 3) Match
+    # 3) retrieve matches
     pairs = matcher.best_matches(compliance_clauses, policy_clauses, top_k=req.top_k)
 
-    # 4) Build response
+    # 4) scoring & labeling
     matches = []
     counts = {"satisfied": 0, "partially_satisfied": 0, "non_existent": 0}
+
     for i, alts in pairs:
         best_idx, best_score = alts[0]
 
-        # --- OLD LABELING (kept for reference) ---
-        # label = matcher.label_from_similarity(best_sim)
-
-        # NEW: label from score (sim or CE), then optional judge for partials
+        # initial label from similarity (bi-encoder or cross-encoder score)
         label = matcher.label_from_similarity(best_score)
         rationale = None
 
-        # If enabled, refine partials with LLM judge and capture a one-line rationale
-        if settings.use_llm_judge and label == "partially_satisfied":
+        # numeric downgrade first (e.g., 24h vs 48h)
+        if settings.use_numeric_check and label == "satisfied":
             try:
-                judged_label, judged_rationale = matcher.judge_label(compliance_clauses[i], policy_clauses[best_idx])
-                # Overwrite label based on judge; always keep the rationale one-liner
-                label = judged_label
-                rationale = judged_rationale
+                downgrade, reason = numeric_downgrade(compliance_clauses[i], policy_clauses[best_idx])
+                if downgrade:
+                    label = "partially_satisfied"
+                    rationale = reason
             except Exception:
                 pass
 
-        # If user requested rationales and none yet, fall back to simple rationale generator
+        # NLI judge (directional check: does policy entail compliance?)
+        if nli is not None:
+            try:
+                nli_label, nli_scores = nli.classify(policy_clauses[best_idx], compliance_clauses[i])
+                nli_note = (
+                    f"NLI verdict={nli_label} "
+                    f"(ent={nli_scores['entailment']:.2f}, neu={nli_scores['neutral']:.2f}, con={nli_scores['contradiction']:.2f})"
+                )
+                rationale = (rationale + " | " if rationale else "") + nli_note
+
+                # If not annotate-only, constrain label toward stricter outcome (never upgrades)
+                if not settings.nli_annotate_only:
+                    label = stricter(label, nli_label)
+            except Exception:
+                # keep going even if NLI fails
+                pass
+
+        # optional simple rationale (legacy) if requested and none present
         if req.use_rationale and rationale is None:
             try:
                 rationale = matcher.rationale(compliance_clauses[i], policy_clauses[best_idx], label)
@@ -82,9 +106,7 @@ def analyze(req: AnalyzeRequest):
             text=compliance_clauses[i],
             label=label,
             best_match=MatchAlt(policy_text=policy_clauses[best_idx], similarity=round(best_score, 3)),
-            alternatives=[
-                MatchAlt(policy_text=policy_clauses[j], similarity=round(s, 3)) for j, s in alts[1:]
-            ],
+            alternatives=[MatchAlt(policy_text=policy_clauses[j], similarity=round(s, 3)) for j, s in alts[1:]],
             rationale=rationale,
         )
         matches.append(match)

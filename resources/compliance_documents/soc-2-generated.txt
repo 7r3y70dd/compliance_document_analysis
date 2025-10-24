@@ -1,0 +1,31 @@
+Security (Common Criteria, “CC”)
+
+Control environment & governance — tone at the top, roles, ethics, accountability (COSO-aligned).
+
+Risk assessment — identify/analyze risks to objectives.
+
+Control activities — policies/standards, change management, secure SDLC, vendor management.
+
+Information & communication — classify data, minimum necessary, disclosure controls.
+
+Monitoring — metrics, internal audit, issue tracking.
+
+Logical access — provisioning, least privilege, MFA, periodic review, network segmentation.
+
+System operations — vulnerability management, patching, malware protection, logging/monitoring, incident response.
+
+Availability
+
+Service continuity — BCP/DR, backups, capacity planning, RTO/RPO objectives, testing.
+
+Confidentiality
+
+Data protection — classification, encryption (at rest/in transit), key management, DLP, secure disposal.
+
+Processing Integrity
+
+Accuracy/completeness/timeliness — input validation, change control, reconciliations, QA, error handling.
+
+Privacy
+
+Privacy program — notice/choice/consent, purpose limitation, access & rectification, retention, secure deletion, complaints handling.

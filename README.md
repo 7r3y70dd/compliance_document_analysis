@@ -133,6 +133,17 @@ curl --fail-with-body -X POST http://localhost:8000/analyze-multipart   -F "poli
   ]
 }
 ```
+TRY NLI
+```json
+export USE_NLI_JUDGE=1
+export NLI_ANNOTATE_ONLY=1
+export NLI_MODEL=distilroberta-base-mnli   # or roberta-large-mnli
+python -m uvicorn app:app --host 0.0.0.0 --port 8000
+
+//let nli downgrade
+export USE_NLI_JUDGE=1
+export NLI_ANNOTATE_ONLY=0
+```
 
 ---
 

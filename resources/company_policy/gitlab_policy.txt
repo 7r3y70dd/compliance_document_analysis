@@ -1,0 +1,474 @@
+Roles & Responsibilities
+Role 	Responsibility
+Security Assurance 	Responsible for implementing and executing this policy
+Business or System Owners 	Alignment to this policy and any related standards
+Security Assurance Management (Code Owners) 	Responsible for approving significant changes and exceptions to this policy
+Team Members 	Responsible for adhering to the requirements of this policy
+Policy
+Access requests and reviews
+
+Access requests are opened for all new or changing access. (AC-2)
+
+Access requests are approved prior to making access changes. (AC-2)
+
+Access requests and reviews are documented. (AC-2, AC-6(7))
+
+An exception process exists for access requests.
+Access revocation
+
+Access is deprovisioned upon cessation of employment. (AC-2(3))
+Job transfers
+
+Access is deprovisioned or provisioned upon job transfer, as appropriate for the transfer. (AC-2, AC-2(3))
+Access reviews
+
+Access reviews are performed to confirm existing access. (AC-6(7))
+Access Management Standard
+
+For further details on GitLab’s access management processes, please review the Access Management Standard in the Internal Handbook.
+
+Scope
+
+The Teleport Access policy applies to all systems within our production environment that require a terminal or CLI access.
+Roles & Responsibilities
+Role 	Responsibility
+GitLab Team Members 	Responsible for following the requirements in this policy
+System Owners 	Alignment to this policy
+Code Owners 	Responsible for approving changes and exceptions to this policy
+Procedure
+
+    Teleport access is managed through Okta and is provided as part of a role’s baseline group assignment or through an access request with appropriate approval
+    Access reviews are performed on a quarterly basis to ensure that all users are appropriate and have appropriate access levels.
+    Teleport Audit Logs must be retained for a defined period of 1 year
+    Teleport Audit Logs must not be modified and or deleted before the defined time of 1 year
+    Access to Teleport Audit log data must be limited based on the principle of least privilege
+
+Exceptions
+
+Exceptions to this policy will be tracked as per the Information Security Policy Exception Management Process
+
+Access Requests are owned by the IT team, while onboarding, offboarding and internal transition requests are owned by the People Operations Team.
+
+If you have any access requests related questions, please reach out to #it_help or the tool provisioner in Slack.
+Access requests related pages
+
+    Frequently asked questions
+    Tech Stack
+    Baseline Entitlements
+    Temporary service providers access requests and onboarding
+
+Get Started
+
+All open and closed ARs can be found in the access-requests project, and you can create a new issue here.
+
+When creating a new AR, you’ll be given the option to chose from various templates to help you figure out exactly what additional information is needed to fulfil your request and if additional approvals are required. We made sure to add all the required lables for each issue type, it’s possible that we missed something so please make sure to double check your request before submitting it
+
+While there are a large number of templates available, they typically fall into one of the categories below.
+
+A full list of all available templates cane be found here
+Individual or Bulk Access Request
+
+Individual or Bulk Access Requests should be used if none of the other templates match what you are looking for.
+
+You can use this template to request access for individuals or multiple people, as long as all the people are requesting access to the same systems. Create multiple issues if multiple people require access to different systems.
+Access Change Request
+
+Access Change Requests are logged when a team member no longer requires access to a currently provisioned system or no longer requires the same level of access (downgraded access from admin to user etc). Refer to For Total Rewards Analysts: Processing Promotions & Compensation Changes section of the GitLab handbook for additional information.
+
+It is important to note that while Okta has provisioning/deprovisioning automation in place, this is not a complete/accurate reflection of access provisioning and deprovisioning. Okta has been configured to assign integrated/implemented applications based on a user’s role/group. This makes applications accessible via Okta but users may still have the ability to access the systems directly. Refer to Okta Application Stack for a list of applications set up in Okta.
+Application-Specific Templates
+
+These issues relate to access to or withing specific applications and services. For example, you can use the 1Password Request Form to modify existing vaults and groups, or to create new ones.
+Admin (Black) Accounts
+
+We support the provisioning of admin access to various core services, such as Okta, 1Password, and Google Workspace. This proccess typically first involves requesting the creation of an admin account with a new email address. Once the admin account has been created, additional ARs need to be submitted for admin access to specific services.
+
+    Admin (Black) Acount
+    1Password Admin
+    AWS Admin
+    Google Workspace Admin
+    Okta Admin
+
+Name Change Request
+
+You can use this template when you want to change your preferred name. We will then work with the People Ops team to update your name across all systems and provide you with a new email address.
+Baseline Entitlements
+
+These issues help us assign the appropriate access to new-hires. These are created automatically for many roles and don’t typically require additional approvals. However, if the automation does not create the issue, it is the responsibility of the new-hire’s manager to manually create the issue.
+
+A list of baseline issue templates can be found here and can be freely customized.
+
+For additional support when creating Baseline Entitlement Requests, please reach out via #it_help in Slack.
+Working on Access Requests
+Department Access Request Boards
+
+    If you need additional labels or have suggestions for improving the process until we can fully automate, please open an issue.
+    ARs are auto-assigned and auto-labeled when possible by department. In some cases, there are multiple provisioners per tool. If a template cannot be auto-assigned, Business Technology will provide a board where the provisioners can review their department’s issues by label (ie dept::to do. It is up to the department to manage the workflow on who works the issues to completion.
+    Moving an issue from one column to another will remove the first label (per the column header) and add the second label. Please use caution when moving issues between columns.
+    Departments can check their outstanding access request issues by viewing their board below.
+
+
+GitLab’s user access review is an important control activity required for internal and external IT audits, helping to minimize threats, and provide assurance that the right people have the right access to critical systems and infrastructure. This procedure details process steps and provides control owner guidance for access reviews.
+Benefits to the organization
+
+    Reduces security risk
+    Identifies dormant and/or disabled accounts
+    Ensures only required team members have access to a system
+    Validates users who have changed roles have not retained access no longer relevant
+    Ensures terminated team members no longer can access company systems
+    Supports GitLab compliance and regulatory requirements which maintains customer trust
+
+Scope
+In-Scope Systems
+
+Security Compliance performs Access Reviews for in-scope systems based on a subset of factors. Including:
+
+    Orgin: External certification impact, Red Data System
+    Criticality: Mission Critical
+    Business Critical if Lumos connector available
+
+    See the tech stack for a current listing of all GitLab Systems and Vendors and their associated critical system tier.
+
+Out-of-scope Systems
+
+Systems that fall outside of the threshold of the above in-scope system factors. As a general best practice, all system owners are highly encouraged to perform a minimum of an annual terminated access review for their owned systems using this process as a guide.
+Roles & Responsibilities
+Role 	Responsibility
+Security Compliance Team 	Execution of Full Entitlement Review, Privilaged Access, Terminated User Reviews
+
+Creation of observations and oversight of remediation activities for any identified findings
+IT Compliance Team 	Execution of Full Entitlement Review, Privilaged Access, Terminated User Reviews for SOX in-scope systems
+
+Creation of observations and oversight of remediation activities for any identified findings
+System Owners 	Validation of privileged entitlements
+
+Validation of user entitlements
+
+Timely evidence support
+
+Execution of remediation plans for identified observations
+
+* Execution of access removal(s)
+System Administrators 	Validation of privileged entitlements
+
+Validation of user entitlements
+
+Timely evidence support
+
+Execution of remediation plans for identified observations
+
+* Execution of access removal(s)
+Managers 	Support validation of privileged entitlements
+
+Support validation of user entitlements
+IT Operations 	* Execution of access removal(s)
+Security Assurance Management (Code Owners) 	Responsible for approving significant changes and exceptions to this procedure
+What is Lumos and why do I have an Okta tile for it?
+
+Lumos is GitLab’s User Access Review tool. It is used to facilitate all user access reviews. By default, all team members will receive access to Lumos upon onboarding. To access Lumos, team members can select the Lumos tile in Okta. If you are assigned an access review, please follow the runbook linked below to complete the access review.
+Access Review Procedure
+
+Terminated Users
+
+    The current access listings of systems is correlated against a list of active team members derived from Workday (GitLab’s source of truth for employment status) using GitLab’s User Access Review tool Lumos. If any users are found to have active system access that are not current GitLab team members, open access removal issues to start the access de-provisioning process.
+
+Entitlement/Privilaged Access
+
+    Access for systems will be reviewed based on the job roles and departments via GitLab’s User Access Review tool, Lumos. Depending on the user base size and scope of users with access, a system owner and/or manager will be involved in reviewing user entitlements. System owners should have detailed knowledge of which roles/deparments should have access to their system. For detailed instructions on how to complete a user access review via Lumos see the Lumos review handbook page here.
+
+Access Review runbook
+
+The Lumos review handbook page here provides the outline to complete these access reviews, including how to confirm least privilege.
+
+In the event access is identified to no longer be required, open an Access Removal issue for each account that no longer requires access and relate it to the system access review issue.
+
+If you have any questions or require assistance with completing an access review, please contact the GitLab Security Compliance team.
+Access Review Cadence
+System Type 	Review Frequency 	Review Scope
+Red Data Systems 	Annual 	All users with access to Red data systems
+SOX In-Scope Applications 	Quarterly 	All users - entitlement reviews
+PCI In-Scope Applications 	Bi-Annual (6 months) 	All entitlements/Account inactivity reviews
+External Certification Systems 	Quarterly 	Entitlement Reviews
+Access Removals
+
+If appropriateness of access cannot be verified as part of the review or a system owner/reviewer flags a user for removal, a validation will take place with the team member’s manager prior to access removal as per the Observation Management Procedure. This validation must take place within 7 calendar days and if access is determined to not be required OR no agreement can be reached within that SLA between the Manager and system owner/reviewer, access will be removed. If the risk associated with unvalidated access is too high, access will be revoked immediately and impacted users will be directed towards the new access request process for re-provisioning. While we want to avoid disruption in access whenever possible, we need to balance the impact of that disruption with the risk of continued and unvalidated access to GitLab systems. The Security Compliance team is not responsible nor has the ability to remove access. Security Compliaces role and responsiblity is limited to opening access removal issues and assigning those issues out to the appropriate System Owner(s) and/or the IT Operations team. System Owners and/or IT Operations is responsible for execution of access removal or adjustment. Communication of the access removal or adjustment for affected team members is at the discretion of the system owner/reviewer.
+Additional Guidance
+Timing of Access Reviews
+
+    Access reviews are targeted to be completed within 1 month from when the system listing is exported to completion of all steps of the review. By completing the access review within a month’s timeframe, we ensure the access data has not become stale. If any components of an access review are not completed within the quarter they are initiated, the review would likely be considered ineffective for compliance purposes making the month timeline all the more important to adhere to.
+
+Lookback Reviews
+
+For any accounts that require any removal of access (full removal or individual roles/privileges), a lookback review may be required. A lookback review is a review of activity for the period of time which the access was inappropriate.
+
+Example scenarios where a lookback may be required:
+
+    A terminated team member is identified during the Access Review as still being an active user in a system, prior to the account being removed GitLab would perform a lookback to confirm that the terminated user did not use the access after their final day.
+    A team member was identified as having administrative access to a system that was not appropriate for their role but the user did require some level of access to the system, a lookback would be performed to validate that the administrative access was not used in an inappropriate manner.
+    A team member was identified as having a role in a system which conflicted with their job responsibilities and their access in other systems allowing them to circumvent established control points and processes, a lookback would be performed to validate the user didn’t use their access to circumvent established processes and controls in place.
+
+In cases where there is a disagreement between system owner and manager as to whether a lookback is required, it should be completed. Engage the appropriate personnel (i.e system owner) to perform a lookback assessment to validate the account(s) did not use the access inappropriately.
+
+It may not be necessary to perform a lookback in all cases, for example:
+
+    A person transferred between non-conflicting departments, continued to support their previous role during transition, and the access review is a chance to remove the access now that the transition is complete
+    A role is being removed as the access granted by that role is duplicative to access granted as part of another role that will remain
+    A user no longer uses the access that they have to a system but the access isn’t a risk for the user to have and could be reinstated via an Access Request if a need for the access ever arises again
+    A team of 4 users have the same access to a system but usage is minimal. To free up licenses and maintain an environment of least privilege, access for 3 of the users is requested for removal.
+
+The most simple method to perform a lookback for users is to review their last login date/time and validate it was not after the date access was no longer appropriate. If a last login shows the account did authenticate after the access was inappropriate, a full review should be performed to determine any activity from the account during that time to validate no risk. If a last login is not available, other validations should be performed to confirm the account was not used inappropriately after termination (i.e review of key transactions etc.)
+
+Evidence of the completed lookback review should be retained and documented within the access review workbook or other associated documentation.
+Validation of Modifications completed
+
+For any accounts that are requested for modification or removal, validation they were modified as requested should be completed and evidence captured of their successful modification (i.e screenshot, updated user listing that reflects changes made).
+Access Review Notification Reminders
+
+Security Compliance managed access reviews required for audit evidence have a deadline of 10 business days from the launch of the review in Lumos. Automated reminders will be used based on number of days out from the due date:
+Days until Due Date 	Notification 	Who is Notified
+5 	Lumos “nudge” 	Reviewer
+3 	Slack ping 	Reviewer
+2 	Lumos “nudge” &
+Slack ping the Reviewer 	Reviewer, Reviewer’s Manager, and Security Compliance Manager
+0 	Escalated to CISO 	CISO
+
+{-If an access review is not completed within 10 days, identified access will be removed.-}
+Access List For Review
+Access List Generation
+
+Based on how the system access is maintained will determine the method of account and related permissions export for access review. This will most likely fall to the business or technical owner identified in the Tech Stack Applications.
+
+    A system owned by Infrastructure will require an issue opened in the Infrastructure Project for access listing export request
+
+Access List Data Fields
+
+The following fields are the most comprehensive to assist in performing a thorough access review: (all are helpful, but all might not be available)
+
+    Account Name
+    User Name
+    Email Address
+    Access Permissions (level of access - user, admin,etc.)
+    Account Creation Date Timestamp
+    Last Access Date Timestamp
+
+Access Listing Generation Validation
+
+    Please attach a system-generated access list along with evidence of how listing was produced, which should include date data was pulled. Timestamp should include the day, month, and year the listing was pulled.
+    Evidence of how the listing was pulled generally takes the form of screenshots from within the system interface; the screenshots document the steps taken within the system to generate the user listing.
+    If a query was used to generate the list, please provide the query along with a screenshot of system used to pull data, e.g. PostgreSQL query window, making sure screenshot evidences date/time query was run and raw row count. This will be used to evidence completeness of the population.
+    To evidence completeness and accuracy, where technically feasible, include a row count or a screen shot of the row count or the generated file hash
+
+    Purpose
+
+This document outlines information security password standards intended to protect GitLab information systems and other resources containing confidential (Red and Orange) GitLab data from unauthorized use, where technically feasible.
+Scope
+
+Applies to all GitLab team members, contractors, advisors, and contracted parties interacting with GitLab computing resources and accessing confidential data.
+Roles & Responsibilities
+Role 	Responsibility
+GitLab Team Members 	Responsible for adhering to the requirements outlined in this standard
+Security 	Responsible for defining and monitoring implementation of these standards for critical applications
+Security Management (Code Owners) 	Responsible for approving significant changes and exceptions to these standards
+Standard
+
+Constructing secure passwords and ensuring proper password management is essential. GitLab’s password standards are based, in part, on the recommendations by NIST 800-63B. To learn what makes a password truly secure, read this article or watch this conference presentation on password strength.
+
+Note: If a system cannot support a specific configuration in this standard due to technical limitations, the configuration must be set to the closest possible setting that matches this standard. An exception must be opened here, and an associated risk rating and exception review timeline will be assigned in accordance with the matrix in the request issue.
+Password Requirements
+
+    Minimum Length = 12 characters
+    Special Characters = No
+    Password Reuse = No
+    Password expiration = No
+    Multi-factor authentication (MFA) = Yes, whenever possible
+
+To make a secure password you can remember, consider using a combination of 5 or more random words. Security questions like “What is your favorite color? What is your mother’s maiden name?”, etc should be answered with a random non-obvious word or set of words. You can generate answers in 1Password and store them as a note. This helps ensure the answer isn’t easily guessable and will be unique across different sites.
+Password Management
+
+    Passwords are to be kept private and secured.
+    Individual account passwords are not to be shared.
+    Passwords are not to be stored in clear text or be written down.
+    Password “hints” are not to be used. If a password is forgotten, a mechanism must be in place to replace a password/passphrase with sufficient controls to verify the identity of the requester of the password reset.
+    Passwords must be stored in a way that is resistant to offline attacks and must be salted and hashed using a suitable one-way key derivation function.
+    If a password is required to be stored, it must be stored within an approved password manager application and may be pasted from this using a master password function (e.g. 1Password).
+    If an account or password is suspected to have been compromised, immediately report the incident to Security and promptly follow instructions.
+
+System Password Configuration Requirements
+
+    For systems where a password can be configured the minimum password length needs to be set to 12 characters.
+    The use of special characters is not required or even recommended.
+    If a particular system requires a password history, configuration should be set for 25 remembered passwords.
+    Passwords are not acceptable if they match the subsequent patterns, and must be checked against commonly used or expected patterns, including: known breached password lists, dictionary words, repetitive or sequential characters, or context specific words such as the name of the service, username, or derivatives thereof.
+    System administrators of applications and/or devices must change default passwords.
+    System administrators need to enable password strength on third party applications and/or tools, where applicable.
+    For applications where a password is the only source of authentication, a password must be expired within a maximum of 90 calendar days.
+    Systems should monitor and log failed login attempts.
+    Information related to authentication failed login attempts need to be recorded within the application logs if technically feasible; such as: name, date, number of failed attempts, unique log identifier.
+    Repeated failed login attempts need to trigger a temporary account lockout after 10 failed attempts. If the particular system will not support lockout after 10 attempts or less, the lockout needs to be configured to the minimum value allowed by the system. The lockout may end after a designated period of time, or require a manual unlock, depending on the profile of the application.
+    Two Factor Authentication (2FA) must be enforced.
+
+Two Factor Authentication (MFA or 2FA)
+
+All GitLab team members are required to use Two Factor Authentication (2FA). Usage of 2FA by GitLab team members is required for access to the production environment. It should be noted that references to MFA (Multi-Factor Authentication) are often included in language associated with third party products and certain compliance references, but the general concept is still covered by the term “2FA”. There are different 2FA methods that can be used by GitLab team members. These are ranked by security strength:
+
+    Biometric Authentication. Biometric-based authentication uses “something you are” to authenticate you. Examples include touch-id (fingerprint) or face-id (facial recognition). This is the most secure authentication method.
+    WebAuthn. FIDO2/WebAuthn uses a hardware token to authenticate you. It is one of the most secure methods, assuming the hardware token itself is physically secured.
+    Push Authentication. For Push Authentication to work, the authentication service and a complementary mobile app typically use RSA keys and OOB (out-of-band) communications to perform the secondary authentication. From a pure cryptographic perspective, this is slightly less secure than WebAuthn as WebAuthn uses secure hardware storage.
+    TOTP. TOTP (Time-based One Time Password) is a popular method for a second factor. While not as secure as WebAuthn, Push as TOTP could be phished (although the attack window would be extremely short). It is still a very secure method of authentication. As 1Password is used by GitLab team members, this could be used for TOTP after proper configuration (1Password guidelines).
+    SMS. SMS (Short Message Service) is a method of using text messaging to provide out-of-band (OOB) authentication. As the messages can be spoofed or intercepted more easily than other methods, SMS is highly discouraged for 2FA. As of this writing, the Security Department is unaware of GitLab assets or third party applications that team members are using that only support SMS 2FA. If you need to use something that only offers SMS as a second factor for GitLab, contact the Security Department.
+
+For a better understanding of how 2FA fits into GitLab, refer to the Accounts and Passwords section, which includes pointers for setting up passwords, acquiring FIDO2 tokens, and links to further resources. Refer to the Tools and Tips page for more detailed information regarding FIDO2/WebAuthn and other 2FA methods.
+Application Authentication Requirements
+
+    Effective FY23 Q3, all third party applications that house GitLab confidential data are required to authenticate via Okta inline with GitLab’s approach to centralized authentication and authorization. Security Notices will be required in all cases where Okta is not supported.
+    Authentication to an application should contain multi-factor authentication (Token, OTP Generator, SSO, YubiKey).
+    SAML Assertion after logging into an authentication portal is required where technically feasible (e.g. Okta).
+    Authentication to an application should support individual users, not groups.
+
+Exceptions
+
+Purpose
+
+Security Trainings and Awareness is key to ensuring that GitLab team members are continuously provided with user education activities and exercises about evolving threats, compliance obligations, and secure workplace practices in order to refine and improve their awareness.
+Scope
+
+This standard applies to all GitLab team members, contractors/Temporary Service Providers (TSPs), consultants, vendors and other service providers that handle, manage, store or transmit GitLab data in support of GitLab’s statutory, regulatory and contractual requirements.
+Definitions
+
+    GitLab Team members: users with a gitlab.com email address
+    Contractors/TSPs and Consultants: Personnel who are external to GitLab who do not have a gitlab.com email address and are under a contract/agreement that involves handling, managing, storing, or transmitting GitLab data in support of GitLab’s statutory, regulatory and contractual requirements.
+
+Roles & Responsibilities
+Role 	Responsibilities
+GitLab Team Members 	Responsible for following the requirements of this standard
+Security Governance Team 	Responsible for the management and execution of security trainings and programs outlined in this standard
+Security Governance Management 	Responsible for oversight, escalation and approval of exceptions for this standard
+Security Assurance Management (Code Owners) 	Responsible for approving significant changes and exceptions to this standard
+Standard
+
+All GitLab Team members and contractors/TSPs are required to participate in GitLab’s General Security Awareness Training, New Hire Training and on-going phishing simulations and training, or show evidence of equivalent training completion within the calendar year. Security Trainings that require participation include the following:
+New Hire Security Training
+
+New Hire Security Training is required to be completed by all GitLab Team Members and contractors/TSPs during their onboarding at GitLab. This security training provides new hires with the knowledge to identify cybersecurity threats, vulnerabilities, and attacks.
+General Security Awareness Training (GSAT)
+
+The GitLab security awareness training program provides ongoing training to GitLab team members that enhances knowledge and identification of cybersecurity threats, vulnerabilities, and attacks as well as satisfying external regulatory requirements. GitLab’s handbook-first General Security Awareness Training is provided annually via Right Hand Cybersecurity, GitLab’s third-party provider, and requires participation and completion by all GitLab Team Members and contractors/TSPs.
+
+Exceptions during the active campaign will be made for GitLab team members on extended leave.
+Phishing Training
+
+The GitLab Phishing Training Program is designed to educate and evaluate GitLab’s ability to detect and prevent phishing attempts. Ongoing phishing simulations and trainings are conducted once per quarter via Right Hand Cybersecurity, GitLab’s third-party provider, and requires participation and completion by all assigned GitLab Team Members and contractors/TSPs.
+
+Remember: If you see something, say something, and always report suspicious emails via PhishArm.
+Secure Coding Training
+
+The GitLab Secure Coding Training is a required training completed by a sub-group of GitLab Team Members and contractors/TSPs in the Engineering Department. This training contains descriptions and Secure Coding Guidelines from OWASP (Open Web Application Security Project) addressing security vulnerabilities commonly identified in the GitLab codebase. This training is intended to help developers identify potential security vulnerabilities early, with the goal of reducing the number of vulnerabilities released over time.
+
+Exceptions during the active campaign will be made for GitLab team members on extended leave.
+
+Purpose
+
+This policy is intended to outline the encryption controls and requirements at GitLab.
+Scope
+
+This policy is applicable to the production environment and any end user devices that store such data. This also includes the GitLab Dedicated single-tenant SaaS offering.
+Roles & Responsibilities
+Role 	Responsibility
+GitLab Team Members 	Responsible for following the requirements in this policy
+Business or System Owners 	Alignment to this policy and any related standards
+Product Security Team 	Maintain this Encryption Policy and associated standards
+Security Management (Code Owners) 	Responsible for approving significant changes and exceptions to this policy
+Policy
+Encryption
+
+Customer data is encrypted at rest. (SC-28)
+
+Corporate owned endpoints are encrypted at rest. (SC-28)
+
+Customer data is encrypted in transit. (SC-8)
+Standard
+
+Encryption at GitLab is performed in accordance with GitLab’s Encryption Standard and Cryptographic Standard
+Exceptions
+
+Security controls are a way to state our company’s position on a variety of security topics. It’s not enough to simply say “We encrypt data” since our customers and teams will naturally want to know “what data do we encrypt?” and “how do we encrypt that data?”. When all of our established security controls are operating effectively this creates a security program greater than the sum of its parts. It demonstrates to our stakeholders that GitLab has a mature and comprehensive security program that will provide assurance that data within GitLab is reasonably protected.
+GitLab Control Framework (GCF)
+
+We have tried to take a comprehensive approach to our immediate and future security compliance needs. Older and larger companies tend to treat each security compliance requirement individually which results in independent security compliance teams going out to internal teams with multiple overlapping requests. For example, at such a company you might have one database engineer that is asked to provide evidence of how a particular database is encrypted based on SOC2 requirements, then again for ISO requirements, then again for PCI requirements. This approach can be visualized as follows:
+
+SOC2_Requirement1
+
+Team1
+
+Team2
+
+SOC2_Requirement2
+
+PCI_Requirement1
+
+ISO_Requirement1
+
+Given our efficiency value here at GitLab we wanted to create a set of security controls that would address multiple underlying requirements with a single security control which would allow us to make fewer requests of our internal teams and efficiently collect all evidence we would need for a variety of audits at once. This approach can be visualized as follows:
+
+SOC2_Requirement1
+
+Control1
+
+PCI_Requirement1
+
+SOC2_Requirement2
+
+Control2
+
+ISO_Requirement1
+
+GCF
+
+Team1
+
+Team2
+
+As our security compliance goals and requirements have evolved so have our requirements and constraints related to our security control framework. Our GCF is currently based on NIST SP 800-53 and is in the process of being iterated into a custom proprietary framework that aligns to GitLab’s needs and security posture. This transformation is necessary due to the fact that not all NIST 800-53 controls map directly to the requirements and standards we maintain.
+
+The custom framework will maintain mappings to all our compliance requirements (SOC2, ISO, PCI, etc.) while eliminating irrelevant controls and adding GitLab-specific controls where needed. This new framework is scheduled to be implemented starting in Q3 FY26, providing us with a more streamlined and relevant security control structure.
+Security Control Lifecycle
+
+The lifecycle of our security controls can be found at this handbook page. As part of the security control lifecycle, GCF security controls are monitored or tested based on risk or as required by regulation.
+
+GCF security controls are assessed at the entity, shared process, or system level depending upon the nature of the control.
+
+Risk-based Control Testing is our methodology for determining the appropriate frequency and depth of control testing based on the criticality and risk profile of a system. This approach allows us to allocate testing resources more efficiently and expand testing beyond what’s in-scope for external audits by focusing more on higher risk systems while maintaining appropriate coverage across all systems. Controls associated with systems are evaluated based upon the system’s critical system tiering.
+Control Ownership
+
+Control Owner - Ensures that the design of the control and the control activities operate effectively and is responsible for remediation of any control activities that are required to bring that control into a state of audit-readiness. Process Owner - Supports the operation of the control and carries out the process designed by the control owner. The process owner is most likely to be interviewed by an auditor to determine whether or not the process is operating as intended.
+Security System Intake
+
+To assess newly acquired/developed systems that enable security controls OR are/may be in scope for compliance programs for potential inclusion into our GitLab Control Framework (GCF) and compliance programs (e.g., Security Compliance Program and SOX Program).
+1. System identification
+
+Our goal is to identify systems that enable security controls (e.g., access management system) OR systems that are (or may be) subject to regulatory (e.g., SOX) or compliance requirements (SOC2, PCI) as early as possible. As we develop new features/systems and engage with third parties for services, we assess the use of the system and whether or not it meets the criteria described above. Existing systems can also be ingested into the Security Compliance Intake process. Examples of these could include systems whose functionality has expanded to support security controls or instances where our understanding of a security control has improved resulting in the identification of a previously uncredited supporting system.
+
+If the system meets the criteria, we open up a new Security Compliance Intake Issue.
+2. Creating Security Compliance Intake Issue
+
+Security Compliance Intake Issue asks the author to include details related to the system including:
+
+    System overview
+    Implemented security controls or impacted regulatory or compliance program
+    Link to TPRM reviews or Production Readiness reviews
+    Critical System Tier (CST)
+    Key Contact Details
+    Deployment model and implementation status
+    Data classification
+    Regulatory scope (supported by Security Compliance and Internal Audit) The author of the issue completes as much of the issue as they can and assigns it to the Security Risk team for completion/triage (if the issue is not originally created by the Security Risk team).
+
+3. Security Compliance workflow
+
+Once the Security Compliance Intake issue is populated, Security Risk assigns the issue to the Security Compliance team to complete the following tasks to incorporate the system into our Security Compliance Program:
+
+    Determine impact (if any) to compliance control environment (for example, determining if applicable to the PCI environment and need for inspecting PCI AoC and Responsibility Matrix documentation)
+    Notify stakeholders and system owners of upcoming testing requirements
+    Incorporate testing requirements (driven by CST and regulatory/compliance requirements) and recommendations into the fiscal year audit schedule
+    Determine when user access reviews for the new system need to start and communicate to compliance teams
+
+References
