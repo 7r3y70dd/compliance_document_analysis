@@ -230,7 +230,7 @@ LLM_DEVICE=-1
 LLM_MAX_NEW_TOKENS=192
 LLM_MODEL_NAME=google/flan-t5-base
 NLI_ANNOTATE_ONLY=0
-NLI_MODEL=roberta-large-mnli
+NLI_MODEL=facebook/bart-large-mnli
 NLI_PARTIAL_FLOOR=0.45
 NLI_SAT_FLOOR=0.70
 PARTIAL_T=0.60
@@ -252,6 +252,12 @@ USE_SEMANTIC_NORMALIZER=1
 ```bash
 docker build -t policy-compl-svc .
 docker run --rm -p 8000:8000   -e EMBEDDING_MODEL=sentence-transformers/all-mpnet-base-v2   -e USE_CROSS_ENCODER=1   -e USE_LLM_JUDGE=1   policy-compl-svc
+
+
+curl --fail-with-body -X POST http://localhost:8000/analyze-multipart   -F "policy=@/resources/long_generated_policy.txt;type=text/plain"   -F "compliance=@/resources/best_outline.txt;type=text/plain"   -F "top_k=3"   -F "use_rationale=false" | jq .
+
+
+curl -X POST http://localhost:8000/analyze-multipart \\n  -F "policy=@$(pwd)/resources/company_policy/mid_generated_policy.txt;type=text/plain" \\n  -F "compliance=@$(pwd)/resources/compliance_documents/best_outline.txt;type=text/plain" \\n  -F "top_k=3" \\n  -F "use_rationale=false" \\n| jq . > ~/projects/misc/compliance_backups/test_results/analyze_result.json
 ```
 
 ---
