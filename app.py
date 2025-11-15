@@ -330,6 +330,57 @@ _REQ_HINTS = (
     "disclose","agreement","contract","rotate","contingency","assign","officer"
 )
 
+# Heuristics for short headings/titles
+_TITLE_STOPWORDS = {
+    "scope","purpose","definitions","overview","summary","policy","procedure","procedures",
+    "applicability","introduction","intent","objective","objectives","roles","responsibilities",
+    "exceptions","exemptions","appendix","annex","glossary","references","revision","revisions",
+    "enforcement","auditing","monitoring"
+}
+
+def _word_tokens(s: str) -> list[str]:
+    return re.findall(r"[A-Za-z0-9]+(?:'[A-Za-z0-9]+)?", s)
+
+def is_title_like(t: str) -> bool:
+    """
+    Returns True if the text looks like a section title/heading rather than a requirement.
+    Intent: aggressively catch very short, punctuation-light, title-cased/all-caps lines.
+    """
+    s = t.strip()
+    if not s:
+        return True
+
+    # Very short lines (<= 3 words) are almost always headings
+    words = _word_tokens(s)
+    n = len(words)
+    if n <= 6:
+        return True
+
+    # Titles rarely end with a period/semicolon; they lack sentence punctuation
+    if not s.endswith((".", ":", ";")) and not any(p in s for p in (".", ";", ":")):
+        # Consider capitalization patterns: Title Case / ALL CAPS
+        is_all_caps = (s.upper() == s) and any(c.isalpha() for c in s)
+        cap_words = sum(1 for w in words if w[:1].isupper() and (len(w) == 1 or w[1:].islower()))
+        title_cased = (cap_words >= max(2, int(0.6 * n)))  # most words capitalized
+        if is_all_caps or title_cased:
+            return True
+
+    # Common heading keywords (single- or two-word)
+    # lw = " ".join(w.lower() for w in words[:3])
+    # if words[0].lower() in _TITLE_STOPWORDS:
+    #     return True
+    # if any(k in lw for k in _TITLE_STOPWORDS):
+    #     return True
+
+    # Numbered/outline headings like "1.", "1.2", "A.", "II", "1 Purpose"
+    if re.match(r"^\s*(\d+(\.\d+)*|[A-Z]|[IVXLC]+)\s*[\.\)]?\s+\S+", s):
+        # If it still looks short and non-sentence-y, treat as title
+        if n <= 8 and not s.rstrip().endswith("."):
+            return True
+
+    return False
+
+
 def looks_requirement_like(t: str) -> bool:
     t = t.strip()
     tl = t.lower()
@@ -422,6 +473,23 @@ def analyze(req: AnalyzeRequest):
                     rationale = reason
             except Exception:
                 pass
+
+        # --- HARD HEADING FILTER: keep short titles as garbage and skip LLM/NLI ---
+        if is_title_like(compliance_clauses[i]):
+            label = "garbage"
+            rationale = "Short/heading-like text (no actionable requirement)."
+            counts[label] += 1
+            match = ClauseMatch(
+                id=f"C-{i:04d}",
+                text=compliance_clauses[i],
+                label=label,
+                best_match=MatchAlt(policy_text=best_text, similarity=round(float(best_score or 0.0), 3)),
+                alternatives=[MatchAlt(policy_text=policy_clauses[j], similarity=round(s, 3)) for j, s in alts[1:]],
+                rationale=rationale if req.use_rationale or rationale else rationale,
+            )
+            matches.append(match)
+            continue  # <<< IMPORTANT: do not run NLI/LLM for headings
+
 
         # NLI judge (directional: policy should entail compliance)
         if nli is not None:
@@ -577,7 +645,7 @@ def analyze(req: AnalyzeRequest):
 
         # BEFORE:
         # AFTER: only turn into garbage if it's not a real requirement
-        GARBAGE_SIM_FLOOR = float(getattr(settings, "garbage_sim_floor", 0.08))  # optional env-driven
+        GARBAGE_SIM_FLOOR = float(getattr(settings, "garbage_sim_floor", 0.05))  # optional env-driven
         if label == "non_existent" and float(best_score) < GARBAGE_SIM_FLOOR:
             if not looks_requirement_like(compliance_clauses[i]):
                 label = "garbage"
