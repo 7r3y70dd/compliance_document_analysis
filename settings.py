@@ -57,6 +57,17 @@ class Settings(BaseModel):
     # --- Rationale control (new) ---
     return_rationale_default: bool = os.getenv("RETURN_RATIONALE_DEFAULT", "true").lower() in ("1", "true", "yes")
 
+    # LLM gating + performance
+    llm_on_non_existent: bool = (os.getenv("LLM_ON_NON_EXISTENT", "1") in ("1", "true", "yes"))
+    llm_on_partial: bool = (os.getenv("LLM_ON_PARTIAL", "0") in ("1", "true", "yes"))  # default OFF
+    llm_min_sim_for_llm: float = float(os.getenv("LLM_MIN_SIM_FOR_LLM", "0.10"))  # don't waste LLM below this
+    llm_min_sim_for_upgrade: float = float(os.getenv("LLM_MIN_SIM_FOR_UPGRADE", "0.20"))  # block upgrades below this
+    llm_max_time: float = float(os.getenv("LLM_MAX_TIME", "2.0"))  # seconds cap per call (generation max_time)
+
+    # NLI-aware upgrade guard (only if NLI enabled)
+    llm_require_nli_for_upgrade: bool = (os.getenv("LLM_REQUIRE_NLI_FOR_UPGRADE", "0") in ("1", "true", "yes"))
+    nli_entailment_min_for_upgrade: float = float(os.getenv("NLI_ENT_FOR_UPGRADE", "0.65"))
+
     # --- Compatibility aliases for matcher.py (no code changes needed) ---
     @property
     def sim_threshold_satisfied(self) -> float:
