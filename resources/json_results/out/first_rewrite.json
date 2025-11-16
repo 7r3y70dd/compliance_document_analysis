@@ -1,9 +1,9 @@
 {
   "overall": {
-    "satisfied": 88,
-    "partially_satisfied": 9,
-    "non_existent": 12,
-    "garbage": 10
+    "satisfied": 81,
+    "partially_satisfied": 14,
+    "non_existent": 15,
+    "garbage": 9
   },
   "clauses": [
     {
@@ -60,12 +60,12 @@
       },
       "alternatives": [
         {
-          "policy_text": "Company shall ensure all access/network/endpoint activities comply with CC6.x requirements.** This policy ensures that all access, network, and endpoint activities within our organization adhere to the specified compliance standards outlined in **CC6.x**, ensuring data security and regulatory adherence. All employees must follow these guidelines to maintain a secure environment for both internal and external systems.",
-          "similarity": 0.001
+          "policy_text": "1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date. Additionally, categorized and handled according to established procedures.",
+          "similarity": 0.003
         },
         {
-          "policy_text": "Company shall ensure adherence to Change Management (CC8) guidelines for all software development lifecycle activities, including but not limited to securing changes through proper approval processes, thorough testing, and maintaining clear separation of duties among team members involved in change management tasks. **[Auditable]** --- This policy ensures accountability and compliance with established procedures across all aspects of change management within the organization.",
-          "similarity": 0.0
+          "policy_text": "Company shall ensure all access/network/endpoint activities comply with CC6.x requirements.** This policy ensures that all access, network, and endpoint activities within our organization adhere to the specified compliance standards outlined in **CC6.x**, ensuring data security and regulatory adherence. All employees must follow these guidelines to maintain a secure environment for both internal and external systems.",
+          "similarity": 0.001
         }
       ],
       "rationale": "Short/heading-like text (no actionable requirement).",
@@ -99,16 +99,16 @@
       "text": "A10. HIPAA Program Procedures (How-To)",
       "label": "garbage",
       "best_match": {
-        "policy_text": "Company shall provide security awareness training annually to all employees on their roles and responsibilities regarding data protection and cybersecurity measures.** This policy ensures compliance with §164.308(a)(5) of the Health Insurance Portability and Accountability Act (HIPAA). Employees must understand their role in protecting sensitive information and implementing necessary cybersecurity protocols.",
-        "similarity": 0.003
+        "policy_text": "The purpose is to establish a comprehensive framework that ensures HIPAA compliance, including Privacy, Security, and Breach Notification standards, as well as SOC 2 attestation criteria for Trust Services Criteria.",
+        "similarity": 0.058
       },
       "alternatives": [
         {
-          "policy_text": "All employees and contractors must comply with HIPAA (45 CFR Part 160 & 164), state privacy/security laws, NIST SP 800-66, NIST SP 800-53 (reference), and HHS guidance when handling protected health information. **END OF POLICY CLAUSE.",
-          "similarity": 0.003
+          "policy_text": "1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date. Additionally, categorized and handled according to established procedures.",
+          "similarity": 0.008
         },
         {
-          "policy_text": "1 Security and privacy program documentation, BAA inventory, access review exports, SIEM dashboards, incident records, backup test logs, DR reports, and training rosters are retained for at least six (6) years from creation or last effective date. Additionally, categorized and handled according to established procedures.",
+          "policy_text": "Company shall provide security awareness training annually to all employees on their roles and responsibilities regarding data protection and cybersecurity measures.** This policy ensures compliance with §164.308(a)(5) of the Health Insurance Portability and Accountability Act (HIPAA). Employees must understand their role in protecting sensitive information and implementing necessary cybersecurity protocols.",
           "similarity": 0.003
         }
       ],
@@ -196,8 +196,8 @@
           "similarity": 0.986
         },
         {
-          "policy_text": "Company shall ensure adherence to all governance and policy management requirements outlined above by conducting regular code of conduct training for employees annually, reviewing policies at least once every two years with senior leadership's approval before implementation. ** This policy ensures compliance with established guidelines while maintaining flexibility through periodic review processes.",
-          "similarity": 0.003
+          "policy_text": "Company shall conduct a risk analysis and management process annually to ensure compliance with all applicable laws, regulations, standards, and policies.** This policy ensures that our organization remains compliant with legal requirements by regularly assessing potential risks and implementing effective mitigation strategies. It is essential for maintaining operational integrity and protecting stakeholders' interests.",
+          "similarity": 0.009
         }
       ],
       "rationale": null,
@@ -297,20 +297,20 @@
       "text": "**Data Owners / System Owners.** Classify data; approve access; perform user access reviews; maintain system inventories.",
       "label": "partially_satisfied",
       "best_match": {
-        "policy_text": "1 Access is granted based on job duties and approved by the relevant manager and System Owner (least-privilege).",
-        "similarity": 0.64
+        "policy_text": "4 User access reviews are performed twice per year on high-risk systems and at least monthly on others; remediation is documented.",
+        "similarity": 0.749
       },
       "alternatives": [
         {
-          "policy_text": "User access reviews are conducted twice per year on high-risk systems and at least monthly on other systems; documentation of remediation is required.",
-          "similarity": 0.627
+          "policy_text": "1 Access is granted based on job duties and approved by the relevant manager and System Owner (least-privilege).",
+          "similarity": 0.64
         },
         {
-          "policy_text": "3 Engineering / SDLC Owners ensure secure design, code review, CI/CD, change control, and secrets management for their systems and oversee user access reviews.",
-          "similarity": 0.497
+          "policy_text": "1 Data is categorized (e.g., Public, Internal, Confidential, Restricted/ePHI). Handling rules specify storage, sharing, and disposal requirements.",
+          "similarity": 0.571
         }
       ],
-      "rationale": "LLM: The BEST POLICY MATCH does not cover 'Classify data' which is a mandatory requirement.",
+      "rationale": "LLM: The policy mentions 4 user access reviews, which is less than the BEST POLICY MATCH's 2 per year for high-risk systems and at least monthly for others. Additionally, the BEST POLICY MATCH specifies that this review must be done twice per year on high-risk systems.",
       "upgraded_from": null,
       "downgraded_from": null
     },
@@ -328,8 +328,8 @@
           "similarity": 0.719
         },
         {
-          "policy_text": "Company shall ensure adherence to all specified KPIs for at least 3 reviews per year and complete remediation within 7 days of detection.",
-          "similarity": 0.005
+          "policy_text": "Company shall ensure all hashing/signing is performed as required, implement change detection mechanisms, and employ anti-tamper measures.",
+          "similarity": 0.004
         }
       ],
       "rationale": null,
@@ -346,12 +346,12 @@
       },
       "alternatives": [
         {
-          "policy_text": "Company shall ensure compliance with CC7.x by implementing robust vulnerability management processes, maintaining comprehensive logging practices, and promptly addressing any incidents through Incident Response procedures.** This policy ensures all operations adhere to the specified requirements for security and incident handling. It mandates adherence to CC7.x standards across all departments, emphasizing vigilance in managing vulnerabilities, securing logs, and responding swiftly to breaches.",
-          "similarity": 0.141
+          "policy_text": "Company shall ensure compliance with all KPIs specified above.",
+          "similarity": 0.16
         },
         {
-          "policy_text": "Company shall ensure adherence to all governance and policy management requirements outlined above by conducting regular code of conduct training for employees annually, reviewing policies at least once every two years with senior leadership's approval before implementation. ** This policy ensures compliance with established guidelines while maintaining flexibility through periodic review processes.",
-          "similarity": 0.014
+          "policy_text": "Company shall ensure compliance with CC7.x by implementing robust vulnerability management processes, maintaining comprehensive logging practices, and promptly addressing any incidents through Incident Response procedures.** This policy ensures all operations adhere to the specified requirements for security and incident handling. It mandates adherence to CC7.x standards across all departments, emphasizing vigilance in managing vulnerabilities, securing logs, and responding swiftly to breaches.",
+          "similarity": 0.141
         }
       ],
       "rationale": null,
@@ -368,12 +368,12 @@
       },
       "alternatives": [
         {
-          "policy_text": "An enterprise risk analysis shall be conducted at least annually and after significant changes. Results shall be documented in a risk register with assigned owners and deadlines.",
-          "similarity": 0.712
+          "policy_text": "An enterprise risk analysis is conducted at least annually and after significant changes. Results are documented in a risk register with assigned owners and deadlines.",
+          "similarity": 0.644
         },
         {
-          "policy_text": "Company shall ensure adherence to all specified KPIs for at least 3 reviews per year and complete remediation within 7 days of detection.",
-          "similarity": 0.075
+          "policy_text": "4 User access reviews are performed twice per year on high-risk systems and at least monthly on others; remediation is documented.",
+          "similarity": 0.03
         }
       ],
       "rationale": null,
@@ -385,8 +385,8 @@
       "text": "**Document retention:** HIPAA-required documentation retained **≥6 years** from creation or last effective date.",
       "label": "satisfied",
       "best_match": {
-        "policy_text": "1 Security and privacy program documentation, BAA inventory, access review exports, SIEM dashboards, incident records, backup test logs, DR reports, and training rosters are retained for at least six (6) years from creation or last effective date. Additionally, categorized and handled according to established procedures.",
-        "similarity": 0.991
+        "policy_text": "1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date. Additionally, categorized and handled according to established procedures.",
+        "similarity": 0.996
       },
       "alternatives": [
         {
@@ -412,8 +412,8 @@
       },
       "alternatives": [
         {
-          "policy_text": "2 Continuous scanning of code changes identifies known vulnerabilities; high-risk issues are prioritized for remediation before release or tracked with an approved exception, with exceptions requiring approval and having an expiration date.",
-          "similarity": 0.06
+          "policy_text": "2 Code changes are continuously scanned for known vulnerabilities; high-risk issues are prioritized for remediation before release or tracked with an approved exception, with exceptions having an expiration date.",
+          "similarity": 0.073
         },
         {
           "policy_text": "Company shall ensure compliance with CC4.x by implementing appropriate control activities and following the Software Development Life Cycle (SDLC).** This policy ensures all software development processes adhere to established guidelines and standards, enhancing security and reliability. **Failure to comply will result in disciplinary action as per Company Policy 5.2.** --- **Policy Title:** Compliance with CC4.x **Effective Date:** [Insert Effective Date] **Last Updated:** [Insert Last Update Date].",
@@ -460,8 +460,8 @@
           "similarity": 0.463
         },
         {
-          "policy_text": "3 Where ePHI is involved, the Privacy Officer coordinates regulatory notifications consistent with applicable law.",
-          "similarity": 0.019
+          "policy_text": "1 Data is categorized (e.g., Public, Internal, Confidential, Restricted/ePHI). Handling rules specify storage, sharing, and disposal requirements.",
+          "similarity": 0.056
         }
       ],
       "rationale": null,
@@ -495,8 +495,8 @@
       "text": "**Business Associate (BA):** Vendor handling ePHI on behalf of `<CompanyName>` (must execute BAA).",
       "label": "partially_satisfied",
       "best_match": {
-        "policy_text": "All Business Associate Agreements shall be executed prior to any vendor handling ePHI; subcontractors must comply with equivalent terms.",
-        "similarity": 0.625
+        "policy_text": "2 Business Associate Agreements are executed before any vendor handles ePHI; subcontractors must meet equivalent obligations.",
+        "similarity": 0.37
       },
       "alternatives": [
         {
@@ -508,8 +508,8 @@
           "similarity": 0.009
         }
       ],
-      "rationale": "LLM: The policy requires that vendors handle ePHI before executing a BAA, which aligns with the requirement. However, the top alternatives suggest additional measures such as conducting security questionnaires, engaging in continuous monitoring, and ensuring timely return or destruction of terminated data, which are not mentioned in the policy.",
-      "upgraded_from": null,
+      "rationale": "LLM: The policy requires 2 agreements before handling ePHI, while the alternatives specify that all BA contracts should include certain clauses.",
+      "upgraded_from": "non_existent",
       "downgraded_from": null
     },
     {
@@ -526,7 +526,7 @@
           "similarity": 0.003
         },
         {
-          "policy_text": "Company shall ensure all BA contracts include required clauses: permitted uses/disclosures, safeguards, breach reporting, subcontractor flow-down, return/destroy PHI, and termination for cause. To clarify, Company reserves the right to audit compliance with these requirements at any time.",
+          "policy_text": "Phishing simulations and quarterly security newsletters are mandatory for awareness purposes, while targeted advisories should be reviewed annually by all employees. **Failure to comply may result in disciplinary action.",
           "similarity": 0.001
         }
       ],
@@ -539,8 +539,8 @@
       "text": "**Security Incident:** Attempted or successful unauthorized access/use/disclosure/modification/destruction.",
       "label": "partially_satisfied",
       "best_match": {
-        "policy_text": "1 Suspected security incidents should be logged and maintained in a central register for review by Security and the Privacy Officer at least once per quarter.",
-        "similarity": 0.221
+        "policy_text": "1 Suspected security incidents are reported to Security and the Privacy Officer within 24 hours of discovery.",
+        "similarity": 0.336
       },
       "alternatives": [
         {
@@ -552,7 +552,7 @@
           "similarity": 0.046
         }
       ],
-      "rationale": "LLM: The policy mentions logging suspected incidents, which aligns with the requirement. However, it lacks details about maintaining logs in a central register, reviewing them quarterly, and ensuring they're accessible for investigation.",
+      "rationale": "LLM: The policy requires reporting within 24 hours, while the alternatives specify logging and maintaining logs in a central register.",
       "upgraded_from": "non_existent",
       "downgraded_from": null
     },
@@ -561,17 +561,17 @@
       "text": "**Risk Analysis (R):** Perform enterprise and system-level risk analyses **annually** and upon major change. Maintain risk register, likelihood/impact, owner, and treatment plan.",
       "label": "satisfied",
       "best_match": {
-        "policy_text": "An enterprise risk analysis shall be conducted at least annually and after significant changes. Results shall be documented in a risk register with assigned owners and deadlines.",
+        "policy_text": "An enterprise risk analysis is conducted at least annually and after significant changes. Results are documented in a risk register with assigned owners and deadlines.",
         "similarity": 1.0
       },
       "alternatives": [
         {
-          "policy_text": "Company shall conduct regular risk assessments to identify, analyze, and mitigate risks including fraud.",
-          "similarity": 0.757
+          "policy_text": "Company shall conduct a risk analysis and management process annually to ensure compliance with all applicable laws, regulations, standards, and policies.** This policy ensures that our organization remains compliant with legal requirements by regularly assessing potential risks and implementing effective mitigation strategies. It is essential for maintaining operational integrity and protecting stakeholders' interests.",
+          "similarity": 0.773
         },
         {
-          "policy_text": "The company will annually perform a comprehensive risk assessment and implementation of control measures to guarantee adherence to all relevant laws, regulations, standards, and policies.",
-          "similarity": 0.689
+          "policy_text": "Company shall conduct regular risk assessments to identify, analyze, and mitigate risks including fraud.",
+          "similarity": 0.757
         }
       ],
       "rationale": null,
@@ -581,23 +581,23 @@
     {
       "id": "C-0026",
       "text": "**Risk Management (R):** Track remediation to closure with due dates and acceptance criteria; high/critical items remediated within **30–90 days** depending on severity.",
-      "label": "satisfied",
+      "label": "non_existent",
       "best_match": {
-        "policy_text": "2 Risks rated Critical or High are remediated within 7 days if they are critical, and within 14 days if they are high. High/Critical risks must be remediated within 30-90 days of identification, with written business justification and CISO approval for acceptance.",
-        "similarity": 0.999
+        "policy_text": "2 Risks rated Critical or High are remediated on a defined timetable. Risk acceptance requires written business justification and CISO approval.",
+        "similarity": 0.734
       },
       "alternatives": [
         {
-          "policy_text": "2 Continuous scanning of code changes identifies known vulnerabilities; high-risk issues are prioritized for remediation before release or tracked with an approved exception, with exceptions requiring approval and having an expiration date.",
-          "similarity": 0.042
+          "policy_text": "2 Code changes are continuously scanned for known vulnerabilities; high-risk issues are prioritized for remediation before release or tracked with an approved exception, with exceptions having an expiration date.",
+          "similarity": 0.058
         },
         {
-          "policy_text": "Company shall ensure adherence to all specified KPIs for at least 3 reviews per year and complete remediation within 7 days of detection.",
-          "similarity": 0.037
+          "policy_text": "The high-risk exceptions must be approved by the executive before they can proceed beyond the initial 90-day period; otherwise, the vulnerability remains critical.",
+          "similarity": 0.032
         }
       ],
-      "rationale": null,
-      "upgraded_from": null,
+      "rationale": "LLM: The requirement specifies'remediation to closure with due dates and acceptance criteria,' while the policy states that 'high/critical items remediated within [X] days' without specifying what constitutes 'high/critical.' Additionally, the policy lacks information about acceptance criteria or exception management.",
+      "upgraded_from": "partially_satisfied",
       "downgraded_from": null
     },
     {
@@ -614,7 +614,7 @@
           "similarity": 0.974
         },
         {
-          "policy_text": "2 This policy is reviewed at least annually and upon material changes.",
+          "policy_text": "Phishing simulations and quarterly security newsletters are mandatory for awareness purposes, while targeted advisories should be reviewed annually by all employees. **Failure to comply may result in disciplinary action.",
           "similarity": 0.006
         }
       ],
@@ -627,13 +627,13 @@
       "text": "**Information System Activity Review (R):** Monitor security events, access logs, audit trails. Review **at least monthly** for in-scope systems.",
       "label": "satisfied",
       "best_match": {
-        "policy_text": "User access reviews are conducted twice per year on high-risk systems and at least monthly on other systems; documentation of remediation is required.",
-        "similarity": 0.863
+        "policy_text": "4 User access reviews are performed twice per year on high-risk systems and at least monthly on others; remediation is documented.",
+        "similarity": 0.833
       },
       "alternatives": [
         {
-          "policy_text": "1 Suspected security incidents should be logged and maintained in a central register for review by Security and the Privacy Officer at least once per quarter.",
-          "similarity": 0.191
+          "policy_text": "2 Logs are retained for at least 365 days, with restricted access and tamper-resistant storage for critical systems, and include an automated system for monitoring and alerting in case of any anomalies.",
+          "similarity": 0.126
         },
         {
           "policy_text": "1 Security-relevant events (authentication results, privilege changes, configuration changes, and incident indicators) are logged centrally where feasible; tracking of these logs is maintained in a central register for easy access and reference. integrity measures such as hashing/signing and change detection are implemented.",
@@ -676,11 +676,11 @@
       },
       "alternatives": [
         {
-          "policy_text": "Company shall implement security questionnaires, conduct SOC report reviews, comply with BAA/DPA requirements, engage in continuous monitoring, and ensure timely return or deletion of terminated data.",
-          "similarity": 0.002
+          "policy_text": "1 Suspected security incidents are reported to Security and the Privacy Officer within 24 hours of discovery.",
+          "similarity": 0.007
         },
         {
-          "policy_text": "Onboarding of new hires must occur prior to granting system access; all personnel must participate in an annual refresher course on security and privacy principles.",
+          "policy_text": "1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date. Additionally, categorized and handled according to established procedures.",
           "similarity": 0.001
         }
       ],
@@ -693,17 +693,17 @@
       "text": "**Information Access Management (R/A):** Minimum necessary; role-based access; documented access authorization and modification; periodic access reviews (**quarterly** for high-risk systems).",
       "label": "satisfied",
       "best_match": {
-        "policy_text": "User access reviews are conducted twice per year on high-risk systems and at least monthly on other systems; documentation of remediation is required.",
-        "similarity": 0.947
+        "policy_text": "4 User access reviews are performed twice per year on high-risk systems and at least monthly on others; remediation is documented.",
+        "similarity": 0.943
       },
       "alternatives": [
         {
-          "policy_text": "1 Access is granted based on job duties and approved by the relevant manager and System Owner (least-privilege).",
-          "similarity": 0.031
+          "policy_text": "Phishing simulations and quarterly security newsletters are mandatory for awareness purposes, while targeted advisories should be reviewed annually by all employees. **Failure to comply may result in disciplinary action.",
+          "similarity": 0.042
         },
         {
-          "policy_text": "1 Suspected security incidents should be logged and maintained in a central register for review by Security and the Privacy Officer at least once per quarter.",
-          "similarity": 0.024
+          "policy_text": "1 Access is granted based on job duties and approved by the relevant manager and System Owner (least-privilege).",
+          "similarity": 0.031
         }
       ],
       "rationale": null,
@@ -715,13 +715,13 @@
       "text": "**Security Awareness & Training (A):** Onboarding + **annual** HIPAA security training; phishing simulations; password/MFA guidance.",
       "label": "satisfied",
       "best_match": {
-        "policy_text": "Company shall provide security awareness training annually to all employees on their roles and responsibilities regarding data protection and cybersecurity measures.** This policy ensures compliance with §164.308(a)(5) of the Health Insurance Portability and Accountability Act (HIPAA). Employees must understand their role in protecting sensitive information and implementing necessary cybersecurity protocols.",
-        "similarity": 0.792
+        "policy_text": "Phishing simulations and quarterly security newsletters are mandatory for awareness purposes, while targeted advisories should be reviewed annually by all employees. **Failure to comply may result in disciplinary action.",
+        "similarity": 0.794
       },
       "alternatives": [
         {
-          "policy_text": "Phishing simulations and quarterly security newsletters are mandatory for awareness purposes, while targeted advisories should be reviewed semiannually by all employees. Failure to comply may result in disciplinary action.",
-          "similarity": 0.737
+          "policy_text": "Company shall provide security awareness training annually to all employees on their roles and responsibilities regarding data protection and cybersecurity measures.** This policy ensures compliance with §164.308(a)(5) of the Health Insurance Portability and Accountability Act (HIPAA). Employees must understand their role in protecting sensitive information and implementing necessary cybersecurity protocols.",
+          "similarity": 0.792
         },
         {
           "policy_text": "Onboarding of new hires must occur prior to granting system access; all personnel must participate in an annual refresher course on security and privacy principles.",
@@ -735,23 +735,23 @@
     {
       "id": "C-0033",
       "text": "**Security Incident Procedures (R):** Detect, triage, contain, investigate, and report. Internal notification to SO/PO **within 24 hours** of discovery.",
-      "label": "partially_satisfied",
+      "label": "satisfied",
       "best_match": {
-        "policy_text": "2 The incident team performs triage, containment, eradication, and recovery, and documents lessons learned.",
-        "similarity": 0.433
+        "policy_text": "1 Suspected security incidents are reported to Security and the Privacy Officer within 24 hours of discovery.",
+        "similarity": 0.999
       },
       "alternatives": [
         {
-          "policy_text": "Incident Response:** SOC (Risk), CISO (Audit), PO (Breach), IT/Engineering (Review), Legal (Consultation), Communications (Notification).",
-          "similarity": 0.195
+          "policy_text": "2 The incident team performs triage, containment, eradication, and recovery, and documents lessons learned.",
+          "similarity": 0.433
         },
         {
-          "policy_text": "3 The security team reviews alerts and trends and escalates potential incidents for investigation.",
-          "similarity": 0.108
+          "policy_text": "Incident Response:** SOC (Risk), CISO (Audit), PO (Breach), IT/Engineering (Review), Legal (Consultation), Communications (Notification).",
+          "similarity": 0.195
         }
       ],
-      "rationale": "LLM: The policy mentions 'SOC', 'CISO', 'IT/Engineering' which are stronger than 'Internal notification'. Additionally, the policy states 'document lessons learned' which is broader than 'investigate'.",
-      "upgraded_from": "non_existent",
+      "rationale": null,
+      "upgraded_from": null,
       "downgraded_from": null
     },
     {
@@ -759,8 +759,8 @@
       "text": "**Contingency Plan (R/A):** Data backup plan, disaster recovery plan, emergency mode operations.",
       "label": "satisfied",
       "best_match": {
-        "policy_text": "The company must have a detailed contingency plan for data backups, disaster recovery, and emergency modes to guarantee operational continuity and reduce downtime.",
-        "similarity": 0.991
+        "policy_text": "Company shall maintain a comprehensive contingency plan for data backup, disaster recovery, and emergency mode operations to ensure business continuity and minimize downtime. **[Auditable]** --- This policy ensures all employees understand their roles in maintaining this plan and adhere to its requirements.",
+        "similarity": 0.996
       },
       "alternatives": [
         {
@@ -768,8 +768,8 @@
           "similarity": 0.327
         },
         {
-          "policy_text": "Company shall implement technical controls for IT operations and infrastructure including access control, logging, backups, disaster recovery, patch management, and endpoint security measures.",
-          "similarity": 0.143
+          "policy_text": "3 Disaster recovery objectives (RTO/RPO) are defined for critical services and validated annually through an annual exercise; quarterly restores are also tested.",
+          "similarity": 0.043
         }
       ],
       "rationale": null,
@@ -781,8 +781,8 @@
       "text": "**Backups:** Encrypt; test **quarterly**; retain per data retention policy.",
       "label": "satisfied",
       "best_match": {
-        "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy; use AWS Key Management Service (KMS) for encryption; rotate keys every 3 years; manage secrets using AWS Secrets Manager. use AWS Key Management Service (KMS) for encryption; rotate keys every 3 years; manage secrets using AWS Secrets Manager.",
-        "similarity": 0.999
+        "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy.",
+        "similarity": 1.0
       },
       "alternatives": [
         {
@@ -834,11 +834,11 @@
           "similarity": 0.003
         },
         {
-          "policy_text": "User access reviews are conducted twice per year on high-risk systems and at least monthly on other systems; documentation of remediation is required.",
-          "similarity": 0.002
+          "policy_text": "4 User access reviews are performed twice per year on high-risk systems and at least monthly on others; remediation is documented.",
+          "similarity": 0.001
         }
       ],
-      "rationale": "LLM: The REQUIREMENT specifies an evaluation every six months, while the BEST POLICY MATCH states a yearly audit, making this option irrelevant as there is no overlap in frequency.",
+      "rationale": "LLM: The REQUIREMENT specifies an evaluation every six months, while the BEST POLICY MATCH states a yearly audit by a third-party auditor, making this option irrelevant as there is no overlap in frequency.",
       "upgraded_from": null,
       "downgraded_from": null
     },
@@ -847,8 +847,8 @@
       "text": "**Business Associate Arrangements (R):** Execute **BAA** before ePHI access; require incident reporting, safeguards, subcontractor flow-downs.",
       "label": "satisfied",
       "best_match": {
-        "policy_text": "All Business Associate Agreements shall be executed prior to any vendor handling ePHI; subcontractors must comply with equivalent terms.",
-        "similarity": 0.954
+        "policy_text": "2 Business Associate Agreements are executed before any vendor handles ePHI; subcontractors must meet equivalent obligations.",
+        "similarity": 0.996
       },
       "alternatives": [
         {
@@ -869,17 +869,17 @@
       "text": "**Facility Access Controls (A):** Badge controls; visitor management; data center access by least privilege; logs retained **1 year** minimum.",
       "label": "satisfied",
       "best_match": {
-        "policy_text": "2 Logs are retained for at least 1 year online, with restricted access and tamper-resistant storage for critical systems, and include an automated system for monitoring and alerting in case of any anomalies.",
-        "similarity": 0.987
+        "policy_text": "1 Facilities housing production systems use badge-controlled access and visitor sign-in procedures.",
+        "similarity": 0.936
       },
       "alternatives": [
         {
-          "policy_text": "1 Facilities housing production systems use badge-controlled access and visitor sign-in procedures.",
-          "similarity": 0.936
+          "policy_text": "2 Logs are retained for at least 365 days, with restricted access and tamper-resistant storage for critical systems, and include an automated system for monitoring and alerting in case of any anomalies.",
+          "similarity": 0.849
         },
         {
-          "policy_text": "1 Access is granted based on job duties and approved by the relevant manager and System Owner (least-privilege).",
-          "similarity": 0.193
+          "policy_text": "1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date. Additionally, categorized and handled according to established procedures.",
+          "similarity": 0.325
         }
       ],
       "rationale": null,
@@ -940,8 +940,8 @@
       },
       "alternatives": [
         {
-          "policy_text": "2 Data in transit should use encryption at rest/in transit; key management; data loss prevention; secure disposal of data; NDAs for handling sensitive information.",
-          "similarity": 0.09
+          "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy.",
+          "similarity": 0.229
         },
         {
           "policy_text": "Company shall implement technical controls for IT operations and infrastructure including access control, logging, backups, disaster recovery, patch management, and endpoint security measures.",
@@ -979,8 +979,8 @@
       "text": "**Encryption:** ePHI **at rest** (AES‑256 or equivalent) and **in transit** (TLS 1.2+; TLS 1.3 preferred). Key management documented.",
       "label": "satisfied",
       "best_match": {
-        "policy_text": "2 Data in transit should use encryption at rest/in transit; key management; data loss prevention; secure disposal of data; NDAs for handling sensitive information.",
-        "similarity": 0.99
+        "policy_text": "2 Data in transit should use secure protocols (TLS 1.2+) unless specifically exempted by documented risk assessment and supplemented with alternative security measures.",
+        "similarity": 0.92
       },
       "alternatives": [
         {
@@ -1001,8 +1001,8 @@
       "text": "**Audit Controls:** Centralized logging; immutable storage for critical logs; SIEM correlation; time sync (NTP).",
       "label": "garbage",
       "best_match": {
-        "policy_text": "2 Logs are retained for at least 1 year online, with restricted access and tamper-resistant storage for critical systems, and include an automated system for monitoring and alerting in case of any anomalies.",
-        "similarity": 0.243
+        "policy_text": "2 Logs are retained for at least 365 days, with restricted access and tamper-resistant storage for critical systems, and include an automated system for monitoring and alerting in case of any anomalies.",
+        "similarity": 0.351
       },
       "alternatives": [
         {
@@ -1032,7 +1032,7 @@
           "similarity": 0.267
         },
         {
-          "policy_text": "Incident Response:** SOC (Risk), CISO (Audit), PO (Breach), IT/Engineering (Review), Legal (Consultation), Communications (Notification).",
+          "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy.",
           "similarity": 0.001
         }
       ],
@@ -1072,12 +1072,12 @@
       },
       "alternatives": [
         {
-          "policy_text": "2 Data in transit should use encryption at rest/in transit; key management; data loss prevention; secure disposal of data; NDAs for handling sensitive information.",
-          "similarity": 0.152
+          "policy_text": "2 Data in transit should use secure protocols (TLS 1.2+) unless specifically exempted by documented risk assessment and supplemented with alternative security measures.",
+          "similarity": 0.021
         },
         {
-          "policy_text": "Company shall implement encryption standards for all data storage classes, ensuring compliance with KMS/HSM requirements and adhering to a scheduled key rotation process. Additionally, Company must manage secrets effectively through robust secret management practices.",
-          "similarity": 0.002
+          "policy_text": "Company shall implement technical controls for IT operations and infrastructure including access control, logging, backups, disaster recovery, patch management, and endpoint security measures.",
+          "similarity": 0.001
         }
       ],
       "rationale": null,
@@ -1111,7 +1111,7 @@
       "text": "Maintain written P&P; train on updates; document evaluations; **retain 6 years** from creation/last effective date.",
       "label": "satisfied",
       "best_match": {
-        "policy_text": "1 Security and privacy program documentation, BAA inventory, access review exports, SIEM dashboards, incident records, backup test logs, DR reports, and training rosters are retained for at least six (6) years from creation or last effective date. Additionally, categorized and handled according to established procedures.",
+        "policy_text": "1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date. Additionally, categorized and handled according to established procedures.",
         "similarity": 0.995
       },
       "alternatives": [
@@ -1160,12 +1160,12 @@
       },
       "alternatives": [
         {
-          "policy_text": "Company shall ensure all BA contracts include required clauses: permitted uses/disclosures, safeguards, breach reporting, subcontractor flow-down, return/destroy PHI, and termination for cause. To clarify, Company reserves the right to audit compliance with these requirements at any time.",
-          "similarity": 0.041
+          "policy_text": "1 Notices describe how personal information is collected, used, and shared; requests for access or deletion of personal information are handled in accordance with applicable laws. marketing and research activities must comply with enhanced data protection measures.",
+          "similarity": 0.291
         },
         {
-          "policy_text": "Company shall ensure compliance with individual rights regarding access, amendment, and accounting of disclosures as outlined in document SLAs.",
-          "similarity": 0.032
+          "policy_text": "Company shall ensure all BA contracts include required clauses: permitted uses/disclosures, safeguards, breach reporting, subcontractor flow-down, return/destroy PHI, and termination for cause. To clarify, Company reserves the right to audit compliance with these requirements at any time.",
+          "similarity": 0.041
         }
       ],
       "rationale": null,
@@ -1182,7 +1182,7 @@
       },
       "alternatives": [
         {
-          "policy_text": "1 Notices describe how personal information is collected, used, and shared; requests for access or deletion of personal information are handled in accordance with applicable laws. Personal information shall be protected according to privacy regulations.",
+          "policy_text": "1 Notices describe how personal information is collected, used, and shared; requests for access or deletion of personal information are handled in accordance with applicable laws. marketing and research activities must comply with enhanced data protection measures.",
           "similarity": 0.002
         },
         {
@@ -1204,12 +1204,12 @@
       },
       "alternatives": [
         {
-          "policy_text": "1 Notices describe how personal information is collected, used, and shared; requests for access or deletion of personal information are handled in accordance with applicable laws. Personal information shall be protected according to privacy regulations.",
-          "similarity": 0.046
+          "policy_text": "1 Notices describe how personal information is collected, used, and shared; requests for access or deletion of personal information are handled in accordance with applicable laws. marketing and research activities must comply with enhanced data protection measures.",
+          "similarity": 0.026
         },
         {
-          "policy_text": "1 Suspected security incidents should be logged and maintained in a central register for review by Security and the Privacy Officer at least once per quarter.",
-          "similarity": 0.004
+          "policy_text": "1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date. Additionally, categorized and handled according to established procedures.",
+          "similarity": 0.009
         }
       ],
       "rationale": null,
@@ -1219,10 +1219,10 @@
     {
       "id": "C-0055",
       "text": "**Breach Notification:** Without unreasonable delay, **no later than 60 days** to affected individuals; notify HHS and media where required. Internal escalation **within 24 hours** of discovery. Maintain risk assessment and decision record.",
-      "label": "garbage",
+      "label": "satisfied",
       "best_match": {
-        "policy_text": "The high-risk exceptions must be approved by the executive before they can proceed beyond the initial 90-day period; otherwise, the vulnerability remains critical.",
-        "similarity": 0.079
+        "policy_text": "1 Suspected security incidents are reported to Security and the Privacy Officer within 24 hours of discovery.",
+        "similarity": 0.892
       },
       "alternatives": [
         {
@@ -1230,12 +1230,12 @@
           "similarity": 0.072
         },
         {
-          "policy_text": "Company shall ensure adherence to all specified KPIs for at least 3 reviews per year and complete remediation within 7 days of detection.",
-          "similarity": 0.01
+          "policy_text": "Phishing simulations and quarterly security newsletters are mandatory for awareness purposes, while targeted advisories should be reviewed annually by all employees. **Failure to comply may result in disciplinary action.",
+          "similarity": 0.004
         }
       ],
-      "rationale": "LLM: The requirement uses a placeholder ('no later than') without providing details about what needs to be done after 60 days.",
-      "upgraded_from": "non_existent",
+      "rationale": null,
+      "upgraded_from": null,
       "downgraded_from": null
     },
     {
@@ -1243,20 +1243,20 @@
       "text": "**Risk Analysis Workflow:** inventory → data flows → threat modeling → likelihood/impact → risk register → treatment plan.",
       "label": "partially_satisfied",
       "best_match": {
-        "policy_text": "An enterprise risk analysis shall be conducted at least annually and after significant changes. Results shall be documented in a risk register with assigned owners and deadlines.",
-        "similarity": 0.387
+        "policy_text": "An enterprise risk analysis is conducted at least annually and after significant changes. Results are documented in a risk register with assigned owners and deadlines.",
+        "similarity": 0.532
       },
       "alternatives": [
         {
-          "policy_text": "Incident Response:** SOC (Risk), CISO (Audit), PO (Breach), IT/Engineering (Review), Legal (Consultation), Communications (Notification).",
-          "similarity": 0.013
+          "policy_text": "Company shall conduct a risk analysis and management process annually to ensure compliance with all applicable laws, regulations, standards, and policies.** This policy ensures that our organization remains compliant with legal requirements by regularly assessing potential risks and implementing effective mitigation strategies. It is essential for maintaining operational integrity and protecting stakeholders' interests.",
+          "similarity": 0.053
         },
         {
-          "policy_text": "Company shall conduct regular risk assessments to identify, analyze, and mitigate risks including fraud.",
-          "similarity": 0.008
+          "policy_text": "2 Risks rated Critical or High are remediated on a defined timetable. Risk acceptance requires written business justification and CISO approval.",
+          "similarity": 0.014
         }
       ],
-      "rationale": "LLM: The BEST POLICY MATCH specifies an annual risk analysis, while the REQUIREMENT suggests an annual and post-change assessment. Additionally, the BEST POLICY MATCH mentions 'data flows' and 'threat modeling', which are not included in the REQUIREMENT.",
+      "rationale": "LLM: The policy mentions an annual risk analysis but does not specify how often it should be conducted. The requirement specifies 'at least annually', which is stricter than the policy's 'after significant changes'. Additionally, the policy lacks clarity regarding when the results should be documented.",
       "upgraded_from": "non_existent",
       "downgraded_from": null
     },
@@ -1287,39 +1287,17 @@
       "text": "**Quarterly Access Reviews:** extract entitlements → owner attestation → remediation tickets → closure evidence.",
       "label": "non_existent",
       "best_match": {
-        "policy_text": "User access reviews are conducted twice per year on high-risk systems and at least monthly on other systems; documentation of remediation is required.",
-        "similarity": 0.099
+        "policy_text": "4 User access reviews are performed twice per year on high-risk systems and at least monthly on others; remediation is documented.",
+        "similarity": 0.079
       },
       "alternatives": [
         {
-          "policy_text": "Company shall ensure adherence to all specified KPIs for at least 3 reviews per year and complete remediation within 7 days of detection.",
-          "similarity": 0.008
+          "policy_text": "1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date. Additionally, categorized and handled according to established procedures.",
+          "similarity": 0.005
         },
         {
-          "policy_text": "1 Security and privacy program documentation, BAA inventory, access review exports, SIEM dashboards, incident records, backup test logs, DR reports, and training rosters are retained for at least six (6) years from creation or last effective date. Additionally, categorized and handled according to established procedures.",
-          "similarity": 0.001
-        }
-      ],
-      "rationale": "LLM: The policy matches the requirement by mentioning quarterly access reviews on high-risk systems and at least monthly on others, while also requiring documentation of remediation and retention of certain documents.",
-      "upgraded_from": null,
-      "downgraded_from": null
-    },
-    {
-      "id": "C-0059",
-      "text": "**Encryption Standard:** storage classes mapped to controls; KMS/HSM; key rotation schedule; secrets management.",
-      "label": "satisfied",
-      "best_match": {
-        "policy_text": "Company shall implement encryption standards for all data storage classes, ensuring compliance with KMS/HSM requirements and adhering to a scheduled key rotation process. Additionally, Company must manage secrets effectively through robust secret management practices.",
-        "similarity": 0.983
-      },
-      "alternatives": [
-        {
-          "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy; use AWS Key Management Service (KMS) for encryption; rotate keys every 3 years; manage secrets using AWS Secrets Manager. use AWS Key Management Service (KMS) for encryption; rotate keys every 3 years; manage secrets using AWS Secrets Manager.",
-          "similarity": 0.776
-        },
-        {
-          "policy_text": "2 Data in transit should use encryption at rest/in transit; key management; data loss prevention; secure disposal of data; NDAs for handling sensitive information.",
-          "similarity": 0.367
+          "policy_text": "3 Engineering / SDLC Owners ensure secure design, code review, CI/CD, change control, and secrets management for their systems and oversee user access reviews.",
+          "similarity": 0.003
         }
       ],
       "rationale": null,
@@ -1327,12 +1305,34 @@
       "downgraded_from": null
     },
     {
+      "id": "C-0059",
+      "text": "**Encryption Standard:** storage classes mapped to controls; KMS/HSM; key rotation schedule; secrets management.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy.",
+        "similarity": 0.034
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall implement encryption for all data transmissions, manage certificates securely, and ensure use of secure APIs.",
+          "similarity": 0.017
+        },
+        {
+          "policy_text": "1 All production databases and file stores containing sensitive data are encrypted at rest using strong, industry-accepted algorithms.",
+          "similarity": 0.007
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
       "id": "C-0060",
       "text": "**Logging & Monitoring:** define events; retention ≥ **1 year online**; alerting playbooks.",
-      "label": "satisfied",
+      "label": "non_existent",
       "best_match": {
-        "policy_text": "2 Logs are retained for at least 1 year online, with restricted access and tamper-resistant storage for critical systems, and include an automated system for monitoring and alerting in case of any anomalies.",
-        "similarity": 0.933
+        "policy_text": "2 Logs are retained for at least 365 days, with restricted access and tamper-resistant storage for critical systems, and include an automated system for monitoring and alerting in case of any anomalies.",
+        "similarity": 0.209
       },
       "alternatives": [
         {
@@ -1340,11 +1340,11 @@
           "similarity": 0.008
         },
         {
-          "policy_text": "1 Suspected security incidents should be logged and maintained in a central register for review by Security and the Privacy Officer at least once per quarter.",
+          "policy_text": "1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date. Additionally, categorized and handled according to established procedures.",
           "similarity": 0.003
         }
       ],
-      "rationale": null,
+      "rationale": "LLM: The REQUIREMENT mentions'retention ≥ 1 year online', while the BEST POLICY MATCH states'retained for at least 365 days'. This discrepancy indicates that the BEST POLICY MATCH does not meet the full requirement.",
       "upgraded_from": null,
       "downgraded_from": null
     },
@@ -1362,8 +1362,8 @@
           "similarity": 0.013
         },
         {
-          "policy_text": "1 Security-relevant events (authentication results, privilege changes, configuration changes, and incident indicators) are logged centrally where feasible; tracking of these logs is maintained in a central register for easy access and reference. integrity measures such as hashing/signing and change detection are implemented.",
-          "similarity": 0.001
+          "policy_text": "Company shall maintain a comprehensive contingency plan for data backup, disaster recovery, and emergency mode operations to ensure business continuity and minimize downtime. **[Auditable]** --- This policy ensures all employees understand their roles in maintaining this plan and adhere to its requirements.",
+          "similarity": 0.0
         }
       ],
       "rationale": null,
@@ -1384,8 +1384,8 @@
           "similarity": 0.863
         },
         {
-          "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy; use AWS Key Management Service (KMS) for encryption; rotate keys every 3 years; manage secrets using AWS Secrets Manager. use AWS Key Management Service (KMS) for encryption; rotate keys every 3 years; manage secrets using AWS Secrets Manager.",
-          "similarity": 0.099
+          "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy.",
+          "similarity": 0.733
         }
       ],
       "rationale": null,
@@ -1395,45 +1395,45 @@
     {
       "id": "C-0063",
       "text": "**KPIs:** access review completion %, median time-to-revoke (hrs), vuln remediation SLA compliance %, backup restore success rate, incident MTTR, training completion %.",
-      "label": "non_existent",
+      "label": "partially_satisfied",
       "best_match": {
-        "policy_text": "Company shall ensure adherence to all specified KPIs for at least 3 reviews per year and complete remediation within 7 days of detection.",
-        "similarity": 0.07
+        "policy_text": "Company shall ensure compliance with all KPIs specified above.",
+        "similarity": 0.257
       },
       "alternatives": [
         {
-          "policy_text": "1 Security and privacy program documentation, BAA inventory, access review exports, SIEM dashboards, incident records, backup test logs, DR reports, and training rosters are retained for at least six (6) years from creation or last effective date. Additionally, categorized and handled according to established procedures.",
-          "similarity": 0.061
+          "policy_text": "4 User access reviews are performed twice per year on high-risk systems and at least monthly on others; remediation is documented.",
+          "similarity": 0.099
         },
         {
-          "policy_text": "User access reviews are conducted twice per year on high-risk systems and at least monthly on other systems; documentation of remediation is required.",
-          "similarity": 0.052
+          "policy_text": "Incident Response:** SOC (Risk), CISO (Audit), PO (Breach), IT/Engineering (Review), Legal (Consultation), Communications (Notification).",
+          "similarity": 0.042
         }
       ],
-      "rationale": "LLM: The policy requires 'training rosters' to be maintained, which is not addressed in the requirement.",
-      "upgraded_from": null,
+      "rationale": "LLM: The policy mentions 'all KPIs' which aligns with the requirement, but does not specify how many times each KPI should be reviewed or remediated.",
+      "upgraded_from": "non_existent",
       "downgraded_from": null
     },
     {
       "id": "C-0064",
       "text": "**Evidence:** risk assessments, BAA inventory, access review exports, SIEM dashboards, IR tickets, backup test logs, DR reports, training rosters.",
-      "label": "satisfied",
+      "label": "non_existent",
       "best_match": {
-        "policy_text": "1 Security and privacy program documentation, BAA inventory, access review exports, SIEM dashboards, incident records, backup test logs, DR reports, and training rosters are retained for at least six (6) years from creation or last effective date. Additionally, categorized and handled according to established procedures.",
-        "similarity": 0.979
+        "policy_text": "1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date. Additionally, categorized and handled according to established procedures.",
+        "similarity": 0.603
       },
       "alternatives": [
         {
-          "policy_text": "Company shall implement security questionnaires, conduct SOC report reviews, comply with BAA/DPA requirements, engage in continuous monitoring, and ensure timely return or deletion of terminated data.",
-          "similarity": 0.023
+          "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy.",
+          "similarity": 0.046
         },
         {
-          "policy_text": "Incident Response:** SOC (Risk), CISO (Audit), PO (Breach), IT/Engineering (Review), Legal (Consultation), Communications (Notification).",
-          "similarity": 0.009
+          "policy_text": "Company shall implement security questionnaires, conduct SOC report reviews, comply with BAA/DPA requirements, engage in continuous monitoring, and ensure timely return or deletion of terminated data.",
+          "similarity": 0.023
         }
       ],
-      "rationale": null,
-      "upgraded_from": null,
+      "rationale": "LLM: The REQUIREMENT specifies that risk assessments, BAA inventory, access review exports, SIEM dashboards, IR tickets, backup test logs, DR reports, and training rosters be retained for at least six years. The BEST POLICY MATCH does not include this information.",
+      "upgraded_from": "partially_satisfied",
       "downgraded_from": null
     },
     {
@@ -1441,8 +1441,8 @@
       "text": "**§164.308(a)(1)** Risk Analysis/Management → [A4‑1].",
       "label": "non_existent",
       "best_match": {
-        "policy_text": "An enterprise risk analysis shall be conducted at least annually and after significant changes. Results shall be documented in a risk register with assigned owners and deadlines.",
-        "similarity": 0.06
+        "policy_text": "Company shall conduct a risk analysis and management process annually to ensure compliance with all applicable laws, regulations, standards, and policies.** This policy ensures that our organization remains compliant with legal requirements by regularly assessing potential risks and implementing effective mitigation strategies. It is essential for maintaining operational integrity and protecting stakeholders' interests.",
+        "similarity": 0.072
       },
       "alternatives": [
         {
@@ -1454,7 +1454,7 @@
           "similarity": 0.004
         }
       ],
-      "rationale": "LLM: The policy clearly states that an annual risk analysis should be conducted and includes additional requirements for documenting results and assigning owners/deadlines, which aligns with the HIPAA regulation.",
+      "rationale": null,
       "upgraded_from": null,
       "downgraded_from": null
     },
@@ -1468,8 +1468,8 @@
       },
       "alternatives": [
         {
-          "policy_text": "Phishing simulations and quarterly security newsletters are mandatory for awareness purposes, while targeted advisories should be reviewed semiannually by all employees. Failure to comply may result in disciplinary action.",
-          "similarity": 0.017
+          "policy_text": "Phishing simulations and quarterly security newsletters are mandatory for awareness purposes, while targeted advisories should be reviewed annually by all employees. **Failure to comply may result in disciplinary action.",
+          "similarity": 0.025
         },
         {
           "policy_text": "Incident Response:** SOC (Risk), CISO (Audit), PO (Breach), IT/Engineering (Review), Legal (Consultation), Communications (Notification).",
@@ -1483,10 +1483,10 @@
     {
       "id": "C-0067",
       "text": "**§164.308(a)(7)** Contingency Plan → [A4‑7].",
-      "label": "satisfied",
+      "label": "non_existent",
       "best_match": {
-        "policy_text": "The company must have a detailed contingency plan for data backups, disaster recovery, and emergency modes to guarantee operational continuity and reduce downtime.",
-        "similarity": 0.233
+        "policy_text": "Company shall maintain a comprehensive contingency plan for data backup, disaster recovery, and emergency mode operations to ensure business continuity and minimize downtime. **[Auditable]** --- This policy ensures all employees understand their roles in maintaining this plan and adhere to its requirements.",
+        "similarity": 0.144
       },
       "alternatives": [
         {
@@ -1498,8 +1498,8 @@
           "similarity": 0.002
         }
       ],
-      "rationale": "LLM: The policy aligns perfectly with the requirement by specifying a detailed contingency plan for data backups, disaster recovery, and emergency modes.",
-      "upgraded_from": "non_existent",
+      "rationale": null,
+      "upgraded_from": null,
       "downgraded_from": null
     },
     {
@@ -1516,8 +1516,8 @@
           "similarity": 0.857
         },
         {
-          "policy_text": "Company shall implement security questionnaires, conduct SOC report reviews, comply with BAA/DPA requirements, engage in continuous monitoring, and ensure timely return or deletion of terminated data.",
-          "similarity": 0.559
+          "policy_text": "Company shall implement necessary controls for all uses/disclosures of data as authorized by law, consent, BAA, and marketing/research purposes, ensuring compliance with applicable regulations and industry standards.",
+          "similarity": 0.682
         }
       ],
       "rationale": null,
@@ -1578,12 +1578,12 @@
       },
       "alternatives": [
         {
-          "policy_text": "An enterprise risk analysis shall be conducted at least annually and after significant changes. Results shall be documented in a risk register with assigned owners and deadlines.",
-          "similarity": 0.041
+          "policy_text": "An enterprise risk analysis is conducted at least annually and after significant changes. Results are documented in a risk register with assigned owners and deadlines.",
+          "similarity": 0.057
         },
         {
-          "policy_text": "Incident Response:** SOC (Risk), CISO (Audit), PO (Breach), IT/Engineering (Review), Legal (Consultation), Communications (Notification).",
-          "similarity": 0.008
+          "policy_text": "Company shall conduct a risk analysis and management process annually to ensure compliance with all applicable laws, regulations, standards, and policies.** This policy ensures that our organization remains compliant with legal requirements by regularly assessing potential risks and implementing effective mitigation strategies. It is essential for maintaining operational integrity and protecting stakeholders' interests.",
+          "similarity": 0.034
         }
       ],
       "rationale": null,
@@ -1703,45 +1703,45 @@
     {
       "id": "C-0077",
       "text": "*1) Governance & Policy Management.** Code of Conduct; info security policy suite; annual reviews; leadership sign-off.",
-      "label": "partially_satisfied",
+      "label": "non_existent",
       "best_match": {
-        "policy_text": "Company shall ensure adherence to all governance and policy management requirements outlined above by conducting regular code of conduct training for employees annually, reviewing policies at least once every two years with senior leadership's approval before implementation. ** This policy ensures compliance with established guidelines while maintaining flexibility through periodic review processes.",
-        "similarity": 0.766
+        "policy_text": "Company shall set the tone at the top, oversee risk management, and approve this policy suite.",
+        "similarity": 0.021
       },
       "alternatives": [
         {
-          "policy_text": "Company shall set the tone at the top, oversee risk management, and approve this policy suite.",
-          "similarity": 0.021
+          "policy_text": "Phishing simulations and quarterly security newsletters are mandatory for awareness purposes, while targeted advisories should be reviewed annually by all employees. **Failure to comply may result in disciplinary action.",
+          "similarity": 0.015
         },
         {
           "policy_text": "3 Engineering / SDLC Owners ensure secure design, code review, CI/CD, change control, and secrets management for their systems and oversee user access reviews.",
           "similarity": 0.005
         }
       ],
-      "rationale": "LLM: The policy mentions annual reviews and leadership sign-off, which align with the requirement. However, it lacks clear references to centralized, immutable, SIEM, and NTP controls.",
+      "rationale": "Valid requirement but no matching policy coverage found.",
       "upgraded_from": null,
       "downgraded_from": null
     },
     {
       "id": "C-0078",
       "text": "*2) Risk Management.** Enterprise and product risks tracked; threat intel; risk appetite; treatment SLAs.",
-      "label": "non_existent",
+      "label": "satisfied",
       "best_match": {
-        "policy_text": "An enterprise risk analysis shall be conducted at least annually and after significant changes. Results shall be documented in a risk register with assigned owners and deadlines.",
-        "similarity": 0.147
+        "policy_text": "An enterprise risk analysis is conducted at least annually and after significant changes. Results are documented in a risk register with assigned owners and deadlines.",
+        "similarity": 0.268
       },
       "alternatives": [
         {
-          "policy_text": "Incident Response:** SOC (Risk), CISO (Audit), PO (Breach), IT/Engineering (Review), Legal (Consultation), Communications (Notification).",
-          "similarity": 0.006
+          "policy_text": "2 Risks rated Critical or High are remediated on a defined timetable. Risk acceptance requires written business justification and CISO approval.",
+          "similarity": 0.014
         },
         {
-          "policy_text": "2 Continuous scanning of code changes identifies known vulnerabilities; high-risk issues are prioritized for remediation before release or tracked with an approved exception, with exceptions requiring approval and having an expiration date.",
-          "similarity": 0.002
+          "policy_text": "Company shall conduct a risk analysis and management process annually to ensure compliance with all applicable laws, regulations, standards, and policies.** This policy ensures that our organization remains compliant with legal requirements by regularly assessing potential risks and implementing effective mitigation strategies. It is essential for maintaining operational integrity and protecting stakeholders' interests.",
+          "similarity": 0.011
         }
       ],
-      "rationale": "LLM: The policy mentions conducting an annual risk analysis and tracking threats, which aligns with the requirement. However, it lacks details about treatment SLAs and does not specify who is responsible for documenting results.",
-      "upgraded_from": null,
+      "rationale": "LLM: The policy addresses both the annual risk analysis and the requirement of tracking enterprise and product risks, which aligns perfectly with the specified requirement.",
+      "upgraded_from": "non_existent",
       "downgraded_from": null
     },
     {
@@ -1749,8 +1749,8 @@
       "text": "*3) Asset & Data Classification.** Inventories; data classes; handling rules; labels.",
       "label": "partially_satisfied",
       "best_match": {
-        "policy_text": "1 Data is categorized (e.g., Public, Internal, Confidential, Restricted/ePHI). Handling rules specify storage, sharing, and disposal requirements. Additionally, least privilege principles must be followed. Additionally, least privilege principles must be followed.",
-        "similarity": 0.645
+        "policy_text": "1 Data is categorized (e.g., Public, Internal, Confidential, Restricted/ePHI). Handling rules specify storage, sharing, and disposal requirements.",
+        "similarity": 0.758
       },
       "alternatives": [
         {
@@ -1758,21 +1758,21 @@
           "similarity": 0.003
         },
         {
-          "policy_text": "2 Data in transit should use encryption at rest/in transit; key management; data loss prevention; secure disposal of data; NDAs for handling sensitive information.",
-          "similarity": 0.002
+          "policy_text": "Incident Response:** SOC (Risk), CISO (Audit), PO (Breach), IT/Engineering (Review), Legal (Consultation), Communications (Notification).",
+          "similarity": 0.001
         }
       ],
-      "rationale": "LLM: The policy mentions 'least privilege principles' which aligns with the requirement, but does not provide details about asset classification, data classes, inventories, or handling rules.",
+      "rationale": "LLM: The BEST POLICY MATCH does not cover the least privilege principle, which is essential for compliance.",
       "upgraded_from": null,
       "downgraded_from": null
     },
     {
       "id": "C-0080",
       "text": "*4) Access Control.** RBAC; JIT/JEA where possible; SSO; **MFA**; quarterly access reviews; privileged access monitoring.",
-      "label": "non_existent",
+      "label": "satisfied",
       "best_match": {
-        "policy_text": "3 Engineering / SDLC Owners ensure secure design, code review, CI/CD, change control, and secrets management for their systems and oversee user access reviews.",
-        "similarity": 0.026
+        "policy_text": "4 User access reviews are performed twice per year on high-risk systems and at least monthly on others; remediation is documented.",
+        "similarity": 0.37
       },
       "alternatives": [
         {
@@ -1784,29 +1784,29 @@
           "similarity": 0.005
         }
       ],
-      "rationale": "Valid requirement but no matching policy coverage found.",
-      "upgraded_from": null,
+      "rationale": "LLM: The policy includes quarterly access reviews, which matches the requirement. It also mentions MFA and privileged access monitoring, though not explicitly stated.",
+      "upgraded_from": "non_existent",
       "downgraded_from": null
     },
     {
       "id": "C-0081",
       "text": "*5) Network Security.** Segmentation; least-route; firewall rules reviewed **semiannually**; secure remote access (VPN/ZTNA).",
-      "label": "satisfied",
+      "label": "non_existent",
       "best_match": {
-        "policy_text": "Company shall review and update network segmentation, least route policies, and firewall rules at least semiannually for security compliance. Additionally, ensure secure remote access through a reliable VPN or Zero Trust Network Access (ZTNA).",
-        "similarity": 1.0
+        "policy_text": "Phishing simulations and quarterly security newsletters are mandatory for awareness purposes, while targeted advisories should be reviewed annually by all employees. **Failure to comply may result in disciplinary action.",
+        "similarity": 0.012
       },
       "alternatives": [
         {
-          "policy_text": "Company shall ensure all access/network/endpoint activities comply with CC6.x requirements.** This policy ensures that all access, network, and endpoint activities within our organization adhere to the specified compliance standards outlined in **CC6.x**, ensuring data security and regulatory adherence. All employees must follow these guidelines to maintain a secure environment for both internal and external systems.",
-          "similarity": 0.005
+          "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy.",
+          "similarity": 0.008
         },
         {
-          "policy_text": "Incident Response:** SOC (Risk), CISO (Audit), PO (Breach), IT/Engineering (Review), Legal (Consultation), Communications (Notification).",
+          "policy_text": "Company shall ensure all access/network/endpoint activities comply with CC6.x requirements.** This policy ensures that all access, network, and endpoint activities within our organization adhere to the specified compliance standards outlined in **CC6.x**, ensuring data security and regulatory adherence. All employees must follow these guidelines to maintain a secure environment for both internal and external systems.",
           "similarity": 0.005
         }
       ],
-      "rationale": null,
+      "rationale": "Valid requirement but no matching policy coverage found.",
       "upgraded_from": null,
       "downgraded_from": null
     },
@@ -1835,22 +1835,22 @@
     {
       "id": "C-0083",
       "text": "*7) Logging & Monitoring.** Centralize logs; detect anomalies; alerting runbooks; retention ≥ **1 year** online (longer if required).",
-      "label": "satisfied",
+      "label": "partially_satisfied",
       "best_match": {
-        "policy_text": "2 Logs are retained for at least 1 year online, with restricted access and tamper-resistant storage for critical systems, and include an automated system for monitoring and alerting in case of any anomalies.",
-        "similarity": 0.986
+        "policy_text": "2 Logs are retained for at least 365 days, with restricted access and tamper-resistant storage for critical systems, and include an automated system for monitoring and alerting in case of any anomalies.",
+        "similarity": 0.668
       },
       "alternatives": [
         {
-          "policy_text": "1 Suspected security incidents should be logged and maintained in a central register for review by Security and the Privacy Officer at least once per quarter.",
+          "policy_text": "1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date. Additionally, categorized and handled according to established procedures.",
           "similarity": 0.065
         },
         {
-          "policy_text": "1 Security-relevant events (authentication results, privilege changes, configuration changes, and incident indicators) are logged centrally where feasible; tracking of these logs is maintained in a central register for easy access and reference. integrity measures such as hashing/signing and change detection are implemented.",
-          "similarity": 0.027
+          "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy.",
+          "similarity": 0.049
         }
       ],
-      "rationale": null,
+      "rationale": "LLM: The requirement specifies'retention ≥ 1 year' while the best policy matches state'retain for at least 365 days'. The difference is significant enough that this cannot be considered fully satisfied.",
       "upgraded_from": null,
       "downgraded_from": null
     },
@@ -1859,8 +1859,8 @@
       "text": "*8) Vulnerability & Patch Management.** Continuous scanning; risk‑based remediation; exceptions with expiry.",
       "label": "satisfied",
       "best_match": {
-        "policy_text": "2 Continuous scanning of code changes identifies known vulnerabilities; high-risk issues are prioritized for remediation before release or tracked with an approved exception, with exceptions requiring approval and having an expiration date.",
-        "similarity": 0.92
+        "policy_text": "2 Code changes are continuously scanned for known vulnerabilities; high-risk issues are prioritized for remediation before release or tracked with an approved exception, with exceptions having an expiration date.",
+        "similarity": 0.968
       },
       "alternatives": [
         {
@@ -1901,7 +1901,7 @@
     {
       "id": "C-0086",
       "text": "*10) Change Management.** CAB or change approvals for high‑risk; emergency change post‑review; separation of duties.",
-      "label": "satisfied",
+      "label": "partially_satisfied",
       "best_match": {
         "policy_text": "Company shall ensure adherence to Change Management (CC8) guidelines for all software development lifecycle activities, including but not limited to securing changes through proper approval processes, thorough testing, and maintaining clear separation of duties among team members involved in change management tasks. **[Auditable]** --- This policy ensures accountability and compliance with established procedures across all aspects of change management within the organization.",
         "similarity": 0.662
@@ -1912,33 +1912,33 @@
           "similarity": 0.067
         },
         {
-          "policy_text": "Company shall set the tone at the top, oversee risk management, and approve this policy suite.",
-          "similarity": 0.007
+          "policy_text": "2 Risks rated Critical or High are remediated on a defined timetable. Risk acceptance requires written business justification and CISO approval.",
+          "similarity": 0.039
         }
       ],
-      "rationale": "LLM: The policy's requirements closely align with the specified elements: 'Change Management' (which encompasses 'CAB or change approvals'), 'high-risk' and 'emergency change post-review', and'separation of duties'.",
-      "upgraded_from": "partially_satisfied",
+      "rationale": "LLM: The policy mentions 'high-risk' and 'emergency change post-review', which align with the requirement. However, it lacks explicit coverage for'separation of duties'. Additionally, while the alternatives provide more detailed information about critical risk management, they do not specify the same level of detail as the policy regarding high-risk changes.",
+      "upgraded_from": null,
       "downgraded_from": null
     },
     {
       "id": "C-0087",
       "text": "*11) Cryptography.** TLS 1.2+; TLS 1.3 preferred; strong ciphers; key management lifecycle; HSM/KMS.",
-      "label": "partially_satisfied",
+      "label": "garbage",
       "best_match": {
-        "policy_text": "Company shall implement encryption standards for all data storage classes, ensuring compliance with KMS/HSM requirements and adhering to a scheduled key rotation process. Additionally, Company must manage secrets effectively through robust secret management practices.",
+        "policy_text": "2 Data in transit should use secure protocols (TLS 1.2+) unless specifically exempted by documented risk assessment and supplemented with alternative security measures.",
         "similarity": 0.275
       },
       "alternatives": [
         {
-          "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy; use AWS Key Management Service (KMS) for encryption; rotate keys every 3 years; manage secrets using AWS Secrets Manager. use AWS Key Management Service (KMS) for encryption; rotate keys every 3 years; manage secrets using AWS Secrets Manager.",
-          "similarity": 0.06
-        },
-        {
           "policy_text": "Company shall implement encryption for all data transmissions, manage certificates securely, and ensure use of secure APIs.",
           "similarity": 0.022
+        },
+        {
+          "policy_text": "Passwords should be managed using Single Sign-On/ Multi-Factor Authentication (SSO/MFA) where applicable, adhering to NIST 800-63 guidelines without requiring periodic forced password rotations or enforcing strict blacklisting policies. **END OF POLICY CLAUSE.",
+          "similarity": 0.016
         }
       ],
-      "rationale": "LLM: The BEST POLICY MATCH does not cover TLS 1.2+, TLS 1.3 preference, strong ciphers, key management lifecycle, or HSM/KMS.",
+      "rationale": "LLM: The requirement is a placeholder heading with no actionable details.",
       "upgraded_from": "non_existent",
       "downgraded_from": null
     },
@@ -1956,8 +1956,8 @@
           "similarity": 0.977
         },
         {
-          "policy_text": "The company must have a detailed contingency plan for data backups, disaster recovery, and emergency modes to guarantee operational continuity and reduce downtime.",
-          "similarity": 0.083
+          "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy.",
+          "similarity": 0.487
         }
       ],
       "rationale": null,
@@ -1967,10 +1967,10 @@
     {
       "id": "C-0089",
       "text": "*13) Confidentiality.** Encryption at rest/in transit; key mgmt; DLP; secure disposal; NDA for confidential data access.",
-      "label": "satisfied",
+      "label": "partially_satisfied",
       "best_match": {
-        "policy_text": "2 Data in transit should use encryption at rest/in transit; key management; data loss prevention; secure disposal of data; NDAs for handling sensitive information.",
-        "similarity": 0.993
+        "policy_text": "2 Data in transit should use secure protocols (TLS 1.2+) unless specifically exempted by documented risk assessment and supplemented with alternative security measures.",
+        "similarity": 0.355
       },
       "alternatives": [
         {
@@ -1978,12 +1978,12 @@
           "similarity": 0.036
         },
         {
-          "policy_text": "Company shall implement encryption standards for all data storage classes, ensuring compliance with KMS/HSM requirements and adhering to a scheduled key rotation process. Additionally, Company must manage secrets effectively through robust secret management practices.",
+          "policy_text": "1 Data is categorized (e.g., Public, Internal, Confidential, Restricted/ePHI). Handling rules specify storage, sharing, and disposal requirements.",
           "similarity": 0.025
         }
       ],
-      "rationale": null,
-      "upgraded_from": null,
+      "rationale": "LLM: The BEST POLICY MATCH requires TLS 1.2+ which is stricter than the top alternatives' requirement that data be categorized and handled according to those categories.",
+      "upgraded_from": "non_existent",
       "downgraded_from": null
     },
     {
@@ -2011,10 +2011,10 @@
     {
       "id": "C-0091",
       "text": "*15) Privacy (if in scope).** Notice, choice/consent, purpose limitation, data subject rights, retention/deletion standards.",
-      "label": "non_existent",
+      "label": "partially_satisfied",
       "best_match": {
-        "policy_text": "1 Notices describe how personal information is collected, used, and shared; requests for access or deletion of personal information are handled in accordance with applicable laws. Personal information shall be protected according to privacy regulations.",
-        "similarity": 0.221
+        "policy_text": "1 Notices describe how personal information is collected, used, and shared; requests for access or deletion of personal information are handled in accordance with applicable laws. marketing and research activities must comply with enhanced data protection measures.",
+        "similarity": 0.205
       },
       "alternatives": [
         {
@@ -2026,8 +2026,8 @@
           "similarity": 0.039
         }
       ],
-      "rationale": "LLM: The requirement specifies 'Privacy (if in scope)', but there's no mention of this in the policy.",
-      "upgraded_from": null,
+      "rationale": "LLM: The policy mentions that marketing and research activities must comply with enhanced data protection measures, which implies privacy considerations. However, it does not specify what constitutes 'Privacy' beyond this context.",
+      "upgraded_from": "non_existent",
       "downgraded_from": null
     },
     {
@@ -2055,22 +2055,22 @@
     {
       "id": "C-0093",
       "text": "**Evidence Library:** policies, org chart, risk register, asset inventories, access reviews, SIEM dashboards, IR tickets, change logs, pipeline results, vendor reviews, DR reports, backup logs, training records.",
-      "label": "satisfied",
+      "label": "partially_satisfied",
       "best_match": {
-        "policy_text": "1 Security and privacy program documentation, BAA inventory, access review exports, SIEM dashboards, incident records, backup test logs, DR reports, and training rosters are retained for at least six (6) years from creation or last effective date. Additionally, categorized and handled according to established procedures.",
-        "similarity": 0.953
+        "policy_text": "1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date. Additionally, categorized and handled according to established procedures.",
+        "similarity": 0.759
       },
       "alternatives": [
         {
-          "policy_text": "2 Logs are retained for at least 1 year online, with restricted access and tamper-resistant storage for critical systems, and include an automated system for monitoring and alerting in case of any anomalies.",
-          "similarity": 0.018
+          "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy.",
+          "similarity": 0.072
         },
         {
-          "policy_text": "Incident Response:** SOC (Risk), CISO (Audit), PO (Breach), IT/Engineering (Review), Legal (Consultation), Communications (Notification).",
-          "similarity": 0.009
+          "policy_text": "2 Logs are retained for at least 365 days, with restricted access and tamper-resistant storage for critical systems, and include an automated system for monitoring and alerting in case of any anomalies.",
+          "similarity": 0.018
         }
       ],
-      "rationale": null,
+      "rationale": "LLM: The BEST POLICY MATCH includes more stringent requirements than the TOP ALTERNATIVE regarding retention periods and handling procedures.",
       "upgraded_from": null,
       "downgraded_from": null
     },
@@ -2079,8 +2079,8 @@
       "text": "**KPIs:** vuln SLA adherence %, patch latency, access review completion %, incident MTTR, failed login trends, DR test success rate, vendor review completion %.",
       "label": "non_existent",
       "best_match": {
-        "policy_text": "Company shall ensure adherence to all specified KPIs for at least 3 reviews per year and complete remediation within 7 days of detection.",
-        "similarity": 0.06
+        "policy_text": "Company shall ensure compliance with all KPIs specified above.",
+        "similarity": 0.071
       },
       "alternatives": [
         {
@@ -2088,33 +2088,33 @@
           "similarity": 0.029
         },
         {
-          "policy_text": "Company shall ensure all access/network/endpoint activities comply with CC6.x requirements.** This policy ensures that all access, network, and endpoint activities within our organization adhere to the specified compliance standards outlined in **CC6.x**, ensuring data security and regulatory adherence. All employees must follow these guidelines to maintain a secure environment for both internal and external systems.",
-          "similarity": 0.001
+          "policy_text": "4 User access reviews are performed twice per year on high-risk systems and at least monthly on others; remediation is documented.",
+          "similarity": 0.022
         }
       ],
-      "rationale": "LLM: The policy clearly states adherence to all specified KPIs for at least 3 reviews per year and completes remediation within 7 days of detection, which aligns perfectly with the requirement.",
+      "rationale": null,
       "upgraded_from": null,
       "downgraded_from": null
     },
     {
       "id": "C-0095",
       "text": "**Internal Audit / QA:** planned audits each quarter; issues tracked to closure with owners and due dates.",
-      "label": "non_existent",
+      "label": "satisfied",
       "best_match": {
         "policy_text": "1 Systems are scanned regularly; findings are triaged and tracked to closure.",
         "similarity": 0.734
       },
       "alternatives": [
         {
-          "policy_text": "An enterprise risk analysis shall be conducted at least annually and after significant changes. Results shall be documented in a risk register with assigned owners and deadlines.",
-          "similarity": 0.016
+          "policy_text": "An enterprise risk analysis is conducted at least annually and after significant changes. Results are documented in a risk register with assigned owners and deadlines.",
+          "similarity": 0.031
         },
         {
-          "policy_text": "1 Suspected security incidents should be logged and maintained in a central register for review by Security and the Privacy Officer at least once per quarter.",
+          "policy_text": "Company shall implement security questionnaires, conduct SOC report reviews, comply with BAA/DPA requirements, engage in continuous monitoring, and ensure timely return or deletion of terminated data.",
           "similarity": 0.001
         }
       ],
-      "rationale": "LLM: The requirement specifies that data must be encrypted both at rest and in transit, while the best policy matches only encrypting data stored in databases and backups, leaving out encryption in transit.",
+      "rationale": "LLM: The policy directly addresses the requirement by stating that 'All sensitive data' must be encrypted, matching the COMPLIANCE requirement.",
       "upgraded_from": "partially_satisfied",
       "downgraded_from": null
     },
@@ -2154,7 +2154,7 @@
           "similarity": 0.001
         },
         {
-          "policy_text": "Company shall provide security awareness training annually to all employees on their roles and responsibilities regarding data protection and cybersecurity measures.** This policy ensures compliance with §164.308(a)(5) of the Health Insurance Portability and Accountability Act (HIPAA). Employees must understand their role in protecting sensitive information and implementing necessary cybersecurity protocols.",
+          "policy_text": "Phishing simulations and quarterly security newsletters are mandatory for awareness purposes, while targeted advisories should be reviewed annually by all employees. **Failure to comply may result in disciplinary action.",
           "similarity": 0.0
         }
       ],
@@ -2231,10 +2231,10 @@
     {
       "id": "C-0101",
       "text": "**Request:** Submit exception with control, justification, risk assessment, compensating controls, expiry date.",
-      "label": "non_existent",
+      "label": "partially_satisfied",
       "best_match": {
-        "policy_text": "2 Continuous scanning of code changes identifies known vulnerabilities; high-risk issues are prioritized for remediation before release or tracked with an approved exception, with exceptions requiring approval and having an expiration date.",
-        "similarity": 0.116
+        "policy_text": "2 Code changes are continuously scanned for known vulnerabilities; high-risk issues are prioritized for remediation before release or tracked with an approved exception, with exceptions having an expiration date.",
+        "similarity": 0.173
       },
       "alternatives": [
         {
@@ -2246,8 +2246,8 @@
           "similarity": 0.081
         }
       ],
-      "rationale": "LLM: All employees must attend mandatory security awareness training once every two years, which meets the requirement of ensuring access to training materials covering at least three different security topics.",
-      "upgraded_from": null,
+      "rationale": "LLM: The policy mentions 'high-risk exceptions' which aligns with the request for submitting an exception. However, it lacks details about the approval process, compensation controls, and the expiration date.",
+      "upgraded_from": "non_existent",
       "downgraded_from": null
     },
     {
@@ -2260,12 +2260,12 @@
       },
       "alternatives": [
         {
-          "policy_text": "2 Continuous scanning of code changes identifies known vulnerabilities; high-risk issues are prioritized for remediation before release or tracked with an approved exception, with exceptions requiring approval and having an expiration date.",
-          "similarity": 0.209
+          "policy_text": "An enterprise risk analysis is conducted at least annually and after significant changes. Results are documented in a risk register with assigned owners and deadlines.",
+          "similarity": 0.162
         },
         {
-          "policy_text": "An enterprise risk analysis shall be conducted at least annually and after significant changes. Results shall be documented in a risk register with assigned owners and deadlines.",
-          "similarity": 0.171
+          "policy_text": "2 Risks rated Critical or High are remediated on a defined timetable. Risk acceptance requires written business justification and CISO approval.",
+          "similarity": 0.075
         }
       ],
       "rationale": null,
@@ -2286,8 +2286,8 @@
           "similarity": 0.015
         },
         {
-          "policy_text": "1 Suspected security incidents should be logged and maintained in a central register for review by Security and the Privacy Officer at least once per quarter.",
-          "similarity": 0.003
+          "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy.",
+          "similarity": 0.0
         }
       ],
       "rationale": null,
@@ -2321,7 +2321,7 @@
       "text": "**Awareness:** Phishing simulations; quarterly security newsletters; targeted advisories.",
       "label": "satisfied",
       "best_match": {
-        "policy_text": "Phishing simulations and quarterly security newsletters are mandatory for awareness purposes, while targeted advisories should be reviewed semiannually by all employees. Failure to comply may result in disciplinary action.",
+        "policy_text": "Phishing simulations and quarterly security newsletters are mandatory for awareness purposes, while targeted advisories should be reviewed annually by all employees. **Failure to comply may result in disciplinary action.",
         "similarity": 0.998
       },
       "alternatives": [
@@ -2352,8 +2352,8 @@
           "similarity": 0.998
         },
         {
-          "policy_text": "Phishing simulations and quarterly security newsletters are mandatory for awareness purposes, while targeted advisories should be reviewed semiannually by all employees. Failure to comply may result in disciplinary action.",
-          "similarity": 0.044
+          "policy_text": "Phishing simulations and quarterly security newsletters are mandatory for awareness purposes, while targeted advisories should be reviewed annually by all employees. **Failure to comply may result in disciplinary action.",
+          "similarity": 0.041
         }
       ],
       "rationale": null,
@@ -2451,45 +2451,45 @@
     {
       "id": "C-0111",
       "text": "Critical patch remediation: **≤ 7 days**; High: **≤ 14 days**.",
-      "label": "satisfied",
+      "label": "non_existent",
       "best_match": {
-        "policy_text": "2 Risks rated Critical or High are remediated within 7 days if they are critical, and within 14 days if they are high. High/Critical risks must be remediated within 30-90 days of identification, with written business justification and CISO approval for acceptance.",
-        "similarity": 0.98
+        "policy_text": "2 Risks rated Critical or High are remediated on a defined timetable. Risk acceptance requires written business justification and CISO approval.",
+        "similarity": 0.163
       },
       "alternatives": [
         {
-          "policy_text": "2 Workstations used to access sensitive data employ full-disk encryption and automatic screen locking; patch SLAs (critical ≤ 7 days). PHI must be securely stored on these workstations and a clear desk policy applies.",
-          "similarity": 0.604
+          "policy_text": "The high-risk exceptions must be approved by the executive before they can proceed beyond the initial 90-day period; otherwise, the vulnerability remains critical.",
+          "similarity": 0.048
         },
         {
-          "policy_text": "Company shall ensure adherence to all specified KPIs for at least 3 reviews per year and complete remediation within 7 days of detection.",
-          "similarity": 0.169
+          "policy_text": "2 Code changes are continuously scanned for known vulnerabilities; high-risk issues are prioritized for remediation before release or tracked with an approved exception, with exceptions having an expiration date.",
+          "similarity": 0.007
         }
       ],
-      "rationale": null,
+      "rationale": "LLM: The requirement specifies a timeframe of ≤ 7 days for Critical risks and ≤ 14 days for High risks, which is not addressed by the policy's statement that 2 Risks rated Critical or High are remediated on a defined timetable.",
       "upgraded_from": null,
       "downgraded_from": null
     },
     {
       "id": "C-0112",
       "text": "Log retention online: **≥ 1 year** (longer if required).",
-      "label": "satisfied",
+      "label": "partially_satisfied",
       "best_match": {
-        "policy_text": "2 Logs are retained for at least 1 year online, with restricted access and tamper-resistant storage for critical systems, and include an automated system for monitoring and alerting in case of any anomalies.",
-        "similarity": 0.96
+        "policy_text": "2 Logs are retained for at least 365 days, with restricted access and tamper-resistant storage for critical systems, and include an automated system for monitoring and alerting in case of any anomalies.",
+        "similarity": 0.386
       },
       "alternatives": [
         {
-          "policy_text": "1 Security and privacy program documentation, BAA inventory, access review exports, SIEM dashboards, incident records, backup test logs, DR reports, and training rosters are retained for at least six (6) years from creation or last effective date. Additionally, categorized and handled according to established procedures.",
-          "similarity": 0.048
+          "policy_text": "1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date. Additionally, categorized and handled according to established procedures.",
+          "similarity": 0.15
         },
         {
-          "policy_text": "1 Suspected security incidents should be logged and maintained in a central register for review by Security and the Privacy Officer at least once per quarter.",
-          "similarity": 0.005
+          "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy.",
+          "similarity": 0.006
         }
       ],
-      "rationale": null,
-      "upgraded_from": null,
+      "rationale": "LLM: The policy matches the requirement in terms of minimum log retention duration, but lacks the additional features mentioned in the requirement such as encryption, quarterly testing, and retention based on data retention policies.",
+      "upgraded_from": "non_existent",
       "downgraded_from": null
     },
     {
@@ -2497,17 +2497,17 @@
       "text": "Access reviews: **Quarterly** (high‑risk), **Semiannual** (moderate), **Annual** (low).",
       "label": "satisfied",
       "best_match": {
-        "policy_text": "User access reviews are conducted twice per year on high-risk systems and at least monthly on other systems; documentation of remediation is required.",
-        "similarity": 0.894
+        "policy_text": "4 User access reviews are performed twice per year on high-risk systems and at least monthly on others; remediation is documented.",
+        "similarity": 0.929
       },
       "alternatives": [
         {
-          "policy_text": "Company shall review and update network segmentation, least route policies, and firewall rules at least semiannually for security compliance. Additionally, ensure secure remote access through a reliable VPN or Zero Trust Network Access (ZTNA).",
-          "similarity": 0.04
+          "policy_text": "Phishing simulations and quarterly security newsletters are mandatory for awareness purposes, while targeted advisories should be reviewed annually by all employees. **Failure to comply may result in disciplinary action.",
+          "similarity": 0.011
         },
         {
-          "policy_text": "Incident Response:** SOC (Risk), CISO (Audit), PO (Breach), IT/Engineering (Review), Legal (Consultation), Communications (Notification).",
-          "similarity": 0.004
+          "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy.",
+          "similarity": 0.005
         }
       ],
       "rationale": null,
@@ -2539,10 +2539,10 @@
     {
       "id": "C-0115",
       "text": "Internal incident escalation: **≤ 24 hours**; External HIPAA breach notices: **≤ 60 days** per law.",
-      "label": "garbage",
+      "label": "non_existent",
       "best_match": {
-        "policy_text": "The high-risk exceptions must be approved by the executive before they can proceed beyond the initial 90-day period; otherwise, the vulnerability remains critical.",
-        "similarity": 0.073
+        "policy_text": "1 Suspected security incidents are reported to Security and the Privacy Officer within 24 hours of discovery.",
+        "similarity": 0.466
       },
       "alternatives": [
         {
@@ -2550,12 +2550,12 @@
           "similarity": 0.058
         },
         {
-          "policy_text": "1 Security and privacy program documentation, BAA inventory, access review exports, SIEM dashboards, incident records, backup test logs, DR reports, and training rosters are retained for at least six (6) years from creation or last effective date. Additionally, categorized and handled according to established procedures.",
-          "similarity": 0.002
+          "policy_text": "1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date. Additionally, categorized and handled according to established procedures.",
+          "similarity": 0.004
         }
       ],
-      "rationale": "LLM: The requirement is a placeholder with no clear action or obligation associated with it.",
-      "upgraded_from": "non_existent",
+      "rationale": "LLM: The requirement is about internal incident escalation, but the policy talks about external HIPAA breach notices.",
+      "upgraded_from": null,
       "downgraded_from": null
     },
     {
@@ -2563,8 +2563,8 @@
       "text": "Encryption: At rest **AES‑256**; in transit **TLS 1.2+** (TLS 1.3 preferred).",
       "label": "satisfied",
       "best_match": {
-        "policy_text": "2 Data in transit should use encryption at rest/in transit; key management; data loss prevention; secure disposal of data; NDAs for handling sensitive information.",
-        "similarity": 0.973
+        "policy_text": "2 Data in transit should use secure protocols (TLS 1.2+) unless specifically exempted by documented risk assessment and supplemented with alternative security measures.",
+        "similarity": 0.923
       },
       "alternatives": [
         {
@@ -2572,8 +2572,8 @@
           "similarity": 0.023
         },
         {
-          "policy_text": "Company shall implement encryption for all data transmissions, manage certificates securely, and ensure use of secure APIs.",
-          "similarity": 0.01
+          "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy.",
+          "similarity": 0.019
         }
       ],
       "rationale": null,
@@ -2594,8 +2594,8 @@
           "similarity": 0.01
         },
         {
-          "policy_text": "Company shall implement encryption standards for all data storage classes, ensuring compliance with KMS/HSM requirements and adhering to a scheduled key rotation process. Additionally, Company must manage secrets effectively through robust secret management practices.",
-          "similarity": 0.01
+          "policy_text": "Phishing simulations and quarterly security newsletters are mandatory for awareness purposes, while targeted advisories should be reviewed annually by all employees. **Failure to comply may result in disciplinary action.",
+          "similarity": 0.001
         }
       ],
       "rationale": null,
@@ -2607,8 +2607,8 @@
       "text": "Risk analyses; BAA list; training logs; SIEM export; access review evidence; IR tickets; backup/DR reports; encryption/KMS configs; vendor risk files; change approvals; SAST/DAST pipelines; data classification registry; privacy notices and request logs.",
       "label": "satisfied",
       "best_match": {
-        "policy_text": "1 Security and privacy program documentation, BAA inventory, access review exports, SIEM dashboards, incident records, backup test logs, DR reports, and training rosters are retained for at least six (6) years from creation or last effective date. Additionally, categorized and handled according to established procedures.",
-        "similarity": 0.908
+        "policy_text": "1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date. Additionally, categorized and handled according to established procedures.",
+        "similarity": 0.851
       },
       "alternatives": [
         {
@@ -2616,8 +2616,8 @@
           "similarity": 0.115
         },
         {
-          "policy_text": "1 Suspected security incidents should be logged and maintained in a central register for review by Security and the Privacy Officer at least once per quarter.",
-          "similarity": 0.111
+          "policy_text": "1 Security-relevant events (authentication results, privilege changes, configuration changes, and incident indicators) are logged centrally where feasible; tracking of these logs is maintained in a central register for easy access and reference. integrity measures such as hashing/signing and change detection are implemented.",
+          "similarity": 0.029
         }
       ],
       "rationale": null,

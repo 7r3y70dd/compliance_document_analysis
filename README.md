@@ -259,6 +259,63 @@ curl -s -X POST \
   -H "Accept: text/plain"
 
 
+> curl -fsS http://localhost:8000/health | jq .
+{
+  "status": "ok",
+  "app_version": "1.6.0",
+  "embedding": {
+    "model": "intfloat/e5-base-v2",
+    "device": 0,
+    "use_e5_prefixes": true
+  },
+  "retrieval": {
+    "use_cross_encoder": true,
+    "cross_encoder_model": "BAAI/bge-reranker-large",
+    "cross_encoder_top_k": 5,
+    "top_k_default": 3,
+    "round_similarity": 3
+  },
+  "thresholds": {
+    "satisfied_threshold": 0.78,
+    "partial_threshold": 0.6
+  },
+  "semantic": {
+    "use_semantic_normalizer": true,
+    "semantic_lexicon_path": "lexicon.yaml",
+    "semantic_threshold": 0.68,
+    "semantic_max_tags": 3,
+    "use_numeric_check": true
+  },
+  "nli": {
+    "use_nli_judge": true,
+    "model": "facebook/bart-large-mnli",
+    "device": -1,
+    "annotate_only": false,
+    "satisfied_floor": 0.7,
+    "partial_floor": 0.45,
+    "entailment_min": 0.8,
+    "contradiction_min": 0.6
+  },
+  "llm": {
+    "enabled": true,
+    "use_llm_judge": true,
+    "use_llm_refine": true,
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "device": 0,
+    "max_new_tokens": 192
+  },
+  "editor": {
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "device": -1,
+    "max_new_tokens": 128,
+    "load_in_4bit": true
+  },
+  "limits": {
+    "max_chars": 800000
+  }
+}
+
+
 ```
 
 ---

@@ -2,8 +2,8 @@
   "overall": {
     "satisfied": 88,
     "partially_satisfied": 9,
-    "non_existent": 12,
-    "garbage": 10
+    "non_existent": 14,
+    "garbage": 8
   },
   "clauses": [
     {
@@ -460,8 +460,8 @@
           "similarity": 0.463
         },
         {
-          "policy_text": "3 Where ePHI is involved, the Privacy Officer coordinates regulatory notifications consistent with applicable law.",
-          "similarity": 0.019
+          "policy_text": "1 Data is categorized (e.g., Public, Internal, Confidential, Restricted/ePHI). Handling rules specify storage, sharing, and disposal requirements. Additionally, least privilege principles must be followed.",
+          "similarity": 0.036
         }
       ],
       "rationale": null,
@@ -781,7 +781,7 @@
       "text": "**Backups:** Encrypt; test **quarterly**; retain per data retention policy.",
       "label": "satisfied",
       "best_match": {
-        "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy; use AWS Key Management Service (KMS) for encryption; rotate keys every 3 years; manage secrets using AWS Secrets Manager. use AWS Key Management Service (KMS) for encryption; rotate keys every 3 years; manage secrets using AWS Secrets Manager.",
+        "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy; use AWS Key Management Service (KMS) for encryption; rotate keys every 3 years; manage secrets using AWS Secrets Manager.",
         "similarity": 0.999
       },
       "alternatives": [
@@ -1219,7 +1219,7 @@
     {
       "id": "C-0055",
       "text": "**Breach Notification:** Without unreasonable delay, **no later than 60 days** to affected individuals; notify HHS and media where required. Internal escalation **within 24 hours** of discovery. Maintain risk assessment and decision record.",
-      "label": "garbage",
+      "label": "non_existent",
       "best_match": {
         "policy_text": "The high-risk exceptions must be approved by the executive before they can proceed beyond the initial 90-day period; otherwise, the vulnerability remains critical.",
         "similarity": 0.079
@@ -1234,8 +1234,8 @@
           "similarity": 0.01
         }
       ],
-      "rationale": "LLM: The requirement uses a placeholder ('no later than') without providing details about what needs to be done after 60 days.",
-      "upgraded_from": "non_existent",
+      "rationale": null,
+      "upgraded_from": null,
       "downgraded_from": null
     },
     {
@@ -1300,7 +1300,7 @@
           "similarity": 0.001
         }
       ],
-      "rationale": "LLM: The policy matches the requirement by mentioning quarterly access reviews on high-risk systems and at least monthly on others, while also requiring documentation of remediation and retention of certain documents.",
+      "rationale": null,
       "upgraded_from": null,
       "downgraded_from": null
     },
@@ -1314,8 +1314,8 @@
       },
       "alternatives": [
         {
-          "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy; use AWS Key Management Service (KMS) for encryption; rotate keys every 3 years; manage secrets using AWS Secrets Manager. use AWS Key Management Service (KMS) for encryption; rotate keys every 3 years; manage secrets using AWS Secrets Manager.",
-          "similarity": 0.776
+          "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy; use AWS Key Management Service (KMS) for encryption; rotate keys every 3 years; manage secrets using AWS Secrets Manager.",
+          "similarity": 0.888
         },
         {
           "policy_text": "2 Data in transit should use encryption at rest/in transit; key management; data loss prevention; secure disposal of data; NDAs for handling sensitive information.",
@@ -1384,8 +1384,8 @@
           "similarity": 0.863
         },
         {
-          "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy; use AWS Key Management Service (KMS) for encryption; rotate keys every 3 years; manage secrets using AWS Secrets Manager. use AWS Key Management Service (KMS) for encryption; rotate keys every 3 years; manage secrets using AWS Secrets Manager.",
-          "similarity": 0.099
+          "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy; use AWS Key Management Service (KMS) for encryption; rotate keys every 3 years; manage secrets using AWS Secrets Manager.",
+          "similarity": 0.178
         }
       ],
       "rationale": null,
@@ -1402,15 +1402,15 @@
       },
       "alternatives": [
         {
-          "policy_text": "1 Security and privacy program documentation, BAA inventory, access review exports, SIEM dashboards, incident records, backup test logs, DR reports, and training rosters are retained for at least six (6) years from creation or last effective date. Additionally, categorized and handled according to established procedures.",
-          "similarity": 0.061
-        },
-        {
           "policy_text": "User access reviews are conducted twice per year on high-risk systems and at least monthly on other systems; documentation of remediation is required.",
           "similarity": 0.052
+        },
+        {
+          "policy_text": "Incident Response:** SOC (Risk), CISO (Audit), PO (Breach), IT/Engineering (Review), Legal (Consultation), Communications (Notification).",
+          "similarity": 0.042
         }
       ],
-      "rationale": "LLM: The policy requires 'training rosters' to be maintained, which is not addressed in the requirement.",
+      "rationale": null,
       "upgraded_from": null,
       "downgraded_from": null
     },
@@ -1454,7 +1454,7 @@
           "similarity": 0.004
         }
       ],
-      "rationale": "LLM: The policy clearly states that an annual risk analysis should be conducted and includes additional requirements for documenting results and assigning owners/deadlines, which aligns with the HIPAA regulation.",
+      "rationale": null,
       "upgraded_from": null,
       "downgraded_from": null
     },
@@ -1740,7 +1740,7 @@
           "similarity": 0.002
         }
       ],
-      "rationale": "LLM: The policy mentions conducting an annual risk analysis and tracking threats, which aligns with the requirement. However, it lacks details about treatment SLAs and does not specify who is responsible for documenting results.",
+      "rationale": null,
       "upgraded_from": null,
       "downgraded_from": null
     },
@@ -1749,8 +1749,8 @@
       "text": "*3) Asset & Data Classification.** Inventories; data classes; handling rules; labels.",
       "label": "partially_satisfied",
       "best_match": {
-        "policy_text": "1 Data is categorized (e.g., Public, Internal, Confidential, Restricted/ePHI). Handling rules specify storage, sharing, and disposal requirements. Additionally, least privilege principles must be followed. Additionally, least privilege principles must be followed.",
-        "similarity": 0.645
+        "policy_text": "1 Data is categorized (e.g., Public, Internal, Confidential, Restricted/ePHI). Handling rules specify storage, sharing, and disposal requirements. Additionally, least privilege principles must be followed.",
+        "similarity": 0.649
       },
       "alternatives": [
         {
@@ -1762,7 +1762,7 @@
           "similarity": 0.002
         }
       ],
-      "rationale": "LLM: The policy mentions 'least privilege principles' which aligns with the requirement, but does not provide details about asset classification, data classes, inventories, or handling rules.",
+      "rationale": "LLM: LLM output was not valid JSON; ignoring.",
       "upgraded_from": null,
       "downgraded_from": null
     },
@@ -1930,15 +1930,15 @@
       },
       "alternatives": [
         {
-          "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy; use AWS Key Management Service (KMS) for encryption; rotate keys every 3 years; manage secrets using AWS Secrets Manager. use AWS Key Management Service (KMS) for encryption; rotate keys every 3 years; manage secrets using AWS Secrets Manager.",
-          "similarity": 0.06
+          "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy; use AWS Key Management Service (KMS) for encryption; rotate keys every 3 years; manage secrets using AWS Secrets Manager.",
+          "similarity": 0.161
         },
         {
           "policy_text": "Company shall implement encryption for all data transmissions, manage certificates securely, and ensure use of secure APIs.",
           "similarity": 0.022
         }
       ],
-      "rationale": "LLM: The BEST POLICY MATCH does not cover TLS 1.2+, TLS 1.3 preference, strong ciphers, key management lifecycle, or HSM/KMS.",
+      "rationale": "LLM: The BEST POLICY MATCH does not specify strong ciphers or key management lifecycle.",
       "upgraded_from": "non_existent",
       "downgraded_from": null
     },
@@ -1956,8 +1956,8 @@
           "similarity": 0.977
         },
         {
-          "policy_text": "The company must have a detailed contingency plan for data backups, disaster recovery, and emergency modes to guarantee operational continuity and reduce downtime.",
-          "similarity": 0.083
+          "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy; use AWS Key Management Service (KMS) for encryption; rotate keys every 3 years; manage secrets using AWS Secrets Manager.",
+          "similarity": 0.132
         }
       ],
       "rationale": null,
@@ -2092,7 +2092,7 @@
           "similarity": 0.001
         }
       ],
-      "rationale": "LLM: The policy clearly states adherence to all specified KPIs for at least 3 reviews per year and completes remediation within 7 days of detection, which aligns perfectly with the requirement.",
+      "rationale": null,
       "upgraded_from": null,
       "downgraded_from": null
     },
@@ -2246,7 +2246,7 @@
           "similarity": 0.081
         }
       ],
-      "rationale": "LLM: All employees must attend mandatory security awareness training once every two years, which meets the requirement of ensuring access to training materials covering at least three different security topics.",
+      "rationale": null,
       "upgraded_from": null,
       "downgraded_from": null
     },
@@ -2528,8 +2528,8 @@
           "similarity": 0.927
         },
         {
-          "policy_text": "Company shall ensure all systems adhere to DR Test compliance requirements.** This policy ensures that all systems within our organization comply with the Data Recovery Testing (DR Test) compliance requirements set by the relevant stakeholders including the Information Technology Infrastructure (IT/Infra), Chief Information Security Officer (CISO), System Owners, Products, and Compliance teams. This requirement is essential for maintaining data integrity and ensuring business continuity.",
-          "similarity": 0.023
+          "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy; use AWS Key Management Service (KMS) for encryption; rotate keys every 3 years; manage secrets using AWS Secrets Manager.",
+          "similarity": 0.001
         }
       ],
       "rationale": null,
@@ -2539,7 +2539,7 @@
     {
       "id": "C-0115",
       "text": "Internal incident escalation: **≤ 24 hours**; External HIPAA breach notices: **≤ 60 days** per law.",
-      "label": "garbage",
+      "label": "non_existent",
       "best_match": {
         "policy_text": "The high-risk exceptions must be approved by the executive before they can proceed beyond the initial 90-day period; otherwise, the vulnerability remains critical.",
         "similarity": 0.073
@@ -2554,8 +2554,8 @@
           "similarity": 0.002
         }
       ],
-      "rationale": "LLM: The requirement is a placeholder with no clear action or obligation associated with it.",
-      "upgraded_from": "non_existent",
+      "rationale": null,
+      "upgraded_from": null,
       "downgraded_from": null
     },
     {
@@ -2568,11 +2568,11 @@
       },
       "alternatives": [
         {
-          "policy_text": "1 All production databases and file stores containing sensitive data are encrypted at rest using strong, industry-accepted algorithms.",
-          "similarity": 0.023
+          "policy_text": "Company shall implement encryption for all data transmissions, manage certificates securely, and ensure use of secure APIs.",
+          "similarity": 0.01
         },
         {
-          "policy_text": "Company shall implement encryption for all data transmissions, manage certificates securely, and ensure use of secure APIs.",
+          "policy_text": "2 Backups: Encrypt; test quarterly; retain per data retention policy; use AWS Key Management Service (KMS) for encryption; rotate keys every 3 years; manage secrets using AWS Secrets Manager.",
           "similarity": 0.01
         }
       ],
