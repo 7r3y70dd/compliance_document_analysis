@@ -243,6 +243,22 @@ USE_LLM_REFINE=true
 USE_NLI_JUDGE=1
 USE_NUMERIC_CHECK=1
 USE_SEMANTIC_NORMALIZER=1
+
+
+
+#rewrite json response:
+
+curl -s -X POST "http://localhost:8000/rewrite-from-json?result=my_run.json&policy=mid_generated_policy.txt" | jq .
+
+
+#rewrite txt response:
+
+curl -s -X POST \
+  -o rewritten_policy.txt \
+  "http://localhost:8000/rewrite-from-json?result=my_run.json&policy=mid_generated_policy.txt" \
+  -H "Accept: text/plain"
+
+
 ```
 
 ---

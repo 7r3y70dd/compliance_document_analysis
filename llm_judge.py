@@ -147,14 +147,23 @@ _JSON_OBJ_RE = re.compile(
 )
 
 INSTRUCTIONS = """
-Compare the COMPLIANCE requirement against the POLICY best match.
-- If the compliance text is not a clear requirement/statement, label "garbage".
-- If the policy clearly satisfies the requirement, label "satisfied".
-- If the policy is related but incomplete/weaker/missing a key element, label "partially_satisfied".
-- If the requirement is valid but the policy is unrelated, label "non_existent".
+You are a strict compliance matcher.
 
-Reply with ONLY one JSON object on a single line:
-{"label":"<satisfied|partially_satisfied|non_existent|garbage>","rationale":"<one short, specific sentence>"}
+Goal: Compare the COMPLIANCE requirement to the POLICY evidence and choose ONE label using these rules:
+- "garbage": the requirement text is a heading/placeholder (no action, no obligation).
+- "satisfied": the policy clearly and explicitly covers ALL required elements.
+- "partially_satisfied": the policy is relevant but weaker/incomplete, or any numeric/frequency threshold is looser/doesn’t match, or only SOME sub-parts are covered.
+- "non_existent": the requirement is valid, but the policy is unrelated or does not address it.
+
+Important rules:
+- If numbers/frequencies/SLAs differ → "partially_satisfied" (explain the numeric delta).
+- If some sub-items present but not all (e.g., “centralized + immutable + SIEM + NTP”) → "partially_satisfied" (list the missing bits).
+- If related content exists only in ALTERNATIVES and is clearly stronger/relevant, you MAY rely on it.
+- Do NOT infer unstated facts. Do NOT assume synonyms cover missing numeric thresholds.
+- Keep rationale to ONE short, specific sentence; mention the precise mismatch or missing element(s).
+
+Output exactly one line JSON:
+{"label":"<satisfied|partially_satisfied|non_existent|garbage>","rationale":"<short reason>"}
 """
 
 PROMPT_TEMPLATE = """{instructions}

@@ -1,4 +1,4 @@
-# clause_extractor.py  (REPLACE FILE)
+# clause_extractor.py
 import re
 from typing import List
 
@@ -68,6 +68,19 @@ def _looks_requirement_like(text: str) -> bool:
     # Otherwise, keep long, sentence-like statements
     return len(text) >= 60 and (text.endswith('.') or text.endswith(':') or ';' in text)
 
+def _word_tokens(s: str) -> list[str]:
+    return re.findall(r"[A-Za-z0-9]+(?:'[A-Za-z0-9]+)?", s)
+
+def _is_short(t: str) -> bool:
+    s = (t or "").strip()
+    if not s:
+        return True
+
+    words = _word_tokens(s)
+    n = len(words)
+    if n <= 6:
+        return True
+
 def extract_clauses(doc_text: str) -> List[str]:
     """Return requirement-like clauses, avoiding TOC/headers/anchors."""
     lines = doc_text.splitlines()
@@ -89,6 +102,10 @@ def extract_clauses(doc_text: str) -> List[str]:
         line = raw.rstrip()
 
         if _is_heading_or_meta(line):
+            flush()
+            continue
+
+        if _is_short(line):
             flush()
             continue
 

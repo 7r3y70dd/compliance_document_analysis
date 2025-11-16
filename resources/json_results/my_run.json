@@ -1,0 +1,2892 @@
+{
+  "overall": {
+    "satisfied": 32,
+    "partially_satisfied": 15,
+    "non_existent": 66,
+    "garbage": 18
+  },
+  "clauses": [
+    {
+      "id": "C-0000",
+      "text": "A4. Administrative Safeguards (§164.308)",
+      "label": "garbage",
+      "best_match": {
+        "policy_text": "2 The objectives are to prevent unauthorized access, ensure service continuity, and promote responsible handling of sensitive information.",
+        "similarity": 0.002
+      },
+      "alternatives": [
+        {
+          "policy_text": "Physical Safeguards 11.1 Facilities housing production systems use badge-controlled access and visitor sign-in procedures.",
+          "similarity": 0.001
+        },
+        {
+          "policy_text": "Workforce Security & Training (Administrative) 6.1 New hires complete security and privacy onboarding before system access is enabled; all personnel complete refresher training annually.",
+          "similarity": 0.0
+        }
+      ],
+      "rationale": "Short/heading-like text (no actionable requirement).",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0001",
+      "text": "A7. Organizational Requirements (§164.314)",
+      "label": "garbage",
+      "best_match": {
+        "policy_text": "Workforce Security & Training (Administrative) 6.1 New hires complete security and privacy onboarding before system access is enabled; all personnel complete refresher training annually.",
+        "similarity": 0.001
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Multi-factor authentication (MFA) is mandatory for administrators and remote access. (MFA for all users is recommended.) 5.3 Sessions must lock after 20 minutes of inactivity and require re-authentication to resume.",
+          "similarity": 0.001
+        },
+        {
+          "policy_text": "2 Business Associate Agreements are executed before any vendor handles ePHI; subcontractors must meet equivalent obligations.",
+          "similarity": 0.0
+        }
+      ],
+      "rationale": "Short/heading-like text (no actionable requirement).",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0002",
+      "text": "A8. Policies, Procedures & Documentation (§164.316)",
+      "label": "garbage",
+      "best_match": {
+        "policy_text": "Documentation & Retention 16.1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date.",
+        "similarity": 0.01
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 This policy is reviewed at least annually and upon material changes.",
+          "similarity": 0.01
+        },
+        {
+          "policy_text": "2 Sections marked “ePHI” apply where electronic protected health information is processed.",
+          "similarity": 0.002
+        }
+      ],
+      "rationale": "Short/heading-like text (no actionable requirement).",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0003",
+      "text": "A9. HIPAA Privacy & Breach Notification (Highlights)",
+      "label": "garbage",
+      "best_match": {
+        "policy_text": "3 Where ePHI is involved, the Privacy Officer coordinates regulatory notifications consistent with applicable law.",
+        "similarity": 0.008
+      },
+      "alternatives": [
+        {
+          "policy_text": "Privacy Program (Overview) 17.1 Notices describe how personal information is collected, used, and shared; requests to access or delete personal information are honored as required by applicable law.",
+          "similarity": 0.006
+        },
+        {
+          "policy_text": "Incident Response (Administrative & Technical) 9.1 Suspected security incidents are reported to Security and the Privacy Officer within 48 hours of discovery.",
+          "similarity": 0.002
+        }
+      ],
+      "rationale": "Short/heading-like text (no actionable requirement).",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0004",
+      "text": "A10. HIPAA Program Procedures (How-To)",
+      "label": "garbage",
+      "best_match": {
+        "policy_text": "Privacy Program (Overview) 17.1 Notices describe how personal information is collected, used, and shared; requests to access or delete personal information are honored as required by applicable law.",
+        "similarity": 0.003
+      },
+      "alternatives": [
+        {
+          "policy_text": "Documentation & Retention 16.1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date.",
+          "similarity": 0.002
+        },
+        {
+          "policy_text": "2 Sections marked “ePHI” apply where electronic protected health information is processed.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": "Short/heading-like text (no actionable requirement).",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0005",
+      "text": "Part B — SOC 2 Trust Services Criteria Policy",
+      "label": "garbage",
+      "best_match": {
+        "policy_text": "2 The objectives are to prevent unauthorized access, ensure service continuity, and promote responsible handling of sensitive information.",
+        "similarity": 0.003
+      },
+      "alternatives": [
+        {
+          "policy_text": "Purpose 1.1 This policy sets minimum safeguards to protect Company Data, including any electronic health information handled by <CompanyName>.",
+          "similarity": 0.001
+        },
+        {
+          "policy_text": "2 Data in transit should use secure protocols (TLS 1.2+). Exceptions require documented risk review and compensating controls.",
+          "similarity": 0.0
+        }
+      ],
+      "rationale": "Short/heading-like text (no actionable requirement).",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0006",
+      "text": "*Policy Owner:** `<CISO/Privacy Officer>` **Approved By:** `<Executive Sponsor>` **Effective Date:** `<YYYY-MM-DD>` **Version:** `<x.y>`",
+      "label": "partially_satisfied",
+      "best_match": {
+        "policy_text": "Document Title: Company Information Security & Privacy Policy (Mid-Coverage Draft) Effective Date: <YYYY-MM-DD> Version: 0.9",
+        "similarity": 0.705
+      },
+      "alternatives": [
+        {
+          "policy_text": "Governance & Roles 3.1 The Chief Information Security Officer (CISO) owns this policy and leads the security program.",
+          "similarity": 0.041
+        },
+        {
+          "policy_text": "3 Where ePHI is involved, the Privacy Officer coordinates regulatory notifications consistent with applicable law.",
+          "similarity": 0.009
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0007",
+      "text": "*Purpose.** This suite establishes a unified set of administrative, physical, and technical controls for **HIPAA** compliance (Privacy, Security & Breach Notification) and **SOC 2** attestation (Trust Services Criteria). It defines responsibilities, minimum control requirements, operational procedures, monitoring, and evidence expectations.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "2 The objectives are to prevent unauthorized access, ensure service continuity, and promote responsible handling of sensitive information.",
+        "similarity": 0.065
+      },
+      "alternatives": [
+        {
+          "policy_text": "Purpose 1.1 This policy sets minimum safeguards to protect Company Data, including any electronic health information handled by <CompanyName>.",
+          "similarity": 0.06
+        },
+        {
+          "policy_text": "Scope 2.1 Applies to all employees, contractors, and vendors who access Company systems.",
+          "similarity": 0.002
+        }
+      ],
+      "rationale": "LLM: The policy matches the requirement's objectives of preventing unauthorized access, ensuring service continuity, and promoting responsible handling of sensitive information.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0008",
+      "text": "*Applicability.** Applies to all `<CompanyName>` workforce members, contractors, and third parties who access `<CompanyName>` information systems and data. Additional obligations apply to systems in-scope for HIPAA ePHI and/or SOC 2.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Scope 2.1 Applies to all employees, contractors, and vendors who access Company systems.",
+        "similarity": 0.995
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Sections marked “ePHI” apply where electronic protected health information is processed.",
+          "similarity": 0.706
+        },
+        {
+          "policy_text": "2 Business Associate Agreements are executed before any vendor handles ePHI; subcontractors must meet equivalent obligations.",
+          "similarity": 0.081
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0009",
+      "text": "**Board / Executive Leadership.** Set tone at the top; oversee risk; approve this policy suite.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Purpose 1.1 This policy sets minimum safeguards to protect Company Data, including any electronic health information handled by <CompanyName>.",
+        "similarity": 0.001
+      },
+      "alternatives": [
+        {
+          "policy_text": "Governance & Roles 3.1 The Chief Information Security Officer (CISO) owns this policy and leads the security program.",
+          "similarity": 0.001
+        },
+        {
+          "policy_text": "2 Risks rated Critical or High are remediated on a defined timetable. Risk acceptance requires written business justification and CISO approval.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0010",
+      "text": "**CISO / Security Officer (SO).** Owns Security Rule implementation; risk management; security incident response; periodic evaluation.",
+      "label": "partially_satisfied",
+      "best_match": {
+        "policy_text": "Governance & Roles 3.1 The Chief Information Security Officer (CISO) owns this policy and leads the security program.",
+        "similarity": 0.461
+      },
+      "alternatives": [
+        {
+          "policy_text": "3 The security team reviews alerts and trends and escalates potential incidents for investigation.",
+          "similarity": 0.057
+        },
+        {
+          "policy_text": "2 The Privacy Officer oversees privacy practices and breach communications.",
+          "similarity": 0.002
+        }
+      ],
+      "rationale": "LLM: The requirement mentions 'Security Rule implementation', which is broader than just ownership of policies by the CISO.",
+      "upgraded_from": "non_existent",
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0011",
+      "text": "**Privacy Officer (PO).** Owns Privacy Rule; Notice of Privacy Practices; individual rights; breach notification content.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "2 The Privacy Officer oversees privacy practices and breach communications.",
+        "similarity": 0.982
+      },
+      "alternatives": [
+        {
+          "policy_text": "3 Where ePHI is involved, the Privacy Officer coordinates regulatory notifications consistent with applicable law.",
+          "similarity": 0.493
+        },
+        {
+          "policy_text": "Privacy Program (Overview) 17.1 Notices describe how personal information is collected, used, and shared; requests to access or delete personal information are honored as required by applicable law.",
+          "similarity": 0.01
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0012",
+      "text": "**IT Operations / Infrastructure.** Implements technical controls (access, logging, backups, DR, patching, endpoint protection).",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "2 The objectives are to prevent unauthorized access, ensure service continuity, and promote responsible handling of sensitive information.",
+        "similarity": 0.038
+      },
+      "alternatives": [
+        {
+          "policy_text": "Access Control (Technical & Administrative) 5.1 Access is granted based on job duties and approved by the relevant manager and System Owner (least-privilege).",
+          "similarity": 0.024
+        },
+        {
+          "policy_text": "Logging & Monitoring (Technical) 8.1 Security-relevant events (authentication results, privilege changes, configuration changes, and incident indicators) are logged centrally where feasible.",
+          "similarity": 0.005
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0013",
+      "text": "**Engineering / SDLC Owners.** Secure design, code review, CI/CD, change control, secrets management.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "3 System Owners approve access to their systems and complete user access reviews.",
+        "similarity": 0.11
+      },
+      "alternatives": [
+        {
+          "policy_text": "Secure Development & Change Management 14.1 Changes to production services require peer review and approval appropriate to the risk of the change.",
+          "similarity": 0.013
+        },
+        {
+          "policy_text": "Vendor & Third-Party Management (Organizational) 12.1 Vendors with access to sensitive data undergo due diligence and must meet Company security expectations.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": "LLM: The BEST POLICY MATCH requires 3 system owners' approval for access, which is less stringent than the requirement that 'all engineering team members' approve access.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0014",
+      "text": "**Data Owners / System Owners.** Classify data; approve access; perform user access reviews; maintain system inventories.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "3 System Owners approve access to their systems and complete user access reviews.",
+        "similarity": 0.997
+      },
+      "alternatives": [
+        {
+          "policy_text": "4 User access reviews are performed twice per year on high-risk systems and at least annually on others; remediation is documented.",
+          "similarity": 0.761
+        },
+        {
+          "policy_text": "Data Classification & Handling 13.1 Data is categorized (e.g., Public, Internal, Confidential, Restricted/ePHI). Handling rules specify storage, sharing, and disposal requirements.",
+          "similarity": 0.066
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0015",
+      "text": "**Third‑Party Management.** Due diligence, BAAs/DPAs, continuous monitoring.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Vendor & Third-Party Management (Organizational) 12.1 Vendors with access to sensitive data undergo due diligence and must meet Company security expectations.",
+        "similarity": 0.124
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 The objectives are to prevent unauthorized access, ensure service continuity, and promote responsible handling of sensitive information.",
+          "similarity": 0.006
+        },
+        {
+          "policy_text": "3 System Owners approve access to their systems and complete user access reviews.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": "LLM: The policy mentions 'due diligence' which implies third-party management practices, but does not specify that they must meet Company security expectations as per the requirement.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0016",
+      "text": "**All Workforce Members.** Complete training; follow policies; report incidents promptly.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "4 All personnel complete training and report suspected incidents without delay.",
+        "similarity": 1.0
+      },
+      "alternatives": [
+        {
+          "policy_text": "Incident Response (Administrative & Technical) 9.1 Suspected security incidents are reported to Security and the Privacy Officer within 48 hours of discovery.",
+          "similarity": 0.559
+        },
+        {
+          "policy_text": "Workforce Security & Training (Administrative) 6.1 New hires complete security and privacy onboarding before system access is enabled; all personnel complete refresher training annually.",
+          "similarity": 0.203
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0017",
+      "text": "**Review cadence:** at least **annually** and upon material changes (technology, regulation, business model, incidents).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "2 This policy is reviewed at least annually and upon material changes.",
+        "similarity": 1.0
+      },
+      "alternatives": [
+        {
+          "policy_text": "4 User access reviews are performed twice per year on high-risk systems and at least annually on others; remediation is documented.",
+          "similarity": 0.091
+        },
+        {
+          "policy_text": "Risk Management (Administrative) 4.1 An enterprise risk analysis is performed at least annually and after major changes. Results are tracked in a risk register with owners and due dates.",
+          "similarity": 0.052
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0018",
+      "text": "**Document retention:** HIPAA-required documentation retained **≥6 years** from creation or last effective date.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Documentation & Retention 16.1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date.",
+        "similarity": 0.997
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Data is retained only as long as needed for business and legal purposes, after which it is securely disposed of.",
+          "similarity": 0.096
+        },
+        {
+          "policy_text": "2 Logs are retained for no less than 180 days, with restricted access and tamper-resistant storage for critical systems.",
+          "similarity": 0.011
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0019",
+      "text": "**Version control:** changes tracked with summary, approver, and effective date.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "2 Code changes are scanned for known weaknesses; high-risk issues are remediated before release or tracked with an approved exception.",
+        "similarity": 0.036
+      },
+      "alternatives": [
+        {
+          "policy_text": "Document Title: Company Information Security & Privacy Policy (Mid-Coverage Draft) Effective Date: <YYYY-MM-DD> Version: 0.9",
+          "similarity": 0.006
+        },
+        {
+          "policy_text": "Logging & Monitoring (Technical) 8.1 Security-relevant events (authentication results, privilege changes, configuration changes, and incident indicators) are logged centrally where feasible.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0020",
+      "text": "Implement the HIPAA **Security Rule** (§164.308–§164.316), **Privacy Rule** (selected highlights), and **Breach Notification Rule**, for all systems processing **ePHI**.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "2 Sections marked “ePHI” apply where electronic protected health information is processed.",
+        "similarity": 0.975
+      },
+      "alternatives": [
+        {
+          "policy_text": "3 Where ePHI is involved, the Privacy Officer coordinates regulatory notifications consistent with applicable law.",
+          "similarity": 0.672
+        },
+        {
+          "policy_text": "Privacy Program (Overview) 17.1 Notices describe how personal information is collected, used, and shared; requests to access or delete personal information are honored as required by applicable law.",
+          "similarity": 0.007
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0021",
+      "text": "*Systems in scope:** Systems storing/processing/transmitting ePHI; integrations; backups; logs containing ePHI identifiers; admin consoles; mobile/endpoint clients with ePHI access.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "2 Sections marked “ePHI” apply where electronic protected health information is processed.",
+        "similarity": 0.92
+      },
+      "alternatives": [
+        {
+          "policy_text": "Scope 2.1 Applies to all employees, contractors, and vendors who access Company systems.",
+          "similarity": 0.021
+        },
+        {
+          "policy_text": "3 Where ePHI is involved, the Privacy Officer coordinates regulatory notifications consistent with applicable law.",
+          "similarity": 0.019
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0022",
+      "text": "HIPAA (45 CFR Part 160 & 164), state privacy/security laws; NIST SP 800‑66; NIST SP 800‑53 (reference), HHS guidance.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "2 Sections marked “ePHI” apply where electronic protected health information is processed.",
+        "similarity": 0.019
+      },
+      "alternatives": [
+        {
+          "policy_text": "3 Where ePHI is involved, the Privacy Officer coordinates regulatory notifications consistent with applicable law.",
+          "similarity": 0.011
+        },
+        {
+          "policy_text": "Privacy Program (Overview) 17.1 Notices describe how personal information is collected, used, and shared; requests to access or delete personal information are honored as required by applicable law.",
+          "similarity": 0.004
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0023",
+      "text": "**Business Associate (BA):** Vendor handling ePHI on behalf of `<CompanyName>` (must execute BAA).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "2 Business Associate Agreements are executed before any vendor handles ePHI; subcontractors must meet equivalent obligations.",
+        "similarity": 0.37
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Sections marked “ePHI” apply where electronic protected health information is processed.",
+          "similarity": 0.059
+        },
+        {
+          "policy_text": "3 Where ePHI is involved, the Privacy Officer coordinates regulatory notifications consistent with applicable law.",
+          "similarity": 0.005
+        }
+      ],
+      "rationale": "LLM: The policy matches the requirements exactly, covering both at-rest and in-transit encryption.",
+      "upgraded_from": "non_existent",
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0024",
+      "text": "**Minimum Necessary:** Only the least amount of PHI needed to accomplish the task.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "2 Personnel must access only the minimum data necessary to perform assigned duties.",
+        "similarity": 0.981
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Multi-factor authentication (MFA) is mandatory for administrators and remote access. (MFA for all users is recommended.) 5.3 Sessions must lock after 20 minutes of inactivity and require re-authentication to resume.",
+          "similarity": 0.0
+        },
+        {
+          "policy_text": "2 Business Associate Agreements are executed before any vendor handles ePHI; subcontractors must meet equivalent obligations.",
+          "similarity": 0.0
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0025",
+      "text": "**Security Incident:** Attempted or successful unauthorized access/use/disclosure/modification/destruction.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Incident Response (Administrative & Technical) 9.1 Suspected security incidents are reported to Security and the Privacy Officer within 48 hours of discovery.",
+        "similarity": 0.162
+      },
+      "alternatives": [
+        {
+          "policy_text": "3 The security team reviews alerts and trends and escalates potential incidents for investigation.",
+          "similarity": 0.046
+        },
+        {
+          "policy_text": "Logging & Monitoring (Technical) 8.1 Security-relevant events (authentication results, privilege changes, configuration changes, and incident indicators) are logged centrally where feasible.",
+          "similarity": 0.018
+        }
+      ],
+      "rationale": "LLM: The policy requires reporting within 48 hours, which is stricter than the requirement of attempted or successful incidents being reported immediately.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0026",
+      "text": "**Security Management Process**",
+      "label": "garbage",
+      "best_match": {
+        "policy_text": "Vendor & Third-Party Management (Organizational) 12.1 Vendors with access to sensitive data undergo due diligence and must meet Company security expectations.",
+        "similarity": 0.003
+      },
+      "alternatives": [
+        {
+          "policy_text": "Workforce Security & Training (Administrative) 6.1 New hires complete security and privacy onboarding before system access is enabled; all personnel complete refresher training annually.",
+          "similarity": 0.002
+        },
+        {
+          "policy_text": "Logging & Monitoring (Technical) 8.1 Security-relevant events (authentication results, privilege changes, configuration changes, and incident indicators) are logged centrally where feasible.",
+          "similarity": 0.002
+        }
+      ],
+      "rationale": "Short/heading-like text (no actionable requirement).",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0027",
+      "text": "**Risk Analysis (R):** Perform enterprise and system-level risk analyses **annually** and upon major change. Maintain risk register, likelihood/impact, owner, and treatment plan.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Risk Management (Administrative) 4.1 An enterprise risk analysis is performed at least annually and after major changes. Results are tracked in a risk register with owners and due dates.",
+        "similarity": 1.0
+      },
+      "alternatives": [
+        {
+          "policy_text": "4 User access reviews are performed twice per year on high-risk systems and at least annually on others; remediation is documented.",
+          "similarity": 0.22
+        },
+        {
+          "policy_text": "2 Risks rated Critical or High are remediated on a defined timetable. Risk acceptance requires written business justification and CISO approval.",
+          "similarity": 0.017
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0028",
+      "text": "**Risk Management (R):** Track remediation to closure with due dates and acceptance criteria; high/critical items remediated within **30–90 days** depending on severity.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "2 Critical vulnerabilities are remediated within 14 days, and High within 30 days unless an approved exception exists.",
+        "similarity": 0.949
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Risks rated Critical or High are remediated on a defined timetable. Risk acceptance requires written business justification and CISO approval.",
+          "similarity": 0.734
+        },
+        {
+          "policy_text": "2 Code changes are scanned for known weaknesses; high-risk issues are remediated before release or tracked with an approved exception.",
+          "similarity": 0.106
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0029",
+      "text": "**Sanction Policy (R):** Violations may lead to corrective action up to termination.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "3 Sanctions: policy violations may lead to corrective action up to termination.",
+        "similarity": 1.0
+      },
+      "alternatives": [
+        {
+          "policy_text": "Enforcement 18.1 Non-compliance may result in disciplinary action up to and including termination and legal remedies where applicable.",
+          "similarity": 0.67
+        },
+        {
+          "policy_text": "2 This policy is reviewed at least annually and upon material changes.",
+          "similarity": 0.006
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0030",
+      "text": "**Information System Activity Review (R):** Monitor security events, access logs, audit trails. Review **at least monthly** for in-scope systems.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "4 User access reviews are performed twice per year on high-risk systems and at least annually on others; remediation is documented.",
+        "similarity": 0.232
+      },
+      "alternatives": [
+        {
+          "policy_text": "Documentation & Retention 16.1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date.",
+          "similarity": 0.054
+        },
+        {
+          "policy_text": "3 The security team reviews alerts and trends and escalates potential incidents for investigation.",
+          "similarity": 0.052
+        }
+      ],
+      "rationale": "LLM: The REQUIREMENT requires 'at least monthly', while the BEST POLICY MATCH states 'quarterly'. This difference indicates that the REQUIREMENT is non-existent.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0031",
+      "text": "**Assigned Security Responsibility (R):** Appoint a Security Officer (SO).",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "3 The security team reviews alerts and trends and escalates potential incidents for investigation.",
+        "similarity": 0.004
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 The Privacy Officer oversees privacy practices and breach communications.",
+          "similarity": 0.002
+        },
+        {
+          "policy_text": "2 The objectives are to prevent unauthorized access, ensure service continuity, and promote responsible handling of sensitive information.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0032",
+      "text": "**Workforce Security (A):** Authorization/supervision; clearance; termination procedures (access revocation ≤ **24 hours** of separation).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "2 Departing personnel have access revoked within 24 hours of separation. Company assets and credentials are returned or disabled.",
+        "similarity": 0.993
+      },
+      "alternatives": [
+        {
+          "policy_text": "Workforce Security & Training (Administrative) 6.1 New hires complete security and privacy onboarding before system access is enabled; all personnel complete refresher training annually.",
+          "similarity": 0.007
+        },
+        {
+          "policy_text": "Physical Safeguards 11.1 Facilities housing production systems use badge-controlled access and visitor sign-in procedures.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0033",
+      "text": "**Information Access Management (R/A):** Minimum necessary; role-based access; documented access authorization and modification; periodic access reviews (**quarterly** for high-risk systems).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "4 User access reviews are performed twice per year on high-risk systems and at least annually on others; remediation is documented.",
+        "similarity": 0.955
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Personnel must access only the minimum data necessary to perform assigned duties.",
+          "similarity": 0.785
+        },
+        {
+          "policy_text": "3 System Owners approve access to their systems and complete user access reviews.",
+          "similarity": 0.131
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0034",
+      "text": "**Security Awareness & Training (A):** Onboarding + **annual** HIPAA security training; phishing simulations; password/MFA guidance.",
+      "label": "partially_satisfied",
+      "best_match": {
+        "policy_text": "Workforce Security & Training (Administrative) 6.1 New hires complete security and privacy onboarding before system access is enabled; all personnel complete refresher training annually.",
+        "similarity": 0.212
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Multi-factor authentication (MFA) is mandatory for administrators and remote access. (MFA for all users is recommended.) 5.3 Sessions must lock after 20 minutes of inactivity and require re-authentication to resume.",
+          "similarity": 0.011
+        },
+        {
+          "policy_text": "Documentation & Retention 16.1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date.",
+          "similarity": 0.009
+        }
+      ],
+      "rationale": "LLM: The policy mentions annual training but does not specify the type (onboarding vs. refresher). Additionally, it lacks information about phishing simulations and MFA guidance.",
+      "upgraded_from": "non_existent",
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0035",
+      "text": "**Security Incident Procedures (R):** Detect, triage, contain, investigate, and report. Internal notification to SO/PO **within 24 hours** of discovery.",
+      "label": "partially_satisfied",
+      "best_match": {
+        "policy_text": "Incident Response (Administrative & Technical) 9.1 Suspected security incidents are reported to Security and the Privacy Officer within 48 hours of discovery.",
+        "similarity": 0.99
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 The incident team performs triage, containment, eradication, and recovery, and documents lessons learned.",
+          "similarity": 0.433
+        },
+        {
+          "policy_text": "3 The security team reviews alerts and trends and escalates potential incidents for investigation.",
+          "similarity": 0.108
+        }
+      ],
+      "rationale": "Numeric mismatch: compliance requires action within 1440 minutes, but policy allows 2880 minutes.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0036",
+      "text": "**Contingency Plan (R/A):** Data backup plan, disaster recovery plan, emergency mode operations.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "3 Disaster recovery objectives (RTO/RPO) are defined for critical services and validated through an annual exercise.",
+        "similarity": 0.048
+      },
+      "alternatives": [
+        {
+          "policy_text": "Contingency Planning & Backups (Administrative & Technical) 10.1 Production data is backed up regularly and encrypted in storage and transit to the backup repository.",
+          "similarity": 0.022
+        },
+        {
+          "policy_text": "2 The incident team performs triage, containment, eradication, and recovery, and documents lessons learned.",
+          "similarity": 0.005
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0037",
+      "text": "**Backups:** Encrypt; test **quarterly**; retain per data retention policy.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "2 Data is retained only as long as needed for business and legal purposes, after which it is securely disposed of.",
+        "similarity": 0.08
+      },
+      "alternatives": [
+        {
+          "policy_text": "Contingency Planning & Backups (Administrative & Technical) 10.1 Production data is backed up regularly and encrypted in storage and transit to the backup repository.",
+          "similarity": 0.027
+        },
+        {
+          "policy_text": "2 Logs are retained for no less than 180 days, with restricted access and tamper-resistant storage for critical systems.",
+          "similarity": 0.011
+        }
+      ],
+      "rationale": "LLM: The requirement is fully met by the best policy and alternative 1, where all data is encrypted both at rest and in transit.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0038",
+      "text": "**DR/BCP:** Define **RTO/RPO**; test **annually** (tabletop + technical).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "3 Disaster recovery objectives (RTO/RPO) are defined for critical services and validated through an annual exercise.",
+        "similarity": 0.947
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 This policy is reviewed at least annually and upon material changes.",
+          "similarity": 0.005
+        },
+        {
+          "policy_text": "2 Restore procedures are tested at least twice per year; results and defects are tracked to closure.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0039",
+      "text": "**Evaluation (R):** Periodic technical and non-technical evaluations **annually**.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "2 This policy is reviewed at least annually and upon material changes.",
+        "similarity": 0.197
+      },
+      "alternatives": [
+        {
+          "policy_text": "3 Disaster recovery objectives (RTO/RPO) are defined for critical services and validated through an annual exercise.",
+          "similarity": 0.006
+        },
+        {
+          "policy_text": "4 User access reviews are performed twice per year on high-risk systems and at least annually on others; remediation is documented.",
+          "similarity": 0.002
+        }
+      ],
+      "rationale": "LLM: The BEST POLICY MATCH specifies an annual review, while the REQUISITION requires an annual evaluation and an annual exercise for disaster recovery objectives.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0040",
+      "text": "**Business Associate Arrangements (R):** Execute **BAA** before ePHI access; require incident reporting, safeguards, subcontractor flow-downs.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "2 Business Associate Agreements are executed before any vendor handles ePHI; subcontractors must meet equivalent obligations.",
+        "similarity": 0.996
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Sections marked “ePHI” apply where electronic protected health information is processed.",
+          "similarity": 0.114
+        },
+        {
+          "policy_text": "3 Where ePHI is involved, the Privacy Officer coordinates regulatory notifications consistent with applicable law.",
+          "similarity": 0.017
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0041",
+      "text": "**Facility Access Controls (A):** Badge controls; visitor management; data center access by least privilege; logs retained **1 year** minimum.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "2 Logs are retained for no less than 180 days, with restricted access and tamper-resistant storage for critical systems.",
+        "similarity": 0.904
+      },
+      "alternatives": [
+        {
+          "policy_text": "Physical Safeguards 11.1 Facilities housing production systems use badge-controlled access and visitor sign-in procedures.",
+          "similarity": 0.811
+        },
+        {
+          "policy_text": "Documentation & Retention 16.1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date.",
+          "similarity": 0.297
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0042",
+      "text": "**Workstation Use (R):** Secure screens, privacy filters for PHI; clear desk for PHI.",
+      "label": "partially_satisfied",
+      "best_match": {
+        "policy_text": "2 Workstations used to access sensitive data employ full-disk encryption and automatic screen locking.",
+        "similarity": 0.626
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Sections marked “ePHI” apply where electronic protected health information is processed.",
+          "similarity": 0.002
+        },
+        {
+          "policy_text": "Workforce Security & Training (Administrative) 6.1 New hires complete security and privacy onboarding before system access is enabled; all personnel complete refresher training annually.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0043",
+      "text": "**Workstation Security (R):** Endpoint protection, disk encryption, screen lock ≤ **10 minutes** idle.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "2 Workstations used to access sensitive data employ full-disk encryption and automatic screen locking.",
+        "similarity": 0.834
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Multi-factor authentication (MFA) is mandatory for administrators and remote access. (MFA for all users is recommended.) 5.3 Sessions must lock after 20 minutes of inactivity and require re-authentication to resume.",
+          "similarity": 0.003
+        },
+        {
+          "policy_text": "2 Logs are retained for no less than 180 days, with restricted access and tamper-resistant storage for critical systems.",
+          "similarity": 0.0
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0044",
+      "text": "**Device & Media Controls (R/A):** Secure disposal; media reuse with crypto‑erase; asset inventory; chain of custody; backup/restore procedures.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "2 Data in transit should use secure protocols (TLS 1.2+). Exceptions require documented risk review and compensating controls.",
+        "similarity": 0.011
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 The objectives are to prevent unauthorized access, ensure service continuity, and promote responsible handling of sensitive information.",
+          "similarity": 0.009
+        },
+        {
+          "policy_text": "2 Workstations used to access sensitive data employ full-disk encryption and automatic screen locking.",
+          "similarity": 0.006
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0045",
+      "text": "**Access Control:** Unique user IDs; **MFA** for privileged and remote access; emergency access procedure; automatic logoff (≤ **15 minutes** idle).",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "2 Multi-factor authentication (MFA) is mandatory for administrators and remote access. (MFA for all users is recommended.) 5.3 Sessions must lock after 20 minutes of inactivity and require re-authentication to resume.",
+        "similarity": 0.187
+      },
+      "alternatives": [
+        {
+          "policy_text": "Physical Safeguards 11.1 Facilities housing production systems use badge-controlled access and visitor sign-in procedures.",
+          "similarity": 0.009
+        },
+        {
+          "policy_text": "2 Departing personnel have access revoked within 24 hours of separation. Company assets and credentials are returned or disabled.",
+          "similarity": 0.007
+        }
+      ],
+      "rationale": "LLM: The requirement is about unique user IDs, MFA for privileged and remote access, emergency access procedure, and automatic logoff. The best policy matches do not include these details.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0046",
+      "text": "**Encryption:** ePHI **at rest** (AES‑256 or equivalent) and **in transit** (TLS 1.2+; TLS 1.3 preferred). Key management documented.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "2 Data in transit should use secure protocols (TLS 1.2+). Exceptions require documented risk review and compensating controls.",
+        "similarity": 0.949
+      },
+      "alternatives": [
+        {
+          "policy_text": "3 Keys are generated, stored, and rotated according to internal key management procedures.",
+          "similarity": 0.568
+        },
+        {
+          "policy_text": "2 Sections marked “ePHI” apply where electronic protected health information is processed.",
+          "similarity": 0.253
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0047",
+      "text": "**Audit Controls:** Centralized logging; immutable storage for critical logs; SIEM correlation; time sync (NTP).",
+      "label": "partially_satisfied",
+      "best_match": {
+        "policy_text": "2 Logs are retained for no less than 180 days, with restricted access and tamper-resistant storage for critical systems.",
+        "similarity": 0.275
+      },
+      "alternatives": [
+        {
+          "policy_text": "Logging & Monitoring (Technical) 8.1 Security-relevant events (authentication results, privilege changes, configuration changes, and incident indicators) are logged centrally where feasible.",
+          "similarity": 0.063
+        },
+        {
+          "policy_text": "2 Workstations used to access sensitive data employ full-disk encryption and automatic screen locking.",
+          "similarity": 0.002
+        }
+      ],
+      "rationale": "LLM: The BEST POLICY MATCH requires centralized logging, immutable storage for critical logs, SIEM correlation, and time sync (NTP), which are not explicitly mentioned in the TOP ALTERNATIVES.",
+      "upgraded_from": "non_existent",
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0048",
+      "text": "**Integrity:** Hashing/signing where applicable; change detection; anti‑tamper.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "2 Code changes are scanned for known weaknesses; high-risk issues are remediated before release or tracked with an approved exception.",
+        "similarity": 0.001
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 The objectives are to prevent unauthorized access, ensure service continuity, and promote responsible handling of sensitive information.",
+          "similarity": 0.001
+        },
+        {
+          "policy_text": "2 Data in transit should use secure protocols (TLS 1.2+). Exceptions require documented risk review and compensating controls.",
+          "similarity": 0.0
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0049",
+      "text": "**Person/Entity Authentication:** Enterprise identity; SSO preferred; password policy consistent with NIST SP 800‑63; MFA mandated.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "2 Multi-factor authentication (MFA) is mandatory for administrators and remote access. (MFA for all users is recommended.) 5.3 Sessions must lock after 20 minutes of inactivity and require re-authentication to resume.",
+        "similarity": 0.068
+      },
+      "alternatives": [
+        {
+          "policy_text": "Physical Safeguards 11.1 Facilities housing production systems use badge-controlled access and visitor sign-in procedures.",
+          "similarity": 0.001
+        },
+        {
+          "policy_text": "Document Title: Company Information Security & Privacy Policy (Mid-Coverage Draft) Effective Date: <YYYY-MM-DD> Version: 0.9",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": "LLM: The policy mentions MFA for administrators and remote access, which aligns with the requirement. However, it recommends MFA for all users, while the requirement specifies that MFA is mandated for administrators and remote access.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0050",
+      "text": "**Transmission Security:** Encrypted channels, certificate management, secure APIs.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "2 Data in transit should use secure protocols (TLS 1.2+). Exceptions require documented risk review and compensating controls.",
+        "similarity": 0.031
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 The objectives are to prevent unauthorized access, ensure service continuity, and promote responsible handling of sensitive information.",
+          "similarity": 0.005
+        },
+        {
+          "policy_text": "Encryption & Key Management (Technical) 7.1 All production databases and file stores containing sensitive data are encrypted at rest using strong, industry-accepted algorithms.",
+          "similarity": 0.0
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0051",
+      "text": "**BA Contracts:** Required clauses: permitted uses/disclosures; safeguards; breach reporting; subcontractor flow-down; return/destroy PHI; termination for cause.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "3 Sanctions: policy violations may lead to corrective action up to termination.",
+        "similarity": 0.036
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Business Associate Agreements are executed before any vendor handles ePHI; subcontractors must meet equivalent obligations.",
+          "similarity": 0.019
+        },
+        {
+          "policy_text": "2 Risks rated Critical or High are remediated on a defined timetable. Risk acceptance requires written business justification and CISO approval.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0052",
+      "text": "Maintain written P&P; train on updates; document evaluations; **retain 6 years** from creation/last effective date.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Documentation & Retention 16.1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date.",
+        "similarity": 0.996
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 This policy is reviewed at least annually and upon material changes.",
+          "similarity": 0.022
+        },
+        {
+          "policy_text": "2 Logs are retained for no less than 180 days, with restricted access and tamper-resistant storage for critical systems.",
+          "similarity": 0.003
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0053",
+      "text": "**Minimum Necessary:** Enforced through RBAC and procedures.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "2 Personnel must access only the minimum data necessary to perform assigned duties.",
+        "similarity": 0.166
+      },
+      "alternatives": [
+        {
+          "policy_text": "Purpose 1.1 This policy sets minimum safeguards to protect Company Data, including any electronic health information handled by <CompanyName>.",
+          "similarity": 0.002
+        },
+        {
+          "policy_text": "Physical Safeguards 11.1 Facilities housing production systems use badge-controlled access and visitor sign-in procedures.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": "LLM: The requirement states 'Enforced through RBAC and procedures,' while the best policy mentions 'Purpose' and 'Physical Safeguards.' The latter do not specify how RBAC and procedures are enforced, so they are incomplete.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0054",
+      "text": "**Uses/Disclosures:** As authorized by law/consent/BAA; marketing/research require additional controls.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Privacy Program (Overview) 17.1 Notices describe how personal information is collected, used, and shared; requests to access or delete personal information are honored as required by applicable law.",
+        "similarity": 0.001
+      },
+      "alternatives": [
+        {
+          "policy_text": "Vendor & Third-Party Management (Organizational) 12.1 Vendors with access to sensitive data undergo due diligence and must meet Company security expectations.",
+          "similarity": 0.001
+        },
+        {
+          "policy_text": "Physical Safeguards 11.1 Facilities housing production systems use badge-controlled access and visitor sign-in procedures.",
+          "similarity": 0.0
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0055",
+      "text": "**Individual Rights:** Access, amendment, accounting of disclosures (document SLAs).",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Privacy Program (Overview) 17.1 Notices describe how personal information is collected, used, and shared; requests to access or delete personal information are honored as required by applicable law.",
+        "similarity": 0.001
+      },
+      "alternatives": [
+        {
+          "policy_text": "Scope 2.1 Applies to all employees, contractors, and vendors who access Company systems.",
+          "similarity": 0.001
+        },
+        {
+          "policy_text": "Document Title: Company Information Security & Privacy Policy (Mid-Coverage Draft) Effective Date: <YYYY-MM-DD> Version: 0.9",
+          "similarity": 0.0
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0056",
+      "text": "**Notice of Privacy Practices (if applicable):** Published and kept current.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Documentation & Retention 16.1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date.",
+        "similarity": 0.015
+      },
+      "alternatives": [
+        {
+          "policy_text": "Privacy Program (Overview) 17.1 Notices describe how personal information is collected, used, and shared; requests to access or delete personal information are honored as required by applicable law.",
+          "similarity": 0.014
+        },
+        {
+          "policy_text": "3 Where ePHI is involved, the Privacy Officer coordinates regulatory notifications consistent with applicable law.",
+          "similarity": 0.014
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0057",
+      "text": "**Breach Notification:** Without unreasonable delay, **no later than 60 days** to affected individuals; notify HHS and media where required. Internal escalation **within 24 hours** of discovery. Maintain risk assessment and decision record.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Incident Response (Administrative & Technical) 9.1 Suspected security incidents are reported to Security and the Privacy Officer within 48 hours of discovery.",
+        "similarity": 0.038
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Critical vulnerabilities are remediated within 14 days, and High within 30 days unless an approved exception exists.",
+          "similarity": 0.026
+        },
+        {
+          "policy_text": "2 Departing personnel have access revoked within 24 hours of separation. Company assets and credentials are returned or disabled.",
+          "similarity": 0.023
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0058",
+      "text": "**Risk Analysis Workflow:** inventory → data flows → threat modeling → likelihood/impact → risk register → treatment plan.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Risk Management (Administrative) 4.1 An enterprise risk analysis is performed at least annually and after major changes. Results are tracked in a risk register with owners and due dates.",
+        "similarity": 0.266
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Risks rated Critical or High are remediated on a defined timetable. Risk acceptance requires written business justification and CISO approval.",
+          "similarity": 0.014
+        },
+        {
+          "policy_text": "2 Code changes are scanned for known weaknesses; high-risk issues are remediated before release or tracked with an approved exception.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": "LLM: The requirement matches the policy's mandate of encrypting data at rest and in transit regardless of system type.",
+      "upgraded_from": "non_existent",
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0059",
+      "text": "**Access Provisioning:** request → manager & data owner approval → least privilege → SSO/MFA enforced → logging.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Access Control (Technical & Administrative) 5.1 Access is granted based on job duties and approved by the relevant manager and System Owner (least-privilege).",
+        "similarity": 0.371
+      },
+      "alternatives": [
+        {
+          "policy_text": "Logging & Monitoring (Technical) 8.1 Security-relevant events (authentication results, privilege changes, configuration changes, and incident indicators) are logged centrally where feasible.",
+          "similarity": 0.037
+        },
+        {
+          "policy_text": "3 System Owners approve access to their systems and complete user access reviews.",
+          "similarity": 0.029
+        }
+      ],
+      "rationale": "LLM: The REQUIREMENT mentions'manager & data owner approval', which is not addressed in either BEST POLICY MATCH or TOP ALTERNATIVE.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0060",
+      "text": "**Quarterly Access Reviews:** extract entitlements → owner attestation → remediation tickets → closure evidence.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "4 User access reviews are performed twice per year on high-risk systems and at least annually on others; remediation is documented.",
+        "similarity": 0.088
+      },
+      "alternatives": [
+        {
+          "policy_text": "3 System Owners approve access to their systems and complete user access reviews.",
+          "similarity": 0.074
+        },
+        {
+          "policy_text": "2 Restore procedures are tested at least twice per year; results and defects are tracked to closure.",
+          "similarity": 0.003
+        }
+      ],
+      "rationale": "LLM: The policy mentions quarterly access reviews for high-risk systems, which aligns with the requirement of extracting entitlements through owner attestation and remediation tickets. However, it lacks coverage for annual reviews on other systems and omits closure evidence.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0061",
+      "text": "**Encryption Standard:** storage classes mapped to controls; KMS/HSM; key rotation schedule; secrets management.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "3 Keys are generated, stored, and rotated according to internal key management procedures.",
+        "similarity": 0.185
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Workstations used to access sensitive data employ full-disk encryption and automatic screen locking.",
+          "similarity": 0.036
+        },
+        {
+          "policy_text": "Encryption & Key Management (Technical) 7.1 All production databases and file stores containing sensitive data are encrypted at rest using strong, industry-accepted algorithms.",
+          "similarity": 0.015
+        }
+      ],
+      "rationale": "LLM: The BEST POLICY MATCH specifies 3 keys, while the REQUIREMENT states 2 workstations use encryption for sensitive data. The BEST POLICY MATCH also mentions automatic screen locking, which is not mentioned in the REQUIREMENT.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0062",
+      "text": "**Logging & Monitoring:** define events; retention ≥ **1 year online**; alerting playbooks.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "2 Logs are retained for no less than 180 days, with restricted access and tamper-resistant storage for critical systems.",
+        "similarity": 0.067
+      },
+      "alternatives": [
+        {
+          "policy_text": "Logging & Monitoring (Technical) 8.1 Security-relevant events (authentication results, privilege changes, configuration changes, and incident indicators) are logged centrally where feasible.",
+          "similarity": 0.047
+        },
+        {
+          "policy_text": "Documentation & Retention 16.1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date.",
+          "similarity": 0.006
+        }
+      ],
+      "rationale": "LLM: The BEST POLICY MATCH specifies logging for up to 180 days, which is shorter than the requirement of 1 year. Additionally, while the BEST POLICY MATCH mentions centralized logging, it doesn't specify that this must be done for all systems as per the requirement.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0063",
+      "text": "**Incident Response:** detect → contain → eradicate → recover → lessons learned; tabletop **biannually**.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "2 The incident team performs triage, containment, eradication, and recovery, and documents lessons learned.",
+        "similarity": 0.97
+      },
+      "alternatives": [
+        {
+          "policy_text": "Incident Response (Administrative & Technical) 9.1 Suspected security incidents are reported to Security and the Privacy Officer within 48 hours of discovery.",
+          "similarity": 0.012
+        },
+        {
+          "policy_text": "3 The security team reviews alerts and trends and escalates potential incidents for investigation.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0064",
+      "text": "**Backup/DR:** nightly backups; offsite copies; quarterly restore tests; annual DR test.",
+      "label": "partially_satisfied",
+      "best_match": {
+        "policy_text": "2 Restore procedures are tested at least twice per year; results and defects are tracked to closure.",
+        "similarity": 0.751
+      },
+      "alternatives": [
+        {
+          "policy_text": "Contingency Planning & Backups (Administrative & Technical) 10.1 Production data is backed up regularly and encrypted in storage and transit to the backup repository.",
+          "similarity": 0.007
+        },
+        {
+          "policy_text": "Vulnerability & Patch Management 15.1 Systems are scanned regularly; findings are triaged and tracked to closure.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0065",
+      "text": "**KPIs:** access review completion %, median time-to-revoke (hrs), vuln remediation SLA compliance %, backup restore success rate, incident MTTR, training completion %.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "4 User access reviews are performed twice per year on high-risk systems and at least annually on others; remediation is documented.",
+        "similarity": 0.08
+      },
+      "alternatives": [
+        {
+          "policy_text": "3 System Owners approve access to their systems and complete user access reviews.",
+          "similarity": 0.036
+        },
+        {
+          "policy_text": "Documentation & Retention 16.1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date.",
+          "similarity": 0.036
+        }
+      ],
+      "rationale": "LLM: The policy specifies that system owners approve access and perform reviews, which matches 'user access reviews' mentioned in the requirements. However, it doesn't provide details about the frequency of reviews ('at least annually') or the completeness of documentation ('remediation is documented'). This makes it incomplete compared to the detailed KPIs specified.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0066",
+      "text": "**Evidence:** risk assessments, BAA inventory, access review exports, SIEM dashboards, IR tickets, backup test logs, DR reports, training rosters.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Documentation & Retention 16.1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date.",
+        "similarity": 0.474
+      },
+      "alternatives": [
+        {
+          "policy_text": "3 The security team reviews alerts and trends and escalates potential incidents for investigation.",
+          "similarity": 0.001
+        },
+        {
+          "policy_text": "2 The incident team performs triage, containment, eradication, and recovery, and documents lessons learned.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": "LLM: The requirement is invalid as evidenced by the absence of clear coverage in the BEST POLICY MATCH and TOP ALTERNATIVES.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0067",
+      "text": "**§164.308(a)(1)** Risk Analysis/Management → [A4‑1].",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Risk Management (Administrative) 4.1 An enterprise risk analysis is performed at least annually and after major changes. Results are tracked in a risk register with owners and due dates.",
+        "similarity": 0.038
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Risks rated Critical or High are remediated on a defined timetable. Risk acceptance requires written business justification and CISO approval.",
+          "similarity": 0.003
+        },
+        {
+          "policy_text": "2 Code changes are scanned for known weaknesses; high-risk issues are remediated before release or tracked with an approved exception.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0068",
+      "text": "**§164.308(a)(5)** Security Awareness/Training → [A4‑5].",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Workforce Security & Training (Administrative) 6.1 New hires complete security and privacy onboarding before system access is enabled; all personnel complete refresher training annually.",
+        "similarity": 0.005
+      },
+      "alternatives": [
+        {
+          "policy_text": "Documentation & Retention 16.1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date.",
+          "similarity": 0.003
+        },
+        {
+          "policy_text": "4 All personnel complete training and report suspected incidents without delay.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0069",
+      "text": "**§164.308(a)(7)** Contingency Plan → [A4‑7].",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Contingency Planning & Backups (Administrative & Technical) 10.1 Production data is backed up regularly and encrypted in storage and transit to the backup repository.",
+        "similarity": 0.002
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 The objectives are to prevent unauthorized access, ensure service continuity, and promote responsible handling of sensitive information.",
+          "similarity": 0.001
+        },
+        {
+          "policy_text": "2 Critical vulnerabilities are remediated within 14 days, and High within 30 days unless an approved exception exists.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0070",
+      "text": "**§164.310** Physical Safeguards → [A5].",
+      "label": "garbage",
+      "best_match": {
+        "policy_text": "Physical Safeguards 11.1 Facilities housing production systems use badge-controlled access and visitor sign-in procedures.",
+        "similarity": 0.02
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Sections marked “ePHI” apply where electronic protected health information is processed.",
+          "similarity": 0.001
+        },
+        {
+          "policy_text": "Purpose 1.1 This policy sets minimum safeguards to protect Company Data, including any electronic health information handled by <CompanyName>.",
+          "similarity": 0.0
+        }
+      ],
+      "rationale": "Short/heading-like text (no actionable requirement).",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0071",
+      "text": "**§164.312** Technical Safeguards → [A6].",
+      "label": "garbage",
+      "best_match": {
+        "policy_text": "Physical Safeguards 11.1 Facilities housing production systems use badge-controlled access and visitor sign-in procedures.",
+        "similarity": 0.001
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Sections marked “ePHI” apply where electronic protected health information is processed.",
+          "similarity": 0.001
+        },
+        {
+          "policy_text": "Purpose 1.1 This policy sets minimum safeguards to protect Company Data, including any electronic health information handled by <CompanyName>.",
+          "similarity": 0.0
+        }
+      ],
+      "rationale": "Short/heading-like text (no actionable requirement).",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0072",
+      "text": "**§164.314** BA Agreements → [A7].",
+      "label": "garbage",
+      "best_match": {
+        "policy_text": "2 Business Associate Agreements are executed before any vendor handles ePHI; subcontractors must meet equivalent obligations.",
+        "similarity": 0.007
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Sections marked “ePHI” apply where electronic protected health information is processed.",
+          "similarity": 0.001
+        },
+        {
+          "policy_text": "Enforcement 18.1 Non-compliance may result in disciplinary action up to and including termination and legal remedies where applicable.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": "Short/heading-like text (no actionable requirement).",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0073",
+      "text": "**§164.316** Documentation → [A8].",
+      "label": "garbage",
+      "best_match": {
+        "policy_text": "Documentation & Retention 16.1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date.",
+        "similarity": 0.006
+      },
+      "alternatives": [
+        {
+          "policy_text": "Document Title: Company Information Security & Privacy Policy (Mid-Coverage Draft) Effective Date: <YYYY-MM-DD> Version: 0.9",
+          "similarity": 0.002
+        },
+        {
+          "policy_text": "2 Sections marked “ePHI” apply where electronic protected health information is processed.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": "Short/heading-like text (no actionable requirement).",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0074",
+      "text": "Establish controls to meet SOC 2 **Trust Services Criteria (TSC)** for **Security (Common Criteria)**, with optional categories **Availability, Confidentiality, Processing Integrity, Privacy** as in scope for `<CompanyName>`.",
+      "label": "partially_satisfied",
+      "best_match": {
+        "policy_text": "2 The objectives are to prevent unauthorized access, ensure service continuity, and promote responsible handling of sensitive information.",
+        "similarity": 0.44
+      },
+      "alternatives": [
+        {
+          "policy_text": "Purpose 1.1 This policy sets minimum safeguards to protect Company Data, including any electronic health information handled by <CompanyName>.",
+          "similarity": 0.41
+        },
+        {
+          "policy_text": "Scope 2.1 Applies to all employees, contractors, and vendors who access Company systems.",
+          "similarity": 0.013
+        }
+      ],
+      "rationale": "LLM: The policy mentions prevention of unauthorized access and ensuring service continuity, which aligns with Security TSC criteria. However, it lacks coverage for Availability, Confidentiality, and Processing Integrity, which are also part of the Security TSC.",
+      "upgraded_from": "non_existent",
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0075",
+      "text": "**Control Environment (CC1):** ethics, governance, structure, authority/responsibility.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "2 The objectives are to prevent unauthorized access, ensure service continuity, and promote responsible handling of sensitive information.",
+        "similarity": 0.001
+      },
+      "alternatives": [
+        {
+          "policy_text": "Governance & Roles 3.1 The Chief Information Security Officer (CISO) owns this policy and leads the security program.",
+          "similarity": 0.0
+        },
+        {
+          "policy_text": "Data Classification & Handling 13.1 Data is categorized (e.g., Public, Internal, Confidential, Restricted/ePHI). Handling rules specify storage, sharing, and disposal requirements.",
+          "similarity": 0.0
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0076",
+      "text": "**Communication & Information (CC2):** internal/external communication supports control operation.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "2 The objectives are to prevent unauthorized access, ensure service continuity, and promote responsible handling of sensitive information.",
+        "similarity": 0.001
+      },
+      "alternatives": [
+        {
+          "policy_text": "Access Control (Technical & Administrative) 5.1 Access is granted based on job duties and approved by the relevant manager and System Owner (least-privilege).",
+          "similarity": 0.0
+        },
+        {
+          "policy_text": "Physical Safeguards 11.1 Facilities housing production systems use badge-controlled access and visitor sign-in procedures.",
+          "similarity": 0.0
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0077",
+      "text": "**Risk Assessment (CC3):** objectives, identification & analysis of risks (including fraud).",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "2 The objectives are to prevent unauthorized access, ensure service continuity, and promote responsible handling of sensitive information.",
+        "similarity": 0.036
+      },
+      "alternatives": [
+        {
+          "policy_text": "Risk Management (Administrative) 4.1 An enterprise risk analysis is performed at least annually and after major changes. Results are tracked in a risk register with owners and due dates.",
+          "similarity": 0.009
+        },
+        {
+          "policy_text": "2 Risks rated Critical or High are remediated on a defined timetable. Risk acceptance requires written business justification and CISO approval.",
+          "similarity": 0.006
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0078",
+      "text": "**Control Activities (CC4):** policies/procedures, technology controls, change mgmt.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Secure Development & Change Management 14.1 Changes to production services require peer review and approval appropriate to the risk of the change.",
+        "similarity": 0.001
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 The objectives are to prevent unauthorized access, ensure service continuity, and promote responsible handling of sensitive information.",
+          "similarity": 0.001
+        },
+        {
+          "policy_text": "Logging & Monitoring (Technical) 8.1 Security-relevant events (authentication results, privilege changes, configuration changes, and incident indicators) are logged centrally where feasible.",
+          "similarity": 0.0
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0079",
+      "text": "**Monitoring (CC5):** ongoing/separate evaluations, remediation.",
+      "label": "garbage",
+      "best_match": {
+        "policy_text": "4 User access reviews are performed twice per year on high-risk systems and at least annually on others; remediation is documented.",
+        "similarity": 0.013
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Critical vulnerabilities are remediated within 14 days, and High within 30 days unless an approved exception exists.",
+          "similarity": 0.002
+        },
+        {
+          "policy_text": "2 Risks rated Critical or High are remediated on a defined timetable. Risk acceptance requires written business justification and CISO approval.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": "Short/heading-like text (no actionable requirement).",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0080",
+      "text": "**Logical & Physical Access (CC6):** provisioning, authN/Z, MFA, network security, endpoint.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "2 The objectives are to prevent unauthorized access, ensure service continuity, and promote responsible handling of sensitive information.",
+        "similarity": 0.016
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Multi-factor authentication (MFA) is mandatory for administrators and remote access. (MFA for all users is recommended.) 5.3 Sessions must lock after 20 minutes of inactivity and require re-authentication to resume.",
+          "similarity": 0.014
+        },
+        {
+          "policy_text": "Physical Safeguards 11.1 Facilities housing production systems use badge-controlled access and visitor sign-in procedures.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0081",
+      "text": "**System Operations (CC7):** vuln mgmt, malware protection, logging/monitoring, incident response.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Logging & Monitoring (Technical) 8.1 Security-relevant events (authentication results, privilege changes, configuration changes, and incident indicators) are logged centrally where feasible.",
+        "similarity": 0.067
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 The incident team performs triage, containment, eradication, and recovery, and documents lessons learned.",
+          "similarity": 0.006
+        },
+        {
+          "policy_text": "3 The security team reviews alerts and trends and escalates potential incidents for investigation.",
+          "similarity": 0.004
+        }
+      ],
+      "rationale": "LLM: The REQUIREMENT includes 'vuln mgmt', which is not addressed by either the BEST POLICY MATCH or TOP ALTERNATIVES.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0082",
+      "text": "**Change Management (CC8):** secure SDLC, approvals, testing, separation of duties.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Secure Development & Change Management 14.1 Changes to production services require peer review and approval appropriate to the risk of the change.",
+        "similarity": 0.026
+      },
+      "alternatives": [
+        {
+          "policy_text": "Vendor & Third-Party Management (Organizational) 12.1 Vendors with access to sensitive data undergo due diligence and must meet Company security expectations.",
+          "similarity": 0.0
+        },
+        {
+          "policy_text": "2 Code changes are scanned for known weaknesses; high-risk issues are remediated before release or tracked with an approved exception.",
+          "similarity": 0.0
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0083",
+      "text": "**Vendor/Third Parties (CC9):** selection, onboarding, monitoring, offboarding.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Vendor & Third-Party Management (Organizational) 12.1 Vendors with access to sensitive data undergo due diligence and must meet Company security expectations.",
+        "similarity": 0.019
+      },
+      "alternatives": [
+        {
+          "policy_text": "3 System Owners approve access to their systems and complete user access reviews.",
+          "similarity": 0.002
+        },
+        {
+          "policy_text": "Logging & Monitoring (Technical) 8.1 Security-relevant events (authentication results, privilege changes, configuration changes, and incident indicators) are logged centrally where feasible.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0084",
+      "text": "*1) Governance & Policy Management.** Code of Conduct; info security policy suite; annual reviews; leadership sign-off.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "2 This policy is reviewed at least annually and upon material changes.",
+        "similarity": 0.926
+      },
+      "alternatives": [
+        {
+          "policy_text": "Governance & Roles 3.1 The Chief Information Security Officer (CISO) owns this policy and leads the security program.",
+          "similarity": 0.115
+        },
+        {
+          "policy_text": "Document Title: Company Information Security & Privacy Policy (Mid-Coverage Draft) Effective Date: <YYYY-MM-DD> Version: 0.9",
+          "similarity": 0.057
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0085",
+      "text": "*2) Risk Management.** Enterprise and product risks tracked; threat intel; risk appetite; treatment SLAs.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Risk Management (Administrative) 4.1 An enterprise risk analysis is performed at least annually and after major changes. Results are tracked in a risk register with owners and due dates.",
+        "similarity": 0.395
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Risks rated Critical or High are remediated on a defined timetable. Risk acceptance requires written business justification and CISO approval.",
+          "similarity": 0.014
+        },
+        {
+          "policy_text": "2 Code changes are scanned for known weaknesses; high-risk issues are remediated before release or tracked with an approved exception.",
+          "similarity": 0.007
+        }
+      ],
+      "rationale": "LLM: LLM output was not valid JSON; ignoring.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0086",
+      "text": "*3) Asset & Data Classification.** Inventories; data classes; handling rules; labels.",
+      "label": "partially_satisfied",
+      "best_match": {
+        "policy_text": "Data Classification & Handling 13.1 Data is categorized (e.g., Public, Internal, Confidential, Restricted/ePHI). Handling rules specify storage, sharing, and disposal requirements.",
+        "similarity": 0.694
+      },
+      "alternatives": [
+        {
+          "policy_text": "3 Keys are generated, stored, and rotated according to internal key management procedures.",
+          "similarity": 0.002
+        },
+        {
+          "policy_text": "2 Data in transit should use secure protocols (TLS 1.2+). Exceptions require documented risk review and compensating controls.",
+          "similarity": 0.0
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0087",
+      "text": "*4) Access Control.** RBAC; JIT/JEA where possible; SSO; **MFA**; quarterly access reviews; privileged access monitoring.",
+      "label": "partially_satisfied",
+      "best_match": {
+        "policy_text": "4 User access reviews are performed twice per year on high-risk systems and at least annually on others; remediation is documented.",
+        "similarity": 0.379
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 The objectives are to prevent unauthorized access, ensure service continuity, and promote responsible handling of sensitive information.",
+          "similarity": 0.029
+        },
+        {
+          "policy_text": "3 System Owners approve access to their systems and complete user access reviews.",
+          "similarity": 0.028
+        }
+      ],
+      "rationale": "LLM: The policy mentions quarterly access reviews for high-risk systems, which aligns with the requirement. However, it lacks annual reviews for other systems and does not specify MFA requirements.",
+      "upgraded_from": "non_existent",
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0088",
+      "text": "*5) Network Security.** Segmentation; least-route; firewall rules reviewed **semiannually**; secure remote access (VPN/ZTNA).",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "4 User access reviews are performed twice per year on high-risk systems and at least annually on others; remediation is documented.",
+        "similarity": 0.081
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Data in transit should use secure protocols (TLS 1.2+). Exceptions require documented risk review and compensating controls.",
+          "similarity": 0.008
+        },
+        {
+          "policy_text": "Access Control (Technical & Administrative) 5.1 Access is granted based on job duties and approved by the relevant manager and System Owner (least-privilege).",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": "LLM: LLM output was not valid JSON; ignoring.",
+      "upgraded_from": "non_existent",
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0089",
+      "text": "*6) Endpoint Security.** EDR/AV; full-disk encryption; secure baseline; patch SLAs (critical ≤ **7 days**).",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "2 Critical vulnerabilities are remediated within 14 days, and High within 30 days unless an approved exception exists.",
+        "similarity": 0.07
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Logs are retained for no less than 180 days, with restricted access and tamper-resistant storage for critical systems.",
+          "similarity": 0.015
+        },
+        {
+          "policy_text": "Workforce Security & Training (Administrative) 6.1 New hires complete security and privacy onboarding before system access is enabled; all personnel complete refresher training annually.",
+          "similarity": 0.002
+        }
+      ],
+      "rationale": "LLM: LLM output was not valid JSON; ignoring.",
+      "upgraded_from": "non_existent",
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0090",
+      "text": "*7) Logging & Monitoring.** Centralize logs; detect anomalies; alerting runbooks; retention ≥ **1 year** online (longer if required).",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "2 Logs are retained for no less than 180 days, with restricted access and tamper-resistant storage for critical systems.",
+        "similarity": 0.35
+      },
+      "alternatives": [
+        {
+          "policy_text": "Logging & Monitoring (Technical) 8.1 Security-relevant events (authentication results, privilege changes, configuration changes, and incident indicators) are logged centrally where feasible.",
+          "similarity": 0.313
+        },
+        {
+          "policy_text": "Documentation & Retention 16.1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date.",
+          "similarity": 0.093
+        }
+      ],
+      "rationale": "LLM: LLM output was not valid JSON; ignoring.",
+      "upgraded_from": "non_existent",
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0091",
+      "text": "*8) Vulnerability & Patch Management.** Continuous scanning; risk‑based remediation; exceptions with expiry.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Vulnerability & Patch Management 15.1 Systems are scanned regularly; findings are triaged and tracked to closure.",
+        "similarity": 0.89
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Code changes are scanned for known weaknesses; high-risk issues are remediated before release or tracked with an approved exception.",
+          "similarity": 0.262
+        },
+        {
+          "policy_text": "2 Critical vulnerabilities are remediated within 14 days, and High within 30 days unless an approved exception exists.",
+          "similarity": 0.041
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0092",
+      "text": "*9) Secure SDLC.** Design reviews; threat modeling; SAST/DAST/dep scanning; code review; secrets scanning; release approvals; changelogs.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "2 Code changes are scanned for known weaknesses; high-risk issues are remediated before release or tracked with an approved exception.",
+        "similarity": 0.343
+      },
+      "alternatives": [
+        {
+          "policy_text": "Secure Development & Change Management 14.1 Changes to production services require peer review and approval appropriate to the risk of the change.",
+          "similarity": 0.007
+        },
+        {
+          "policy_text": "Logging & Monitoring (Technical) 8.1 Security-relevant events (authentication results, privilege changes, configuration changes, and incident indicators) are logged centrally where feasible.",
+          "similarity": 0.007
+        }
+      ],
+      "rationale": "LLM: LLM output was not valid JSON; ignoring.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0093",
+      "text": "*10) Change Management.** CAB or change approvals for high‑risk; emergency change post‑review; separation of duties.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "2 Code changes are scanned for known weaknesses; high-risk issues are remediated before release or tracked with an approved exception.",
+        "similarity": 0.112
+      },
+      "alternatives": [
+        {
+          "policy_text": "Secure Development & Change Management 14.1 Changes to production services require peer review and approval appropriate to the risk of the change.",
+          "similarity": 0.064
+        },
+        {
+          "policy_text": "2 Risks rated Critical or High are remediated on a defined timetable. Risk acceptance requires written business justification and CISO approval.",
+          "similarity": 0.039
+        }
+      ],
+      "rationale": "LLM: The policy mentions 'high-risk' which aligns with the requirement, but does not specify that 'emergency change post-review' is included.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0094",
+      "text": "*11) Cryptography.** TLS 1.2+; TLS 1.3 preferred; strong ciphers; key management lifecycle; HSM/KMS.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "2 Data in transit should use secure protocols (TLS 1.2+). Exceptions require documented risk review and compensating controls.",
+        "similarity": 0.364
+      },
+      "alternatives": [
+        {
+          "policy_text": "Encryption & Key Management (Technical) 7.1 All production databases and file stores containing sensitive data are encrypted at rest using strong, industry-accepted algorithms.",
+          "similarity": 0.051
+        },
+        {
+          "policy_text": "3 Keys are generated, stored, and rotated according to internal key management procedures.",
+          "similarity": 0.016
+        }
+      ],
+      "rationale": "LLM: The REQUIREMENT mentions the least privilege principle, while the BEST POLICY MATCH addresses the need-to-know principle, which is different and thus non-existent.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0095",
+      "text": "*12) Business Continuity & DR (Availability).** RTO/RPO documented; tested **annually**; backup strategy with quarterly restores.",
+      "label": "partially_satisfied",
+      "best_match": {
+        "policy_text": "3 Disaster recovery objectives (RTO/RPO) are defined for critical services and validated through an annual exercise.",
+        "similarity": 0.535
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Restore procedures are tested at least twice per year; results and defects are tracked to closure.",
+          "similarity": 0.451
+        },
+        {
+          "policy_text": "Contingency Planning & Backups (Administrative & Technical) 10.1 Production data is backed up regularly and encrypted in storage and transit to the backup repository.",
+          "similarity": 0.005
+        }
+      ],
+      "rationale": "LLM: The BEST POLICY MATCH specifies an annual validation of RTO/RPO, while the REQUIREMENT requires yearly testing. The BEST POLICY MATCH also mentions quarterly restores, which is less frequent than the requirement's stated annually.",
+      "upgraded_from": "non_existent",
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0096",
+      "text": "*13) Confidentiality.** Encryption at rest/in transit; key mgmt; DLP; secure disposal; NDA for confidential data access.",
+      "label": "partially_satisfied",
+      "best_match": {
+        "policy_text": "2 Data in transit should use secure protocols (TLS 1.2+). Exceptions require documented risk review and compensating controls.",
+        "similarity": 0.381
+      },
+      "alternatives": [
+        {
+          "policy_text": "Data Classification & Handling 13.1 Data is categorized (e.g., Public, Internal, Confidential, Restricted/ePHI). Handling rules specify storage, sharing, and disposal requirements.",
+          "similarity": 0.031
+        },
+        {
+          "policy_text": "Encryption & Key Management (Technical) 7.1 All production databases and file stores containing sensitive data are encrypted at rest using strong, industry-accepted algorithms.",
+          "similarity": 0.028
+        }
+      ],
+      "rationale": "LLM: The BEST POLICY MATCH does not cover encryption at rest/in transit, key management, DLP, secure disposal, or NDA for confidential data access.",
+      "upgraded_from": "non_existent",
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0097",
+      "text": "*14) Processing Integrity.** Input validation; reconciliation; QA gates; error handling/playbacks; rollback procedures.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "2 Code changes are scanned for known weaknesses; high-risk issues are remediated before release or tracked with an approved exception.",
+        "similarity": 0.002
+      },
+      "alternatives": [
+        {
+          "policy_text": "Vulnerability & Patch Management 15.1 Systems are scanned regularly; findings are triaged and tracked to closure.",
+          "similarity": 0.001
+        },
+        {
+          "policy_text": "2 Sections marked “ePHI” apply where electronic protected health information is processed.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0098",
+      "text": "*15) Privacy (if in scope).** Notice, choice/consent, purpose limitation, data subject rights, retention/deletion standards.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Privacy Program (Overview) 17.1 Notices describe how personal information is collected, used, and shared; requests to access or delete personal information are honored as required by applicable law.",
+        "similarity": 0.031
+      },
+      "alternatives": [
+        {
+          "policy_text": "Purpose 1.1 This policy sets minimum safeguards to protect Company Data, including any electronic health information handled by <CompanyName>.",
+          "similarity": 0.015
+        },
+        {
+          "policy_text": "Document Title: Company Information Security & Privacy Policy (Mid-Coverage Draft) Effective Date: <YYYY-MM-DD> Version: 0.9",
+          "similarity": 0.004
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0099",
+      "text": "*16) Third‑Party Risk.** Security questionnaires, SOC reports review, **BAA/DPA** as applicable; continuous monitoring; termination data return/delete.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Vendor & Third-Party Management (Organizational) 12.1 Vendors with access to sensitive data undergo due diligence and must meet Company security expectations.",
+        "similarity": 0.022
+      },
+      "alternatives": [
+        {
+          "policy_text": "4 User access reviews are performed twice per year on high-risk systems and at least annually on others; remediation is documented.",
+          "similarity": 0.014
+        },
+        {
+          "policy_text": "Documentation & Retention 16.1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date.",
+          "similarity": 0.007
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0100",
+      "text": "**Evidence Library:** policies, org chart, risk register, asset inventories, access reviews, SIEM dashboards, IR tickets, change logs, pipeline results, vendor reviews, DR reports, backup logs, training records.",
+      "label": "partially_satisfied",
+      "best_match": {
+        "policy_text": "Documentation & Retention 16.1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date.",
+        "similarity": 0.756
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Logs are retained for no less than 180 days, with restricted access and tamper-resistant storage for critical systems.",
+          "similarity": 0.023
+        },
+        {
+          "policy_text": "Logging & Monitoring (Technical) 8.1 Security-relevant events (authentication results, privilege changes, configuration changes, and incident indicators) are logged centrally where feasible.",
+          "similarity": 0.002
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0101",
+      "text": "**KPIs:** vuln SLA adherence %, patch latency, access review completion %, incident MTTR, failed login trends, DR test success rate, vendor review completion %.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "4 User access reviews are performed twice per year on high-risk systems and at least annually on others; remediation is documented.",
+        "similarity": 0.023
+      },
+      "alternatives": [
+        {
+          "policy_text": "3 System Owners approve access to their systems and complete user access reviews.",
+          "similarity": 0.022
+        },
+        {
+          "policy_text": "Vulnerability & Patch Management 15.1 Systems are scanned regularly; findings are triaged and tracked to closure.",
+          "similarity": 0.015
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0102",
+      "text": "**Internal Audit / QA:** planned audits each quarter; issues tracked to closure with owners and due dates.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "2 Restore procedures are tested at least twice per year; results and defects are tracked to closure.",
+        "similarity": 0.789
+      },
+      "alternatives": [
+        {
+          "policy_text": "Vulnerability & Patch Management 15.1 Systems are scanned regularly; findings are triaged and tracked to closure.",
+          "similarity": 0.421
+        },
+        {
+          "policy_text": "Risk Management (Administrative) 4.1 An enterprise risk analysis is performed at least annually and after major changes. Results are tracked in a risk register with owners and due dates.",
+          "similarity": 0.117
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0103",
+      "text": "**CC1.0–CC1.5** → Governance, ethics, roles ([B3‑1]).",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Governance & Roles 3.1 The Chief Information Security Officer (CISO) owns this policy and leads the security program.",
+        "similarity": 0.011
+      },
+      "alternatives": [
+        {
+          "policy_text": "Access Control (Technical & Administrative) 5.1 Access is granted based on job duties and approved by the relevant manager and System Owner (least-privilege).",
+          "similarity": 0.0
+        },
+        {
+          "policy_text": "Data Classification & Handling 13.1 Data is categorized (e.g., Public, Internal, Confidential, Restricted/ePHI). Handling rules specify storage, sharing, and disposal requirements.",
+          "similarity": 0.0
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0104",
+      "text": "**CC2.0** → Communication & awareness (5. Training).",
+      "label": "garbage",
+      "best_match": {
+        "policy_text": "Scope 2.1 Applies to all employees, contractors, and vendors who access Company systems.",
+        "similarity": 0.0
+      },
+      "alternatives": [
+        {
+          "policy_text": "Workforce Security & Training (Administrative) 6.1 New hires complete security and privacy onboarding before system access is enabled; all personnel complete refresher training annually.",
+          "similarity": 0.0
+        },
+        {
+          "policy_text": "2 Sections marked “ePHI” apply where electronic protected health information is processed.",
+          "similarity": 0.0
+        }
+      ],
+      "rationale": "Short/heading-like text (no actionable requirement).",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0105",
+      "text": "**CC3.x** → Risk management ([B3‑2]).",
+      "label": "garbage",
+      "best_match": {
+        "policy_text": "Risk Management (Administrative) 4.1 An enterprise risk analysis is performed at least annually and after major changes. Results are tracked in a risk register with owners and due dates.",
+        "similarity": 0.007
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Code changes are scanned for known weaknesses; high-risk issues are remediated before release or tracked with an approved exception.",
+          "similarity": 0.001
+        },
+        {
+          "policy_text": "2 Risks rated Critical or High are remediated on a defined timetable. Risk acceptance requires written business justification and CISO approval.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": "Short/heading-like text (no actionable requirement).",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0106",
+      "text": "**CC4.x** → Control activities & SDLC ([B3‑9], [B3‑10]).",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Logging & Monitoring (Technical) 8.1 Security-relevant events (authentication results, privilege changes, configuration changes, and incident indicators) are logged centrally where feasible.",
+        "similarity": 0.0
+      },
+      "alternatives": [
+        {
+          "policy_text": "Access Control (Technical & Administrative) 5.1 Access is granted based on job duties and approved by the relevant manager and System Owner (least-privilege).",
+          "similarity": 0.0
+        },
+        {
+          "policy_text": "Data Classification & Handling 13.1 Data is categorized (e.g., Public, Internal, Confidential, Restricted/ePHI). Handling rules specify storage, sharing, and disposal requirements.",
+          "similarity": 0.0
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0107",
+      "text": "**CC5.x** → Monitoring & remediation ([B4]).",
+      "label": "garbage",
+      "best_match": {
+        "policy_text": "4 User access reviews are performed twice per year on high-risk systems and at least annually on others; remediation is documented.",
+        "similarity": 0.001
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Critical vulnerabilities are remediated within 14 days, and High within 30 days unless an approved exception exists.",
+          "similarity": 0.001
+        },
+        {
+          "policy_text": "2 Risks rated Critical or High are remediated on a defined timetable. Risk acceptance requires written business justification and CISO approval.",
+          "similarity": 0.0
+        }
+      ],
+      "rationale": "Short/heading-like text (no actionable requirement).",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0108",
+      "text": "**CC6.x** → Access/network/endpoint ([B3‑4]–[B3‑6]).",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Access Control (Technical & Administrative) 5.1 Access is granted based on job duties and approved by the relevant manager and System Owner (least-privilege).",
+        "similarity": 0.003
+      },
+      "alternatives": [
+        {
+          "policy_text": "3 System Owners approve access to their systems and complete user access reviews.",
+          "similarity": 0.001
+        },
+        {
+          "policy_text": "Vendor & Third-Party Management (Organizational) 12.1 Vendors with access to sensitive data undergo due diligence and must meet Company security expectations.",
+          "similarity": 0.0
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0109",
+      "text": "**CC7.x** → Ops, vuln mgmt, logging, IR ([B3‑7], [B3‑8]).",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Logging & Monitoring (Technical) 8.1 Security-relevant events (authentication results, privilege changes, configuration changes, and incident indicators) are logged centrally where feasible.",
+        "similarity": 0.002
+      },
+      "alternatives": [
+        {
+          "policy_text": "3 Keys are generated, stored, and rotated according to internal key management procedures.",
+          "similarity": 0.001
+        },
+        {
+          "policy_text": "Encryption & Key Management (Technical) 7.1 All production databases and file stores containing sensitive data are encrypted at rest using strong, industry-accepted algorithms.",
+          "similarity": 0.0
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0110",
+      "text": "**CC8.x** → Change management ([B3‑10]).",
+      "label": "garbage",
+      "best_match": {
+        "policy_text": "Secure Development & Change Management 14.1 Changes to production services require peer review and approval appropriate to the risk of the change.",
+        "similarity": 0.002
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Code changes are scanned for known weaknesses; high-risk issues are remediated before release or tracked with an approved exception.",
+          "similarity": 0.0
+        },
+        {
+          "policy_text": "Logging & Monitoring (Technical) 8.1 Security-relevant events (authentication results, privilege changes, configuration changes, and incident indicators) are logged centrally where feasible.",
+          "similarity": 0.0
+        }
+      ],
+      "rationale": "Short/heading-like text (no actionable requirement).",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0111",
+      "text": "**CC9.x** → Vendor risk ([B3‑16]).",
+      "label": "garbage",
+      "best_match": {
+        "policy_text": "2 Code changes are scanned for known weaknesses; high-risk issues are remediated before release or tracked with an approved exception.",
+        "similarity": 0.001
+      },
+      "alternatives": [
+        {
+          "policy_text": "Vendor & Third-Party Management (Organizational) 12.1 Vendors with access to sensitive data undergo due diligence and must meet Company security expectations.",
+          "similarity": 0.001
+        },
+        {
+          "policy_text": "2 Risks rated Critical or High are remediated on a defined timetable. Risk acceptance requires written business justification and CISO approval.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": "Short/heading-like text (no actionable requirement).",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0112",
+      "text": "**Request:** Submit exception with control, justification, risk assessment, compensating controls, expiry date.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "2 Data in transit should use secure protocols (TLS 1.2+). Exceptions require documented risk review and compensating controls.",
+        "similarity": 0.846
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Critical vulnerabilities are remediated within 14 days, and High within 30 days unless an approved exception exists.",
+          "similarity": 0.029
+        },
+        {
+          "policy_text": "2 Risks rated Critical or High are remediated on a defined timetable. Risk acceptance requires written business justification and CISO approval.",
+          "similarity": 0.015
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0113",
+      "text": "**Limits:** High‑risk exceptions require executive approval; maximum initial term **90 days**, renewals require updated risk analysis.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "2 Critical vulnerabilities are remediated within 14 days, and High within 30 days unless an approved exception exists.",
+        "similarity": 0.379
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Code changes are scanned for known weaknesses; high-risk issues are remediated before release or tracked with an approved exception.",
+          "similarity": 0.092
+        },
+        {
+          "policy_text": "2 Risks rated Critical or High are remediated on a defined timetable. Risk acceptance requires written business justification and CISO approval.",
+          "similarity": 0.075
+        }
+      ],
+      "rationale": "LLM: The requirement refers to 'High-risk exceptions requiring executive approval', but there is no corresponding policy or alternative that addresses this specifically. The best matching alternatives do not provide clear guidance on executive approval for exceptions.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0114",
+      "text": "**Tracking:** Central register; reminders before expiry; evidence of compensating controls.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Logging & Monitoring (Technical) 8.1 Security-relevant events (authentication results, privilege changes, configuration changes, and incident indicators) are logged centrally where feasible.",
+        "similarity": 0.0
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Code changes are scanned for known weaknesses; high-risk issues are remediated before release or tracked with an approved exception.",
+          "similarity": 0.0
+        },
+        {
+          "policy_text": "Documentation & Retention 16.1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date.",
+          "similarity": 0.0
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0115",
+      "text": "**Required:** Security & privacy training at onboarding and **annually**; HIPAA‑specific training for ePHI handlers; role‑based training for admins/developers.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Workforce Security & Training (Administrative) 6.1 New hires complete security and privacy onboarding before system access is enabled; all personnel complete refresher training annually.",
+        "similarity": 0.517
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Sections marked “ePHI” apply where electronic protected health information is processed.",
+          "similarity": 0.079
+        },
+        {
+          "policy_text": "3 Where ePHI is involved, the Privacy Officer coordinates regulatory notifications consistent with applicable law.",
+          "similarity": 0.053
+        }
+      ],
+      "rationale": "LLM: The policy clearly states that all employees must be trained on data protection principles by the end of their first year of employment, which matches the requirement.",
+      "upgraded_from": "non_existent",
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0116",
+      "text": "**Awareness:** Phishing simulations; quarterly security newsletters; targeted advisories.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "2 The objectives are to prevent unauthorized access, ensure service continuity, and promote responsible handling of sensitive information.",
+        "similarity": 0.003
+      },
+      "alternatives": [
+        {
+          "policy_text": "3 The security team reviews alerts and trends and escalates potential incidents for investigation.",
+          "similarity": 0.001
+        },
+        {
+          "policy_text": "Document Title: Company Information Security & Privacy Policy (Mid-Coverage Draft) Effective Date: <YYYY-MM-DD> Version: 0.9",
+          "similarity": 0.0
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0117",
+      "text": "Violations of this policy may result in corrective action up to termination and legal remedies where applicable. Report suspected violations to the SO/PO immediately.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "3 Sanctions: policy violations may lead to corrective action up to termination.",
+        "similarity": 0.999
+      },
+      "alternatives": [
+        {
+          "policy_text": "Enforcement 18.1 Non-compliance may result in disciplinary action up to and including termination and legal remedies where applicable.",
+          "similarity": 0.996
+        },
+        {
+          "policy_text": "Incident Response (Administrative & Technical) 9.1 Suspected security incidents are reported to Security and the Privacy Officer within 48 hours of discovery.",
+          "similarity": 0.652
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0118",
+      "text": "**Access Provisioning:** Requester (R), Manager (A/R), Data Owner (A), IT/IdP (R), Compliance (C), Security (C).",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Access Control (Technical & Administrative) 5.1 Access is granted based on job duties and approved by the relevant manager and System Owner (least-privilege).",
+        "similarity": 0.015
+      },
+      "alternatives": [
+        {
+          "policy_text": "Vendor & Third-Party Management (Organizational) 12.1 Vendors with access to sensitive data undergo due diligence and must meet Company security expectations.",
+          "similarity": 0.014
+        },
+        {
+          "policy_text": "Scope 2.1 Applies to all employees, contractors, and vendors who access Company systems.",
+          "similarity": 0.005
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0119",
+      "text": "**Incident Response:** SOC (R), CISO (A), PO (A for breaches), IT/Eng (R), Legal (C), Comms (C).",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Incident Response (Administrative & Technical) 9.1 Suspected security incidents are reported to Security and the Privacy Officer within 48 hours of discovery.",
+        "similarity": 0.081
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 The incident team performs triage, containment, eradication, and recovery, and documents lessons learned.",
+          "similarity": 0.026
+        },
+        {
+          "policy_text": "3 The security team reviews alerts and trends and escalates potential incidents for investigation.",
+          "similarity": 0.005
+        }
+      ],
+      "rationale": "LLM: The policy requires reporting within 48 hours, which is stricter than the alternatives' 72 hours.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0120",
+      "text": "**DR Test:** IT/Infra (R), CISO (A), System Owners (R), Product (C), Compliance (C).",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "3 System Owners approve access to their systems and complete user access reviews.",
+        "similarity": 0.012
+      },
+      "alternatives": [
+        {
+          "policy_text": "Vendor & Third-Party Management (Organizational) 12.1 Vendors with access to sensitive data undergo due diligence and must meet Company security expectations.",
+          "similarity": 0.001
+        },
+        {
+          "policy_text": "3 Disaster recovery objectives (RTO/RPO) are defined for critical services and validated through an annual exercise.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0121",
+      "text": "Screen lock: **≤ 10 minutes**; Session timeout: **≤ 15 minutes**.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "2 Multi-factor authentication (MFA) is mandatory for administrators and remote access. (MFA for all users is recommended.) 5.3 Sessions must lock after 20 minutes of inactivity and require re-authentication to resume.",
+        "similarity": 0.039
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Workstations used to access sensitive data employ full-disk encryption and automatic screen locking.",
+          "similarity": 0.014
+        },
+        {
+          "policy_text": "2 Departing personnel have access revoked within 24 hours of separation. Company assets and credentials are returned or disabled.",
+          "similarity": 0.002
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0122",
+      "text": "Access revocation upon termination: **≤ 24 hours**.",
+      "label": "garbage",
+      "best_match": {
+        "policy_text": "2 Departing personnel have access revoked within 24 hours of separation. Company assets and credentials are returned or disabled.",
+        "similarity": 0.973
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Logs are retained for no less than 180 days, with restricted access and tamper-resistant storage for critical systems.",
+          "similarity": 0.004
+        },
+        {
+          "policy_text": "2 Critical vulnerabilities are remediated within 14 days, and High within 30 days unless an approved exception exists.",
+          "similarity": 0.002
+        }
+      ],
+      "rationale": "Short/heading-like text (no actionable requirement).",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0123",
+      "text": "Critical patch remediation: **≤ 7 days**; High: **≤ 14 days**.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "2 Critical vulnerabilities are remediated within 14 days, and High within 30 days unless an approved exception exists.",
+        "similarity": 0.984
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Risks rated Critical or High are remediated on a defined timetable. Risk acceptance requires written business justification and CISO approval.",
+          "similarity": 0.163
+        },
+        {
+          "policy_text": "4 User access reviews are performed twice per year on high-risk systems and at least annually on others; remediation is documented.",
+          "similarity": 0.005
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0124",
+      "text": "Log retention online: **≥ 1 year** (longer if required).",
+      "label": "partially_satisfied",
+      "best_match": {
+        "policy_text": "2 Logs are retained for no less than 180 days, with restricted access and tamper-resistant storage for critical systems.",
+        "similarity": 0.458
+      },
+      "alternatives": [
+        {
+          "policy_text": "Documentation & Retention 16.1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date.",
+          "similarity": 0.257
+        },
+        {
+          "policy_text": "2 Data is retained only as long as needed for business and legal purposes, after which it is securely disposed of.",
+          "similarity": 0.004
+        }
+      ],
+      "rationale": "LLM: The requirement specifies '≥ 1 year', while the best policy states 'for no less than 180 days'. The difference is significant enough that this cannot be considered fully satisfied.",
+      "upgraded_from": "non_existent",
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0125",
+      "text": "Access reviews: **Quarterly** (high‑risk), **Semiannual** (moderate), **Annual** (low).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "4 User access reviews are performed twice per year on high-risk systems and at least annually on others; remediation is documented.",
+        "similarity": 0.954
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 This policy is reviewed at least annually and upon material changes.",
+          "similarity": 0.057
+        },
+        {
+          "policy_text": "3 System Owners approve access to their systems and complete user access reviews.",
+          "similarity": 0.013
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0126",
+      "text": "DR testing: **Annual** full test; **Quarterly** restore drills.",
+      "label": "partially_satisfied",
+      "best_match": {
+        "policy_text": "2 Restore procedures are tested at least twice per year; results and defects are tracked to closure.",
+        "similarity": 0.217
+      },
+      "alternatives": [
+        {
+          "policy_text": "3 Disaster recovery objectives (RTO/RPO) are defined for critical services and validated through an annual exercise.",
+          "similarity": 0.008
+        },
+        {
+          "policy_text": "4 User access reviews are performed twice per year on high-risk systems and at least annually on others; remediation is documented.",
+          "similarity": 0.0
+        }
+      ],
+      "rationale": "LLM: The requirement specifies 'Annual' tests and 'Quarterly' drills, which do not align with the policy's stated frequency of 'at least twice per year'. The policy mentions 'Restore procedures', while the best alternative focuses on RTO/RPO and user access reviews.",
+      "upgraded_from": "non_existent",
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0127",
+      "text": "Internal incident escalation: **≤ 24 hours**; External HIPAA breach notices: **≤ 60 days** per law.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Incident Response (Administrative & Technical) 9.1 Suspected security incidents are reported to Security and the Privacy Officer within 48 hours of discovery.",
+        "similarity": 0.07
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Departing personnel have access revoked within 24 hours of separation. Company assets and credentials are returned or disabled.",
+          "similarity": 0.017
+        },
+        {
+          "policy_text": "2 Critical vulnerabilities are remediated within 14 days, and High within 30 days unless an approved exception exists.",
+          "similarity": 0.009
+        }
+      ],
+      "rationale": "LLM: There is no clear reference to centralized, immutable, SIEM, or NTP in the policy, indicating that the policy is irrelevant or incomplete.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0128",
+      "text": "Encryption: At rest **AES‑256**; in transit **TLS 1.2+** (TLS 1.3 preferred).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "2 Data in transit should use secure protocols (TLS 1.2+). Exceptions require documented risk review and compensating controls.",
+        "similarity": 0.959
+      },
+      "alternatives": [
+        {
+          "policy_text": "Encryption & Key Management (Technical) 7.1 All production databases and file stores containing sensitive data are encrypted at rest using strong, industry-accepted algorithms.",
+          "similarity": 0.03
+        },
+        {
+          "policy_text": "3 Secrets are stored in managed vaults; direct embedding of secrets in source code is prohibited.",
+          "similarity": 0.004
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0129",
+      "text": "Passwords: SSO/MFA preferred; follow NIST 800‑63 (no periodic forced rotation; length/blacklist checks).",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "2 Multi-factor authentication (MFA) is mandatory for administrators and remote access. (MFA for all users is recommended.) 5.3 Sessions must lock after 20 minutes of inactivity and require re-authentication to resume.",
+        "similarity": 0.01
+      },
+      "alternatives": [
+        {
+          "policy_text": "3 Keys are generated, stored, and rotated according to internal key management procedures.",
+          "similarity": 0.005
+        },
+        {
+          "policy_text": "Physical Safeguards 11.1 Facilities housing production systems use badge-controlled access and visitor sign-in procedures.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0130",
+      "text": "Risk analyses; BAA list; training logs; SIEM export; access review evidence; IR tickets; backup/DR reports; encryption/KMS configs; vendor risk files; change approvals; SAST/DAST pipelines; data classification registry; privacy notices and request logs.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Documentation & Retention 16.1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date.",
+        "similarity": 0.491
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Data in transit should use secure protocols (TLS 1.2+). Exceptions require documented risk review and compensating controls.",
+          "similarity": 0.084
+        },
+        {
+          "policy_text": "Data Classification & Handling 13.1 Data is categorized (e.g., Public, Internal, Confidential, Restricted/ePHI). Handling rules specify storage, sharing, and disposal requirements.",
+          "similarity": 0.074
+        }
+      ],
+      "rationale": "LLM: The REQUIREMENT mentions 'Risk Analyses' which is not addressed by either the BEST POLICY MATCH or TOP ALTERNATIVE.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    }
+  ]
+}

@@ -13,6 +13,8 @@ class Settings(BaseModel):
     cross_encoder_model_name: str = os.getenv("CROSS_ENCODER_MODEL", "cross-encoder/ms-marco-MiniLM-L-6-v2")
     cross_encoder_top_k: int = int(os.getenv("CROSS_ENCODER_TOP_K", "5"))
 
+    progress_every: int = int(os.getenv("PROGRESS_EVERY", "25"))
+
     # --- Optional rationale / legacy judge (kept for back-compat) ---
     rationale_model_name: str = os.getenv("RATIONALE_MODEL", "google/flan-t5-base")
     use_llm_judge: bool = bool(int(os.getenv("USE_LLM_JUDGE", "0")))
@@ -60,8 +62,8 @@ class Settings(BaseModel):
     # LLM gating + performance
     llm_on_non_existent: bool = (os.getenv("LLM_ON_NON_EXISTENT", "1") in ("1", "true", "yes"))
     llm_on_partial: bool = (os.getenv("LLM_ON_PARTIAL", "0") in ("1", "true", "yes"))  # default OFF
-    llm_min_sim_for_llm: float = float(os.getenv("LLM_MIN_SIM_FOR_LLM", "0.10"))  # don't waste LLM below this
-    llm_min_sim_for_upgrade: float = float(os.getenv("LLM_MIN_SIM_FOR_UPGRADE", "0.20"))  # block upgrades below this
+    llm_min_sim_for_llm: float = float(os.getenv("LLM_MIN_SIM_FOR_LLM", "0.05"))  # don't waste LLM below this
+    llm_min_sim_for_upgrade: float = float(os.getenv("LLM_MIN_SIM_FOR_UPGRADE", "0.05"))  # block upgrades below this
     llm_max_time: float = float(os.getenv("LLM_MAX_TIME", "2.0"))  # seconds cap per call (generation max_time)
 
     # NLI-aware upgrade guard (only if NLI enabled)
