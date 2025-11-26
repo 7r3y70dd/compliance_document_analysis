@@ -4,7 +4,7 @@
 export CUDA_VISIBLE_DEVICES=0
 
 # Embeddings (SentenceTransformer)
-export EMBEDDING_DEVICE=0
+export EMBEDDING_DEVICE=-1
 export EMBEDDING_MODEL="intfloat/e5-base-v2"
 export USE_E5_PREFIXES=1
 
@@ -24,7 +24,7 @@ export NLI_ANNOTATE_ONLY=0
 export USE_LLM_JUDGE=1
 export USE_LLM_REFINE=1
 export LLM_MODEL_NAME="Qwen/Qwen2.5-1.5B-Instruct"
-export LLM_DEVICE=0
+export LLM_DEVICE=-1
 export LLM_MAX_NEW_TOKENS=192
 
 # Editor (rewriter) – only if your rewriter reads EDITOR_* envs

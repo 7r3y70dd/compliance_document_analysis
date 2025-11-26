@@ -1,0 +1,32 @@
+[2025-11-19T16:54:12Z] ANALYZE: app up
+[2025-11-19T16:54:12Z] ANALYZE: starting
+[2025-11-19T16:54:14Z] ANALYZE: done -> /home/trey/projects/compliance_document_analysis/resources/misc/set05/analyze_result1.json
+[2025-11-19T16:54:14Z] Copied analyze_result1.json -> resources/json_results/my_run.json
+[2025-11-19T16:54:15Z] ANALYZE: app down
+[2025-11-19T16:54:21Z] REWRITE: app up
+[2025-11-19T16:54:21Z] REWRITE: starting
+[2025-11-19T16:59:32Z] REWRITE: done -> /home/trey/projects/compliance_document_analysis/resources/misc/set05/rewrite01.txt
+[2025-11-19T16:59:33Z] REWRITE: app down
+[2025-11-19T16:59:38Z] RE-ANALYZE: app up
+[2025-11-19T16:59:39Z] RE-ANALYZE: starting
+[2025-11-19T16:59:41Z] RE-ANALYZE: done -> /home/trey/projects/compliance_document_analysis/resources/misc/set05/analyze_result2.json
+[2025-11-19T16:59:42Z] RE-ANALYZE: app down
+----------------------------------------------------------------
+SET SUMMARY
+Started: 2025-11-19T16:53:57Z
+Ended:   2025-11-19T16:59:42Z
+Elapsed: 345s
+
+Artifacts:
+- /home/trey/projects/compliance_document_analysis/resources/misc/set05/health_analyze.json
+- /home/trey/projects/compliance_document_analysis/resources/misc/set05/analyze_result1.json
+- /home/trey/projects/compliance_document_analysis/resources/json_results/my_run.json
+- /home/trey/projects/compliance_document_analysis/resources/misc/set05/health_rewrite.json
+- /home/trey/projects/compliance_document_analysis/resources/misc/set05/rewrite01.txt
+- /home/trey/projects/compliance_document_analysis/resources/misc/set05/health_reanalyze.json
+- /home/trey/projects/compliance_document_analysis/resources/misc/set05/analyze_result2.json
+- /home/trey/projects/compliance_document_analysis/resources/misc/set05/uvicorn_analyze.log
+- /home/trey/projects/compliance_document_analysis/resources/misc/set05/uvicorn_rewrite.log
+- /home/trey/projects/compliance_document_analysis/resources/misc/set05/uvicorn_reanalyze.log
+- /home/trey/projects/compliance_document_analysis/resources/misc/set05/config.json
+----------------------------------------------------------------

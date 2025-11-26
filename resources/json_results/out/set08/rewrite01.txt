@@ -1,0 +1,171 @@
+Design reviews; threat modeling; SAST/DAST/dep scanning; code review; secrets scanning; release approvals; changelogs..9
+
+1. Purpose
+   1.This policy establishes minimum safeguards to protect Company Data, including any electronic health information handled by <CompanyName>, in accordance with HIPAA compliance and SOC 2 attestation requirements.
+   1.2 The objectives are to prevent unauthorized access, ensure service continuity, and promote responsible handling of sensitive information.
+
+2. Scope
+   2.1 Applies to all employees, contractors, and vendors who access Company systems.
+   2.2 Sections marked “ePHI” apply where electronic protected health information is stored, processed, transmitted, backed up, logged containing ePHI identifiers, accessed via admin consoles, or used by mobile/endpoint clients with ePHI access.
+
+3. Governance & Roles
+   3.The Chief Information Security Officer (CISO) is responsible for developing and implementing this policy, ensuring its alignment with organizational objectives, and overseeing the security program through regular audits and updates.
+   3.The Chief Compliance Officer oversees privacy practices and breach communications.
+   3.3 System Owners review system access requests and conduct user access audits.
+   3.4 All personnel complete training and report suspected incidents without delay.
+
+4. Risk Management (Administrative)
+   4.An enterprise risk analysis is conducted annually and following significant modifications. The outcomes are documented within an organized repository of risks, including their respective stakeholders and deadlines.
+   4.The board oversees risks rated as critical or high, ensuring they are addressed within a specified timeline. Acceptance of these risks necessitates a detailed business case supported by the CISO.
+   4.3 Sanctions: Policy violations shall be addressed through control activities such as audits, reviews, and remediation plans, which may include corrective actions up to termination of access rights.
+
+5. Access Control (Technical & Administrative)
+   5.1 Access is granted based on job duties and approved by the relevant manager and System Owner (least-privilege).
+   5.2 Multi-factor authentication (MFA) is mandatory for administrators and remote access. (MFA for all users is recommended.)
+   5.3 Sessions must lock after 20 minutes of inactivity and require re-authentication to resume.
+   5.User access reviews are conducted quarterly on high-risk systems and semiannually on others; documentation of remediation is required.
+
+6. Workforce Security & Training (Administrative)
+   6.Onboarding for new hires and annual refresher training in security and privacy principles must be completed by all personnel.
+   6.2 Departing personnel have access revoked within 24 hours of separation. Company assets and credentials are returned or disabled.
+
+7. Encryption & Key Management (Technical)
+   7.All production databases and file stores containing sensitive data are encrypted at rest using strong, industry-accepted algorithms through secure transmission protocols and certificate management practices.
+   7.2 Data in transit should use secure protocols (TLS 1.2+) unless otherwise approved by management. Exceptions must be documented and include compensating controls.
+   7.3 Keys are generated, stored, and rotated using AWS Key Management Service (KMS) for encryption standard compliance.
+
+8. Logging & Monitoring (Technical)
+   8.1 Security-relevant events (authentication results, privilege changes, configuration changes, and incident indicators) are logged centrally where feasible.
+   8.2 Logs are retained for at least 365 days, with restricted access and tamper-resistant storage for critical systems; centralized logging; immutable storage for critical logs; SIEM correlation; time sync (NTP).
+   8.3 The security team reviews alerts and trends and escalates potential incidents for investigation.
+
+9. Incident Response (Administrative & Technical)
+   9.1 Suspected security incidents must be reported to Security and the Privacy Officer immediately upon discovery.
+   9.2 The incident team performs triage, containment, eradication, and recovery, and documents lessons learned.
+   9.3 Where ePHI is involved, the Privacy Officer coordinates regulatory notifications consistent with applicable law.
+
+10. Contingency Planning & Backups (Administrative & Technical)
+   10.1 Production data is backed up regularly and encrypted in storage and transit to the backup repository; backups are tested quarterly and retained per data retention policy.
+   10.Restore procedures are tested monthly; results and defects are tracked for 6 months; quarterly restore tests are conducted; annual DR testing includes recovery drills.
+   10.3 Disaster recovery objectives (RTO/RPO) are defined for critical services and validated through an annual exercise.
+
+11. Physical Safeguards
+   11.1 Facilities housing production systems implement badge-based access control measures and utilize visitor management protocols for entry verification.
+   11.2 Workstations used to access sensitive data employ secure screens, privacy filters for PHI, and clear desks for PHI.
+
+12. Vendor & Third-Party Management (Organizational)
+   12.1 Establish controls to meet SOC 2 Trust Services Criteria (TSC) for Security (Common Criteria), with optional categories Availability, Confidentiality, Processing Integrity, Privacy as in scope for <CompanyName>. Additionally, all uses/disclosures of this data require explicit authorization as per applicable laws, consents, or BAA agreements.
+   12.2 Business Associate Agreements shall be executed prior to any vendor handling ePHI; subcontractors must comply with equivalent protections.
+
+13. Data Classification & Handling
+   13.1 Data is categorized (e.g., Public, Internal, Confidential, Restricted/ePHI). Handling rules specify storage, sharing, and disposal requirements.
+   13.2 Personnel must access only the minimum data necessary to perform assigned duties.
+
+14. Secure Development & Change Management
+   14.1 Changes to production services must undergo a formal Change Management process that includes peer reviews and approvals by authorized personnel based on the potential impact and risks associated with the changes.
+   14.2 Code changes undergo thorough scanning for vulnerabilities; high-risk issues are prioritized for immediate resolution or managed through an approved exception process. integrity measures include hashing/signing where applicable; change detection; anti-tamper techniques.
+   14.3 Secrets must be securely stored in managed vaults; direct embedding of secrets in source code is forbidden.
+
+15. Vulnerability & Patch Management
+   15.1 Systems are scanned quarterly; findings are triaged and tracked to closure with owners and due dates.
+   15.2 Critical vulnerabilities must be remediated within 14 days, and High within 30 days unless an approved exception exists.
+
+16. Documentation & Retention
+   16.1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date.
+   16.2 This policy is reviewed at least annually and upon material changes.
+
+17. Privacy Program (Overview)
+   17.1 Notices describe how personal information is collected, used, and shared; requests for access or deletion of personal information are handled in accordance with applicable laws.
+   17.2 Data is retained only as long as needed for business and legal purposes, after which it is securely disposed of.
+
+18. Enforcement
+   18.1 Non-compliance may result in disciplinary action up to and including termination and legal remedies where applicable.
+
+Additional Controls (Auto-Added):
+1. Company shall establish and maintain a comprehensive HIPAA-compliant infrastructure with SOC 2 attestation assurance, ensuring all data is protected according to applicable regulations and industry standards. We must adhere strictly to these guidelines, conduct regular audits, and retain records as required by law.
+2. Company shall set the tone at the top, oversee risk management, and approve this policy suite.
+3. Company shall implement technical controls for IT operations and infrastructure including access control, logging, backups, disaster recovery, patch management, and endpoint security measures.
+4. Engineering / SDLC Owners:** Company shall ensure all engineering designs, source code, and software components undergo secure coding practices, adhere to strict change controls, implement continuous integration and delivery processes, and utilize robust secret management systems. **All stakeholders involved in development, testing, deployment, and maintenance of applications and services must comply with these requirements.
+5. Company shall implement robust due diligence processes for third-party vendors, maintain Binding Arrangements (BAAs) with all suppliers, and conduct ongoing monitoring of vendor activities to ensure compliance with all relevant regulations and contractual obligations.
+6. Company shall maintain version control of all documents and records, tracking changes with a summary, approver, and effective date for each update. We must ensure compliance with these requirements at all times.
+7. Company shall implement the HIPAA Security Rule (§164.308–§164.316), Privacy Rule (selected highlights), and Breach Notification Rule for all systems processing ePHI.
+8. All systems within the scope of this policy must comply with all applicable regulations, standards, and guidelines related to the protection of electronic protected health information (ePHI). This includes but is not limited to ensuring proper encryption, secure storage, regular audits, and adherence to industry best practices for data security.
+9. All employees and contractors must comply with HIPAA (45 CFR Part 160 & 164), state privacy/security laws, NIST SP 800-66, NIST SP 800-53 (reference), and HHS guidance when handling protected health information. **END OF POLICY CLAUSE.
+10. Company shall ensure that only the minimum necessary Protected Health Information (PHI) is retained and used for the purpose specified by the individual or as required by law.
+11. Company shall implement robust security measures to prevent, detect, respond to, and mitigate any attempted or successful unauthorized access, use, disclosure, modification, or destruction of data. We must ensure compliance with all relevant laws, regulations, and industry standards related to cybersecurity.
+12. Company shall review information system activity at least monthly for in-scope systems.
+13. A Security Officer (SO) shall be appointed within 30 days of the establishment of this policy. The SO is responsible for ensuring compliance with all security policies and procedures.
+14. Company shall implement strict authorization/supervision protocols for all employees, ensuring access is revoked within 24 hours upon employee termination.** This policy ensures compliance with workforce security regulations by clearly defining how access should be managed post-termination. It emphasizes swift action to maintain data integrity and protect sensitive information.
+15. Information Access Management (R/A):** Information should be accessed on a minimum necessary basis, with roles determining access levels, and all access authorizations and modifications documented. Periodic reviews of access controls should occur at least quarterly for high-risk systems.
+16. Company shall notify Security Officer and Project Owner within 24 hours of detecting a security incident for prompt containment and investigation.
+17. Company shall maintain a comprehensive contingency plan for data backup, disaster recovery, and emergency mode operations to ensure business continuity and minimize downtime. **[Auditable]** --- This policy ensures all employees understand their roles in maintaining this plan and adhere to its requirements.
+18. Company shall encrypt backups and conduct quarterly tests of encryption capabilities; backups shall be retained according to the data retention policy.
+19. Company shall conduct periodic technical and non-technical evaluations annually.
+20. Company shall ensure all workstations comply with the following requirements: 1. Screens shall be secure to prevent unauthorized access.
+21. Company shall ensure all devices and media are securely disposed of, reused with cryptographic erase, maintain an up-to-date asset inventory, adhere to strict chain of custody protocols, and implement comprehensive backup and restore procedures. **End Policy Clause.
+22. Company shall implement unique user IDs; enforce Multi-Factor Authentication (MFA) for privileged and remote access; establish an emergency access procedure; ensure automatic logoff within ≤ 15 minutes of inactivity.
+23. Company shall ensure all electronic Protected Health Information is encrypted at rest using AES-256 or an equivalent standard, and in transit using TLS 1.2 or higher with TLS 1.3 being preferred for security reasons. Key management documentation will be maintained.
+24. Centralized logging; immutable storage for critical logs; SIEM correlation; time sync (NTP). **Compliance Requirement:** Company shall implement audit controls as outlined above.
+25. Company shall ensure all hashing/signing is performed as required, implement change detection mechanisms, and employ anti-tamper measures.
+26. Enterprise Identity:** Personnel must authenticate using enterprise identity methods, such as Single Sign-On (SSO), ensuring consistency with National Institute of Standards and Technology (NIST) Special Publication 800-63 for password policies. Multi-Factor Authentication (MFA) is mandatory. **End Clause.
+27. Company shall implement encryption for all data transmissions, manage certificates securely, and ensure use of secure APIs.
+28. Company shall ensure all BA contracts include required clauses: permitted uses/disclosures, safeguards, breach reporting, subcontractor flow-down, return/destroy PHI, and termination for cause. To clarify, Company reserves the right to audit compliance with these requirements at any time.
+29. Enforcement of **Minimum Necessary** is achieved through Role-Based Access Control (RBAC) and established procedures.
+30. Company shall implement necessary controls for all uses/disclosures of data as authorized by law, consent, BAA, and marketing/research purposes, ensuring compliance with applicable regulations and industry standards.
+31. Company shall ensure compliance with individual rights regarding access, amendment, and accounting of disclosures as outlined in document SLAs.
+32. Company shall publish and keep Notice of Privacy Practices current.
+33. Without unreasonable delay, no later than 60 days to affected individuals; notify HHS and media where required. Internal escalation within 24 hours of discovery. Maintain risk assessment and decision record.
+34. All employees must adhere to the Risk Analysis Workflow outlined below: 1. Conduct an inventory of all assets and vulnerabilities within their jurisdiction.
+35. Quarterly access reviews of entitlements must be conducted by authorized personnel, with owners providing attestations on compliance. Remediation actions must be documented, and all required closure evidence must be submitted for review. **Failure to comply will result in disciplinary action.
+36. Company shall implement encryption standards for all data storage classes, ensuring compliance with KMS/HSM requirements and adhering to a scheduled key rotation process. Additionally, Company must manage secrets effectively through robust secret management practices.
+37. Events should be logged; logs should retain for at least 1 year online; alerts should trigger based on defined playbook rules.
+38. Company shall conduct incident response drills biannually to ensure detection, containment, eradication, recovery, and learning from incidents.** This policy ensures that all employees understand their roles during an incident by participating in these drills, which is crucial for maintaining operational continuity and minimizing damage. The frequency of these drills aligns with industry best practices, providing regular opportunities for improvement and preparedness.
+39. Company shall implement nightly backups, maintain offsite copies, conduct quarterly restore tests, and annually perform disaster recovery testing.
+40. Company shall ensure adherence to all KPIs specified above for continuous improvement and regulatory compliance.
+41. Company shall maintain all evidence related to compliance requirements as documented in this policy.** This policy applies to all employees and contractors who have access to sensitive information or systems. Violations will result in disciplinary action up to and including termination of employment.
+42. Company shall conduct a risk analysis and management process annually to ensure compliance with all applicable laws, regulations, standards, and policies.** This policy ensures that our organization remains compliant with legal requirements by regularly assessing potential risks and implementing effective mitigation strategies. It is essential for maintaining operational integrity and protecting stakeholders' interests.
+43. Company shall provide security awareness training annually to all employees on their roles and responsibilities regarding data protection and cybersecurity measures.** This policy ensures compliance with §164.308(a)(5) of the Health Insurance Portability and Accountability Act (HIPAA). Employees must understand their role in protecting sensitive information and implementing necessary cybersecurity protocols.
+44. Company shall maintain an up-to-date contingency plan for all critical systems and operations, ensuring redundancy and failover capabilities.** This policy ensures that our business continuity is robust against unforeseen disruptions, safeguarding data integrity and operational efficiency.
+45. Company shall establish controls to meet SOC 2 Trust Services Criteria (TSC) for Security (Common Criteria), with optional categories Availability, Confidentiality, Processing Integrity, Privacy as in scope for <CompanyName>.
+46. Company shall maintain an ethical culture, adhere to governance principles, establish clear structures, and assign appropriate authorities and responsibilities to ensure compliance with all relevant laws, regulations, and industry standards. **(CC1)** --- This policy ensures that every employee understands their role in upholding integrity and contributing to a fair workplace environment.
+47. Internal/external communication supports control operations. **(CC2)** --- ### Policy Clause: Internal/external communication supports control operations.
+48. Company shall conduct regular risk assessments to identify, analyze, and mitigate risks including fraud.
+49. Company shall implement and maintain control activities as outlined in CC4 to ensure compliance with relevant regulations and standards. **We must adhere strictly to these requirements.
+50. Logical & Physical Access (CC6):** All employees and contractors must comply with all provisions of this section regarding logical access controls, physical access controls, authentication methods, multi-factor authentication requirements, and network and endpoint security measures as outlined by CC6. **(End of Policy Clause)** --- This policy ensures that all aspects of logical and physical access are managed securely, including but not limited to: 1.
+51. Company shall implement robust system operations procedures including but not limited to vulnerability management, malware protection, comprehensive logging and monitoring, and immediate incident response protocols to ensure the security of all systems and data. We must adhere strictly to these requirements at all times.
+52. Company shall ensure adherence to Change Management (CC8) guidelines for all software development lifecycle activities, including but not limited to securing changes through proper approval processes, thorough testing, and maintaining clear separation of duties among team members involved in change management tasks. **[Auditable]** --- This policy ensures accountability and compliance with established procedures across all aspects of change management within the organization.
+53. Vendor/Third Parties (CC9):** All vendors and third parties must comply with all applicable laws, regulations, and policies of the Company during their engagement with us. This includes selecting qualified partners based on criteria such as security standards, data protection measures, and ethical business practices.
+54. Company shall ensure adherence to all governance and policy management requirements outlined above by conducting regular code of conduct training for employees annually, reviewing policies at least once every two years with senior leadership's approval before implementation. ** This policy ensures compliance with established guidelines while maintaining flexibility through periodic review processes.
+55. Company shall track enterprise and product risks, maintain threat intelligence, establish a risk appetite, and ensure Treatment SLAs are adhered to.
+56. Company shall implement robust access control measures including Role-Based Access Control (RBAC), Just-In-Time/Just-In-Event Authorization (JIT/JEA) where feasible, Single Sign-On (SSO), Multi-Factor Authentication (MFA), and conduct quarterly access reviews with privileged access monitoring. Note: The original requirement was quite detailed, so I've condensed it while maintaining clarity and compliance requirements.
+57. Company shall review and update network segmentation, least route policies, and firewall rules at least semiannually for security compliance. Additionally, ensure secure remote access through a reliable VPN or Zero Trust Network Access (ZTNA).
+58. Company shall implement endpoint security measures including EDR/AV, full-disk encryption, secure baseline configuration, and adhere to patch SLAs with critical updates completed within 7 business days.
+59. Company shall centralize logs, detect anomalies, implement runbook alerts, and maintain retention of logs for at least 1 year online, with longer retention as required.
+60. Company shall implement continuous vulnerability scanning and apply risk-based remediation measures for all systems, ensuring timely resolution of identified issues. Exceptions to this policy may be granted upon approval by senior management and will have an expiration date.
+61. Company shall implement and maintain secure Software Development Lifecycle (SDLC), including but not limited to design reviews, threat modeling, static application security testing (SAST)/dynamic application security testing (DAST)/dependency scanning, code review, secrets scanning, release approval processes, and change log management. ** This policy ensures compliance with industry standards and best practices for software development security.
+62. Company shall adhere strictly to all change management procedures outlined by the Change Control Board (CAB), ensuring thorough review and approval processes for both high-risk changes and emergency changes following a comprehensive review. Additionally, it is imperative that any separation of duties be meticulously planned and executed to maintain operational integrity.
+63. Company shall ensure all cryptographic operations adhere to TLS 1.2+, with TLS 1.3 being preferred for enhanced security, employing strong ciphers, maintaining a robust key management lifecycle, and utilizing Hardware Security Modules (HSMs) or Key Management Services (KMS). ** This policy ensures compliance with industry standards while enhancing data protection through advanced encryption methods and secure key management practices.
+64. Company shall ensure that all business continuity and disaster recovery plans are documented, regularly tested annually, and include quarterly backups for data restoration. To summarize this requirement concisely: "Business Continuity & Disaster Recovery Plans must be documented, annually tested, and include quarterly backups." This concise policy clause captures the essence of the compliance requirement while maintaining clarity and readability.
+65. Company shall implement encryption at rest/in transit, manage keys securely, enforce Data Loss Prevention (DLP), ensure confidential data is disposed of securely, and require Non-Disclosure Agreements (NDAs) for accessing confidential data. ** This policy ensures compliance with all confidentiality requirements outlined above.
+66. Company shall implement input validation, perform reconciliations, utilize QA gates, employ error handling and playback mechanisms, and establish rollback procedures for processing integrity. Note: The term "Processing Integrity" is used as per the original requirement.
+67. Company shall comply with all applicable privacy regulations, including providing notice of data collection practices, obtaining explicit consent for data use, limiting data purposes as necessary, respecting data subjects' rights, maintaining strict retention and deletion policies, ensuring compliance through audits and training. ** This is an example of how you might write a policy clause: --- "Company shall comply with all applicable privacy regulations, including providing notice of data collection practices, obtaining explicit consent for data use, limiting data purposes as necessary, respecting data subjects' rights, maintaining strict retention and deletion policies, ensuring compliance through audits and training." --- Please note that this.
+68. Company shall implement security questionnaires, conduct SOC report reviews, comply with BAA/DPA requirements, engage in continuous monitoring, and ensure timely return or deletion of terminated data.
+69. Company shall maintain an evidence library including but not limited to policies, org charts, risk registers, asset inventories, access reviews, SIEM dashboards, incident response (IR) tickets, change logs, project pipeline results, vendor evaluations, disaster recovery (DR) reports, backup logs, and employee training records for audit purposes.
+70. Company shall ensure compliance with all KPIs specified above.
+71. Internal Audit/QA: Planned quarterly audits; issues tracked for closure with owners and due dates.
+72. Company shall ensure adherence to all governance, ethics, and role-related compliance requirements outlined in CC1.0 through CC1.5. We must maintain transparency and accountability throughout our operations.
+73. Company shall ensure compliance with CC4.x by implementing appropriate control activities and following the Software Development Life Cycle (SDLC).** This policy ensures all software development processes adhere to established guidelines and standards, enhancing security and reliability. **Failure to comply will result in disciplinary action as per Company Policy 5.2.** --- **Policy Title:** Compliance with CC4.x **Effective Date:** [Insert Effective Date] **Last Updated:** [Insert Last Update Date].
+74. Company shall ensure all access/network/endpoint activities comply with CC6.x requirements.** This policy ensures that all access, network, and endpoint activities within our organization adhere to the specified compliance standards outlined in **CC6.x**, ensuring data security and regulatory adherence. All employees must follow these guidelines to maintain a secure environment for both internal and external systems.
+75. Company shall ensure compliance with CC7.x by implementing robust vulnerability management processes, maintaining comprehensive logging practices, and promptly addressing any incidents through Incident Response procedures.** This policy ensures all operations adhere to the specified requirements for security and incident handling. It mandates adherence to CC7.x standards across all departments, emphasizing vigilance in managing vulnerabilities, securing logs, and responding swiftly to breaches.
+76. Submit exceptions for approval with supporting documentation including control measures, justification, risk assessment, compensating controls, and an expiry date. **(Auditable)** This policy ensures compliance by requiring all requests for exceptions to be accompanied by detailed justifications, risk assessments, and documented mitigations.
+77. High-risk exceptions must be approved by executive management before implementation; all renewal terms must include an updated risk assessment.
+78. Company shall maintain a central register for all compliance requirements, receive timely reminders before their expiration, and retain evidence of any compensating controls implemented.
+79. Phishing simulations and quarterly security newsletters are mandatory for awareness purposes, while targeted advisories should be reviewed annually by all employees. **Failure to comply may result in disciplinary action.
+80. Requesters must ensure compliance with access provisioning requirements by verifying requester identity through appropriate means before granting access to data owned by others. **Failure to comply may result in disciplinary action.** This policy clarifies the responsibilities of all parties involved in ensuring proper access control within the organization.
+81. Incident Response:** SOC (Risk), CISO (Audit), PO (Breach), IT/Engineering (Review), Legal (Consultation), Communications (Notification).
+82. Company shall ensure all systems adhere to DR Test compliance requirements.** This policy ensures that all systems within our organization comply with the Data Recovery Testing (DR Test) compliance requirements set by the relevant stakeholders including the Information Technology Infrastructure (IT/Infra), Chief Information Security Officer (CISO), System Owners, Products, and Compliance teams. This requirement is essential for maintaining data integrity and ensuring business continuity.
+83. Company shall implement screen lock policies ensuring access is restricted within ≤ 10 minutes of user inactivity; session timeouts shall be set to ≤ 15 minutes to prevent unauthorized access.
+84. Company shall ensure all internal incidents are escalated within ≤ 24 hours; external HIPAA breach notifications will be provided within ≤ 60 days as required by law.
+85. Company shall implement encryption at rest using AES-256; for data in transit, we must use TLS 1.2+ (TLS 1.3 is preferred).
+86. Passwords should be managed using Single Sign-On/ Multi-Factor Authentication (SSO/MFA) where applicable, adhering to NIST 800-63 guidelines without requiring periodic forced password rotations or enforcing strict blacklisting policies. **END OF POLICY CLAUSE.
+87. All employees and contractors must comply with all specified compliance requirements including but not limited to risk analyses, BAA lists, training logs, SIEM exports, access reviews, incident response (IR) tickets, backup/DR reports, encryption/key management system (KMS) configurations, vendor risk files, change approval processes, static application security testing (SAST)/dynamic application security testing (DAST) pipelines, data classification registries, privacy notices, and requests, as well as any other relevant regulatory or contractual obligations. **END OF POLICY CLAUSE.

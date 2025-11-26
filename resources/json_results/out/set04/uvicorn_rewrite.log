@@ -1,0 +1,30 @@
+2025-11-19 08:48:31,283 INFO sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda
+2025-11-19 08:48:31,283 INFO sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-11-19 08:48:32,790 INFO sentence_transformers.cross_encoder.CrossEncoder: Use pytorch device: cuda
+INFO:     Started server process [72565]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:46036 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46052 - "GET /health HTTP/1.1" 200 OK
+2025-11-19 08:48:35,604 INFO pca: ⏳ Rewriting policy from analysis JSON ...
+2025-11-19 08:48:35,604 INFO pca: … rewrite pass on clause 1/119 (C-0000)
+/home/trey/projects/compliance_document_analysis/.venv/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:601: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.7` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/home/trey/projects/compliance_document_analysis/.venv/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:606: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.8` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/home/trey/projects/compliance_document_analysis/.venv/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:623: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+Starting from v4.46, the `logits` model output will have the same type as the model (except at train time, where it will always be FP32)
+You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
+2025-11-19 08:49:07,945 INFO pca: … rewrite pass on clause 25/119 (C-0024)
+2025-11-19 08:50:06,057 INFO pca: … rewrite pass on clause 50/119 (C-0049)
+2025-11-19 08:51:25,702 INFO pca: … rewrite pass on clause 75/119 (C-0074)
+2025-11-19 08:52:55,997 INFO pca: … rewrite pass on clause 100/119 (C-0099)
+2025-11-19 08:53:42,827 INFO pca: … rewrite pass on clause 119/119 (C-0118)
+2025-11-19 08:53:47,281 INFO pca: ✅ Rewriting policy from analysis JSON (311.68s)
+INFO:     127.0.0.1:46060 - "POST /rewrite-txt-from-json?result=my_run.json&policy=mid_generated_policy.txt HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [72565]

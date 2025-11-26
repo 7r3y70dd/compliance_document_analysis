@@ -1,0 +1,15 @@
+2025-11-19 09:04:26,200 INFO sentence_transformers.SentenceTransformer: Use pytorch device_name: cpu
+2025-11-19 09:04:26,201 INFO sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+INFO:     Started server process [91061]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:52106 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52108 - "GET /health HTTP/1.1" 200 OK
+Batches:   0%|          | 0/4 [00:00<?, ?it/s]Batches:  25%|██▌       | 1/4 [00:00<00:01,  2.12it/s]Batches:  50%|█████     | 2/4 [00:00<00:00,  2.72it/s]Batches:  75%|███████▌  | 3/4 [00:01<00:00,  3.04it/s]Batches: 100%|██████████| 4/4 [00:01<00:00,  3.76it/s]Batches: 100%|██████████| 4/4 [00:01<00:00,  3.28it/s]
+Batches:   0%|          | 0/2 [00:00<?, ?it/s]Batches:  50%|█████     | 1/2 [00:00<00:00,  3.22it/s]Batches: 100%|██████████| 2/2 [00:00<00:00,  5.15it/s]
+INFO:     127.0.0.1:52116 - "POST /analyze-multipart HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [91061]

@@ -1,0 +1,2628 @@
+{
+  "overall": {
+    "satisfied": 101,
+    "partially_satisfied": 1,
+    "non_existent": 10,
+    "garbage": 7
+  },
+  "clauses": [
+    {
+      "id": "C-0000",
+      "text": "A4. Administrative Safeguards (§164.308)",
+      "label": "garbage",
+      "best_match": {
+        "policy_text": "1 This policy sets minimum safeguards to protect Company Data, including any electronic health information handled by <CompanyName>.",
+        "similarity": -5.29
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall implement strict authorization/supervision protocols for all employees, ensuring access is revoked within 24 hours upon employee termination.** This policy ensures compliance with workforce security regulations by clearly defining how access should be managed post-termination. It emphasizes swift action to maintain data integrity and protect sensitive information.",
+          "similarity": -8.64
+        },
+        {
+          "policy_text": "Company shall maintain all evidence related to compliance requirements as documented in this policy.** This policy applies to all employees and contractors who have access to sensitive information or systems. Violations will result in disciplinary action up to and including termination of employment.",
+          "similarity": -9.251
+        }
+      ],
+      "rationale": "Short/heading-like text (no actionable requirement).",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0001",
+      "text": "A7. Organizational Requirements (§164.314)",
+      "label": "garbage",
+      "best_match": {
+        "policy_text": "All employees and contractors must comply with all specified compliance requirements including but not limited to risk analyses, BAA lists, training logs, SIEM exports, access reviews, incident response (IR) tickets, backup/DR reports, encryption/key management system (KMS) configurations, vendor risk files, change approval processes, static application security testing (SAST)/dynamic application security testing (DAST) pipelines, data classification registries, privacy notices, and requests, as well as any other relevant regulatory or contractual obligations. **END OF POLICY CLAUSE.",
+        "similarity": -6.538
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall maintain all evidence related to compliance requirements as documented in this policy.** This policy applies to all employees and contractors who have access to sensitive information or systems. Violations will result in disciplinary action up to and including termination of employment.",
+          "similarity": -7.028
+        },
+        {
+          "policy_text": "Company shall implement and maintain control activities as outlined in CC4 to ensure compliance with relevant regulations and standards. **We must adhere strictly to these requirements.",
+          "similarity": -8.064
+        }
+      ],
+      "rationale": "Short/heading-like text (no actionable requirement).",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0002",
+      "text": "A8. Policies, Procedures & Documentation (§164.316)",
+      "label": "garbage",
+      "best_match": {
+        "policy_text": "Submit exceptions for approval with supporting documentation including control measures, justification, risk assessment, compensating controls, and an expiry date. **(Auditable)** This policy ensures compliance by requiring all requests for exceptions to be accompanied by detailed justifications, risk assessments, and documented mitigations.",
+        "similarity": -4.858
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall maintain all evidence related to compliance requirements as documented in this policy.** This policy applies to all employees and contractors who have access to sensitive information or systems. Violations will result in disciplinary action up to and including termination of employment.",
+          "similarity": -5.667
+        },
+        {
+          "policy_text": "2 This policy is reviewed at least annually and upon material changes.",
+          "similarity": -6.113
+        }
+      ],
+      "rationale": "Short/heading-like text (no actionable requirement).",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0003",
+      "text": "A9. HIPAA Privacy & Breach Notification (Highlights)",
+      "label": "garbage",
+      "best_match": {
+        "policy_text": "Company shall implement the HIPAA Security Rule (§164.308–§164.316), Privacy Rule (selected highlights), and Breach Notification Rule for all systems processing ePHI.",
+        "similarity": 5.371
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall ensure all internal incidents are escalated within ≤ 24 hours; external HIPAA breach notifications will be provided within ≤ 60 days as required by law.",
+          "similarity": 1.304
+        },
+        {
+          "policy_text": "All employees and contractors must comply with HIPAA (45 CFR Part 160 & 164), state privacy/security laws, NIST SP 800-66, NIST SP 800-53 (reference), and HHS guidance when handling protected health information. **END OF POLICY CLAUSE.",
+          "similarity": -3.563
+        }
+      ],
+      "rationale": "Short/heading-like text (no actionable requirement).",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0004",
+      "text": "A10. HIPAA Program Procedures (How-To)",
+      "label": "garbage",
+      "best_match": {
+        "policy_text": "Company shall implement the HIPAA Security Rule (§164.308–§164.316), Privacy Rule (selected highlights), and Breach Notification Rule for all systems processing ePHI.",
+        "similarity": -4.522
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall ensure all internal incidents are escalated within ≤ 24 hours; external HIPAA breach notifications will be provided within ≤ 60 days as required by law.",
+          "similarity": -4.724
+        },
+        {
+          "policy_text": "All employees and contractors must comply with HIPAA (45 CFR Part 160 & 164), state privacy/security laws, NIST SP 800-66, NIST SP 800-53 (reference), and HHS guidance when handling protected health information. **END OF POLICY CLAUSE.",
+          "similarity": -5.245
+        }
+      ],
+      "rationale": "Short/heading-like text (no actionable requirement).",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0005",
+      "text": "Part B — SOC 2 Trust Services Criteria Policy",
+      "label": "garbage",
+      "best_match": {
+        "policy_text": "Company shall establish controls to meet SOC 2 Trust Services Criteria (TSC) for Security (Common Criteria), with optional categories Availability, Confidentiality, Processing Integrity, Privacy as in scope for <CompanyName>.",
+        "similarity": 5.365
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall establish and maintain a comprehensive HIPAA-compliant infrastructure with SOC 2 attestation assurance, ensuring all data is protected according to applicable regulations and industry standards. We must adhere strictly to these guidelines, conduct regular audits, and retain records as required by law.",
+          "similarity": -2.1
+        },
+        {
+          "policy_text": "Company shall implement security questionnaires, conduct SOC report reviews, comply with BAA/DPA requirements, engage in continuous monitoring, and ensure timely return or deletion of terminated data.",
+          "similarity": -6.652
+        }
+      ],
+      "rationale": "Short/heading-like text (no actionable requirement).",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0006",
+      "text": "*Purpose.** This suite establishes a unified set of administrative, physical, and technical controls for **HIPAA** compliance (Privacy, Security & Breach Notification) and **SOC 2** attestation (Trust Services Criteria). It defines responsibilities, minimum control requirements, operational procedures, monitoring, and evidence expectations.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Company shall establish controls to meet SOC 2 Trust Services Criteria (TSC) for Security (Common Criteria), with optional categories Availability, Confidentiality, Processing Integrity, Privacy as in scope for <CompanyName>.",
+        "similarity": -4.98
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall establish and maintain a comprehensive HIPAA-compliant infrastructure with SOC 2 attestation assurance, ensuring all data is protected according to applicable regulations and industry standards. We must adhere strictly to these guidelines, conduct regular audits, and retain records as required by law.",
+          "similarity": -5.588
+        },
+        {
+          "policy_text": "Company shall implement the HIPAA Security Rule (§164.308–§164.316), Privacy Rule (selected highlights), and Breach Notification Rule for all systems processing ePHI.",
+          "similarity": -6.481
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0007",
+      "text": "*Applicability.** Applies to all `<CompanyName>` workforce members, contractors, and third parties who access `<CompanyName>` information systems and data. Additional obligations apply to systems in-scope for HIPAA ePHI and/or SOC 2.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "All employees and contractors must comply with HIPAA (45 CFR Part 160 & 164), state privacy/security laws, NIST SP 800-66, NIST SP 800-53 (reference), and HHS guidance when handling protected health information. **END OF POLICY CLAUSE.",
+        "similarity": -3.862
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall establish and maintain a comprehensive HIPAA-compliant infrastructure with SOC 2 attestation assurance, ensuring all data is protected according to applicable regulations and industry standards. We must adhere strictly to these guidelines, conduct regular audits, and retain records as required by law.",
+          "similarity": -7.273
+        },
+        {
+          "policy_text": "Company shall implement the HIPAA Security Rule (§164.308–§164.316), Privacy Rule (selected highlights), and Breach Notification Rule for all systems processing ePHI.",
+          "similarity": -7.361
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0008",
+      "text": "**Board / Executive Leadership.** Set tone at the top; oversee risk; approve this policy suite.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall set the tone at the top, oversee risk management, and approve this policy suite.",
+        "similarity": 5.769
+      },
+      "alternatives": [
+        {
+          "policy_text": "The board oversees risks rated as critical or high, ensuring they are addressed within a specified timeline. Acceptance of these risks necessitates a detailed business case supported by the CISO.",
+          "similarity": -3.021
+        },
+        {
+          "policy_text": "High-risk exceptions must be approved by executive management before implementation; all renewal terms must include an updated risk assessment.",
+          "similarity": -3.397
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0009",
+      "text": "**CISO / Security Officer (SO).** Owns Security Rule implementation; risk management; security incident response; periodic evaluation.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "The Chief Information Security Officer (CISO) is responsible for developing and implementing this policy, ensuring its alignment with organizational objectives, and overseeing the security program through regular audits and updates.",
+        "similarity": 1.086
+      },
+      "alternatives": [
+        {
+          "policy_text": "Incident Response:** SOC (Risk), CISO (Audit), PO (Breach), IT/Engineering (Review), Legal (Consultation), Communications (Notification).",
+          "similarity": -0.08
+        },
+        {
+          "policy_text": "A Security Officer (SO) shall be appointed within 30 days of the establishment of this policy. The SO is responsible for ensuring compliance with all security policies and procedures.",
+          "similarity": -0.864
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0010",
+      "text": "**Privacy Officer (PO).** Owns Privacy Rule; Notice of Privacy Practices; individual rights; breach notification content.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "2 The Privacy Officer oversees privacy practices and breach communications.",
+        "similarity": 2.24
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall publish and keep Notice of Privacy Practices current.",
+          "similarity": -0.58
+        },
+        {
+          "policy_text": "3 Where ePHI is involved, the Privacy Officer coordinates regulatory notifications consistent with applicable law.",
+          "similarity": -1.0
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0011",
+      "text": "**IT Operations / Infrastructure.** Implements technical controls (access, logging, backups, DR, patching, endpoint protection).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall implement technical controls for IT operations and infrastructure including access control, logging, backups, disaster recovery, patch management, and endpoint security measures.",
+        "similarity": 7.937
+      },
+      "alternatives": [
+        {
+          "policy_text": "1 Implement technical controls for access management including least-privilege principle.",
+          "similarity": 0.463
+        },
+        {
+          "policy_text": "Company shall implement robust system operations procedures including but not limited to vulnerability management, malware protection, comprehensive logging and monitoring, and immediate incident response protocols to ensure the security of all systems and data. We must adhere strictly to these requirements at all times.",
+          "similarity": -1.164
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0012",
+      "text": "**Engineering / SDLC Owners.** Secure design, code review, CI/CD, change control, secrets management.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "3 Engineering/SDLC owners ensure secure design, code review, CI/CD, change control, and secrets management for their systems.",
+        "similarity": 7.895
+      },
+      "alternatives": [
+        {
+          "policy_text": "Engineering / SDLC Owners:** Company shall ensure all engineering designs, source code, and software components undergo secure coding practices, adhere to strict change controls, implement continuous integration and delivery processes, and utilize robust secret management systems. **All stakeholders involved in development, testing, deployment, and maintenance of applications and services must comply with these requirements.",
+          "similarity": 6.73
+        },
+        {
+          "policy_text": "Company shall implement and maintain secure Software Development Lifecycle (SDLC), including but not limited to design reviews, threat modeling, static application security testing (SAST)/dynamic application security testing (DAST)/dependency scanning, code review, secrets scanning, release approval processes, and change log management. ** This policy ensures compliance with industry standards and best practices for software development security.",
+          "similarity": 4.023
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0013",
+      "text": "**Data Owners / System Owners.** Classify data; approve access; perform user access reviews; maintain system inventories.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Information Access Management (R/A):** Information should be accessed on a minimum necessary basis, with roles determining access levels, and all access authorizations and modifications documented. Periodic reviews of access controls should occur at least quarterly for high-risk systems.",
+        "similarity": -2.452
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall implement robust system operations procedures including but not limited to vulnerability management, malware protection, comprehensive logging and monitoring, and immediate incident response protocols to ensure the security of all systems and data. We must adhere strictly to these requirements at all times.",
+          "similarity": -6.643
+        },
+        {
+          "policy_text": "1 Implement technical controls for access management including least-privilege principle.",
+          "similarity": -6.78
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0014",
+      "text": "**Third‑Party Management.** Due diligence, BAAs/DPAs, continuous monitoring.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall implement robust due diligence processes for third-party vendors, maintain Binding Arrangements (BAAs) with all suppliers, and conduct ongoing monitoring of vendor activities to ensure compliance with all relevant regulations and contractual obligations.",
+        "similarity": 4.941
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall implement security questionnaires, conduct SOC report reviews, comply with BAA/DPA requirements, engage in continuous monitoring, and ensure timely return or deletion of terminated data.",
+          "similarity": 0.105
+        },
+        {
+          "policy_text": "Incident Response:** SOC (Risk), CISO (Audit), PO (Breach), IT/Engineering (Review), Legal (Consultation), Communications (Notification).",
+          "similarity": -9.818
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0015",
+      "text": "**All Workforce Members.** Complete training; follow policies; report incidents promptly.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "4 All personnel complete training and report suspected incidents without delay.",
+        "similarity": 4.502
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall ensure adherence to all governance and policy management requirements outlined above by conducting regular code of conduct training for employees annually, reviewing policies at least once every two years with senior leadership's approval before implementation. ** This policy ensures compliance with established guidelines while maintaining flexibility through periodic review processes.",
+          "similarity": -2.027
+        },
+        {
+          "policy_text": "Company shall implement strict authorization/supervision protocols for all employees, ensuring access is revoked within 24 hours upon employee termination.** This policy ensures compliance with workforce security regulations by clearly defining how access should be managed post-termination. It emphasizes swift action to maintain data integrity and protect sensitive information.",
+          "similarity": -3.531
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0016",
+      "text": "**Review cadence:** at least **annually** and upon material changes (technology, regulation, business model, incidents).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "2 This policy is reviewed at least annually and upon material changes.",
+        "similarity": 2.647
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall review information system activity at least monthly for in-scope systems.",
+          "similarity": -5.132
+        },
+        {
+          "policy_text": "Company shall conduct periodic technical and non-technical evaluations annually.",
+          "similarity": -5.69
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0017",
+      "text": "**Document retention:** HIPAA-required documentation retained **≥6 years** from creation or last effective date.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date.",
+        "similarity": 5.581
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall establish and maintain a comprehensive HIPAA-compliant infrastructure with SOC 2 attestation assurance, ensuring all data is protected according to applicable regulations and industry standards. We must adhere strictly to these guidelines, conduct regular audits, and retain records as required by law.",
+          "similarity": -2.122
+        },
+        {
+          "policy_text": "Company shall ensure all internal incidents are escalated within ≤ 24 hours; external HIPAA breach notifications will be provided within ≤ 60 days as required by law.",
+          "similarity": -4.551
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0018",
+      "text": "**Version control:** changes tracked with summary, approver, and effective date.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall maintain version control of all documents and records, tracking changes with a summary, approver, and effective date for each update. We must ensure compliance with these requirements at all times.",
+        "similarity": 6.781
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Code changes are scanned for known weaknesses; high-risk issues are remediated before release or tracked with an approved exception; integrity measures include hashing/signing where applicable; change detection; anti-tamper techniques.",
+          "similarity": -3.94
+        },
+        {
+          "policy_text": "Company shall ensure adherence to Change Management (CC8) guidelines for all software development lifecycle activities, including but not limited to securing changes through proper approval processes, thorough testing, and maintaining clear separation of duties among team members involved in change management tasks. **[Auditable]** --- This policy ensures accountability and compliance with established procedures across all aspects of change management within the organization.",
+          "similarity": -6.191
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0019",
+      "text": "Implement the HIPAA **Security Rule** (§164.308–§164.316), **Privacy Rule** (selected highlights), and **Breach Notification Rule**, for all systems processing **ePHI**.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall implement the HIPAA Security Rule (§164.308–§164.316), Privacy Rule (selected highlights), and Breach Notification Rule for all systems processing ePHI.",
+        "similarity": 8.157
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall provide security awareness training annually to all employees on their roles and responsibilities regarding data protection and cybersecurity measures.** This policy ensures compliance with §164.308(a)(5) of the Health Insurance Portability and Accountability Act (HIPAA). Employees must understand their role in protecting sensitive information and implementing necessary cybersecurity protocols.",
+          "similarity": 2.642
+        },
+        {
+          "policy_text": "All employees and contractors must comply with HIPAA (45 CFR Part 160 & 164), state privacy/security laws, NIST SP 800-66, NIST SP 800-53 (reference), and HHS guidance when handling protected health information. **END OF POLICY CLAUSE.",
+          "similarity": 0.922
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0020",
+      "text": "*Systems in scope:** Systems storing/processing/transmitting ePHI; integrations; backups; logs containing ePHI identifiers; admin consoles; mobile/endpoint clients with ePHI access.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "2 Sections marked “ePHI” apply where electronic protected health information is stored, processed, transmitted, backed up, logged containing ePHI identifiers, accessed via admin consoles, or used by mobile/endpoint clients with ePHI access.",
+        "similarity": 1.945
+      },
+      "alternatives": [
+        {
+          "policy_text": "All systems within the scope of this policy must comply with all applicable regulations, standards, and guidelines related to the protection of electronic protected health information (ePHI). This includes but is not limited to ensuring proper encryption, secure storage, regular audits, and adherence to industry best practices for data security.",
+          "similarity": 0.131
+        },
+        {
+          "policy_text": "Centralized logging; immutable storage for critical logs; SIEM correlation; time sync (NTP). **Compliance Requirement:** Company shall implement audit controls as outlined above.",
+          "similarity": -5.41
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0021",
+      "text": "HIPAA (45 CFR Part 160 & 164), state privacy/security laws; NIST SP 800‑66; NIST SP 800‑53 (reference), HHS guidance.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "All employees and contractors must comply with HIPAA (45 CFR Part 160 & 164), state privacy/security laws, NIST SP 800-66, NIST SP 800-53 (reference), and HHS guidance when handling protected health information. **END OF POLICY CLAUSE.",
+        "similarity": 8.332
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall implement the HIPAA Security Rule (§164.308–§164.316), Privacy Rule (selected highlights), and Breach Notification Rule for all systems processing ePHI.",
+          "similarity": -0.027
+        },
+        {
+          "policy_text": "Company shall provide security awareness training annually to all employees on their roles and responsibilities regarding data protection and cybersecurity measures.** This policy ensures compliance with §164.308(a)(5) of the Health Insurance Portability and Accountability Act (HIPAA). Employees must understand their role in protecting sensitive information and implementing necessary cybersecurity protocols.",
+          "similarity": -2.994
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0022",
+      "text": "**Business Associate (BA):** Vendor handling ePHI on behalf of `<CompanyName>` (must execute BAA).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "2 Business Associate Agreements shall be executed prior to any vendor handling ePHI; subcontractors must comply with equivalent protections.",
+        "similarity": 4.882
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall implement robust due diligence processes for third-party vendors, maintain Binding Arrangements (BAAs) with all suppliers, and conduct ongoing monitoring of vendor activities to ensure compliance with all relevant regulations and contractual obligations.",
+          "similarity": -0.872
+        },
+        {
+          "policy_text": "Company shall ensure all BA contracts include required clauses: permitted uses/disclosures, safeguards, breach reporting, subcontractor flow-down, return/destroy PHI, and termination for cause. To clarify, Company reserves the right to audit compliance with these requirements at any time.",
+          "similarity": -4.327
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0023",
+      "text": "**Minimum Necessary:** Only the least amount of PHI needed to accomplish the task.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall ensure that only the minimum necessary Protected Health Information (PHI) is retained and used for the purpose specified by the individual or as required by law.",
+        "similarity": 2.573
+      },
+      "alternatives": [
+        {
+          "policy_text": "Enforcement of **Minimum Necessary** is achieved through Role-Based Access Control (RBAC) and established procedures.",
+          "similarity": 1.15
+        },
+        {
+          "policy_text": "2 Personnel must access only the minimum data necessary to perform assigned duties.",
+          "similarity": -0.12
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0024",
+      "text": "**Security Incident:** Attempted or successful unauthorized access/use/disclosure/modification/destruction.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall implement robust security measures to prevent, detect, respond to, and mitigate any attempted or successful unauthorized access, use, disclosure, modification, or destruction of data. We must ensure compliance with all relevant laws, regulations, and industry standards related to cybersecurity.",
+        "similarity": 5.744
+      },
+      "alternatives": [
+        {
+          "policy_text": "1 Suspected security incidents must be reported to Security and the Privacy Officer immediately upon discovery.",
+          "similarity": -1.726
+        },
+        {
+          "policy_text": "Incident Response:** SOC (Risk), CISO (Audit), PO (Breach), IT/Engineering (Review), Legal (Consultation), Communications (Notification).",
+          "similarity": -5.93
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0025",
+      "text": "**Risk Analysis (R):** Perform enterprise and system-level risk analyses **annually** and upon major change. Maintain risk register, likelihood/impact, owner, and treatment plan.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "An enterprise risk analysis is conducted annually and following significant modifications. The outcomes are documented within an organized risk register, including designated stakeholders and deadlines.",
+        "similarity": 4.348
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall conduct a risk analysis and management process annually to ensure compliance with all applicable laws, regulations, standards, and policies.** This policy ensures that our organization remains compliant with legal requirements by regularly assessing potential risks and implementing effective mitigation strategies. It is essential for maintaining operational integrity and protecting stakeholders' interests.",
+          "similarity": 1.371
+        },
+        {
+          "policy_text": "Company shall track enterprise and product risks, maintain threat intelligence, establish a risk appetite, and ensure Treatment SLAs are adhered to.",
+          "similarity": -2.7
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0026",
+      "text": "**Risk Management (R):** Track remediation to closure with due dates and acceptance criteria; high/critical items remediated within **30–90 days** depending on severity.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "The board oversees risks rated as critical or high, ensuring they are addressed within a specified timeline. Acceptance of these risks necessitates a detailed business case supported by the CISO.",
+        "similarity": -2.36
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall implement continuous vulnerability scanning and apply risk-based remediation measures for all systems, ensuring timely resolution of identified issues. Exceptions to this policy may be granted upon approval by senior management and will have an expiration date.",
+          "similarity": -2.853
+        },
+        {
+          "policy_text": "User access reviews are conducted quarterly on high-risk systems and semiannually on others; documentation of remediation is required.",
+          "similarity": -3.371
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0027",
+      "text": "**Sanction Policy (R):** Violations may lead to corrective action up to termination.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "3 Sanctions: policy violations may lead to corrective action up to termination.",
+        "similarity": 7.044
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall maintain all evidence related to compliance requirements as documented in this policy.** This policy applies to all employees and contractors who have access to sensitive information or systems. Violations will result in disciplinary action up to and including termination of employment.",
+          "similarity": 4.148
+        },
+        {
+          "policy_text": "1 Non-compliance may result in disciplinary action up to and including termination and legal remedies where applicable.",
+          "similarity": 0.001
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0028",
+      "text": "**Information System Activity Review (R):** Monitor security events, access logs, audit trails. Review **at least monthly** for in-scope systems.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall review information system activity at least monthly for in-scope systems.",
+        "similarity": 2.587
+      },
+      "alternatives": [
+        {
+          "policy_text": "Information Access Management (R/A):** Information should be accessed on a minimum necessary basis, with roles determining access levels, and all access authorizations and modifications documented. Periodic reviews of access controls should occur at least quarterly for high-risk systems.",
+          "similarity": 1.069
+        },
+        {
+          "policy_text": "User access reviews are conducted quarterly on high-risk systems and semiannually on others; documentation of remediation is required.",
+          "similarity": -2.945
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0029",
+      "text": "**Assigned Security Responsibility (R):** Appoint a Security Officer (SO).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "A Security Officer (SO) shall be appointed within 30 days of the establishment of this policy. The SO is responsible for ensuring compliance with all security policies and procedures.",
+        "similarity": 6.058
+      },
+      "alternatives": [
+        {
+          "policy_text": "The Chief Information Security Officer (CISO) is responsible for developing and implementing this policy, ensuring its alignment with organizational objectives, and overseeing the security program through regular audits and updates.",
+          "similarity": -1.193
+        },
+        {
+          "policy_text": "2 The Privacy Officer oversees privacy practices and breach communications.",
+          "similarity": -5.447
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0030",
+      "text": "**Workforce Security (A):** Authorization/supervision; clearance; termination procedures (access revocation ≤ **24 hours** of separation).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall implement strict authorization/supervision protocols for all employees, ensuring access is revoked within 24 hours upon employee termination.** This policy ensures compliance with workforce security regulations by clearly defining how access should be managed post-termination. It emphasizes swift action to maintain data integrity and protect sensitive information.",
+        "similarity": 5.252
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Departing personnel have access revoked within 24 hours of separation. Company assets and credentials are returned or disabled.",
+          "similarity": -0.791
+        },
+        {
+          "policy_text": "Enforcement of **Minimum Necessary** is achieved through Role-Based Access Control (RBAC) and established procedures.",
+          "similarity": -4.588
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0031",
+      "text": "**Information Access Management (R/A):** Minimum necessary; role-based access; documented access authorization and modification; periodic access reviews (**quarterly** for high-risk systems).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Information Access Management (R/A):** Information should be accessed on a minimum necessary basis, with roles determining access levels, and all access authorizations and modifications documented. Periodic reviews of access controls should occur at least quarterly for high-risk systems.",
+        "similarity": 7.677
+      },
+      "alternatives": [
+        {
+          "policy_text": "Enforcement of **Minimum Necessary** is achieved through Role-Based Access Control (RBAC) and established procedures.",
+          "similarity": 3.549
+        },
+        {
+          "policy_text": "Company shall implement robust access control measures including Role-Based Access Control (RBAC), Just-In-Time/Just-In-Event Authorization (JIT/JEA) where feasible, Single Sign-On (SSO), Multi-Factor Authentication (MFA), and conduct quarterly access reviews with privileged access monitoring. Note: The original requirement was quite detailed, so I've condensed it while maintaining clarity and compliance requirements.",
+          "similarity": 0.366
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0032",
+      "text": "**Security Awareness & Training (A):** Onboarding + **annual** HIPAA security training; phishing simulations; password/MFA guidance.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall provide security awareness training annually to all employees on their roles and responsibilities regarding data protection and cybersecurity measures.** This policy ensures compliance with §164.308(a)(5) of the Health Insurance Portability and Accountability Act (HIPAA). Employees must understand their role in protecting sensitive information and implementing necessary cybersecurity protocols.",
+        "similarity": 2.755
+      },
+      "alternatives": [
+        {
+          "policy_text": "Onboarding for new hires and annual refresher training in security and privacy principles must be completed by all personnel.",
+          "similarity": 2.598
+        },
+        {
+          "policy_text": "Phishing simulations and quarterly security newsletters are mandatory for awareness purposes, while targeted advisories should be reviewed annually by all employees. **Failure to comply may result in disciplinary action.",
+          "similarity": -0.897
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0033",
+      "text": "**Security Incident Procedures (R):** Detect, triage, contain, investigate, and report. Internal notification to SO/PO **within 24 hours** of discovery.",
+      "label": "partially_satisfied",
+      "best_match": {
+        "policy_text": "Company shall notify Security Officer and Project Owner within 24 hours of detecting a security incident for prompt containment and investigation.",
+        "similarity": 0.656
+      },
+      "alternatives": [
+        {
+          "policy_text": "1 Suspected security incidents must be reported to Security and the Privacy Officer immediately upon discovery.",
+          "similarity": -0.982
+        },
+        {
+          "policy_text": "Incident Response:** SOC (Risk), CISO (Audit), PO (Breach), IT/Engineering (Review), Legal (Consultation), Communications (Notification).",
+          "similarity": -2.795
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0034",
+      "text": "**Contingency Plan (R/A):** Data backup plan, disaster recovery plan, emergency mode operations.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall maintain a comprehensive contingency plan for data backup, disaster recovery, and emergency mode operations to ensure business continuity and minimize downtime. **[Auditable]** --- This policy ensures all employees understand their roles in maintaining this plan and adhere to its requirements.",
+        "similarity": 7.976
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall ensure that all business continuity and disaster recovery plans are documented, regularly tested annually, and include quarterly backups for data restoration. To summarize this requirement concisely: \"Business Continuity & Disaster Recovery Plans must be documented, annually tested, and include quarterly backups.\" This concise policy clause captures the essence of the compliance requirement while maintaining clarity and readability.",
+          "similarity": 1.607
+        },
+        {
+          "policy_text": "Company shall maintain an up-to-date contingency plan for all critical systems and operations, ensuring redundancy and failover capabilities.** This policy ensures that our business continuity is robust against unforeseen disruptions, safeguarding data integrity and operational efficiency.",
+          "similarity": 1.585
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0035",
+      "text": "**Backups:** Encrypt; test **quarterly**; retain per data retention policy.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall encrypt backups and conduct quarterly tests of encryption capabilities; backups shall be retained according to the data retention policy.",
+        "similarity": 7.043
+      },
+      "alternatives": [
+        {
+          "policy_text": "1 Production data is backed up regularly and encrypted in storage and transit to the backup repository; encryption keys are managed securely; data loss prevention (DLP) measures are implemented to detect and prevent unauthorized access to sensitive information; data is securely disposed of after its lifecycle has ended; all users who have access to confidential data sign non-disclosure agreements (NDAs). backups are tested quarterly and retained per data retention policy.",
+          "similarity": 5.809
+        },
+        {
+          "policy_text": "Company shall ensure that all business continuity and disaster recovery plans are documented, regularly tested annually, and include quarterly backups for data restoration. To summarize this requirement concisely: \"Business Continuity & Disaster Recovery Plans must be documented, annually tested, and include quarterly backups.\" This concise policy clause captures the essence of the compliance requirement while maintaining clarity and readability.",
+          "similarity": 0.587
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0036",
+      "text": "**DR/BCP:** Define **RTO/RPO**; test **annually** (tabletop + technical).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "3 Disaster recovery objectives (RTO/RPO) are defined for critical services and validated through an annual exercise.",
+        "similarity": 1.073
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall conduct periodic technical and non-technical evaluations annually.",
+          "similarity": -5.511
+        },
+        {
+          "policy_text": "Company shall ensure all systems adhere to DR Test compliance requirements.** This policy ensures that all systems within our organization comply with the Data Recovery Testing (DR Test) compliance requirements set by the relevant stakeholders including the Information Technology Infrastructure (IT/Infra), Chief Information Security Officer (CISO), System Owners, Products, and Compliance teams. This requirement is essential for maintaining data integrity and ensuring business continuity.",
+          "similarity": -6.013
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0037",
+      "text": "**Evaluation (R):** Periodic technical and non-technical evaluations **annually**.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall conduct periodic technical and non-technical evaluations annually.",
+        "similarity": 6.805
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 This policy is reviewed at least annually and upon material changes.",
+          "similarity": -3.622
+        },
+        {
+          "policy_text": "An enterprise risk analysis is conducted annually and following significant modifications. The outcomes are documented within an organized risk register, including designated stakeholders and deadlines.",
+          "similarity": -4.654
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0038",
+      "text": "**Business Associate Arrangements (R):** Execute **BAA** before ePHI access; require incident reporting, safeguards, subcontractor flow-downs.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "2 Business Associate Agreements shall be executed prior to any vendor handling ePHI; subcontractors must comply with equivalent protections.",
+        "similarity": 3.517
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall ensure all BA contracts include required clauses: permitted uses/disclosures, safeguards, breach reporting, subcontractor flow-down, return/destroy PHI, and termination for cause. To clarify, Company reserves the right to audit compliance with these requirements at any time.",
+          "similarity": -3.192
+        },
+        {
+          "policy_text": "Company shall implement robust due diligence processes for third-party vendors, maintain Binding Arrangements (BAAs) with all suppliers, and conduct ongoing monitoring of vendor activities to ensure compliance with all relevant regulations and contractual obligations.",
+          "similarity": -5.964
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0039",
+      "text": "**Facility Access Controls (A):** Badge controls; visitor management; data center access by least privilege; logs retained **1 year** minimum.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "1 Implement technical controls for access management including least-privilege principle.",
+        "similarity": 0.277
+      },
+      "alternatives": [
+        {
+          "policy_text": "Information Access Management (R/A):** Information should be accessed on a minimum necessary basis, with roles determining access levels, and all access authorizations and modifications documented. Periodic reviews of access controls should occur at least quarterly for high-risk systems.",
+          "similarity": -1.815
+        },
+        {
+          "policy_text": "Enforcement of **Minimum Necessary** is achieved through Role-Based Access Control (RBAC) and established procedures.",
+          "similarity": -3.526
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0040",
+      "text": "**Workstation Use (R):** Secure screens, privacy filters for PHI; clear desk for PHI.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "2 Workstations used to access sensitive data employ secure screens, privacy filters for PHI, and clear desks for PHI.",
+        "similarity": 6.687
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall ensure all workstations comply with the following requirements: 1. Screens shall be secure to prevent unauthorized access.",
+          "similarity": 0.064
+        },
+        {
+          "policy_text": "Company shall ensure that only the minimum necessary Protected Health Information (PHI) is retained and used for the purpose specified by the individual or as required by law.",
+          "similarity": -5.549
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0041",
+      "text": "**Workstation Security (R):** Endpoint protection, disk encryption, screen lock ≤ **10 minutes** idle.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall implement screen lock policies ensuring access is restricted within ≤ 10 minutes of user inactivity; session timeouts shall be set to ≤ 15 minutes to prevent unauthorized access.",
+        "similarity": 1.09
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall ensure all workstations comply with the following requirements: 1. Screens shall be secure to prevent unauthorized access.",
+          "similarity": -2.412
+        },
+        {
+          "policy_text": "2 Workstations used to access sensitive data employ secure screens, privacy filters for PHI, and clear desks for PHI.",
+          "similarity": -3.302
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0042",
+      "text": "**Device & Media Controls (R/A):** Secure disposal; media reuse with crypto‑erase; asset inventory; chain of custody; backup/restore procedures.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall ensure all devices and media are securely disposed of, reused with cryptographic erase, maintain an up-to-date asset inventory, adhere to strict chain of custody protocols, and implement comprehensive backup and restore procedures. **End Policy Clause.",
+        "similarity": 3.722
+      },
+      "alternatives": [
+        {
+          "policy_text": "1 Production data is backed up regularly and encrypted in storage and transit to the backup repository; encryption keys are managed securely; data loss prevention (DLP) measures are implemented to detect and prevent unauthorized access to sensitive information; data is securely disposed of after its lifecycle has ended; all users who have access to confidential data sign non-disclosure agreements (NDAs). backups are tested quarterly and retained per data retention policy.",
+          "similarity": -8.39
+        },
+        {
+          "policy_text": "2 Workstations used to access sensitive data employ secure screens, privacy filters for PHI, and clear desks for PHI.",
+          "similarity": -8.445
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0043",
+      "text": "**Access Control:** Unique user IDs; **MFA** for privileged and remote access; emergency access procedure; automatic logoff (≤ **15 minutes** idle).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall implement unique user IDs; enforce Multi-Factor Authentication (MFA) for privileged and remote access; establish an emergency access procedure; ensure automatic logoff within ≤ 15 minutes of inactivity.",
+        "similarity": 6.319
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Multi-factor authentication (MFA) is mandatory for administrators and remote access. (MFA for all users is recommended.) 5.3 Sessions must lock after 20 minutes of inactivity and require re-authentication to resume.",
+          "similarity": -0.301
+        },
+        {
+          "policy_text": "Enterprise Identity:** Personnel must authenticate using enterprise identity methods, such as Single Sign-On (SSO), ensuring consistency with National Institute of Standards and Technology (NIST) Special Publication 800-63 for password policies. Multi-Factor Authentication (MFA) is mandatory. **End Clause.",
+          "similarity": -4.825
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0044",
+      "text": "**Encryption:** ePHI **at rest** (AES‑256 or equivalent) and **in transit** (TLS 1.2+; TLS 1.3 preferred). Key management documented.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall implement encryption at rest using AES-256; for data in transit, we must use TLS 1.2+ (TLS 1.3 is preferred).",
+        "similarity": 4.116
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall ensure all electronic Protected Health Information is encrypted at rest using AES-256 or an equivalent standard, and in transit using TLS 1.2 or higher with TLS 1.3 being preferred for security reasons. Key management documentation will be maintained.",
+          "similarity": 3.728
+        },
+        {
+          "policy_text": "All systems within the scope of this policy must comply with all applicable regulations, standards, and guidelines related to the protection of electronic protected health information (ePHI). This includes but is not limited to ensuring proper encryption, secure storage, regular audits, and adherence to industry best practices for data security.",
+          "similarity": -3.787
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0045",
+      "text": "**Audit Controls:** Centralized logging; immutable storage for critical logs; SIEM correlation; time sync (NTP).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Centralized logging; immutable storage for critical logs; SIEM correlation; time sync (NTP). **Compliance Requirement:** Company shall implement audit controls as outlined above.",
+        "similarity": 7.807
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Logs are retained for at least 365 days, with restricted access and tamper-resistant storage for critical systems; centralized logging; immutable storage for critical logs; SIEM correlation; time sync (NTP).",
+          "similarity": 4.437
+        },
+        {
+          "policy_text": "Company shall implement technical controls for IT operations and infrastructure including access control, logging, backups, disaster recovery, patch management, and endpoint security measures.",
+          "similarity": -5.891
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0046",
+      "text": "**Integrity:** Hashing/signing where applicable; change detection; anti‑tamper.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "2 Code changes are scanned for known weaknesses; high-risk issues are remediated before release or tracked with an approved exception; integrity measures include hashing/signing where applicable; change detection; anti-tamper techniques.",
+        "similarity": 6.765
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall ensure all hashing/signing is performed as required, implement change detection mechanisms, and employ anti-tamper measures.",
+          "similarity": 4.295
+        },
+        {
+          "policy_text": "Company shall implement input validation, perform reconciliations, utilize QA gates, employ error handling and playback mechanisms, and establish rollback procedures for processing integrity. Note: The term \"Processing Integrity\" is used as per the original requirement.",
+          "similarity": -8.687
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0047",
+      "text": "**Person/Entity Authentication:** Enterprise identity; SSO preferred; password policy consistent with NIST SP 800‑63; MFA mandated.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Enterprise Identity:** Personnel must authenticate using enterprise identity methods, such as Single Sign-On (SSO), ensuring consistency with National Institute of Standards and Technology (NIST) Special Publication 800-63 for password policies. Multi-Factor Authentication (MFA) is mandatory. **End Clause.",
+        "similarity": 6.594
+      },
+      "alternatives": [
+        {
+          "policy_text": "Passwords should be managed using Single Sign-On/ Multi-Factor Authentication (SSO/MFA) where applicable, adhering to NIST 800-63 guidelines without requiring periodic forced password rotations or enforcing strict blacklisting policies. **END OF POLICY CLAUSE.",
+          "similarity": 3.683
+        },
+        {
+          "policy_text": "Company shall implement robust access control measures including Role-Based Access Control (RBAC), Just-In-Time/Just-In-Event Authorization (JIT/JEA) where feasible, Single Sign-On (SSO), Multi-Factor Authentication (MFA), and conduct quarterly access reviews with privileged access monitoring. Note: The original requirement was quite detailed, so I've condensed it while maintaining clarity and compliance requirements.",
+          "similarity": -4.027
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0048",
+      "text": "**Transmission Security:** Encrypted channels, certificate management, secure APIs.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall implement encryption for all data transmissions, manage certificates securely, and ensure use of secure APIs.",
+        "similarity": 3.764
+      },
+      "alternatives": [
+        {
+          "policy_text": "All production databases and file stores containing sensitive data are encrypted at rest using strong, industry-accepted algorithms through secure transmission protocols and certificate management practices.",
+          "similarity": 3.157
+        },
+        {
+          "policy_text": "Company shall ensure all cryptographic operations adhere to TLS 1.2+, with TLS 1.3 being preferred for enhanced security, employing strong ciphers, maintaining a robust key management lifecycle, and utilizing Hardware Security Modules (HSMs) or Key Management Services (KMS). ** This policy ensures compliance with industry standards while enhancing data protection through advanced encryption methods and secure key management practices.",
+          "similarity": -5.718
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0049",
+      "text": "**BA Contracts:** Required clauses: permitted uses/disclosures; safeguards; breach reporting; subcontractor flow-down; return/destroy PHI; termination for cause.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall ensure all BA contracts include required clauses: permitted uses/disclosures, safeguards, breach reporting, subcontractor flow-down, return/destroy PHI, and termination for cause. To clarify, Company reserves the right to audit compliance with these requirements at any time.",
+        "similarity": 8.443
+      },
+      "alternatives": [
+        {
+          "policy_text": "All employees and contractors must comply with all specified compliance requirements including but not limited to risk analyses, BAA lists, training logs, SIEM exports, access reviews, incident response (IR) tickets, backup/DR reports, encryption/key management system (KMS) configurations, vendor risk files, change approval processes, static application security testing (SAST)/dynamic application security testing (DAST) pipelines, data classification registries, privacy notices, and requests, as well as any other relevant regulatory or contractual obligations. **END OF POLICY CLAUSE.",
+          "similarity": -0.365
+        },
+        {
+          "policy_text": "Company shall implement necessary controls for all uses/disclosures of data as authorized by law, consent, BAA, and marketing/research purposes, ensuring compliance with applicable regulations and industry standards.",
+          "similarity": -1.505
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0050",
+      "text": "Maintain written P&P; train on updates; document evaluations; **retain 6 years** from creation/last effective date.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date.",
+        "similarity": 3.271
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall maintain version control of all documents and records, tracking changes with a summary, approver, and effective date for each update. We must ensure compliance with these requirements at all times.",
+          "similarity": -1.22
+        },
+        {
+          "policy_text": "Company shall centralize logs, detect anomalies, implement runbook alerts, and maintain retention of logs for at least 1 year online, with longer retention as required.",
+          "similarity": -5.953
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0051",
+      "text": "**Minimum Necessary:** Enforced through RBAC and procedures.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Enforcement of **Minimum Necessary** is achieved through Role-Based Access Control (RBAC) and established procedures.",
+        "similarity": 8.978
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall implement robust access control measures including Role-Based Access Control (RBAC), Just-In-Time/Just-In-Event Authorization (JIT/JEA) where feasible, Single Sign-On (SSO), Multi-Factor Authentication (MFA), and conduct quarterly access reviews with privileged access monitoring. Note: The original requirement was quite detailed, so I've condensed it while maintaining clarity and compliance requirements.",
+          "similarity": -2.291
+        },
+        {
+          "policy_text": "Company shall implement necessary controls for all uses/disclosures of data as authorized by law, consent, BAA, and marketing/research purposes, ensuring compliance with applicable regulations and industry standards.",
+          "similarity": -6.917
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0052",
+      "text": "**Uses/Disclosures:** As authorized by law/consent/BAA; marketing/research require additional controls.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall implement necessary controls for all uses/disclosures of data as authorized by law, consent, BAA, and marketing/research purposes, ensuring compliance with applicable regulations and industry standards.",
+        "similarity": 7.349
+      },
+      "alternatives": [
+        {
+          "policy_text": "1 Notices describe how personal information is collected, used, and shared; requests for access or deletion of personal information are handled in accordance with applicable laws. marketing and research activities must comply with enhanced data protection measures.",
+          "similarity": -2.41
+        },
+        {
+          "policy_text": "Company shall ensure compliance with individual rights regarding access, amendment, and accounting of disclosures as outlined in document SLAs.",
+          "similarity": -5.923
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0053",
+      "text": "**Individual Rights:** Access, amendment, accounting of disclosures (document SLAs).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall ensure compliance with individual rights regarding access, amendment, and accounting of disclosures as outlined in document SLAs.",
+        "similarity": 7.312
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall implement necessary controls for all uses/disclosures of data as authorized by law, consent, BAA, and marketing/research purposes, ensuring compliance with applicable regulations and industry standards.",
+          "similarity": -5.664
+        },
+        {
+          "policy_text": "Company shall comply with all applicable privacy regulations, including providing notice of data collection practices, obtaining explicit consent for data use, limiting data purposes as necessary, respecting data subjects' rights, maintaining strict retention and deletion policies, ensuring compliance through audits and training. ** This is an example of how you might write a policy clause: --- \"Company shall comply with all applicable privacy regulations, including providing notice of data collection practices, obtaining explicit consent for data use, limiting data purposes as necessary, respecting data subjects' rights, maintaining strict retention and deletion policies, ensuring compliance through audits and training.\" --- Please note that this.",
+          "similarity": -7.431
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0054",
+      "text": "**Notice of Privacy Practices (if applicable):** Published and kept current.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall publish and keep Notice of Privacy Practices current.",
+        "similarity": 6.735
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall comply with all applicable privacy regulations, including providing notice of data collection practices, obtaining explicit consent for data use, limiting data purposes as necessary, respecting data subjects' rights, maintaining strict retention and deletion policies, ensuring compliance through audits and training. ** This is an example of how you might write a policy clause: --- \"Company shall comply with all applicable privacy regulations, including providing notice of data collection practices, obtaining explicit consent for data use, limiting data purposes as necessary, respecting data subjects' rights, maintaining strict retention and deletion policies, ensuring compliance through audits and training.\" --- Please note that this.",
+          "similarity": 2.3
+        },
+        {
+          "policy_text": "1 Notices describe how personal information is collected, used, and shared; requests for access or deletion of personal information are handled in accordance with applicable laws. marketing and research activities must comply with enhanced data protection measures.",
+          "similarity": -2.634
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0055",
+      "text": "**Breach Notification:** Without unreasonable delay, **no later than 60 days** to affected individuals; notify HHS and media where required. Internal escalation **within 24 hours** of discovery. Maintain risk assessment and decision record.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Without unreasonable delay, no later than 60 days to affected individuals; notify HHS and media where required. Internal escalation within 24 hours of discovery. Maintain risk assessment and decision record.",
+        "similarity": 7.005
+      },
+      "alternatives": [
+        {
+          "policy_text": "Without reasonable delay, no later than 90 days to affected individuals; notify HHS and media as required. Internal escalation within 24 hours of discovery. Maintain risk assessment and decision records.",
+          "similarity": 5.88
+        },
+        {
+          "policy_text": "Company shall ensure all internal incidents are escalated within ≤ 24 hours; external HIPAA breach notifications will be provided within ≤ 60 days as required by law.",
+          "similarity": 1.54
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0056",
+      "text": "**Risk Analysis Workflow:** inventory → data flows → threat modeling → likelihood/impact → risk register → treatment plan.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "All employees must adhere to the Risk Analysis Workflow outlined below: 1. Conduct an inventory of all assets and vulnerabilities within their jurisdiction.",
+        "similarity": 1.724
+      },
+      "alternatives": [
+        {
+          "policy_text": "An enterprise risk analysis is conducted annually and following significant modifications. The outcomes are documented within an organized risk register, including designated stakeholders and deadlines.",
+          "similarity": -1.157
+        },
+        {
+          "policy_text": "Company shall conduct a risk analysis and management process annually to ensure compliance with all applicable laws, regulations, standards, and policies.** This policy ensures that our organization remains compliant with legal requirements by regularly assessing potential risks and implementing effective mitigation strategies. It is essential for maintaining operational integrity and protecting stakeholders' interests.",
+          "similarity": -2.634
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0057",
+      "text": "**Access Provisioning:** request → manager & data owner approval → least privilege → SSO/MFA enforced → logging.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Requesters must ensure compliance with access provisioning requirements by verifying requester identity through appropriate means before granting access to data owned by others. **Failure to comply may result in disciplinary action.** This policy clarifies the responsibilities of all parties involved in ensuring proper access control within the organization.",
+        "similarity": 0.475
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall implement unique user IDs; enforce Multi-Factor Authentication (MFA) for privileged and remote access; establish an emergency access procedure; ensure automatic logoff within ≤ 15 minutes of inactivity.",
+          "similarity": -3.29
+        },
+        {
+          "policy_text": "Enterprise Identity:** Personnel must authenticate using enterprise identity methods, such as Single Sign-On (SSO), ensuring consistency with National Institute of Standards and Technology (NIST) Special Publication 800-63 for password policies. Multi-Factor Authentication (MFA) is mandatory. **End Clause.",
+          "similarity": -5.239
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0058",
+      "text": "**Quarterly Access Reviews:** extract entitlements → owner attestation → remediation tickets → closure evidence.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Quarterly access reviews of entitlements must be conducted by authorized personnel, with owners providing attestations on compliance. Remediation actions must be documented, and all required closure evidence must be submitted for review. **Failure to comply will result in disciplinary action.",
+        "similarity": 5.819
+      },
+      "alternatives": [
+        {
+          "policy_text": "User access reviews are conducted quarterly on high-risk systems and semiannually on others; documentation of remediation is required.",
+          "similarity": -0.38
+        },
+        {
+          "policy_text": "Information Access Management (R/A):** Information should be accessed on a minimum necessary basis, with roles determining access levels, and all access authorizations and modifications documented. Periodic reviews of access controls should occur at least quarterly for high-risk systems.",
+          "similarity": -3.221
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0059",
+      "text": "**Encryption Standard:** storage classes mapped to controls; KMS/HSM; key rotation schedule; secrets management.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "3 Secrets are stored in managed vaults; direct embedding of secrets in source code is explicitly forbidden.; Encryption standard: storage classes mapped to controls; KMS/HSM; key rotation schedule; secrets management.",
+        "similarity": 6.598
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall implement encryption standards for all data storage classes, ensuring compliance with KMS/HSM requirements and adhering to a scheduled key rotation process. Additionally, Company must manage secrets effectively through robust secret management practices.",
+          "similarity": 4.802
+        },
+        {
+          "policy_text": "Company shall ensure all cryptographic operations adhere to TLS 1.2+, with TLS 1.3 being preferred for enhanced security, employing strong ciphers, maintaining a robust key management lifecycle, and utilizing Hardware Security Modules (HSMs) or Key Management Services (KMS). ** This policy ensures compliance with industry standards while enhancing data protection through advanced encryption methods and secure key management practices.",
+          "similarity": -0.41
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0060",
+      "text": "**Logging & Monitoring:** define events; retention ≥ **1 year online**; alerting playbooks.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Events should be logged; logs should retain for at least 1 year online; alerts should trigger based on defined playbook rules.",
+        "similarity": 4.321
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall centralize logs, detect anomalies, implement runbook alerts, and maintain retention of logs for at least 1 year online, with longer retention as required.",
+          "similarity": 2.241
+        },
+        {
+          "policy_text": "1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date.",
+          "similarity": -2.587
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0061",
+      "text": "**Incident Response:** detect → contain → eradicate → recover → lessons learned; tabletop **biannually**.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall conduct incident response drills biannually to ensure detection, containment, eradication, recovery, and learning from incidents.** This policy ensures that all employees understand their roles during an incident by participating in these drills, which is crucial for maintaining operational continuity and minimizing damage. The frequency of these drills aligns with industry best practices, providing regular opportunities for improvement and preparedness.",
+        "similarity": 2.1
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 The incident team performs triage, containment, eradication, and recovery, and documents lessons learned.",
+          "similarity": -1.581
+        },
+        {
+          "policy_text": "Incident Response:** SOC (Risk), CISO (Audit), PO (Breach), IT/Engineering (Review), Legal (Consultation), Communications (Notification).",
+          "similarity": -3.353
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0062",
+      "text": "**Backup/DR:** nightly backups; offsite copies; quarterly restore tests; annual DR test.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall implement nightly backups, maintain offsite copies, conduct quarterly restore tests, and annually perform disaster recovery testing.",
+        "similarity": 5.809
+      },
+      "alternatives": [
+        {
+          "policy_text": "Restore procedures are tested monthly; results and defects are tracked for 6 months; quarterly restore tests are conducted; annual DR testing includes recovery drills.",
+          "similarity": 2.821
+        },
+        {
+          "policy_text": "Company shall encrypt backups and conduct quarterly tests of encryption capabilities; backups shall be retained according to the data retention policy.",
+          "similarity": -1.05
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0063",
+      "text": "**KPIs:** access review completion %, median time-to-revoke (hrs), vuln remediation SLA compliance %, backup restore success rate, incident MTTR, training completion %.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Company shall ensure adherence to all KPIs specified above for continuous improvement and regulatory compliance.",
+        "similarity": -5.447
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall ensure compliance with all KPIs specified above.",
+          "similarity": -5.463
+        },
+        {
+          "policy_text": "Incident Response:** SOC (Risk), CISO (Audit), PO (Breach), IT/Engineering (Review), Legal (Consultation), Communications (Notification).",
+          "similarity": -7.65
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0064",
+      "text": "**Evidence:** risk assessments, BAA inventory, access review exports, SIEM dashboards, IR tickets, backup test logs, DR reports, training rosters.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "All employees and contractors must comply with all specified compliance requirements including but not limited to risk analyses, BAA lists, training logs, SIEM exports, access reviews, incident response (IR) tickets, backup/DR reports, encryption/key management system (KMS) configurations, vendor risk files, change approval processes, static application security testing (SAST)/dynamic application security testing (DAST) pipelines, data classification registries, privacy notices, and requests, as well as any other relevant regulatory or contractual obligations. **END OF POLICY CLAUSE.",
+        "similarity": 4.05
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall maintain an evidence library including but not limited to policies, org charts, risk registers, asset inventories, access reviews, SIEM dashboards, incident response (IR) tickets, change logs, project pipeline results, vendor evaluations, disaster recovery (DR) reports, backup logs, and employee training records for audit purposes.",
+          "similarity": 3.49
+        },
+        {
+          "policy_text": "Company shall conduct regular risk assessments to identify, analyze, and mitigate risks including fraud.",
+          "similarity": -5.453
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0065",
+      "text": "**§164.308(a)(1)** Risk Analysis/Management → [A4‑1].",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall conduct a risk analysis and management process annually to ensure compliance with all applicable laws, regulations, standards, and policies.** This policy ensures that our organization remains compliant with legal requirements by regularly assessing potential risks and implementing effective mitigation strategies. It is essential for maintaining operational integrity and protecting stakeholders' interests.",
+        "similarity": 1.71
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall conduct regular risk assessments to identify, analyze, and mitigate risks including fraud.",
+          "similarity": -2.166
+        },
+        {
+          "policy_text": "All employees must adhere to the Risk Analysis Workflow outlined below: 1. Conduct an inventory of all assets and vulnerabilities within their jurisdiction.",
+          "similarity": -2.33
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0066",
+      "text": "**§164.308(a)(5)** Security Awareness/Training → [A4‑5].",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall provide security awareness training annually to all employees on their roles and responsibilities regarding data protection and cybersecurity measures.** This policy ensures compliance with §164.308(a)(5) of the Health Insurance Portability and Accountability Act (HIPAA). Employees must understand their role in protecting sensitive information and implementing necessary cybersecurity protocols.",
+        "similarity": 6.491
+      },
+      "alternatives": [
+        {
+          "policy_text": "Onboarding for new hires and annual refresher training in security and privacy principles must be completed by all personnel.",
+          "similarity": -4.576
+        },
+        {
+          "policy_text": "Company shall implement robust security measures to prevent, detect, respond to, and mitigate any attempted or successful unauthorized access, use, disclosure, modification, or destruction of data. We must ensure compliance with all relevant laws, regulations, and industry standards related to cybersecurity.",
+          "similarity": -6.957
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0067",
+      "text": "**§164.308(a)(7)** Contingency Plan → [A4‑7].",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Company shall maintain an up-to-date contingency plan for all critical systems and operations, ensuring redundancy and failover capabilities.** This policy ensures that our business continuity is robust against unforeseen disruptions, safeguarding data integrity and operational efficiency.",
+        "similarity": -0.001
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall maintain a comprehensive contingency plan for data backup, disaster recovery, and emergency mode operations to ensure business continuity and minimize downtime. **[Auditable]** --- This policy ensures all employees understand their roles in maintaining this plan and adhere to its requirements.",
+          "similarity": -0.843
+        },
+        {
+          "policy_text": "Company shall ensure that all business continuity and disaster recovery plans are documented, regularly tested annually, and include quarterly backups for data restoration. To summarize this requirement concisely: \"Business Continuity & Disaster Recovery Plans must be documented, annually tested, and include quarterly backups.\" This concise policy clause captures the essence of the compliance requirement while maintaining clarity and readability.",
+          "similarity": -7.073
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0068",
+      "text": "Establish controls to meet SOC 2 **Trust Services Criteria (TSC)** for **Security (Common Criteria)**, with optional categories **Availability, Confidentiality, Processing Integrity, Privacy** as in scope for `<CompanyName>`.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall establish controls to meet SOC 2 Trust Services Criteria (TSC) for Security (Common Criteria), with optional categories Availability, Confidentiality, Processing Integrity, Privacy as in scope for <CompanyName>.",
+        "similarity": 9.088
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall establish and maintain a comprehensive HIPAA-compliant infrastructure with SOC 2 attestation assurance, ensuring all data is protected according to applicable regulations and industry standards. We must adhere strictly to these guidelines, conduct regular audits, and retain records as required by law.",
+          "similarity": -2.025
+        },
+        {
+          "policy_text": "Company shall implement security questionnaires, conduct SOC report reviews, comply with BAA/DPA requirements, engage in continuous monitoring, and ensure timely return or deletion of terminated data.",
+          "similarity": -5.206
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0069",
+      "text": "**Control Environment (CC1):** ethics, governance, structure, authority/responsibility.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall maintain an ethical culture, adhere to governance principles, establish clear structures, and assign appropriate authorities and responsibilities to ensure compliance with all relevant laws, regulations, and industry standards. **(CC1)** --- This policy ensures that every employee understands their role in upholding integrity and contributing to a fair workplace environment.",
+        "similarity": 4.578
+      },
+      "alternatives": [
+        {
+          "policy_text": "The objectives are to maintain control over the environment, ensuring ethical practices, governance compliance, structured operations, clear authority-responsibility delineation, and safeguarding sensitive data.",
+          "similarity": 3.802
+        },
+        {
+          "policy_text": "Company shall ensure adherence to all governance, ethics, and role-related compliance requirements outlined in CC1.0 through CC1.5. We must maintain transparency and accountability throughout our operations.",
+          "similarity": 0.831
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0070",
+      "text": "**Communication & Information (CC2):** internal/external communication supports control operation.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Internal/external communication supports control operations. **(CC2)** --- ### Policy Clause: Internal/external communication supports control operations.",
+        "similarity": 8.714
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall ensure all access/network/endpoint activities comply with CC6.x requirements.** This policy ensures that all access, network, and endpoint activities within our organization adhere to the specified compliance standards outlined in **CC6.x**, ensuring data security and regulatory adherence. All employees must follow these guidelines to maintain a secure environment for both internal and external systems.",
+          "similarity": -1.66
+        },
+        {
+          "policy_text": "Company shall implement and maintain control activities as outlined in CC4 to ensure compliance with relevant regulations and standards. **We must adhere strictly to these requirements.",
+          "similarity": -1.996
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0071",
+      "text": "**Risk Assessment (CC3):** objectives, identification & analysis of risks (including fraud).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall conduct regular risk assessments to identify, analyze, and mitigate risks including fraud.",
+        "similarity": 4.883
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall conduct a risk analysis and management process annually to ensure compliance with all applicable laws, regulations, standards, and policies.** This policy ensures that our organization remains compliant with legal requirements by regularly assessing potential risks and implementing effective mitigation strategies. It is essential for maintaining operational integrity and protecting stakeholders' interests.",
+          "similarity": 0.706
+        },
+        {
+          "policy_text": "An enterprise risk analysis is conducted annually and following significant modifications. The outcomes are documented within an organized risk register, including designated stakeholders and deadlines.",
+          "similarity": -1.088
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0072",
+      "text": "**Control Activities (CC4):** policies/procedures, technology controls, change mgmt.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall ensure compliance with CC4.x by implementing appropriate control activities and following the Software Development Life Cycle (SDLC).** This policy ensures all software development processes adhere to established guidelines and standards, enhancing security and reliability. **Failure to comply will result in disciplinary action as per Company Policy 5.2.** --- **Policy Title:** Compliance with CC4.x **Effective Date:** [Insert Effective Date] **Last Updated:** [Insert Last Update Date].",
+        "similarity": 3.887
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall implement and maintain control activities as outlined in CC4 to ensure compliance with relevant regulations and standards. **We must adhere strictly to these requirements.",
+          "similarity": 2.973
+        },
+        {
+          "policy_text": "Company shall ensure adherence to Change Management (CC8) guidelines for all software development lifecycle activities, including but not limited to securing changes through proper approval processes, thorough testing, and maintaining clear separation of duties among team members involved in change management tasks. **[Auditable]** --- This policy ensures accountability and compliance with established procedures across all aspects of change management within the organization.",
+          "similarity": 1.936
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0073",
+      "text": "**Logical & Physical Access (CC6):** provisioning, authN/Z, MFA, network security, endpoint.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Logical & Physical Access (CC6):** All employees and contractors must comply with all provisions of this section regarding logical access controls, physical access controls, authentication methods, multi-factor authentication requirements, and network and endpoint security measures as outlined by CC6. **(End of Policy Clause)** --- This policy ensures that all aspects of logical and physical access are managed securely, including but not limited to: 1.",
+        "similarity": 5.874
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall ensure all access/network/endpoint activities comply with CC6.x requirements.** This policy ensures that all access, network, and endpoint activities within our organization adhere to the specified compliance standards outlined in **CC6.x**, ensuring data security and regulatory adherence. All employees must follow these guidelines to maintain a secure environment for both internal and external systems.",
+          "similarity": 2.021
+        },
+        {
+          "policy_text": "Company shall implement unique user IDs; enforce Multi-Factor Authentication (MFA) for privileged and remote access; establish an emergency access procedure; ensure automatic logoff within ≤ 15 minutes of inactivity.",
+          "similarity": -5.876
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0074",
+      "text": "**System Operations (CC7):** vuln mgmt, malware protection, logging/monitoring, incident response.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall ensure compliance with CC7.x by implementing robust vulnerability management processes, maintaining comprehensive logging practices, and promptly addressing any incidents through Incident Response procedures.** This policy ensures all operations adhere to the specified requirements for security and incident handling. It mandates adherence to CC7.x standards across all departments, emphasizing vigilance in managing vulnerabilities, securing logs, and responding swiftly to breaches.",
+        "similarity": 4.822
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall implement robust system operations procedures including but not limited to vulnerability management, malware protection, comprehensive logging and monitoring, and immediate incident response protocols to ensure the security of all systems and data. We must adhere strictly to these requirements at all times.",
+          "similarity": 4.58
+        },
+        {
+          "policy_text": "Incident Response:** SOC (Risk), CISO (Audit), PO (Breach), IT/Engineering (Review), Legal (Consultation), Communications (Notification).",
+          "similarity": -3.384
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0075",
+      "text": "**Change Management (CC8):** secure SDLC, approvals, testing, separation of duties.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall ensure adherence to Change Management (CC8) guidelines for all software development lifecycle activities, including but not limited to securing changes through proper approval processes, thorough testing, and maintaining clear separation of duties among team members involved in change management tasks. **[Auditable]** --- This policy ensures accountability and compliance with established procedures across all aspects of change management within the organization.",
+        "similarity": 6.891
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall adhere strictly to all change management procedures outlined by the Change Control Board (CAB), ensuring thorough review and approval processes for both high-risk changes and emergency changes following a comprehensive review. Additionally, it is imperative that any separation of duties be meticulously planned and executed to maintain operational integrity.",
+          "similarity": 2.842
+        },
+        {
+          "policy_text": "Engineering / SDLC Owners:** Company shall ensure all engineering designs, source code, and software components undergo secure coding practices, adhere to strict change controls, implement continuous integration and delivery processes, and utilize robust secret management systems. **All stakeholders involved in development, testing, deployment, and maintenance of applications and services must comply with these requirements.",
+          "similarity": 0.929
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0076",
+      "text": "**Vendor/Third Parties (CC9):** selection, onboarding, monitoring, offboarding.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Vendor/Third Parties (CC9):** All vendors and third parties must comply with all applicable laws, regulations, and policies of the Company during their engagement with us. This includes selecting qualified partners based on criteria such as security standards, data protection measures, and ethical business practices.",
+        "similarity": 4.161
+      },
+      "alternatives": [
+        {
+          "policy_text": "Onboarding for new hires and annual refresher training in security and privacy principles must be completed by all personnel.",
+          "similarity": -6.468
+        },
+        {
+          "policy_text": "Company shall implement and maintain control activities as outlined in CC4 to ensure compliance with relevant regulations and standards. **We must adhere strictly to these requirements.",
+          "similarity": -6.723
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0077",
+      "text": "*1) Governance & Policy Management.** Code of Conduct; info security policy suite; annual reviews; leadership sign-off.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall ensure adherence to all governance and policy management requirements outlined above by conducting regular code of conduct training for employees annually, reviewing policies at least once every two years with senior leadership's approval before implementation. ** This policy ensures compliance with established guidelines while maintaining flexibility through periodic review processes.",
+        "similarity": 2.824
+      },
+      "alternatives": [
+        {
+          "policy_text": "Information Access Management (R/A):** Information should be accessed on a minimum necessary basis, with roles determining access levels, and all access authorizations and modifications documented. Periodic reviews of access controls should occur at least quarterly for high-risk systems.",
+          "similarity": -6.655
+        },
+        {
+          "policy_text": "Company shall implement security questionnaires, conduct SOC report reviews, comply with BAA/DPA requirements, engage in continuous monitoring, and ensure timely return or deletion of terminated data.",
+          "similarity": -6.826
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0078",
+      "text": "*2) Risk Management.** Enterprise and product risks tracked; threat intel; risk appetite; treatment SLAs.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall track enterprise and product risks, maintain threat intelligence, establish a risk appetite, and ensure Treatment SLAs are adhered to.",
+        "similarity": 5.519
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall conduct a risk analysis and management process annually to ensure compliance with all applicable laws, regulations, standards, and policies.** This policy ensures that our organization remains compliant with legal requirements by regularly assessing potential risks and implementing effective mitigation strategies. It is essential for maintaining operational integrity and protecting stakeholders' interests.",
+          "similarity": -4.679
+        },
+        {
+          "policy_text": "Company shall set the tone at the top, oversee risk management, and approve this policy suite.",
+          "similarity": -5.711
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0079",
+      "text": "*3) Asset & Data Classification.** Inventories; data classes; handling rules; labels.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "1 Data is categorized (e.g., Public, Internal, Confidential, Restricted/ePHI). Handling rules specify storage, sharing, and disposal requirements.",
+        "similarity": 1.685
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall maintain an evidence library including but not limited to policies, org charts, risk registers, asset inventories, access reviews, SIEM dashboards, incident response (IR) tickets, change logs, project pipeline results, vendor evaluations, disaster recovery (DR) reports, backup logs, and employee training records for audit purposes.",
+          "similarity": -6.532
+        },
+        {
+          "policy_text": "Company shall implement necessary controls for all uses/disclosures of data as authorized by law, consent, BAA, and marketing/research purposes, ensuring compliance with applicable regulations and industry standards.",
+          "similarity": -8.716
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0080",
+      "text": "*4) Access Control.** RBAC; JIT/JEA where possible; SSO; **MFA**; quarterly access reviews; privileged access monitoring.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall implement robust access control measures including Role-Based Access Control (RBAC), Just-In-Time/Just-In-Event Authorization (JIT/JEA) where feasible, Single Sign-On (SSO), Multi-Factor Authentication (MFA), and conduct quarterly access reviews with privileged access monitoring. Note: The original requirement was quite detailed, so I've condensed it while maintaining clarity and compliance requirements.",
+        "similarity": 5.59
+      },
+      "alternatives": [
+        {
+          "policy_text": "Enforcement of **Minimum Necessary** is achieved through Role-Based Access Control (RBAC) and established procedures.",
+          "similarity": -0.857
+        },
+        {
+          "policy_text": "1 Implement technical controls for access management including least-privilege principle.",
+          "similarity": -5.899
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0081",
+      "text": "*5) Network Security.** Segmentation; least-route; firewall rules reviewed **semiannually**; secure remote access (VPN/ZTNA).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall review and update network segmentation, least route policies, and firewall rules at least semiannually for security compliance. Additionally, ensure secure remote access through a reliable VPN or Zero Trust Network Access (ZTNA).",
+        "similarity": 6.276
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall ensure all access/network/endpoint activities comply with CC6.x requirements.** This policy ensures that all access, network, and endpoint activities within our organization adhere to the specified compliance standards outlined in **CC6.x**, ensuring data security and regulatory adherence. All employees must follow these guidelines to maintain a secure environment for both internal and external systems.",
+          "similarity": -5.4
+        },
+        {
+          "policy_text": "Enforcement of **Minimum Necessary** is achieved through Role-Based Access Control (RBAC) and established procedures.",
+          "similarity": -7.172
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0082",
+      "text": "*6) Endpoint Security.** EDR/AV; full-disk encryption; secure baseline; patch SLAs (critical ≤ **7 days**).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall implement endpoint security measures including EDR/AV, full-disk encryption, secure baseline configuration, and adhere to patch SLAs with critical updates completed within 7 business days.",
+        "similarity": 5.677
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall implement encryption at rest/in transit, manage keys securely, enforce Data Loss Prevention (DLP), ensure confidential data is disposed of securely, and require Non-Disclosure Agreements (NDAs) for accessing confidential data. ** This policy ensures compliance with all confidentiality requirements outlined above.",
+          "similarity": -7.475
+        },
+        {
+          "policy_text": "Company shall implement encryption standards for all data storage classes, ensuring compliance with KMS/HSM requirements and adhering to a scheduled key rotation process. Additionally, Company must manage secrets effectively through robust secret management practices.",
+          "similarity": -7.516
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0083",
+      "text": "*7) Logging & Monitoring.** Centralize logs; detect anomalies; alerting runbooks; retention ≥ **1 year** online (longer if required).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall centralize logs, detect anomalies, implement runbook alerts, and maintain retention of logs for at least 1 year online, with longer retention as required.",
+        "similarity": 5.243
+      },
+      "alternatives": [
+        {
+          "policy_text": "Events should be logged; logs should retain for at least 1 year online; alerts should trigger based on defined playbook rules.",
+          "similarity": -1.872
+        },
+        {
+          "policy_text": "2 Logs are retained for at least 365 days, with restricted access and tamper-resistant storage for critical systems; centralized logging; immutable storage for critical logs; SIEM correlation; time sync (NTP).",
+          "similarity": -3.422
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0084",
+      "text": "*8) Vulnerability & Patch Management.** Continuous scanning; risk‑based remediation; exceptions with expiry.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall implement continuous vulnerability scanning and apply risk-based remediation measures for all systems, ensuring timely resolution of identified issues. Exceptions to this policy may be granted upon approval by senior management and will have an expiration date.",
+        "similarity": 5.118
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Code changes are scanned for known weaknesses; high-risk issues are remediated before release or tracked with an approved exception; integrity measures include hashing/signing where applicable; change detection; anti-tamper techniques.",
+          "similarity": -3.654
+        },
+        {
+          "policy_text": "Company shall ensure compliance with CC7.x by implementing robust vulnerability management processes, maintaining comprehensive logging practices, and promptly addressing any incidents through Incident Response procedures.** This policy ensures all operations adhere to the specified requirements for security and incident handling. It mandates adherence to CC7.x standards across all departments, emphasizing vigilance in managing vulnerabilities, securing logs, and responding swiftly to breaches.",
+          "similarity": -4.359
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0085",
+      "text": "*9) Secure SDLC.** Design reviews; threat modeling; SAST/DAST/dep scanning; code review; secrets scanning; release approvals; changelogs.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall implement and maintain secure Software Development Lifecycle (SDLC), including but not limited to design reviews, threat modeling, static application security testing (SAST)/dynamic application security testing (DAST)/dependency scanning, code review, secrets scanning, release approval processes, and change log management. ** This policy ensures compliance with industry standards and best practices for software development security.",
+        "similarity": 5.901
+      },
+      "alternatives": [
+        {
+          "policy_text": "The security team conducts design reviews, threat modeling, static application security testing (SAST), dynamic application security testing (DAST), dependency scanning, code reviews, secret scanning, release approval processes, and maintains changelog records.",
+          "similarity": 3.571
+        },
+        {
+          "policy_text": "3 Engineering/SDLC owners ensure secure design, code review, CI/CD, change control, and secrets management for their systems.",
+          "similarity": 1.454
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0086",
+      "text": "*10) Change Management.** CAB or change approvals for high‑risk; emergency change post‑review; separation of duties.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall adhere strictly to all change management procedures outlined by the Change Control Board (CAB), ensuring thorough review and approval processes for both high-risk changes and emergency changes following a comprehensive review. Additionally, it is imperative that any separation of duties be meticulously planned and executed to maintain operational integrity.",
+        "similarity": 6.215
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall ensure adherence to Change Management (CC8) guidelines for all software development lifecycle activities, including but not limited to securing changes through proper approval processes, thorough testing, and maintaining clear separation of duties among team members involved in change management tasks. **[Auditable]** --- This policy ensures accountability and compliance with established procedures across all aspects of change management within the organization.",
+          "similarity": 1.224
+        },
+        {
+          "policy_text": "1 Changes to production services must undergo a formal Change Management process that includes peer reviews and approvals by authorized personnel based on the potential impact and risks associated with the changes.",
+          "similarity": -0.565
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0087",
+      "text": "*11) Cryptography.** TLS 1.2+; TLS 1.3 preferred; strong ciphers; key management lifecycle; HSM/KMS.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall ensure all cryptographic operations adhere to TLS 1.2+, with TLS 1.3 being preferred for enhanced security, employing strong ciphers, maintaining a robust key management lifecycle, and utilizing Hardware Security Modules (HSMs) or Key Management Services (KMS). ** This policy ensures compliance with industry standards while enhancing data protection through advanced encryption methods and secure key management practices.",
+        "similarity": 6.548
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall implement encryption at rest using AES-256; for data in transit, we must use TLS 1.2+ (TLS 1.3 is preferred).",
+          "similarity": 2.054
+        },
+        {
+          "policy_text": "Company shall ensure all electronic Protected Health Information is encrypted at rest using AES-256 or an equivalent standard, and in transit using TLS 1.2 or higher with TLS 1.3 being preferred for security reasons. Key management documentation will be maintained.",
+          "similarity": 0.058
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0088",
+      "text": "*12) Business Continuity & DR (Availability).** RTO/RPO documented; tested **annually**; backup strategy with quarterly restores.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall ensure that all business continuity and disaster recovery plans are documented, regularly tested annually, and include quarterly backups for data restoration. To summarize this requirement concisely: \"Business Continuity & Disaster Recovery Plans must be documented, annually tested, and include quarterly backups.\" This concise policy clause captures the essence of the compliance requirement while maintaining clarity and readability.",
+        "similarity": 3.536
+      },
+      "alternatives": [
+        {
+          "policy_text": "3 Disaster recovery objectives (RTO/RPO) are defined for critical services and validated through an annual exercise.",
+          "similarity": -2.32
+        },
+        {
+          "policy_text": "Company shall implement nightly backups, maintain offsite copies, conduct quarterly restore tests, and annually perform disaster recovery testing.",
+          "similarity": -3.481
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0089",
+      "text": "*13) Confidentiality.** Encryption at rest/in transit; key mgmt; DLP; secure disposal; NDA for confidential data access.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall implement encryption at rest/in transit, manage keys securely, enforce Data Loss Prevention (DLP), ensure confidential data is disposed of securely, and require Non-Disclosure Agreements (NDAs) for accessing confidential data. ** This policy ensures compliance with all confidentiality requirements outlined above.",
+        "similarity": 5.02
+      },
+      "alternatives": [
+        {
+          "policy_text": "1 Production data is backed up regularly and encrypted in storage and transit to the backup repository; encryption keys are managed securely; data loss prevention (DLP) measures are implemented to detect and prevent unauthorized access to sensitive information; data is securely disposed of after its lifecycle has ended; all users who have access to confidential data sign non-disclosure agreements (NDAs). backups are tested quarterly and retained per data retention policy.",
+          "similarity": 1.208
+        },
+        {
+          "policy_text": "All production databases and file stores containing sensitive data are encrypted at rest using strong, industry-accepted algorithms through secure transmission protocols and certificate management practices.",
+          "similarity": -5.542
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0090",
+      "text": "*14) Processing Integrity.** Input validation; reconciliation; QA gates; error handling/playbacks; rollback procedures.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall implement input validation, perform reconciliations, utilize QA gates, employ error handling and playback mechanisms, and establish rollback procedures for processing integrity. Note: The term \"Processing Integrity\" is used as per the original requirement.",
+        "similarity": 6.006
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Code changes are scanned for known weaknesses; high-risk issues are remediated before release or tracked with an approved exception; integrity measures include hashing/signing where applicable; change detection; anti-tamper techniques.",
+          "similarity": -8.268
+        },
+        {
+          "policy_text": "Company shall implement robust system operations procedures including but not limited to vulnerability management, malware protection, comprehensive logging and monitoring, and immediate incident response protocols to ensure the security of all systems and data. We must adhere strictly to these requirements at all times.",
+          "similarity": -9.873
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0091",
+      "text": "*15) Privacy (if in scope).** Notice, choice/consent, purpose limitation, data subject rights, retention/deletion standards.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall comply with all applicable privacy regulations, including providing notice of data collection practices, obtaining explicit consent for data use, limiting data purposes as necessary, respecting data subjects' rights, maintaining strict retention and deletion policies, ensuring compliance through audits and training. ** This is an example of how you might write a policy clause: --- \"Company shall comply with all applicable privacy regulations, including providing notice of data collection practices, obtaining explicit consent for data use, limiting data purposes as necessary, respecting data subjects' rights, maintaining strict retention and deletion policies, ensuring compliance through audits and training.\" --- Please note that this.",
+        "similarity": 1.548
+      },
+      "alternatives": [
+        {
+          "policy_text": "1 Notices describe how personal information is collected, used, and shared; requests for access or deletion of personal information are handled in accordance with applicable laws. marketing and research activities must comply with enhanced data protection measures.",
+          "similarity": -4.591
+        },
+        {
+          "policy_text": "Company shall implement necessary controls for all uses/disclosures of data as authorized by law, consent, BAA, and marketing/research purposes, ensuring compliance with applicable regulations and industry standards.",
+          "similarity": -5.069
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0092",
+      "text": "*16) Third‑Party Risk.** Security questionnaires, SOC reports review, **BAA/DPA** as applicable; continuous monitoring; termination data return/delete.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall implement security questionnaires, conduct SOC report reviews, comply with BAA/DPA requirements, engage in continuous monitoring, and ensure timely return or deletion of terminated data.",
+        "similarity": 2.091
+      },
+      "alternatives": [
+        {
+          "policy_text": "Incident Response:** SOC (Risk), CISO (Audit), PO (Breach), IT/Engineering (Review), Legal (Consultation), Communications (Notification).",
+          "similarity": -2.439
+        },
+        {
+          "policy_text": "All employees and contractors must comply with all specified compliance requirements including but not limited to risk analyses, BAA lists, training logs, SIEM exports, access reviews, incident response (IR) tickets, backup/DR reports, encryption/key management system (KMS) configurations, vendor risk files, change approval processes, static application security testing (SAST)/dynamic application security testing (DAST) pipelines, data classification registries, privacy notices, and requests, as well as any other relevant regulatory or contractual obligations. **END OF POLICY CLAUSE.",
+          "similarity": -5.075
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0093",
+      "text": "**Evidence Library:** policies, org chart, risk register, asset inventories, access reviews, SIEM dashboards, IR tickets, change logs, pipeline results, vendor reviews, DR reports, backup logs, training records.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall maintain an evidence library including but not limited to policies, org charts, risk registers, asset inventories, access reviews, SIEM dashboards, incident response (IR) tickets, change logs, project pipeline results, vendor evaluations, disaster recovery (DR) reports, backup logs, and employee training records for audit purposes.",
+        "similarity": 6.066
+      },
+      "alternatives": [
+        {
+          "policy_text": "Incident Response:** SOC (Risk), CISO (Audit), PO (Breach), IT/Engineering (Review), Legal (Consultation), Communications (Notification).",
+          "similarity": -7.541
+        },
+        {
+          "policy_text": "Centralized logging; immutable storage for critical logs; SIEM correlation; time sync (NTP). **Compliance Requirement:** Company shall implement audit controls as outlined above.",
+          "similarity": -7.905
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0094",
+      "text": "**KPIs:** vuln SLA adherence %, patch latency, access review completion %, incident MTTR, failed login trends, DR test success rate, vendor review completion %.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "Company shall ensure adherence to all KPIs specified above for continuous improvement and regulatory compliance.",
+        "similarity": -3.353
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall ensure compliance with all KPIs specified above.",
+          "similarity": -5.17
+        },
+        {
+          "policy_text": "Incident Response:** SOC (Risk), CISO (Audit), PO (Breach), IT/Engineering (Review), Legal (Consultation), Communications (Notification).",
+          "similarity": -6.563
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0095",
+      "text": "**Internal Audit / QA:** planned audits each quarter; issues tracked to closure with owners and due dates.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Internal Audit/QA: Planned quarterly audits; issues tracked for closure with owners and due dates.",
+        "similarity": 7.227
+      },
+      "alternatives": [
+        {
+          "policy_text": "Quarterly access reviews of entitlements must be conducted by authorized personnel, with owners providing attestations on compliance. Remediation actions must be documented, and all required closure evidence must be submitted for review. **Failure to comply will result in disciplinary action.",
+          "similarity": -4.786
+        },
+        {
+          "policy_text": "Centralized logging; immutable storage for critical logs; SIEM correlation; time sync (NTP). **Compliance Requirement:** Company shall implement audit controls as outlined above.",
+          "similarity": -8.788
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0096",
+      "text": "**CC1.0–CC1.5** → Governance, ethics, roles ([B3‑1]).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall ensure adherence to all governance, ethics, and role-related compliance requirements outlined in CC1.0 through CC1.5. We must maintain transparency and accountability throughout our operations.",
+        "similarity": 5.427
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall maintain an ethical culture, adhere to governance principles, establish clear structures, and assign appropriate authorities and responsibilities to ensure compliance with all relevant laws, regulations, and industry standards. **(CC1)** --- This policy ensures that every employee understands their role in upholding integrity and contributing to a fair workplace environment.",
+          "similarity": 3.772
+        },
+        {
+          "policy_text": "The objectives are to maintain control over the environment, ensuring ethical practices, governance compliance, structured operations, clear authority-responsibility delineation, and safeguarding sensitive data.",
+          "similarity": -2.852
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0097",
+      "text": "**CC2.0** → Communication & awareness (5. Training).",
+      "label": "garbage",
+      "best_match": {
+        "policy_text": "Internal/external communication supports control operations. **(CC2)** --- ### Policy Clause: Internal/external communication supports control operations.",
+        "similarity": -0.255
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall ensure adherence to all governance, ethics, and role-related compliance requirements outlined in CC1.0 through CC1.5. We must maintain transparency and accountability throughout our operations.",
+          "similarity": -2.35
+        },
+        {
+          "policy_text": "Company shall ensure all access/network/endpoint activities comply with CC6.x requirements.** This policy ensures that all access, network, and endpoint activities within our organization adhere to the specified compliance standards outlined in **CC6.x**, ensuring data security and regulatory adherence. All employees must follow these guidelines to maintain a secure environment for both internal and external systems.",
+          "similarity": -4.78
+        }
+      ],
+      "rationale": "Short/heading-like text (no actionable requirement).",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0098",
+      "text": "**CC4.x** → Control activities & SDLC ([B3‑9], [B3‑10]).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall ensure compliance with CC4.x by implementing appropriate control activities and following the Software Development Life Cycle (SDLC).** This policy ensures all software development processes adhere to established guidelines and standards, enhancing security and reliability. **Failure to comply will result in disciplinary action as per Company Policy 5.2.** --- **Policy Title:** Compliance with CC4.x **Effective Date:** [Insert Effective Date] **Last Updated:** [Insert Last Update Date].",
+        "similarity": 5.363
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall implement and maintain control activities as outlined in CC4 to ensure compliance with relevant regulations and standards. **We must adhere strictly to these requirements.",
+          "similarity": 3.317
+        },
+        {
+          "policy_text": "Internal/external communication supports control operations. **(CC2)** --- ### Policy Clause: Internal/external communication supports control operations.",
+          "similarity": 0.251
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0099",
+      "text": "**CC6.x** → Access/network/endpoint ([B3‑4]–[B3‑6]).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall ensure all access/network/endpoint activities comply with CC6.x requirements.** This policy ensures that all access, network, and endpoint activities within our organization adhere to the specified compliance standards outlined in **CC6.x**, ensuring data security and regulatory adherence. All employees must follow these guidelines to maintain a secure environment for both internal and external systems.",
+        "similarity": 5.884
+      },
+      "alternatives": [
+        {
+          "policy_text": "Logical & Physical Access (CC6):** All employees and contractors must comply with all provisions of this section regarding logical access controls, physical access controls, authentication methods, multi-factor authentication requirements, and network and endpoint security measures as outlined by CC6. **(End of Policy Clause)** --- This policy ensures that all aspects of logical and physical access are managed securely, including but not limited to: 1.",
+          "similarity": 3.439
+        },
+        {
+          "policy_text": "Company shall ensure compliance with CC4.x by implementing appropriate control activities and following the Software Development Life Cycle (SDLC).** This policy ensures all software development processes adhere to established guidelines and standards, enhancing security and reliability. **Failure to comply will result in disciplinary action as per Company Policy 5.2.** --- **Policy Title:** Compliance with CC4.x **Effective Date:** [Insert Effective Date] **Last Updated:** [Insert Last Update Date].",
+          "similarity": -2.583
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0100",
+      "text": "**CC7.x** → Ops, vuln mgmt, logging, IR ([B3‑7], [B3‑8]).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall ensure compliance with CC7.x by implementing robust vulnerability management processes, maintaining comprehensive logging practices, and promptly addressing any incidents through Incident Response procedures.** This policy ensures all operations adhere to the specified requirements for security and incident handling. It mandates adherence to CC7.x standards across all departments, emphasizing vigilance in managing vulnerabilities, securing logs, and responding swiftly to breaches.",
+        "similarity": 2.414
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall ensure all access/network/endpoint activities comply with CC6.x requirements.** This policy ensures that all access, network, and endpoint activities within our organization adhere to the specified compliance standards outlined in **CC6.x**, ensuring data security and regulatory adherence. All employees must follow these guidelines to maintain a secure environment for both internal and external systems.",
+          "similarity": -4.468
+        },
+        {
+          "policy_text": "Company shall ensure compliance with CC4.x by implementing appropriate control activities and following the Software Development Life Cycle (SDLC).** This policy ensures all software development processes adhere to established guidelines and standards, enhancing security and reliability. **Failure to comply will result in disciplinary action as per Company Policy 5.2.** --- **Policy Title:** Compliance with CC4.x **Effective Date:** [Insert Effective Date] **Last Updated:** [Insert Last Update Date].",
+          "similarity": -4.919
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0101",
+      "text": "**Request:** Submit exception with control, justification, risk assessment, compensating controls, expiry date.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Submit exceptions for approval with supporting documentation including control measures, justification, risk assessment, compensating controls, and an expiry date. **(Auditable)** This policy ensures compliance by requiring all requests for exceptions to be accompanied by detailed justifications, risk assessments, and documented mitigations.",
+        "similarity": 8.017
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall implement continuous vulnerability scanning and apply risk-based remediation measures for all systems, ensuring timely resolution of identified issues. Exceptions to this policy may be granted upon approval by senior management and will have an expiration date.",
+          "similarity": -3.357
+        },
+        {
+          "policy_text": "Requesters must ensure compliance with access provisioning requirements by verifying requester identity through appropriate means before granting access to data owned by others. **Failure to comply may result in disciplinary action.** This policy clarifies the responsibilities of all parties involved in ensuring proper access control within the organization.",
+          "similarity": -5.927
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0102",
+      "text": "**Limits:** High‑risk exceptions require executive approval; maximum initial term **90 days**, renewals require updated risk analysis.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "High-risk exceptions must be approved by executive management before implementation; all renewal terms must include an updated risk assessment.",
+        "similarity": 5.464
+      },
+      "alternatives": [
+        {
+          "policy_text": "Submit exceptions for approval with supporting documentation including control measures, justification, risk assessment, compensating controls, and an expiry date. **(Auditable)** This policy ensures compliance by requiring all requests for exceptions to be accompanied by detailed justifications, risk assessments, and documented mitigations.",
+          "similarity": -0.738
+        },
+        {
+          "policy_text": "Company shall implement continuous vulnerability scanning and apply risk-based remediation measures for all systems, ensuring timely resolution of identified issues. Exceptions to this policy may be granted upon approval by senior management and will have an expiration date.",
+          "similarity": -3.029
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0103",
+      "text": "**Tracking:** Central register; reminders before expiry; evidence of compensating controls.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall maintain a central register for all compliance requirements, receive timely reminders before their expiration, and retain evidence of any compensating controls implemented.",
+        "similarity": 5.677
+      },
+      "alternatives": [
+        {
+          "policy_text": "1 Systems are scanned regularly; findings are triaged and tracked for tracking purposes; reminders are sent before expiry; evidence of compensating controls is documented.",
+          "similarity": 5.096
+        },
+        {
+          "policy_text": "Centralized logging; immutable storage for critical logs; SIEM correlation; time sync (NTP). **Compliance Requirement:** Company shall implement audit controls as outlined above.",
+          "similarity": -7.446
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0104",
+      "text": "**Required:** Security & privacy training at onboarding and **annually**; HIPAA‑specific training for ePHI handlers; role‑based training for admins/developers.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Onboarding for new hires and annual refresher training in security and privacy principles must be completed by all personnel.",
+        "similarity": 3.587
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall provide security awareness training annually to all employees on their roles and responsibilities regarding data protection and cybersecurity measures.** This policy ensures compliance with §164.308(a)(5) of the Health Insurance Portability and Accountability Act (HIPAA). Employees must understand their role in protecting sensitive information and implementing necessary cybersecurity protocols.",
+          "similarity": -0.33
+        },
+        {
+          "policy_text": "Company shall implement the HIPAA Security Rule (§164.308–§164.316), Privacy Rule (selected highlights), and Breach Notification Rule for all systems processing ePHI.",
+          "similarity": -0.369
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0105",
+      "text": "**Awareness:** Phishing simulations; quarterly security newsletters; targeted advisories.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Phishing simulations and quarterly security newsletters are mandatory for awareness purposes, while targeted advisories should be reviewed annually by all employees. **Failure to comply may result in disciplinary action.",
+        "similarity": 7.457
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall provide security awareness training annually to all employees on their roles and responsibilities regarding data protection and cybersecurity measures.** This policy ensures compliance with §164.308(a)(5) of the Health Insurance Portability and Accountability Act (HIPAA). Employees must understand their role in protecting sensitive information and implementing necessary cybersecurity protocols.",
+          "similarity": -5.31
+        },
+        {
+          "policy_text": "Onboarding for new hires and annual refresher training in security and privacy principles must be completed by all personnel.",
+          "similarity": -9.087
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0106",
+      "text": "Violations of this policy may result in corrective action up to termination and legal remedies where applicable. Report suspected violations to the SO/PO immediately.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "3 Sanctions: policy violations may lead to corrective action up to termination.",
+        "similarity": 4.787
+      },
+      "alternatives": [
+        {
+          "policy_text": "1 Non-compliance may result in disciplinary action up to and including termination and legal remedies where applicable.",
+          "similarity": 3.968
+        },
+        {
+          "policy_text": "Company shall maintain all evidence related to compliance requirements as documented in this policy.** This policy applies to all employees and contractors who have access to sensitive information or systems. Violations will result in disciplinary action up to and including termination of employment.",
+          "similarity": 3.084
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0107",
+      "text": "**Access Provisioning:** Requester (R), Manager (A/R), Data Owner (A), IT/IdP (R), Compliance (C), Security (C).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Requesters must ensure compliance with access provisioning requirements by verifying requester identity through appropriate means before granting access to data owned by others. **Failure to comply may result in disciplinary action.** This policy clarifies the responsibilities of all parties involved in ensuring proper access control within the organization.",
+        "similarity": 3.115
+      },
+      "alternatives": [
+        {
+          "policy_text": "1 Implement technical controls for access management including least-privilege principle.",
+          "similarity": -5.315
+        },
+        {
+          "policy_text": "All employees and contractors must comply with all specified compliance requirements including but not limited to risk analyses, BAA lists, training logs, SIEM exports, access reviews, incident response (IR) tickets, backup/DR reports, encryption/key management system (KMS) configurations, vendor risk files, change approval processes, static application security testing (SAST)/dynamic application security testing (DAST) pipelines, data classification registries, privacy notices, and requests, as well as any other relevant regulatory or contractual obligations. **END OF POLICY CLAUSE.",
+          "similarity": -5.779
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0108",
+      "text": "**Incident Response:** SOC (R), CISO (A), PO (A for breaches), IT/Eng (R), Legal (C), Comms (C).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Incident Response:** SOC (Risk), CISO (Audit), PO (Breach), IT/Engineering (Review), Legal (Consultation), Communications (Notification).",
+        "similarity": 7.71
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall ensure all systems adhere to DR Test compliance requirements.** This policy ensures that all systems within our organization comply with the Data Recovery Testing (DR Test) compliance requirements set by the relevant stakeholders including the Information Technology Infrastructure (IT/Infra), Chief Information Security Officer (CISO), System Owners, Products, and Compliance teams. This requirement is essential for maintaining data integrity and ensuring business continuity.",
+          "similarity": -5.007
+        },
+        {
+          "policy_text": "The board oversees risks rated as critical or high, ensuring they are addressed within a specified timeline. Acceptance of these risks necessitates a detailed business case supported by the CISO.",
+          "similarity": -5.138
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0109",
+      "text": "**DR Test:** IT/Infra (R), CISO (A), System Owners (R), Product (C), Compliance (C).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall ensure all systems adhere to DR Test compliance requirements.** This policy ensures that all systems within our organization comply with the Data Recovery Testing (DR Test) compliance requirements set by the relevant stakeholders including the Information Technology Infrastructure (IT/Infra), Chief Information Security Officer (CISO), System Owners, Products, and Compliance teams. This requirement is essential for maintaining data integrity and ensuring business continuity.",
+        "similarity": 5.627
+      },
+      "alternatives": [
+        {
+          "policy_text": "Incident Response:** SOC (Risk), CISO (Audit), PO (Breach), IT/Engineering (Review), Legal (Consultation), Communications (Notification).",
+          "similarity": -1.291
+        },
+        {
+          "policy_text": "All employees and contractors must comply with all specified compliance requirements including but not limited to risk analyses, BAA lists, training logs, SIEM exports, access reviews, incident response (IR) tickets, backup/DR reports, encryption/key management system (KMS) configurations, vendor risk files, change approval processes, static application security testing (SAST)/dynamic application security testing (DAST) pipelines, data classification registries, privacy notices, and requests, as well as any other relevant regulatory or contractual obligations. **END OF POLICY CLAUSE.",
+          "similarity": -5.333
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0110",
+      "text": "Screen lock: **≤ 10 minutes**; Session timeout: **≤ 15 minutes**.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall implement screen lock policies ensuring access is restricted within ≤ 10 minutes of user inactivity; session timeouts shall be set to ≤ 15 minutes to prevent unauthorized access.",
+        "similarity": 8.175
+      },
+      "alternatives": [
+        {
+          "policy_text": "2 Multi-factor authentication (MFA) is mandatory for administrators and remote access. (MFA for all users is recommended.) 5.3 Sessions must lock after 20 minutes of inactivity and require re-authentication to resume.",
+          "similarity": -2.253
+        },
+        {
+          "policy_text": "Company shall implement unique user IDs; enforce Multi-Factor Authentication (MFA) for privileged and remote access; establish an emergency access procedure; ensure automatic logoff within ≤ 15 minutes of inactivity.",
+          "similarity": -3.805
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0111",
+      "text": "Critical patch remediation: **≤ 7 days**; High: **≤ 14 days**.",
+      "label": "non_existent",
+      "best_match": {
+        "policy_text": "User access reviews are conducted quarterly on high-risk systems and semiannually on others; documentation of remediation is required.",
+        "similarity": -6.249
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall implement continuous vulnerability scanning and apply risk-based remediation measures for all systems, ensuring timely resolution of identified issues. Exceptions to this policy may be granted upon approval by senior management and will have an expiration date.",
+          "similarity": -6.48
+        },
+        {
+          "policy_text": "Without reasonable delay, no later than 90 days to affected individuals; notify HHS and media as required. Internal escalation within 24 hours of discovery. Maintain risk assessment and decision records.",
+          "similarity": -8.427
+        }
+      ],
+      "rationale": "Valid requirement but no matching policy coverage found.",
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0112",
+      "text": "Log retention online: **≥ 1 year** (longer if required).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall centralize logs, detect anomalies, implement runbook alerts, and maintain retention of logs for at least 1 year online, with longer retention as required.",
+        "similarity": 5.564
+      },
+      "alternatives": [
+        {
+          "policy_text": "Events should be logged; logs should retain for at least 1 year online; alerts should trigger based on defined playbook rules.",
+          "similarity": 3.004
+        },
+        {
+          "policy_text": "1 Security and privacy program documentation, access review evidence, incident records, and training logs are retained for at least six (6) years from creation or last effective date.",
+          "similarity": 0.813
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0113",
+      "text": "Access reviews: **Quarterly** (high‑risk), **Semiannual** (moderate), **Annual** (low).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "User access reviews are conducted quarterly on high-risk systems and semiannually on others; documentation of remediation is required.",
+        "similarity": 6.288
+      },
+      "alternatives": [
+        {
+          "policy_text": "Information Access Management (R/A):** Information should be accessed on a minimum necessary basis, with roles determining access levels, and all access authorizations and modifications documented. Periodic reviews of access controls should occur at least quarterly for high-risk systems.",
+          "similarity": 4.632
+        },
+        {
+          "policy_text": "Quarterly access reviews of entitlements must be conducted by authorized personnel, with owners providing attestations on compliance. Remediation actions must be documented, and all required closure evidence must be submitted for review. **Failure to comply will result in disciplinary action.",
+          "similarity": 3.338
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0114",
+      "text": "DR testing: **Annual** full test; **Quarterly** restore drills.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Restore procedures are tested monthly; results and defects are tracked for 6 months; quarterly restore tests are conducted; annual DR testing includes recovery drills.",
+        "similarity": 6.333
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall implement nightly backups, maintain offsite copies, conduct quarterly restore tests, and annually perform disaster recovery testing.",
+          "similarity": 0.796
+        },
+        {
+          "policy_text": "Company shall ensure that all business continuity and disaster recovery plans are documented, regularly tested annually, and include quarterly backups for data restoration. To summarize this requirement concisely: \"Business Continuity & Disaster Recovery Plans must be documented, annually tested, and include quarterly backups.\" This concise policy clause captures the essence of the compliance requirement while maintaining clarity and readability.",
+          "similarity": -3.914
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0115",
+      "text": "Internal incident escalation: **≤ 24 hours**; External HIPAA breach notices: **≤ 60 days** per law.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall ensure all internal incidents are escalated within ≤ 24 hours; external HIPAA breach notifications will be provided within ≤ 60 days as required by law.",
+        "similarity": 7.387
+      },
+      "alternatives": [
+        {
+          "policy_text": "Without unreasonable delay, no later than 60 days to affected individuals; notify HHS and media where required. Internal escalation within 24 hours of discovery. Maintain risk assessment and decision record.",
+          "similarity": 4.162
+        },
+        {
+          "policy_text": "Without reasonable delay, no later than 90 days to affected individuals; notify HHS and media as required. Internal escalation within 24 hours of discovery. Maintain risk assessment and decision records.",
+          "similarity": 2.925
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0116",
+      "text": "Encryption: At rest **AES‑256**; in transit **TLS 1.2+** (TLS 1.3 preferred).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Company shall implement encryption at rest using AES-256; for data in transit, we must use TLS 1.2+ (TLS 1.3 is preferred).",
+        "similarity": 7.32
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall ensure all electronic Protected Health Information is encrypted at rest using AES-256 or an equivalent standard, and in transit using TLS 1.2 or higher with TLS 1.3 being preferred for security reasons. Key management documentation will be maintained.",
+          "similarity": 5.853
+        },
+        {
+          "policy_text": "Company shall ensure all cryptographic operations adhere to TLS 1.2+, with TLS 1.3 being preferred for enhanced security, employing strong ciphers, maintaining a robust key management lifecycle, and utilizing Hardware Security Modules (HSMs) or Key Management Services (KMS). ** This policy ensures compliance with industry standards while enhancing data protection through advanced encryption methods and secure key management practices.",
+          "similarity": -1.259
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0117",
+      "text": "Passwords: SSO/MFA preferred; follow NIST 800‑63 (no periodic forced rotation; length/blacklist checks).",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "Passwords should be managed using Single Sign-On/ Multi-Factor Authentication (SSO/MFA) where applicable, adhering to NIST 800-63 guidelines without requiring periodic forced password rotations or enforcing strict blacklisting policies. **END OF POLICY CLAUSE.",
+        "similarity": 6.589
+      },
+      "alternatives": [
+        {
+          "policy_text": "Enterprise Identity:** Personnel must authenticate using enterprise identity methods, such as Single Sign-On (SSO), ensuring consistency with National Institute of Standards and Technology (NIST) Special Publication 800-63 for password policies. Multi-Factor Authentication (MFA) is mandatory. **End Clause.",
+          "similarity": 2.871
+        },
+        {
+          "policy_text": "Company shall implement robust access control measures including Role-Based Access Control (RBAC), Just-In-Time/Just-In-Event Authorization (JIT/JEA) where feasible, Single Sign-On (SSO), Multi-Factor Authentication (MFA), and conduct quarterly access reviews with privileged access monitoring. Note: The original requirement was quite detailed, so I've condensed it while maintaining clarity and compliance requirements.",
+          "similarity": -5.416
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    },
+    {
+      "id": "C-0118",
+      "text": "Risk analyses; BAA list; training logs; SIEM export; access review evidence; IR tickets; backup/DR reports; encryption/KMS configs; vendor risk files; change approvals; SAST/DAST pipelines; data classification registry; privacy notices and request logs.",
+      "label": "satisfied",
+      "best_match": {
+        "policy_text": "All employees and contractors must comply with all specified compliance requirements including but not limited to risk analyses, BAA lists, training logs, SIEM exports, access reviews, incident response (IR) tickets, backup/DR reports, encryption/key management system (KMS) configurations, vendor risk files, change approval processes, static application security testing (SAST)/dynamic application security testing (DAST) pipelines, data classification registries, privacy notices, and requests, as well as any other relevant regulatory or contractual obligations. **END OF POLICY CLAUSE.",
+        "similarity": 5.297
+      },
+      "alternatives": [
+        {
+          "policy_text": "Company shall maintain an evidence library including but not limited to policies, org charts, risk registers, asset inventories, access reviews, SIEM dashboards, incident response (IR) tickets, change logs, project pipeline results, vendor evaluations, disaster recovery (DR) reports, backup logs, and employee training records for audit purposes.",
+          "similarity": 2.468
+        },
+        {
+          "policy_text": "Centralized logging; immutable storage for critical logs; SIEM correlation; time sync (NTP). **Compliance Requirement:** Company shall implement audit controls as outlined above.",
+          "similarity": -5.826
+        }
+      ],
+      "rationale": null,
+      "upgraded_from": null,
+      "downgraded_from": null
+    }
+  ]
+}

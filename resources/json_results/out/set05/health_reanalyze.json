@@ -1,0 +1,54 @@
+{
+  "status": "ok",
+  "app_version": "1.6.0",
+  "embedding": {
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "device": -1,
+    "use_e5_prefixes": false
+  },
+  "retrieval": {
+    "use_cross_encoder": true,
+    "cross_encoder_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "cross_encoder_top_k": 5,
+    "top_k_default": 3,
+    "round_similarity": 3
+  },
+  "thresholds": {
+    "satisfied_threshold": 0.78,
+    "partial_threshold": 0.6
+  },
+  "semantic": {
+    "use_semantic_normalizer": true,
+    "semantic_lexicon_path": "lexicon.yaml",
+    "semantic_threshold": 0.68,
+    "semantic_max_tags": 3,
+    "use_numeric_check": true
+  },
+  "nli": {
+    "use_nli_judge": false,
+    "model": null,
+    "device": null,
+    "annotate_only": null,
+    "satisfied_floor": null,
+    "partial_floor": null,
+    "entailment_min": null,
+    "contradiction_min": null
+  },
+  "llm": {
+    "enabled": false,
+    "use_llm_judge": false,
+    "use_llm_refine": false,
+    "model": null,
+    "device": null,
+    "max_new_tokens": null
+  },
+  "editor": {
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "device": -1,
+    "max_new_tokens": 128,
+    "load_in_4bit": true
+  },
+  "limits": {
+    "max_chars": 800000
+  }
+}

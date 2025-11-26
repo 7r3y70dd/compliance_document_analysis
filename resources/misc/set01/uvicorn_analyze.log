@@ -1,0 +1,8 @@
+2025-11-22 12:57:13,120 INFO sentence_transformers.SentenceTransformer: Use pytorch device_name: cpu
+2025-11-22 12:57:13,120 INFO sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+INFO:     Started server process [83619]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8000): address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.

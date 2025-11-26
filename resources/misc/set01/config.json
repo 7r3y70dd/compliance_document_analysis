@@ -1,0 +1,14 @@
+{
+  "timestamp_utc": "2025-11-22T20:57:10Z",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "use_cross_encoder": 0,
+  "cross_encoder_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+  "use_semantic_normalizer": 0,
+  "satisfied_threshold": 0.78,
+  "partial_threshold": 0.60,
+  "top_k_default": 3,
+  "analyze_llm_device": -1,
+  "analyze_editor_device": -1,
+  "rewrite_llm_device": -1,
+  "rewrite_editor_device": 0
+}
